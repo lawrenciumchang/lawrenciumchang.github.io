@@ -842,11 +842,20 @@ hr {
   display: table;
   clear: both; }
 
-/**
- * Icons
- */
 .icon > svg {
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: middle; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+a {
+  text-decoration: none; }

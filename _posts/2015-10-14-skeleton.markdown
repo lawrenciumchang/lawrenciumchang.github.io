@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Skeleton has been added"
+date:   2015-10-14 14:4:00
+categories: personal
+---
+
+I just added Skeleton to my project and am using Gulp to make things a lot easier. 
+
+Not sure how to style my website or what content to add to it...but this is another post to temporarily populate my website.
+
+:^)
+
+Check out my [twitter][twitter] for science.
+
+[twitter]:	http://www.twitter.com/lawrenciumchang

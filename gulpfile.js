@@ -57,10 +57,6 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('_sass/*.scss', ['sass']);
     gulp.watch(['index.html', 
-        'articles/index.html', 
-        'projects/index.html', 
-        'photographs/index.html', 
-        'archives/index.html', 
         '_layouts/*.html', 
         '_includes/*.html', 
         '_posts/**/*.md'], 
