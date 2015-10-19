@@ -842,12 +842,6 @@ hr {
   display: table;
   clear: both; }
 
-.icon > svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle; }
-
 .text-center {
   text-align: center; }
 
@@ -859,3 +853,10 @@ hr {
 
 a {
   text-decoration: none; }
+
+.bottom-divider {
+  margin-top: 0.5em; }
+
+.profileImage {
+  height: 280px;
+  width: auto; }

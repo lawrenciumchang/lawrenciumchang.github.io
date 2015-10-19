@@ -4,7 +4,6 @@
     {% include head.html %}
 
     <body>
-
       <div class="container animsition">
 
         {% include header.html %}
@@ -13,6 +12,7 @@
           <div class="wrapper">
             {{ content }}
           </div>
+          <hr class="bottom-divider">
         </div>
 
         {% include footer.html %}
@@ -24,7 +24,6 @@
       <!-- animsition.js -->
       <script src="{{ "/animsition/js/animsition.min.js" | prepend: site.baseurl }}"></script>
       <script src="{{ "/js/animsition_fade_right.js" | prepend: site.baseurl }}"></script>
-
     </body>
 
 </html>
