@@ -14,18 +14,18 @@ var distPaths = {
 
 var server = {
   host: 'localhost',
-  port: '8001'
+  port: '9001'
 }
 
 gulp.task('sass', function () {
-  gulp.src( sourcePaths.styles )
+  gulp.src(sourcePaths.styles)
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest( distPaths.styles ));
+    .pipe(gulp.dest(distPaths.styles));
 });
 
 gulp.task('webserver', function() {
-  gulp.src( '.' )
+  gulp.src('.')
     .pipe(webserver({
       host:             server.host,
       port:             server.port,
@@ -35,7 +35,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('openbrowser', function() {
-  opn( 'http://' + server.host + ':' + server.port );
+  opn('http://' + server.host + ':' + server.port, {app: ['google chrome']});
 });
 
 gulp.task('watch', function(){
