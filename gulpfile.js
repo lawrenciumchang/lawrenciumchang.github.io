@@ -6,7 +6,7 @@ var opn       = require('opn');
 var inject    = require('gulp-inject');
 
 var sourcePaths = {
-  styles: ['./scss/**/*.scss']
+  styles: ['./sass/**/*.scss']
 };
 
 var distPaths = {
