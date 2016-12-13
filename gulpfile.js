@@ -3,13 +3,14 @@ var plumber   = require('gulp-plumber');
 var sass      = require('gulp-sass');
 var webserver = require('gulp-webserver');
 var opn       = require('opn');
+var inject    = require('gulp-inject');
 
 var sourcePaths = {
-  styles: ['scss/**/*.scss']
+  styles: ['./scss/**/*.scss']
 };
 
 var distPaths = {
-  styles: 'css'
+  styles: './css'
 };
 
 var server = {
@@ -22,6 +23,13 @@ gulp.task('sass', function () {
     .pipe(plumber())
     .pipe(sass())
     .pipe(gulp.dest(distPaths.styles));
+});
+
+gulp.task('index', function () {
+    var target = gulp.src('./index.html');
+    var sources = gulp.src(['./js/**/*.js', './css/*.css'], {read: false});
+    return target.pipe(inject(sources))
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('webserver', function() {
@@ -44,4 +52,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', ['sass']);
 
-gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
+gulp.task('default', ['build', 'index', 'webserver', 'watch', 'openbrowser']);
