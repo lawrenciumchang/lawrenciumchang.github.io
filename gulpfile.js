@@ -3,7 +3,6 @@ var plumber   = require('gulp-plumber');
 var sass      = require('gulp-sass');
 var webserver = require('gulp-webserver');
 var opn       = require('opn');
-var gnf       = require('gulp-npm-files');
 
 var sourcePaths = {
   styles: ['scss/**/*.scss']
@@ -17,11 +16,6 @@ var server = {
   host: 'localhost',
   port: '9001'
 }
-
-// Copy dependencies to build/node_modules/ 
-gulp.task('copyNpm', function() {
-  gulp.src(gnf(), {base:'./'}).pipe(gulp.dest('./build'));
-});
 
 gulp.task('sass', function () {
   gulp.src(sourcePaths.styles)
@@ -50,4 +44,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', ['sass']);
 
-gulp.task('default', ['build', 'copyNpm', 'webserver', 'watch', 'openbrowser']);
+gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
