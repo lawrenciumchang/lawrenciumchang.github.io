@@ -10,13 +10,19 @@
         <link rel="icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css">
+        <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body ng-app="app.core">
-        <div class="nav-bar">
-            <a ui-sref="home" ui-sref-active="active">Home</a>
-            <a ui-sref="photos" ui-sref-active="active">Photos</a>
-            <a ui-sref="contact" ui-sref-active="active">Contact</a>
+        <div class="nav clearfix px3 py2">
+            <div class="nav-left sm-col sm-col-12 md-col-6">
+                <a class="font-light" ui-sref="home">LAWRENCE CHANG</a>
+            </div>
+            <div class="nav-right sm-col sm-col-12 md-col-6 right-align">
+                <a class="font-light h6 px3 py1" ui-sref="home" ui-sref-active="active">HOME</a>
+                <a class="font-light h6 px3 py1" ui-sref="photos" ui-sref-active="active">PHOTOS</a>
+                <a class="font-light h6 px3 py1" ui-sref="contact" ui-sref-active="active">CONTACT</a>
+            </div>
         </div>
 
         <ui-view></ui-view>
