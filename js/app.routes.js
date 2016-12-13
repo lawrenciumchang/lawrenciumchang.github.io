@@ -4,12 +4,13 @@ angular
     .config(Routes)
     .config(['$locationProvider', function($locationProvider) {
         $locationProvider.html5Mode({
-            enabled: true,
+            enabled: false,
             requireBase: false
         });
     }]);
 
-function Routes($stateProvider) {
+function Routes($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('home', {
             url: '/',
