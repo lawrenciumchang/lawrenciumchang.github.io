@@ -2,6 +2,9 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0px; }
+  body .container {
+    display: block;
+    min-height: 700px; }
 
 .font-light {
   font-weight: 300; }
@@ -29,17 +32,16 @@ body {
     text-align: center; }
     .nav .nav-right a.active, .nav .nav-right a:hover {
       background-color: #3a3a3a; }
-
-@media (max-width: 831px) {
-  .nav-left {
-    font-size: larger;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 10px; }
-  .nav-right {
-    text-align: center; }
-    .nav-right a {
-      padding: 8px 16px; } }
+  @media (max-width: 831px) {
+    .nav .nav-left {
+      font-size: larger;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 10px; }
+    .nav .nav-right {
+      text-align: center; }
+      .nav .nav-right a {
+        padding: 8px 16px; } }
 
 .photos-template .photos .photo {
   cursor: pointer; }
@@ -52,3 +54,11 @@ body {
     color: #ffffff;
     z-index: 1000;
     font-size: smaller; }
+
+.footer {
+  background: #2a2a2a; }
+  .footer p {
+    color: #ffffff; }
+  @media (max-width: 831px) {
+    .footer p {
+      text-align: center; } }

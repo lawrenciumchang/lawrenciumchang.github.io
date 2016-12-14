@@ -18,20 +18,20 @@
            } 
         }
     }
-}
 
-// Small width screen (also the sm breakpoint for basscss)
-@media(max-width: 831px) {
-    .nav-left {
-        font-size: larger;
-        text-align: center;
-        padding-top: 5px;
-        padding-bottom: 10px;
-    }
-    .nav-right {
-        text-align: center;
-        a {
-            padding: 8px 16px;
+    // Small width screen (also the sm breakpoint for basscss)
+    @media(max-width: 831px) {
+        .nav-left {
+            font-size: larger;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+        .nav-right {
+            text-align: center;
+            a {
+                padding: 8px 16px;
+            }
         }
     }
 }
