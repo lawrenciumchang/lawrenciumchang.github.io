@@ -14,7 +14,7 @@ function PhotosService(PhotosResource) {
         var USER_ID = '75527516@N07';
         return PhotosResource.get({api_key: API_KEY, user_id: USER_ID}).$promise
             .then(function(response) {
-                return response;
+                return response.photos;
             });
     }
 }

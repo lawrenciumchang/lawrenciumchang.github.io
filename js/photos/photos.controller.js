@@ -6,18 +6,45 @@ angular
 /* @ngInject */
 function PhotosController($q, PhotosService) {
     var vm = this;
+    vm.showTitle = showTitle;
+    vm.hideTitle = hideTitle;
+
+    vm.photos = [];
+    vm.displayTitle = [];
 
     activate();
 
     function activate() {
         var promises = [getPhotos()];
-        return $q.all(promises);
+        return $q.all(promises).then(function() {
+            generatePhotos(vm.photoData.photo);
+        });
     }
 
     function getPhotos() {
         return PhotosService.getPhotos().then(function(response) {
             vm.photoData = response;
         });
+    }
+
+    function generatePhotos(photos) {
+        for(var i = 0; i < photos.length; i++) {
+            var p = {
+                'id': i,
+                'title': photos[i].title,
+                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg',
+                'thumbnail_url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_z' + '.jpg'
+            }; 
+            vm.photos.push(p);
+        }  
+    }
+
+    function showTitle(id) {
+        vm.displayTitle[id] = true;
+    }
+
+    function hideTitle(id) {
+        vm.displayTitle[id] = false;
     }
 
 }

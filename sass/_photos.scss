@@ -1,0 +1,18 @@
+.photos-template {
+    .photos {
+        .photo {
+            img {
+                -webkit-transition: .4s;
+                &:hover {
+                    -webkit-filter: brightness(70%);
+                }
+            }
+            .photo-title {
+                top: -44px;
+                color: $white;
+                z-index: 1000;
+                font-size: smaller;
+            }
+        }
+    }
+}

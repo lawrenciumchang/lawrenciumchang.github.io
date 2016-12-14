@@ -1,4 +1,9 @@
 <div class="photos-template">
-    <p>Photos coming soon.</p>
-    <pre>{{vm.photoData|json}}</pre>
+    <h2 class="center mt3">photos</h2>
+    <div class="photos clearfix">
+        <div class="photo center sm-col sm-col-6 md-col-4 p2" ng-repeat="photo in vm.photos">
+            <img ng-src="{{photo.thumbnail_url}}" ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)" width="100%"/>
+            <span class="photo-title font-light relative" ng-if="vm.displayTitle[photo.id]">{{photo.title}}</span>
+        </div>
+    </div>
 </div>
