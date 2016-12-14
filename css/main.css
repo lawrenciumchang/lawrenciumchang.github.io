@@ -5,6 +5,11 @@ body {
   body .container {
     display: block;
     min-height: 700px; }
+    body .container.ng-enter {
+      transition: 1.5s;
+      opacity: 0; }
+    body .container.ng-enter-active {
+      opacity: 1; }
 
 .font-light {
   font-weight: 300; }
