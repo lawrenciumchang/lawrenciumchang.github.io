@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0px; }
   body .container {
-    display: block;
+    display: flex;
     min-height: 700px; }
 
 .font-light {
