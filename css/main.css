@@ -52,7 +52,3 @@ body {
     color: #ffffff;
     z-index: 1000;
     font-size: smaller; }
-
-@media (min-width: 832px) {
-  .photos-template .photo {
-    height: 280px; } }

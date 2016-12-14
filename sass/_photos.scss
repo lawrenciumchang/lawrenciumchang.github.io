@@ -16,11 +16,4 @@
             }
         }
     }
-
-    // Large width screen (also the sm breakpoint for basscss)
-    @media(min-width: 832px) {
-        .photo {
-            height: 280px;
-        }
-    }
 }

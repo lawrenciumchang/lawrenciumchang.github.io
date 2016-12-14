@@ -28,6 +28,7 @@ function PhotosController($q, PhotosService) {
     }
 
     function generatePhotos(photos) {
+        var array = [];
         for(var i = 0; i < photos.length; i++) {
             var p = {
                 'id': i,
@@ -35,8 +36,15 @@ function PhotosController($q, PhotosService) {
                 'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg',
                 'thumbnail_url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_z' + '.jpg'
             }; 
-            vm.photos.push(p);
-        }  
+            array.push(p);
+            if((i+1) % 3 == 0) {
+                vm.photos.push(array);
+                array = [];
+            }
+            if(i == photos.length-1) {
+                vm.photos.push(array);
+            }
+        } 
     }
 
     function showTitle(id) {
