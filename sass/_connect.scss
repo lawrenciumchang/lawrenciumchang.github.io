@@ -1,3 +1,13 @@
 .connect-template {
-
+    .clearfix {
+        padding-top: 240px;
+        img {
+            cursor: pointer;
+            padding: 2px;
+            transition: .2s;
+            &:hover{ 
+                transform: scale(1.2); 
+            }
+        }
+    }
 }

@@ -29,7 +29,8 @@ body {
     border-radius: 4px;
     width: 50px;
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    transition: .4s; }
     .nav .nav-right a.active, .nav .nav-right a:hover {
       background-color: #3a3a3a; }
   @media (max-width: 831px) {
@@ -55,6 +56,15 @@ body {
     font-size: smaller;
     margin-top: -44px;
     display: block; }
+
+.connect-template .clearfix {
+  padding-top: 240px; }
+  .connect-template .clearfix img {
+    cursor: pointer;
+    padding: 2px;
+    transition: .2s; }
+    .connect-template .clearfix img:hover {
+      transform: scale(1.2); }
 
 .footer {
   background: #2a2a2a; }
