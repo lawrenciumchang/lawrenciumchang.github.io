@@ -5,14 +5,15 @@
             img {
                 -webkit-transition: .4s;
                 &:hover {
-                    -webkit-filter: brightness(70%);
+                    -webkit-filter: brightness(60%);
                 }
             }
             .photo-title {
-                top: -44px;
                 color: $white;
                 z-index: 1000;
                 font-size: smaller;
+                margin-top: -44px;
+                display: block;
             }
         }
     }

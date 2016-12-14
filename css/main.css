@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0px; }
   body .container {
-    display: flex;
+    display: block;
     min-height: 700px; }
 
 .font-light {
@@ -48,12 +48,13 @@ body {
   .photos-template .photos .photo img {
     -webkit-transition: .4s; }
     .photos-template .photos .photo img:hover {
-      -webkit-filter: brightness(70%); }
+      -webkit-filter: brightness(60%); }
   .photos-template .photos .photo .photo-title {
-    top: -44px;
     color: #ffffff;
     z-index: 1000;
-    font-size: smaller; }
+    font-size: smaller;
+    margin-top: -44px;
+    display: block; }
 
 .footer {
   background: #2a2a2a; }

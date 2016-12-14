@@ -1,11 +1,12 @@
 <div class="photos-template">
     <h2 class="center mt3">photos</h2>
-
-    <div class="photos clearfix" ng-repeat="photoSet in vm.photos">
-        <div class="photo center sm-col sm-col-4 md-col-4 p2" ng-repeat="photo in photoSet">
-            <div ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)">
-                <img ng-src="{{photo.thumbnail_url}}" width="100%"/>
-                <span class="photo-title font-light relative" ng-if="vm.displayTitle[photo.id]">{{photo.title}}</span>
+    <div class="photos-container mb3">
+        <div class="photos clearfix" ng-repeat="photoSet in vm.photos">
+            <div class="photo center sm-col sm-col-4 md-col-4 p2" ng-repeat="photo in photoSet">
+                <div ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)">
+                    <img ng-src="{{photo.thumbnail_url}}" width="100%"/>
+                    <span class="photo-title font-light relative">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
+                </div>
             </div>
         </div>
     </div>
