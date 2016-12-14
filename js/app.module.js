@@ -1,3 +1,3 @@
 'use strict';
 
-var angular = angular.module('app.core', ['ui.router']);
+var angular = angular.module('app.core', ['ui.router', 'ngResource']);

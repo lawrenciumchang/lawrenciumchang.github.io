@@ -24,19 +24,20 @@
                 <a class="font-light h6 px3 py1" ui-sref="contact" ui-sref-active="active">CONTACT</a>
             </div>
         </div>
-
         <ui-view></ui-view>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0-rc.2/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.0/angular-resource.min.js"></script>
 
         <!-- inject:js -->
         <script src="/js/app.module.js"></script>
         <script src="/js/app.routes.js"></script>
-        <script src="/js/contact/contact.controller.js"></script>
         <script src="/js/home/home.controller.js"></script>
+        <script src="/js/contact/contact.controller.js"></script>
         <script src="/js/photos/photos.controller.js"></script>
+        <script src="/js/photos/photos.resource.js"></script>
+        <script src="/js/photos/photos.service.js"></script>
         <!-- endinject -->
-        
     </body>
 </html>

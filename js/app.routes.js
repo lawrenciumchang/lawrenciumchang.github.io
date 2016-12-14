@@ -15,16 +15,19 @@ function Routes($stateProvider, $urlRouterProvider) {
         .state('home', {
             url: '/',
             templateUrl: 'js/home/home.template.html',
-            controller: 'HomeController'
+            controller: 'HomeController',
+            controllerAs: 'vm'
         })
         .state('photos', {
             url: '/photos',
             templateUrl: 'js/photos/photos.template.html',
-            controller: 'PhotosController'
+            controller: 'PhotosController',
+            controllerAs: 'vm'
         })
         .state('contact', {
             url: '/contact',
             templateUrl: 'js/contact/contact.template.html',
-            controller: 'ContactController'
+            controller: 'ContactController',
+            controllerAs: 'vm'
         });
 };
