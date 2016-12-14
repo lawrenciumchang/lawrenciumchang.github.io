@@ -17,17 +17,22 @@ body {
 
 .nav {
   background: #2a2a2a; }
-  .nav span, .nav a {
+  .nav a {
     color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px; }
-    .nav span.active, .nav a.active {
+    text-decoration: none; }
+  .nav .nav-left {
+    margin-top: 4px; }
+  .nav .nav-right a {
+    border-radius: 4px;
+    width: 50px;
+    display: inline-block;
+    text-align: center; }
+    .nav .nav-right a.active, .nav .nav-right a:hover {
       background-color: #3a3a3a; }
-  .nav .nav-right {
-    margin-top: -2px; }
 
 @media (max-width: 831px) {
   .nav-left {
+    font-size: larger;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px; }
