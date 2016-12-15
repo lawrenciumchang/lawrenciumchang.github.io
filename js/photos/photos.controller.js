@@ -28,6 +28,9 @@ function PhotosController($q, PhotosService) {
     }
 
     function generatePhotos(photos) {
+        photos = photos.sort(function(a, b) {
+            return new Date(a.datetaken).getTime() - new Date(b.datetaken).getTime();
+        });
         var array = [];
         for(var i = 0; i < photos.length; i++) {
             var p = {
