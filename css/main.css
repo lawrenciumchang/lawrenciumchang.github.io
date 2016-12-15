@@ -96,13 +96,14 @@ body {
         font-weight: 400; }
 
 .photos-template .title {
-  margin-top: 18px;
-  margin-bottom: 16px; }
+  background-color: #3a3a3a;
+  color: #ffffff;
+  margin: 2px 3px 0px 3px;
+  padding: 16px; }
 
 .photos-template .photos-container {
   padding: 2px 2px 0px 2px; }
   .photos-template .photos-container .photos .photo {
-    cursor: pointer;
     padding: 0px 1px 2px 1px; }
     .photos-template .photos-container .photos .photo .photo-mask {
       height: 360px; }
