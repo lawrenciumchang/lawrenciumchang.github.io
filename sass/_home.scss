@@ -1,3 +1,54 @@
 .home-template {
-
+    .home-background {
+        min-height: 700px;
+        background-image: url('../img/hero_image.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        filter: grayscale(100%);
+        transition: .6s;
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+    .content {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background: rgba(42, 42, 42, .7);
+        // Mobile
+        @media(max-width: 831px) {
+            top: 65%;
+            width: 90%;
+        }
+        .clearfix {
+            padding: 10px 40px;
+            .image-mask {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                margin: 0 auto;
+                margin-top: 14px;
+                background-image: url('../img/profile_image.jpg');
+                background-size: 216px auto;
+                background-position: -20px -30px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            p {
+                color: $white;
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                transition: .6s;
+                &:hover {
+                    color: $credera_red;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
 }

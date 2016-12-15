@@ -51,6 +51,50 @@ body {
       .nav .nav-right a {
         padding: 8px 16px; } }
 
+.home-template .home-background {
+  min-height: 700px;
+  background-image: url("../img/hero_image.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  filter: grayscale(100%);
+  transition: .6s; }
+  .home-template .home-background:hover {
+    filter: grayscale(0%); }
+
+.home-template .content {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: rgba(42, 42, 42, 0.7); }
+  @media (max-width: 831px) {
+    .home-template .content {
+      top: 65%;
+      width: 90%; } }
+  .home-template .content .clearfix {
+    padding: 10px 40px; }
+    .home-template .content .clearfix .image-mask {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 14px;
+      background-image: url("../img/profile_image.jpg");
+      background-size: 216px auto;
+      background-position: -20px -30px;
+      transition: 1s; }
+      .home-template .content .clearfix .image-mask:hover {
+        transform: scale(1.1); }
+    .home-template .content .clearfix p {
+      color: #ffffff; }
+    .home-template .content .clearfix a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: .6s; }
+      .home-template .content .clearfix a:hover {
+        color: #c52033;
+        font-weight: 400; }
+
 .photos-template .title {
   margin-top: 18px;
   margin-bottom: 16px; }
