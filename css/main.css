@@ -44,7 +44,7 @@ body {
     width: 50px;
     display: inline-block;
     text-align: center;
-    transition: .4s; }
+    transition: .6s; }
     .nav .nav-right a.active, .nav .nav-right a:hover {
       background-color: #3a3a3a; }
     @media (max-width: 831px) {
@@ -76,17 +76,33 @@ body {
           filter: grayscale(0%); }
         .photos-template .photos-container .photos .photo .photo-mask img.reveal-image {
           visibility: visible; }
-      .photos-template .photos-container .photos .photo .photo-mask .photo-title {
-        color: #ffffff;
-        z-index: 1000;
-        font-size: smaller;
-        margin-top: -29px;
-        display: block; }
-      .photos-template .photos-container .photos .photo .photo-mask .photo-title-banner {
-        background: #2a2a2a;
-        opacity: .5;
+      .photos-template .photos-container .photos .photo .photo-mask .title-hide {
+        -webkit-transition: .6s;
+        -moz-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+        opacity: 0;
+        margin-top: -29px; }
+        .photos-template .photos-container .photos .photo .photo-mask .title-hide.title-show {
+          color: #ffffff;
+          z-index: 1000;
+          font-size: smaller;
+          margin-top: -29px;
+          display: block;
+          opacity: 1; }
+      .photos-template .photos-container .photos .photo .photo-mask .banner-hide {
+        -webkit-transition: .6s;
+        -moz-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+        opacity: 0;
         margin-top: -44px;
         height: 36px; }
+        .photos-template .photos-container .photos .photo .photo-mask .banner-hide.banner-show {
+          background: #2a2a2a;
+          opacity: .5;
+          margin-top: -44px;
+          height: 36px; }
 
 .connect-template .clearfix {
   padding-top: 240px; }

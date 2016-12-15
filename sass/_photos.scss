@@ -29,18 +29,36 @@
                             visibility: visible;
                         }
                     }
-                    .photo-title {
-                        color: $white;
-                        z-index: 1000;
-                        font-size: smaller;
+                    .title-hide {
+                        -webkit-transition: .6s;
+                        -moz-transition: .6s;
+                        -o-transition: .6s;
+                        transition: .6s;
+                        opacity: 0;
                         margin-top: -29px;
-                        display: block;
+                        &.title-show {
+                            color: $white;
+                            z-index: 1000;
+                            font-size: smaller;
+                            margin-top: -29px;
+                            display: block;
+                            opacity: 1;
+                        }
                     }
-                    .photo-title-banner {
-                        background: #2a2a2a;
-                        opacity: .5;
+                    .banner-hide {
+                        -webkit-transition: .6s;
+                        -moz-transition: .6s;
+                        -o-transition: .6s;
+                        transition: .6s;
+                        opacity: 0;
                         margin-top: -44px;
                         height: 36px;
+                        &.banner-show {
+                            background: #2a2a2a;
+                            opacity: .5;
+                            margin-top: -44px;
+                            height: 36px;
+                        }
                     }
                 }
             }
