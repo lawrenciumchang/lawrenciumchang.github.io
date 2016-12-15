@@ -6,8 +6,19 @@
     }
     .nav-left {
         margin-top: 4px;
+        // Mobile
+        @media(max-width: 831px) {
+            font-size: larger;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
     }
     .nav-right {
+        // Mobile
+        @media(max-width: 831px) {
+            text-align: center;
+        }
         a {
            border-radius: 4px;
            width: 50px;
@@ -17,22 +28,10 @@
            &.active, &:hover {
                background-color: $gray;
            } 
-        }
-    }
-
-    // Small width screen (also the sm breakpoint for basscss)
-    @media(max-width: 831px) {
-        .nav-left {
-            font-size: larger;
-            text-align: center;
-            padding-top: 5px;
-            padding-bottom: 10px;
-        }
-        .nav-right {
-            text-align: center;
-            a {
-                padding: 8px 16px;
-            }
+           // Mobile
+           @media(max-width: 831px) {
+               padding: 8px 16px;
+           }
         }
     }
 }

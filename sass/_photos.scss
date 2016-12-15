@@ -1,23 +1,41 @@
 .photos-template {
-    .photos {
-        .photo {
-            cursor: pointer;
-            img {
-                visibility: hidden;
-                -webkit-transition: .4s;
-                &:hover {
-                    -webkit-filter: brightness(60%);
+    .title {
+        margin-top: 18px;
+        margin-bottom: 16px;
+    }
+    .photos-container {
+        padding: 2px 2px 0px 2px;
+        .photos {
+            .photo {
+                cursor: pointer;
+                padding: 0px 1px 2px 1px;
+                .photo-mask {
+                    height: 340px;
+                    // Mobile
+                    @media(max-width: 831px) {
+                        height: 240px;
+                    }
                 }
-                &.reveal-image {
-                    visibility: visible;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                    visibility: hidden;
+                    -webkit-transition: .4s;
+                    &:hover {
+                        -webkit-filter: brightness(60%);
+                    }
+                    &.reveal-image {
+                        visibility: visible;
+                    }
                 }
-            }
-            .photo-title {
-                color: $white;
-                z-index: 1000;
-                font-size: smaller;
-                margin-top: -44px;
-                display: block;
+                .photo-title {
+                    color: $white;
+                    z-index: 1000;
+                    font-size: smaller;
+                    margin-top: -44px;
+                    display: block;
+                }
             }
         }
     }

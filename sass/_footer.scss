@@ -2,11 +2,8 @@
     background: $dark-gray;
     p {
         color: $white;
-    }
-
-    // Small width screen (also the sm breakpoint for basscss)
-    @media(max-width: 831px) {
-        p {
+        // Mobile
+        @media(max-width: 831px) {
             text-align: center;
         }
     }
