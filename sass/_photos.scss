@@ -21,18 +21,17 @@
                         object-position: 50% 50%;
                         filter: grayscale(100%);
                         visibility: hidden;
-                        -webkit-transition: .6s;
+                        transition: 1.4s;
+                        opacity: 0;
                         &:hover {
                             filter: grayscale(0%);
                         }
                         &.reveal-image {
                             visibility: visible;
+                            opacity: 1;
                         }
                     }
                     .title-hide {
-                        -webkit-transition: .6s;
-                        -moz-transition: .6s;
-                        -o-transition: .6s;
                         transition: .6s;
                         opacity: 0;
                         margin-top: -29px;
@@ -46,9 +45,6 @@
                         }
                     }
                     .banner-hide {
-                        -webkit-transition: .6s;
-                        -moz-transition: .6s;
-                        -o-transition: .6s;
                         transition: .6s;
                         opacity: 0;
                         margin-top: -44px;
