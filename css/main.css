@@ -147,6 +147,9 @@ body {
 
 .contact-template .clearfix {
   padding-top: 240px; }
+  @media (max-width: 831px) {
+    .contact-template .clearfix {
+      padding-top: 160px; } }
   .contact-template .clearfix img {
     cursor: pointer;
     padding: 2px;
