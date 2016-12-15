@@ -33,11 +33,10 @@ function PhotosController($q, PhotosService) {
             var p = {
                 'id': i,
                 'title': photos[i].title,
-                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg',
-                'thumbnail_url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_z' + '.jpg'
+                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg'
             }; 
             array.push(p);
-            if((i+1) % 3 == 0) {
+            if((i+1) % 2 == 0) {
                 vm.photos.push(array);
                 array = [];
             }

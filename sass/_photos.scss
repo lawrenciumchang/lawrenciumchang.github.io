@@ -3,9 +3,13 @@
         .photo {
             cursor: pointer;
             img {
+                visibility: hidden;
                 -webkit-transition: .4s;
                 &:hover {
                     -webkit-filter: brightness(60%);
+                }
+                &.reveal-image {
+                    visibility: visible;
                 }
             }
             .photo-title {

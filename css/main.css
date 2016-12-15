@@ -6,7 +6,7 @@ body {
     display: block;
     min-height: 700px; }
     body .container.ng-enter {
-      transition: 1.5s;
+      transition: 2s;
       opacity: 0; }
     body .container.ng-enter-active {
       opacity: 1; }
@@ -52,9 +52,12 @@ body {
 .photos-template .photos .photo {
   cursor: pointer; }
   .photos-template .photos .photo img {
+    visibility: hidden;
     -webkit-transition: .4s; }
     .photos-template .photos .photo img:hover {
       -webkit-filter: brightness(60%); }
+    .photos-template .photos .photo img.reveal-image {
+      visibility: visible; }
   .photos-template .photos .photo .photo-title {
     color: #ffffff;
     z-index: 1000;
