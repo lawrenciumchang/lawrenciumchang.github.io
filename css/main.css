@@ -69,7 +69,7 @@ body {
   background: rgba(42, 42, 42, 0.7); }
   @media (max-width: 831px) {
     .home-template .content {
-      top: 360px;
+      top: 380px;
       width: 90%; } }
   .home-template .content .clearfix {
     padding: 10px 40px; }
@@ -144,13 +144,13 @@ body {
           margin-top: -44px;
           height: 36px; }
 
-.connect-template .clearfix {
+.contact-template .clearfix {
   padding-top: 240px; }
-  .connect-template .clearfix img {
+  .contact-template .clearfix img {
     cursor: pointer;
     padding: 2px;
     transition: .2s; }
-    .connect-template .clearfix img:hover {
+    .contact-template .clearfix img:hover {
       transform: scale(1.2); }
 
 .footer {

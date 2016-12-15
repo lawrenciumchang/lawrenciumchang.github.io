@@ -24,10 +24,10 @@ function Routes($stateProvider, $urlRouterProvider) {
             controller: 'PhotosController',
             controllerAs: 'vm'
         })
-        .state('connect', {
-            url: '/connect',
-            templateUrl: 'js/connect/connect.template.html',
-            controller: 'ConnectController',
+        .state('contact', {
+            url: '/contact',
+            templateUrl: 'js/contact/contact.template.html',
+            controller: 'ContactController',
             controllerAs: 'vm'
         });
 };
