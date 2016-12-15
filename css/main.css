@@ -61,26 +61,32 @@ body {
     cursor: pointer;
     padding: 0px 1px 2px 1px; }
     .photos-template .photos-container .photos .photo .photo-mask {
-      height: 340px; }
+      height: 360px; }
       @media (max-width: 831px) {
         .photos-template .photos-container .photos .photo .photo-mask {
           height: 240px; } }
-    .photos-template .photos-container .photos .photo img {
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-      visibility: hidden;
-      -webkit-transition: .4s; }
-      .photos-template .photos-container .photos .photo img:hover {
-        -webkit-filter: brightness(60%); }
-      .photos-template .photos-container .photos .photo img.reveal-image {
-        visibility: visible; }
-    .photos-template .photos-container .photos .photo .photo-title {
-      color: #ffffff;
-      z-index: 1000;
-      font-size: smaller;
-      margin-top: -44px;
-      display: block; }
+      .photos-template .photos-container .photos .photo .photo-mask img {
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        filter: grayscale(100%);
+        visibility: hidden;
+        -webkit-transition: .6s; }
+        .photos-template .photos-container .photos .photo .photo-mask img:hover {
+          filter: grayscale(0%); }
+        .photos-template .photos-container .photos .photo .photo-mask img.reveal-image {
+          visibility: visible; }
+      .photos-template .photos-container .photos .photo .photo-mask .photo-title {
+        color: #ffffff;
+        z-index: 1000;
+        font-size: smaller;
+        margin-top: -29px;
+        display: block; }
+      .photos-template .photos-container .photos .photo .photo-mask .photo-title-banner {
+        background: #2a2a2a;
+        opacity: .5;
+        margin-top: -44px;
+        height: 36px; }
 
 .connect-template .clearfix {
   padding-top: 240px; }

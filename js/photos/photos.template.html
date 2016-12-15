@@ -5,6 +5,7 @@
             <div class="photo center sm-col sm-col-6" ng-repeat="photo in photoSet">
                 <div class="photo-mask" ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)">
                     <img img-preload ng-src="{{photo.url}}" width="100%"/>
+                    <div ng-class="{'photo-title-banner': vm.displayTitle[photo.id]}"></div>
                     <span class="photo-title font-light relative">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
                 </div>
             </div>
