@@ -5,6 +5,9 @@ body {
   body .container {
     display: block;
     min-height: 700px; }
+    @media (max-width: 831px) {
+      body .container {
+        min-height: 530px; } }
     body .container.ng-enter {
       transition: 2s;
       opacity: 0; }
@@ -60,6 +63,9 @@ body {
   transition: .6s; }
   .home-template .home-background:hover {
     filter: grayscale(0%); }
+  @media (max-width: 831px) {
+    .home-template .home-background {
+      min-height: 530px; } }
 
 .home-template .content {
   left: 50%;

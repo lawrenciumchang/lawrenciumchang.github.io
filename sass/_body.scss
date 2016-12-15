@@ -1,16 +1,17 @@
 body {
     font-family: 'Poppins', sans-serif; 
     margin: 0px;
-
     .container {
         display: block;
         min-height: 700px;
-
+        // Mobile
+        @media(max-width: 831px) {
+            min-height: 530px;
+        }
         &.ng-enter {
             transition: 2s;
             opacity: 0;
         }
-
         &.ng-enter-active {
             opacity: 1;
         }

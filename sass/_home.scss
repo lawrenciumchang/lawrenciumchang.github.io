@@ -9,6 +9,10 @@
         &:hover {
             filter: grayscale(0%);
         }
+        // Mobile
+        @media(max-width: 831px) {
+            min-height: 530px;
+        }
     }
     .content {
         left: 50%;
