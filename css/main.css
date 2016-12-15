@@ -72,7 +72,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  background: rgba(42, 42, 42, 0.7); }
+  background: rgba(42, 42, 42, 0.8); }
   @media (max-width: 831px) {
     .home-template .content {
       top: 380px;
