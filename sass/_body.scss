@@ -3,7 +3,7 @@ body {
     margin: 0px;
     .container {
         display: block;
-        min-height: 700px;
+        min-height: 85.5vh;
         // Mobile
         @media(max-width: 831px) {
             min-height: 530px;
