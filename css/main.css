@@ -103,11 +103,14 @@ body {
 
 .photos-template {
   min-height: 100vh; }
-  .photos-template .title {
+  .photos-template .title, .photos-template .foot {
     background-color: #2a2a2a;
     color: #ffffff;
     margin: 2px 3px 0px 3px;
     padding: 16px; }
+  .photos-template .foot {
+    margin-top: 0px;
+    margin-bottom: 2px; }
   .photos-template .photos-container {
     padding: 2px 2px 0px 2px; }
     .photos-template .photos-container .photos .photo {
