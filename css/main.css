@@ -38,12 +38,15 @@ body {
     z-index: 1000;
     text-align: center;
     padding: 16px 0px; }
+    .sidebar .accordion {
+      cursor: pointer; }
     .sidebar .navigation {
       display: none;
       padding-top: 12px;
       margin-bottom: -12px; }
       .sidebar .navigation p {
-        margin: 12px 0px; }
+        margin: 12px 0px;
+        cursor: pointer; }
         .sidebar .navigation p#home {
           margin-top: 0px; } }
 

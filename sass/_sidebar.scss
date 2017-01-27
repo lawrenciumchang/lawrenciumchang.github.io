@@ -34,12 +34,16 @@
         z-index: 1000;
         text-align: center;
         padding: 16px 0px;
+        .accordion {
+            cursor: pointer;
+        }
         .navigation {
             display: none;
             padding-top: 12px;
             margin-bottom: -12px;
             p {
                 margin: 12px 0px;
+                cursor: pointer;
                 &#home {
                     margin-top: 0px;
                 }
