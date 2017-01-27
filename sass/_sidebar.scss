@@ -10,7 +10,7 @@
         text-align: right;
         padding-right: 24px;
         padding-left: 24px;
-        .navigation-desktop {
+        .navigation {
             #home {
                 margin-top: 24px;
             }
@@ -21,9 +21,6 @@
                 }
             }
         }
-        .navigation-mobile {
-            display: none;
-        }
     }
     // Mobile
     @media(max-width: 767px) {
@@ -33,17 +30,15 @@
         background: $white;
         z-index: 1000;
         text-align: center;
-        padding-top: 16px;
-        .navigation-desktop {
+        padding: 16px 0px;
+        .navigation {
             display: none;
-        }
-        .navigation-mobile {
-            .menu-items {
-                p {
-                    margin: 12px 0px;
-                    &#home {
-                        margin-top: 0px;
-                    }
+            padding-top: 12px;
+            margin-bottom: -12px;
+            p {
+                margin: 12px 0px;
+                &#home {
+                    margin-top: 0px;
                 }
             }
             #nav-icon span:nth-child(1) {
