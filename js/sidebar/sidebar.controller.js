@@ -6,8 +6,6 @@ angular
 /* @ngInject */
 function SidebarController($q) {
     var vm = this;
-    vm.toggleMenu = toggleMenu;
-    vm.showMenuItems = false;
 
     activate();
 
@@ -18,18 +16,8 @@ function SidebarController($q) {
         });
     }
 
-    function toggleMenu() {
-        vm.showMenuItems = !vm.showMenuItems;
-    }
-
-    // $(document).ready(function(){
-    //     $('#nav-icon').click(function(){
-    //         $(this).toggleClass('open');
-    //     });
-    // });
-
     $(function() {
-      $('.acc_ctrl').on('click', function(e) {
+      $('.accordion').on('click', function(e) {
         e.preventDefault();
         if ($(this).hasClass('active')) {
           $(this).removeClass('active');
