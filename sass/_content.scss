@@ -9,9 +9,14 @@
         margin-bottom: 32px;
         margin-left: 280px;
         padding-left: 24px;
+        .section {
+            margin-bottom: 36px;
+        }
     }
     // Mobile
     @media(max-width: 767px) {
-
+        .section {
+            margin-bottom: 24px;
+        }
     }
 }

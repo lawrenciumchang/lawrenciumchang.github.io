@@ -1,58 +1,22 @@
-// .home-template {
-//     .home-background {
-//         height: 85.5vh;
-//         background-image: url('../img/hero_image.jpg');
-//         background-size: cover;
-//         background-position: 50% 50%;
-//         filter: grayscale(100%);
-//         transition: .6s;
-//         &:hover {
-//             filter: grayscale(0%);
-//         }
-//         // Mobile
-//         @media(max-width: 831px) {
-//             min-height: 530px;
-//         }
-//     }
-//     .content {
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-//         position: absolute;
-//         background: rgba(42, 42, 42, .8);
-//         // Mobile
-//         @media(max-width: 831px) {
-//             top: 380px;
-//             width: 90%;
-//         }
-//         .clearfix {
-//             padding: 10px 40px;
-//             .image-mask {
-//                 border-radius: 50%;
-//                 height: 100px;
-//                 width: 100px;
-//                 margin: 0 auto;
-//                 margin-top: 14px;
-//                 background-image: url('../img/profile_image.jpg');
-//                 background-size: 216px auto;
-//                 background-position: -20px -30px;
-//                 transition: 1s;
-//                 &:hover {
-//                     transform: scale(1.1);
-//                 }
-//             }
-//             p {
-//                 color: $white;
-//             }
-//             a {
-//                 color: $white;
-//                 text-decoration: none;
-//                 transition: .6s;
-//                 &:hover {
-//                     color: $credera_red;
-//                     font-weight: 400;
-//                 }
-//             }
-//         }
-//     }
-// }
+.home-template {
+    .hero-image {
+        padding: 2px;
+    }
+    // Larger than mobile
+    @media(min-width: 768px) {
+        .hero-image {
+            height: 600px;
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+        }
+    }
+    // Mobile
+    @media(max-width: 767px) {
+        .hero-image {
+
+        }
+    }
+}
