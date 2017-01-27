@@ -1,0 +1,20 @@
+.sidebar {
+    position: fixed;
+    width: 280px; 
+    top: 32px;
+    bottom: 32px;
+    left: 0px;
+    border-right: 2px solid $dark-blue;
+    text-align: right;
+    padding-right: 24px;
+    padding-left: 24px;
+    a {
+        cursor: pointer;
+        &.label-home {
+            margin-top: 24px;
+        }
+        &:hover, &.active {
+            font-weight: 600;
+        }
+    }
+}

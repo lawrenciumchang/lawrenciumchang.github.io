@@ -1,18 +1,18 @@
-.contact-template {
-    height: 85.5vh;
-    .clearfix {
-        padding-top: 240px;
-        // Mobile
-        @media(max-width: 831px) {
-            padding-top: 160px;
-        }
-        img {
-            cursor: pointer;
-            padding: 2px;
-            transition: .2s;
-            &:hover{ 
-                transform: scale(1.2); 
-            }
-        }
-    }
-}
+// .contact-template {
+//     height: 85.5vh;
+//     .clearfix {
+//         padding-top: 240px;
+//         // Mobile
+//         @media(max-width: 831px) {
+//             padding-top: 160px;
+//         }
+//         img {
+//             cursor: pointer;
+//             padding: 2px;
+//             transition: .2s;
+//             &:hover{ 
+//                 transform: scale(1.2); 
+//             }
+//         }
+//     }
+// }

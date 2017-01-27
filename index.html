@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>lawrence chang</title>
-        <meta name="description" content="lawrence chang">
+        <title>Lawrence Chang</title>
+        <meta name="description" content="Lawrence Chang">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" href="icon.png">
@@ -14,31 +14,114 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body ng-app="app.core">
-        <div class="nav clearfix px3 py2">
-            <div class="nav-left sm-col sm-col-12 md-col-6">
-                <a class="font-light" ui-sref="home">lawrence chang</a>
+        <div class="clearfix">
+            <div class="sidebar sm-col sm-col-12 md-col-3">
+                <h3 class="m0">Lawrence Chang</h3>
+                <h6 class="m0">designer | developer | photographer | pianist</h6>
+                <p><a class="h5 my2 label-home">HOME</a></p>
+                <p><a class="h5 my2">PHOTOS</a></p>
+                <p><a class="h5 my2">ABOUT</a></p>
+                <p><a class="h5 my2">CONTACT</a></p>
             </div>
-            <div class="nav-right sm-col sm-col-12 md-col-6 right-align">
-                <a class="font-light h6 px3 py1" ui-sref="home" ui-sref-active="active">home</a>
-                <a class="font-light h6 px3 py1" ui-sref="photos" ui-sref-active="active">photos</a>
-                <a class="font-light h6 px3 py1" ui-sref="contact" ui-sref-active="active">contact</a>
+            <div class="content sm-col sm-col-12 md-col-9">
+                <div id="section1">
+                    <h1>section 1</h1>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>content</p>
+                    <p>more content</p>
+                </div>
+
+                <div id="section2">
+                    <h1>section 2</h1>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                </div>
+
+                <div id="section3">
+                    <h1>section 3</h1>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p><p>content</p>
+                    <p>more content</p>
+                    <p>even more content</p>
+                </div>
             </div>
         </div>
 
-        <ui-view class="container"></ui-view>
-
-        <div class="footer clearfix px3 py2">
-            <p class="font-light right-align m0 h5">© 2017 lawrence chang</p>
-        </div>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0-rc.2/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.0/angular-resource.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-animate.min.js"></script>
 
         <!-- inject:js -->
         <script src="/js/app.module.js"></script>
-        <script src="/js/app.routes.js"></script>
         <script src="/js/contact/contact.controller.js"></script>
         <script src="/js/home/home.controller.js"></script>
         <script src="/js/imgPreload/imgPreload.directive.js"></script>
