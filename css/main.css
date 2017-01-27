@@ -133,12 +133,16 @@ body {
       object-position: 50% 50%; } }
 
 @media (max-width: 767px) {
-  .home-template .hero-image {
-    height: 400px; }
-    .home-template .hero-image img {
-      height: 100%;
-      object-fit: cover;
-      object-position: 38% 50%; } }
+  .home-template {
+    margin-top: 80px; }
+    .home-template .title {
+      display: none; }
+    .home-template .hero-image {
+      height: 400px; }
+      .home-template .hero-image img {
+        height: 100%;
+        object-fit: cover;
+        object-position: 38% 50%; } }
 
 .photos-template .photos-container .photos {
   padding: 0px 1px; }
