@@ -1,15 +1,14 @@
-<div class="photos-template">
-    <h2 class="center title font-regular">photos</h2>
+<div ng-controller="PhotosController as vm" class="photos-template">
+    <p class="title font-semi-bold">PHOTOS</p>
     <div class="photos-container">
         <div class="photos clearfix" ng-repeat="photoSet in vm.photos">
-            <div class="photo center sm-col sm-col-6" ng-repeat="photo in photoSet">
+            <div class="photo center lg-col lg-col-6" ng-repeat="photo in photoSet">
                 <div class="photo-mask" ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)">
                     <img img-preload ng-src="{{photo.url}}" width="100%"/>
                     <div class="banner-hide" ng-class="{'banner-show': vm.displayTitle[photo.id]}"></div>
-                    <span class="title-hide font-light relative" ng-class="{'title-show': vm.displayTitle[photo.id]}">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
+                    <span class="title-hide font-regular relative" ng-class="{'title-show': vm.displayTitle[photo.id]}">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
                 </div>
             </div>
         </div>
     </div>
-    <p class="center foot font-light h6">all images © 2015-2017 lawrence chang</p>
 </div>

@@ -1,6 +1,6 @@
 .sidebar {
     // Larger than mobile
-    @media(min-width: 769px) {
+    @media(min-width: 768px) {
         position: fixed;
         width: 230px; 
         top: 32px;
@@ -21,7 +21,7 @@
         }
     }
     // Mobile
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
 
     }
 }

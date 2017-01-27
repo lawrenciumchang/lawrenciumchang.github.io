@@ -9,7 +9,7 @@ body {
 .font-semi-bold {
   font-weight: 600; }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .sidebar {
     position: fixed;
     width: 230px;
@@ -27,10 +27,55 @@ body {
       .sidebar a:hover, .sidebar a.active {
         font-weight: 600; } }
 
-@media (min-width: 769px) {
+.content .title {
+  margin-bottom: 12px; }
+
+@media (min-width: 768px) {
   .content {
     margin-top: 32px;
     margin-right: 24px;
     margin-bottom: 32px;
     margin-left: 280px;
     padding-left: 24px; } }
+
+.photos-template .photos-container .photos .photo {
+  padding: 0px 1px 2px 1px; }
+  .photos-template .photos-container .photos .photo .photo-mask {
+    height: 340px; }
+    @media (max-width: 767px) {
+      .photos-template .photos-container .photos .photo .photo-mask {
+        height: 260px; } }
+    .photos-template .photos-container .photos .photo .photo-mask img {
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      filter: grayscale(100%);
+      visibility: hidden;
+      transition: 1.4s;
+      opacity: 0; }
+      .photos-template .photos-container .photos .photo .photo-mask img:hover {
+        filter: grayscale(0%); }
+      .photos-template .photos-container .photos .photo .photo-mask img.reveal-image {
+        visibility: visible;
+        opacity: 1; }
+    .photos-template .photos-container .photos .photo .photo-mask .title-hide {
+      transition: .6s;
+      opacity: 0;
+      margin-top: -27px; }
+      .photos-template .photos-container .photos .photo .photo-mask .title-hide.title-show {
+        color: #ffffff;
+        z-index: 1000;
+        font-size: smaller;
+        margin-top: -27px;
+        display: block;
+        opacity: 1; }
+    .photos-template .photos-container .photos .photo .photo-mask .banner-hide {
+      transition: .6s;
+      opacity: 0;
+      margin-top: -42px;
+      height: 36px; }
+      .photos-template .photos-container .photos .photo .photo-mask .banner-hide.banner-show {
+        background: #2a2a2a;
+        opacity: .5;
+        margin-top: -42px;
+        height: 36px; }

@@ -1,6 +1,9 @@
 .content {
+    .title {
+        margin-bottom: 12px;
+    }
     // Larger than mobile
-    @media(min-width: 769px) {
+    @media(min-width: 768px) {
         margin-top: 32px;
         margin-right: 24px;
         margin-bottom: 32px;
@@ -8,7 +11,7 @@
         padding-left: 24px;
     }
     // Mobile
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
 
     }
 }

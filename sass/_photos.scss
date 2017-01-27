@@ -1,69 +1,57 @@
-// .photos-template {
-//     min-height: 100vh;
-//     .title, .foot {
-//         background-color: $dark-gray;
-//         color: $white;
-//         margin: 2px 3px 0px 3px;
-//         padding: 16px;
-//     }
-//     .foot {
-//         margin-top: 0px;
-//         margin-bottom: 2px;
-//     }
-//     .photos-container {
-//         padding: 2px 2px 0px 2px;
-//         .photos {
-//             .photo {
-//                 padding: 0px 1px 2px 1px;
-//                 .photo-mask {
-//                     height: 360px;
-//                     // Mobile
-//                     @media(max-width: 831px) {
-//                         height: 240px;
-//                     }
-//                     img {
-//                         height: 100%;
-//                         object-fit: cover;
-//                         object-position: 50% 50%;
-//                         filter: grayscale(100%);
-//                         visibility: hidden;
-//                         transition: 1.4s;
-//                         opacity: 0;
-//                         &:hover {
-//                             filter: grayscale(0%);
-//                         }
-//                         &.reveal-image {
-//                             visibility: visible;
-//                             opacity: 1;
-//                         }
-//                     }
-//                     .title-hide {
-//                         transition: .6s;
-//                         opacity: 0;
-//                         margin-top: -29px;
-//                         &.title-show {
-//                             color: $white;
-//                             z-index: 1000;
-//                             font-size: smaller;
-//                             margin-top: -29px;
-//                             display: block;
-//                             opacity: 1;
-//                         }
-//                     }
-//                     .banner-hide {
-//                         transition: .6s;
-//                         opacity: 0;
-//                         margin-top: -44px;
-//                         height: 36px;
-//                         &.banner-show {
-//                             background: #2a2a2a;
-//                             opacity: .5;
-//                             margin-top: -44px;
-//                             height: 36px;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+.photos-template {
+    .photos-container {
+        .photos {
+            .photo {
+                padding: 0px 1px 2px 1px;
+                .photo-mask {
+                    height: 340px;
+                    // Mobile
+                    @media(max-width: 767px) {
+                        height: 260px;
+                    }
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 50% 50%;
+                        filter: grayscale(100%);
+                        visibility: hidden;
+                        transition: 1.4s;
+                        opacity: 0;
+                        &:hover {
+                            filter: grayscale(0%);
+                        }
+                        &.reveal-image {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                    .title-hide {
+                        transition: .6s;
+                        opacity: 0;
+                        margin-top: -27px;
+                        &.title-show {
+                            color: $white;
+                            z-index: 1000;
+                            font-size: smaller;
+                            margin-top: -27px;
+                            display: block;
+                            opacity: 1;
+                        }
+                    }
+                    .banner-hide {
+                        transition: .6s;
+                        opacity: 0;
+                        margin-top: -42px;
+                        height: 36px;
+                        &.banner-show {
+                            background: #2a2a2a;
+                            opacity: .5;
+                            margin-top: -42px;
+                            height: 36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
