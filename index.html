@@ -15,14 +15,7 @@
     </head>
     <body ng-app="app.core">
         <div class="clearfix">
-            <div class="sidebar">
-                <h3 class="m0">Lawrence Chang</h3>
-                <h6 class="m0">designer | developer | photographer | pianist</h6>
-                <p><a class="h5 my2 label-home">HOME</a></p>
-                <p><a class="h5 my2">PHOTOS</a></p>
-                <p><a class="h5 my2">ABOUT</a></p>
-                <p><a class="h5 my2">CONTACT</a></p>
-            </div>
+            <div class="sidebar" ng-include="'/js/sidebar/sidebar.template.html'"></div>
             <div class="content">
                 <div class="section" id="home" ng-include="'/js/home/home.template.html'"></div>
                 <div class="section" id="photos" ng-include="'/js/photos/photos.template.html'"></div>
@@ -42,6 +35,7 @@
         <script src="/js/photos/photos.controller.js"></script>
         <script src="/js/photos/photos.resource.js"></script>
         <script src="/js/photos/photos.service.js"></script>
+        <script src="/js/sidebar/sidebar.controller.js"></script>
         <!-- endinject -->
     </body>
 </html>

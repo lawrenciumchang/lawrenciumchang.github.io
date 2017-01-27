@@ -7,4 +7,8 @@
             font-weight: 600;
         }
     }
+    // Mobile
+    @media(max-width: 767px) {
+        padding: 0px 20px;
+    }
 }

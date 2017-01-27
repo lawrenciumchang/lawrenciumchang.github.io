@@ -1,18 +1,31 @@
 .contact-template {
-    position: relative;
-    height: 460px;
-    .clearfix {
-        img {
-            cursor: pointer;
-            margin-right: 6px;
-            transition: .2s;
-            &:hover{ 
-                transform: scale(1.2); 
+    // Larger than mobile
+    @media(min-width: 768px) {
+        position: relative;
+        height: 460px;
+        .clearfix {
+            img {
+                cursor: pointer;
+                margin-right: 6px;
+                transition: .2s;
+                &:hover{ 
+                    transform: scale(1.2); 
+                }
             }
         }
+        .copyright {
+            position: absolute;
+            bottom: 0; 
+        }
     }
-    .copyright {
-        position: absolute;
-        bottom: 0; 
+    // Mobile
+    @media(max-width: 767px) {
+        .clearfix {
+            text-align: center;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 24px;
+        }
     }
 }

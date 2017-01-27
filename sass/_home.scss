@@ -1,4 +1,7 @@
 .home-template {
+    .title {
+        margin-top: 35px;
+    }
     .hero-image {
         padding: 2px;
     }
@@ -16,7 +19,12 @@
     // Mobile
     @media(max-width: 767px) {
         .hero-image {
-
+            height: 400px;
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: 38% 50%;
+            }
         }
     }
 }
