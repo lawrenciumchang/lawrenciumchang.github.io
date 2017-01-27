@@ -1,0 +1,10 @@
+.about-template {
+    a {
+        text-decoration: none;
+        color: $credera-red;
+        &:hover {
+            color: $credera-red;
+            font-weight: 600;
+        }
+    }
+}

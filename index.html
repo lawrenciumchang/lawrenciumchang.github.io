@@ -26,6 +26,8 @@
             <div class="content">
                 <div class="section" id="home" ng-include="'/js/home/home.template.html'"></div>
                 <div class="section" id="photos" ng-include="'/js/photos/photos.template.html'"></div>
+                <div class="section" id="about" ng-include="'/js/about/about.template.html'"></div>
+                <div class="section" id="contact" ng-include="'/js/contact/contact.template.html'"></div>
             </div>
         </div>
 
@@ -36,11 +38,10 @@
 
         <!-- inject:js -->
         <script src="/js/app.module.js"></script>
-        <script src="/js/contact/contact.controller.js"></script>
+        <script src="/js/imgPreload/imgPreload.directive.js"></script>
         <script src="/js/photos/photos.controller.js"></script>
         <script src="/js/photos/photos.resource.js"></script>
         <script src="/js/photos/photos.service.js"></script>
-        <script src="/js/imgPreload/imgPreload.directive.js"></script>
         <!-- endinject -->
     </body>
 </html>

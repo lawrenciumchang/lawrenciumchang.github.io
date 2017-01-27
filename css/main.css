@@ -98,3 +98,23 @@ body {
           opacity: .5;
           margin-top: -42px;
           height: 36px; }
+
+.about-template a {
+  text-decoration: none;
+  color: #c52033; }
+  .about-template a:hover {
+    color: #c52033;
+    font-weight: 600; }
+
+.contact-template {
+  position: relative;
+  height: 460px; }
+  .contact-template .clearfix img {
+    cursor: pointer;
+    margin-right: 6px;
+    transition: .2s; }
+    .contact-template .clearfix img:hover {
+      transform: scale(1.2); }
+  .contact-template .copyright {
+    position: absolute;
+    bottom: 0; }
