@@ -1,7 +1,14 @@
 .content {
-    margin-top: 32px;
-    margin-right: 24px;
-    margin-bottom: 32px;
-    margin-left: 280px;
-    padding-left: 24px;
+    // Larger than mobile
+    @media(min-width: 769px) {
+        margin-top: 32px;
+        margin-right: 24px;
+        margin-bottom: 32px;
+        margin-left: 280px;
+        padding-left: 24px;
+    }
+    // Mobile
+    @media(max-width: 768px) {
+
+    }
 }
