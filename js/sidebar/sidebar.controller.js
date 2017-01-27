@@ -6,6 +6,7 @@ angular
 /* @ngInject */
 function SidebarController($q) {
     var vm = this;
+    vm.hideMenu = hideMenu;
 
     activate();
 
@@ -13,6 +14,17 @@ function SidebarController($q) {
         var promises = [];
         return $q.all(promises).then(function() {
 
+        });
+    }
+
+    function hideMenu() {
+        $(function() {
+            if ($('.accordion').hasClass('active')) {
+              $('.accordion').removeClass('active');
+              $('.accordion').next()
+              .stop()
+              .slideUp(300);
+            }
         });
     }
 
