@@ -107,7 +107,13 @@ body {
       .home-template .mobile-hero-image img {
         height: 100%;
         object-fit: cover;
-        object-position: 38% 50%; } }
+        object-position: 38% 50%;
+        visibility: hidden;
+        transition: 1.4s;
+        opacity: 0; }
+        .home-template .mobile-hero-image img.reveal-image {
+          visibility: visible;
+          opacity: 1; } }
 
 .photos-template .photos-container .photos {
   padding: 0px 1px; }
