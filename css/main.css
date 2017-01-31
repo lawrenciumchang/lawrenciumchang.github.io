@@ -9,6 +9,10 @@ body {
 .font-semi-bold {
   font-weight: 600; }
 
+.sidebar a {
+  text-decoration: none;
+  color: #2d3e4f; }
+
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -42,7 +46,6 @@ body {
       cursor: pointer; }
     .sidebar .navigation {
       display: none;
-      padding-top: 12px;
       margin-bottom: -12px; }
       .sidebar .navigation p {
         margin: 12px 0px;
@@ -72,15 +75,13 @@ body {
 .home-template .title {
   margin-top: 35px; }
 
-.home-template .hero-image {
+.home-template .hero-image, .home-template .mobile-hero-image {
   padding: 2px; }
 
 @media (min-width: 768px) {
   .home-template .hero-image, .home-template .tile {
     height: 600px;
     position: relative;
-    float: left;
-    width: 100%;
     overflow: hidden;
     margin-bottom: 36px; }
   .home-template .photo {
@@ -151,6 +152,12 @@ body {
           opacity: .5;
           margin-top: -42px;
           height: 36px; }
+
+@media (max-width: 767px) {
+  .photos-template {
+    margin-top: -24px; }
+    .photos-template .title {
+      display: none; } }
 
 .about-template a {
   text-decoration: none;

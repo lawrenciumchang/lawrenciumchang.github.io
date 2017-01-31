@@ -1,4 +1,8 @@
 .sidebar {
+    a {
+        text-decoration: none;
+        color: $dark-blue;
+    }
     // Larger than mobile
     @media(min-width: 768px) {
         position: fixed;
@@ -39,7 +43,6 @@
         }
         .navigation {
             display: none;
-            padding-top: 12px;
             margin-bottom: -12px;
             p {
                 margin: 12px 0px;

@@ -13,9 +13,33 @@ function SidebarController($q) {
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
-
+          
         });
     }
+
+    $('#goToHome').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top-32
+        }, 1000);
+    });
+
+    $('#goToPhotos').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#photos').offset().top-32
+        }, 1000);
+    });
+
+    $('#goToAbout').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top-32
+        }, 1000);
+    });
+
+    $('#goToContact').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top-32
+        }, 1000);
+    });
 
     function hideMenu() {
         $(function() {

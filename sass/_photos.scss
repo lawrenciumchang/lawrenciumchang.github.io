@@ -55,4 +55,11 @@
             }
         }
     }
+    // Mobile
+    @media(max-width: 767px) {
+        margin-top: -24px;
+        .title {
+            display: none;
+        }
+    }
 }
