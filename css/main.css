@@ -26,8 +26,6 @@ body {
     padding-left: 24px; }
     .sidebar .accordion {
       pointer-events: none; }
-    .sidebar .navigation #home {
-      margin-top: 24px; }
     .sidebar .navigation a {
       cursor: pointer; }
       .sidebar .navigation a:hover, .sidebar .navigation a.active {
