@@ -19,25 +19,25 @@ function SidebarController($q) {
 
     $('#goToHome').click(function() {
         $('html, body').animate({
-            scrollTop: $('#home').offset().top-32
+            scrollTop: $('#home').offset().top-35
         }, 1000);
     });
 
     $('#goToPhotos').click(function() {
         $('html, body').animate({
-            scrollTop: $('#photos').offset().top-32
+            scrollTop: $('#photos').offset().top-35
         }, 1000);
     });
 
     $('#goToAbout').click(function() {
         $('html, body').animate({
-            scrollTop: $('#about').offset().top-32
+            scrollTop: $('#about').offset().top-35
         }, 1000);
     });
 
     $('#goToContact').click(function() {
         $('html, body').animate({
-            scrollTop: $('#contact').offset().top-32
+            scrollTop: $('#contact').offset().top-35
         }, 1000);
     });
 
