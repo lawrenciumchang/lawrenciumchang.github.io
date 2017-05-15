@@ -49,8 +49,6 @@ body {
       .sidebar .navigation p {
         margin: 12px 0px;
         cursor: pointer; }
-        .sidebar .navigation p a:active {
-          font-weight: 600; }
         .sidebar .navigation p#home {
           margin-top: 0px; } }
 
