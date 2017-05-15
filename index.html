@@ -18,10 +18,10 @@
         <div class="clearfix">
             <div class="sidebar" ng-include="'/js/sidebar/sidebar.template.html'"></div>
             <div class="content">
-                <div class="section" id="home" ng-include="'/js/home/home.template.html'"></div>
-                <div class="section" id="photos" ng-include="'/js/photos/photos.template.html'"></div>
-                <div class="section" id="about" ng-include="'/js/about/about.template.html'"></div>
-                <div class="section" id="contact" ng-include="'/js/contact/contact.template.html'"></div>
+                <div id="home" class="section" data-scrollspy-broadcast ng-include="'/js/home/home.template.html'"></div>
+                <div id="photos" class="section" data-scrollspy-broadcast ng-include="'/js/photos/photos.template.html'"></div>
+                <div id="about" class="section" data-scrollspy-broadcast ng-include="'/js/about/about.template.html'"></div>
+                <div id="contact" class="section" data-scrollspy-broadcast ng-include="'/js/contact/contact.template.html'"></div>
             </div>
         </div>
 
@@ -30,6 +30,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.0/angular-resource.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-animate.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+        <script src="/js/ngScrollSpy/ngScrollSpy.directive.js"></script>
 
         <!-- inject:js -->
         <script src="/js/app.module.js"></script>

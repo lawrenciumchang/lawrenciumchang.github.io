@@ -55,6 +55,9 @@ body {
 .content .title {
   margin-bottom: 12px; }
 
+.content #photos {
+  min-height: 500px; }
+
 @media (min-width: 768px) {
   .content {
     margin-top: 32px;
