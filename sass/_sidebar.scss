@@ -44,6 +44,11 @@
             p {
                 margin: 12px 0px;
                 cursor: pointer;
+                a {
+                    &:active {
+                        font-weight: 600;
+                    }
+                }
                 &#home {
                     margin-top: 0px;
                 }
