@@ -57,4 +57,11 @@ function PhotosController($q, PhotosService) {
         vm.displayTitle[id] = false;
     }
 
+    lightbox.option({
+        'disableScrolling': true,
+        'imageFadeDuration': 200,
+        'resizeDuration': 200,
+        'showImageNumberLabel': false
+    });
+
 }
