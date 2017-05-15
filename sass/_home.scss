@@ -12,6 +12,9 @@
             position: relative;
             overflow: hidden;
             margin-bottom: 36px;
+            .photo {
+                animation: fadeInLoad 1.4s;
+            }
         }
         .photo {
             position: absolute;
@@ -48,6 +51,15 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+    // Fade in keyframe for hero image on desktop
+    @keyframes fadeInLoad {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
         }
     }
 }

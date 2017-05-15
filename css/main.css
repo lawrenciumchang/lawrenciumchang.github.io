@@ -82,6 +82,8 @@ body {
     position: relative;
     overflow: hidden;
     margin-bottom: 36px; }
+    .home-template .hero-image .photo, .home-template .tile .photo {
+      animation: fadeInLoad 1.4s; }
   .home-template .photo {
     position: absolute;
     top: 0;
@@ -112,6 +114,12 @@ body {
         .home-template .mobile-hero-image img.reveal-image {
           visibility: visible;
           opacity: 1; } }
+
+@keyframes fadeInLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .photos-template .photos-container .photos {
   padding: 0px 1px; }
