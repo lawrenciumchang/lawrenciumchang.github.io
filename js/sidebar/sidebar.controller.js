@@ -17,27 +17,11 @@ function SidebarController($q) {
         });
     }
 
-    $('#goToHome').click(function() {
+    $('#side-nav a').click(function(e) {
+        e.preventDefault();
+        var section = $(this).attr("href");
         $('html, body').animate({
-            scrollTop: $('#home').offset().top-35
-        }, 1000);
-    });
-
-    $('#goToPhotos').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#photos').offset().top-35
-        }, 1000);
-    });
-
-    $('#goToAbout').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#about').offset().top-35
-        }, 1000);
-    });
-
-    $('#goToContact').click(function() {
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top-35
+            scrollTop: $(section).offset().top-35
         }, 1000);
     });
 
