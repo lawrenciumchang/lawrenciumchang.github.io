@@ -5,8 +5,14 @@
     .hero-image, .mobile-hero-image {
         padding: 2px;
     }
-    // Larger than mobile
-    @media(min-width: 768px) {
+    // Giant desktops
+    @media(min-width: 1440px) {
+        .hero-image, .tile {
+            height: 900px !important;
+        }
+    }
+    // Mid desktop size
+    @media(min-width: 1024px) {
         .hero-image, .tile {
             height: 600px;
             position: relative;

@@ -6,6 +6,10 @@
                 padding: 0px 1px 2px 1px;
                 .photo-mask {
                     height: 340px;
+                    // Giant desktops
+                    @media(min-width: 1440px) {
+                        height: 500px;
+                    }
                     // Mobile
                     @media(max-width: 767px) {
                         height: 260px;

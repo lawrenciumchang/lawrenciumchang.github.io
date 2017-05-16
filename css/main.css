@@ -80,7 +80,11 @@ body {
 .home-template .hero-image, .home-template .mobile-hero-image {
   padding: 2px; }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
+  .home-template .hero-image, .home-template .tile {
+    height: 900px !important; } }
+
+@media (min-width: 1024px) {
   .home-template .hero-image, .home-template .tile {
     height: 600px;
     position: relative;
@@ -131,6 +135,9 @@ body {
     padding: 0px 1px 2px 1px; }
     .photos-template .photos-container .photos .photo .photo-mask {
       height: 340px; }
+      @media (min-width: 1440px) {
+        .photos-template .photos-container .photos .photo .photo-mask {
+          height: 500px; } }
       @media (max-width: 767px) {
         .photos-template .photos-container .photos .photo .photo-mask {
           height: 260px; } }
