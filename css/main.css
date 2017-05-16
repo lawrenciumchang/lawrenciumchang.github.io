@@ -1,14 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   margin: 0px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+.font-light {
+  font-weight: 300; }
 
 .font-regular {
   font-weight: 400; }
 
-.font-semi-bold {
-  font-weight: 600; }
+.font-bold {
+  font-weight: 700; }
 
 .sidebar a {
   text-decoration: none;
@@ -30,7 +33,7 @@ body {
     .sidebar .navigation a {
       cursor: pointer; }
       .sidebar .navigation a:hover, .sidebar .navigation a.active {
-        font-weight: 600; } }
+        font-weight: 700; } }
 
 @media (max-width: 767px) {
   .sidebar {
@@ -40,12 +43,12 @@ body {
     background: #ffffff;
     z-index: 1000;
     text-align: center;
-    padding: 16px 0px; }
+    padding: 20px 0px; }
     .sidebar .accordion {
       cursor: pointer; }
     .sidebar .navigation {
       display: none;
-      margin-bottom: -12px; }
+      margin-bottom: -20px; }
       .sidebar .navigation p {
         margin: 12px 0px;
         cursor: pointer; }
@@ -157,23 +160,23 @@ body {
       .photos-template .photos-container .photos .photo .photo-mask .title-hide {
         transition: .6s;
         opacity: 0;
-        margin-top: -27px; }
+        margin-top: -25px; }
         .photos-template .photos-container .photos .photo .photo-mask .title-hide.title-show {
           color: #ffffff;
           z-index: 1000;
           font-size: smaller;
-          margin-top: -27px;
+          margin-top: -25px;
           display: block;
           opacity: 1; }
       .photos-template .photos-container .photos .photo .photo-mask .banner-hide {
         transition: .6s;
         opacity: 0;
-        margin-top: -42px;
+        margin-top: -40px;
         height: 36px; }
         .photos-template .photos-container .photos .photo .photo-mask .banner-hide.banner-show {
           background: #2a2a2a;
           opacity: .5;
-          margin-top: -42px;
+          margin-top: -40px;
           height: 36px; }
 
 @media (max-width: 767px) {
@@ -187,7 +190,11 @@ body {
   color: #c52033; }
   .about-template a:hover {
     color: #c52033;
-    font-weight: 600; }
+    font-weight: 700; }
+
+.about-template .h5 {
+  line-height: 18px;
+  margin: 12px 0px; }
 
 @media (max-width: 767px) {
   .about-template {

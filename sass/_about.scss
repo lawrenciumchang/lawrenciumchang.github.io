@@ -4,8 +4,12 @@
         color: $credera-red;
         &:hover {
             color: $credera-red;
-            font-weight: 600;
+            font-weight: 700;
         }
+    }
+    .h5 {
+        line-height: 18px;
+        margin: 12px 0px;
     }
     // Mobile
     @media(max-width: 767px) {
