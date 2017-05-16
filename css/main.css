@@ -220,3 +220,15 @@ body {
   .contact-template .copyright {
     text-align: center;
     margin-top: 24px; } }
+
+.not-found-template {
+  text-align: center; }
+  .not-found-template .container {
+    color: #2d3e4f;
+    margin-top: 210px; }
+    .not-found-template .container h1 {
+      font-size: 160px; }
+    .not-found-template .container a {
+      text-decoration: none; }
+    .not-found-template .container .message {
+      margin-top: -14px; }
