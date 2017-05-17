@@ -140,7 +140,7 @@ body {
       height: 340px; }
       @media (min-width: 1440px) {
         .photos-template .photos-container .photos .photo .photo-mask {
-          height: 500px; } }
+          height: 420px; } }
       @media (max-width: 767px) {
         .photos-template .photos-container .photos .photo .photo-mask {
           height: 260px; } }
