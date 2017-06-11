@@ -1,4 +1,4 @@
-<div class="contact-template">
+<div ng-controller="ContactController as vm" class="contact-template">
     <p class="title font-bold">CONTACT</p>
     <div class="clearfix">
         <a href="mailto:lawrencium.chang@gmail.com" target="_top"><img ng-src="img/social_icons/email-round.svg"/></a>
@@ -7,5 +7,5 @@
         <a ng-href="https://www.instagram.com/lawrenciumchang" target="_blank"><img ng-src="img/social_icons/instagram-round.svg"/></a>
         <a ng-href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank"><img ng-src="img/social_icons/linkedin-round.svg"/></a>
     </div>
-    <h6 class="copyright font-regular m0">All images and content © 2015-2017 Lawrence Chang</h6>
+    <h6 class="copyright font-regular m0">All images and content Copyright © 2015-{{vm.currentYear}} Lawrence Chang</h6>
 </div>
