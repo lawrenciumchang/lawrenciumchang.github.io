@@ -1,6 +1,6 @@
 'use strict';
 
-angular.directive('imgPreload', ['$rootScope', function($rootScope) {
+app.directive('imgPreload', ['$rootScope', function($rootScope) {
     return {
         restrict: 'A',
         scope: {

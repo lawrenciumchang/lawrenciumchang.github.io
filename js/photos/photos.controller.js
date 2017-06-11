@@ -1,6 +1,6 @@
 'use strict';
 
-angular
+app
     .controller('PhotosController', PhotosController);
 
 /* @ngInject */

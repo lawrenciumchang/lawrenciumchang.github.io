@@ -1,6 +1,6 @@
 'use strict';
 
-angular
+app
     .factory('PhotosResource', PhotosResource);
 
 /* @ngInject */
