@@ -6,7 +6,8 @@ app
 /* @ngInject */
 function SidebarController($q) {
     var vm = this;
-    vm.hideMenu = hideMenu;
+    vm.toTop = toTop;
+    vm.hideMobileMenu = hideMobileMenu;
 
     activate();
 
@@ -17,15 +18,23 @@ function SidebarController($q) {
         });
     }
 
+    var offsetValue = $(window).width() <= 767 ? 93 : 26;
+
     $('#side-nav a').click(function(e) {
         e.preventDefault();
         var section = $(this).attr("href");
         $('html, body').animate({
-            scrollTop: $(section).offset().top-35
+            scrollTop: $(section).offset().top-offsetValue
         }, 1000);
     });
 
-    function hideMenu() {
+    function toTop() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+    }
+
+    function hideMobileMenu() {
         $(function() {
             if ($('.accordion').hasClass('active')) {
                 $('.accordion').removeClass('active');

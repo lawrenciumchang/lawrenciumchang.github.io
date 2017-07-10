@@ -1,6 +1,7 @@
 .home-template {
     .title {
-        margin-top: 35px;
+        margin-top: -34px;
+        padding-top: 70px;
     }
     .hero-image, .mobile-hero-image {
         padding: 2px;
@@ -40,7 +41,7 @@
     // Mobile
     @media(max-width: 767px) {
         margin-top: 71px;
-        .title {
+        .intro-text {
             display: none;
         }
         .mobile-hero-image {

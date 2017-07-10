@@ -13,8 +13,13 @@
         text-align: right;
         padding-right: 24px;
         padding-left: 24px;
-        .accordion {
-            pointer-events: none;
+        .desktop-sidebar {
+            .header {
+                cursor: pointer;
+            }
+        }
+        .mobile-header {
+            display: none;
         }
         .navigation {
             a {
@@ -27,13 +32,16 @@
     }
     // Mobile
     @media(max-width: 767px) {
+        background: $light-gray;
         position: fixed;
         top: 0px;
         width: 100%;
-        background: $white;
         z-index: 1000;
         text-align: center;
-        padding: 20px 0px;
+        padding: 20px 0px 24px 0px;
+        .desktop-sidebar {
+            display: none;
+        }
         .accordion {
             cursor: pointer;
         }

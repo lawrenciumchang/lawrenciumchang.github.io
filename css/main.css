@@ -27,8 +27,10 @@ body {
     text-align: right;
     padding-right: 24px;
     padding-left: 24px; }
-    .sidebar .accordion {
-      pointer-events: none; }
+    .sidebar .desktop-sidebar .header {
+      cursor: pointer; }
+    .sidebar .mobile-header {
+      display: none; }
     .sidebar .navigation a {
       cursor: pointer; }
       .sidebar .navigation a:hover, .sidebar .navigation a.active {
@@ -36,13 +38,15 @@ body {
 
 @media (max-width: 767px) {
   .sidebar {
+    background: #f8f9fa;
     position: fixed;
     top: 0px;
     width: 100%;
-    background: #ffffff;
     z-index: 1000;
     text-align: center;
-    padding: 20px 0px; }
+    padding: 20px 0px 24px 0px; }
+    .sidebar .desktop-sidebar {
+      display: none; }
     .sidebar .accordion {
       cursor: pointer; }
     .sidebar .navigation {
@@ -55,7 +59,14 @@ body {
           margin-top: 0px; } }
 
 .content .title {
-  margin-bottom: 12px; }
+  background: #f8f9fa;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  position: relative;
+  left: -28px;
+  padding-left: 28px;
+  width: calc(100vw - 304px); }
 
 .content #photos {
   min-height: 500px; }
@@ -72,12 +83,16 @@ body {
 
 @media (max-width: 767px) {
   .content .title {
-    text-align: center; }
+    text-align: center;
+    padding-left: 0px;
+    width: 100%;
+    left: 0; }
   .content .section {
     margin-bottom: 24px; } }
 
 .home-template .title {
-  margin-top: 35px; }
+  margin-top: -34px;
+  padding-top: 70px; }
 
 .home-template .hero-image, .home-template .mobile-hero-image {
   padding: 2px; }
@@ -110,7 +125,7 @@ body {
 @media (max-width: 767px) {
   .home-template {
     margin-top: 71px; }
-    .home-template .title {
+    .home-template .intro-text {
       display: none; }
     .home-template .mobile-hero-image {
       height: 400px; }
@@ -196,7 +211,7 @@ body {
   margin: 12px 0px; }
 
 @media (max-width: 767px) {
-  .about-template {
+  .about-template .about-content {
     padding: 0px 20px; } }
 
 @media (min-width: 768px) {
@@ -216,9 +231,11 @@ body {
 @media (max-width: 767px) {
   .contact-template .clearfix {
     text-align: center; }
+    .contact-template .clearfix img {
+      margin-right: 4px; }
   .contact-template .copyright {
     text-align: center;
-    margin-top: 24px; } }
+    margin-top: 34px; } }
 
 .not-found-template {
   text-align: center; }
