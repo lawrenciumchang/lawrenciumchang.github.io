@@ -36,7 +36,8 @@ function PhotosController($q, PhotosService) {
             var p = {
                 'id': i,
                 'title': photos[i].title,
-                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg'
+                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg',
+                'url_large': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_h' + '.jpg'
             }; 
             array.push(p);
             if((i+1) % 2 == 0) {
