@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 body {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
@@ -13,6 +13,21 @@ body {
 .font-bold {
   font-weight: 700; }
 
+.font-black {
+  font-weight: 900; }
+
+.space-25 {
+  letter-spacing: 2.5px; }
+
+.space-15 {
+  letter-spacing: 1.5px; }
+
+.space-10 {
+  letter-spacing: 1.0px; }
+
+.space-05 {
+  letter-spacing: 0.5px; }
+
 .sidebar a {
   text-decoration: none;
   color: #2d3e4f; }
@@ -20,7 +35,7 @@ body {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    width: 230px;
+    width: 242px;
     background: #f8f9fa;
     padding: 32px 0;
     height: 100%;
@@ -34,7 +49,7 @@ body {
     .sidebar .navigation a {
       cursor: pointer; }
       .sidebar .navigation a:hover, .sidebar .navigation a.active {
-        font-weight: 700; } }
+        font-weight: 400; } }
 
 @media (max-width: 767px) {
   .sidebar {
@@ -60,8 +75,8 @@ body {
 
 .content .title {
   background: #f8f9fa;
-  padding-top: 16px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   margin-bottom: 22px;
   position: relative;
   left: -28px;
@@ -76,7 +91,7 @@ body {
     margin-top: 32px;
     margin-right: 24px;
     margin-bottom: 32px;
-    margin-left: 280px;
+    margin-left: 292px;
     padding-left: 24px; }
     .content .section {
       margin-bottom: 36px; } }
@@ -221,21 +236,21 @@ body {
   .the-image-project-template .text-content {
     padding: 0px 20px; } }
 
-.about-template a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #c52033; }
-  .about-template a:hover {
-    color: #c52033;
-    font-weight: 700; }
-
-.about-template .h5 {
-  line-height: 18px;
-  margin: 12px 0px; }
-
-@media (max-width: 767px) {
-  .about-template .text-content {
-    padding: 0px 20px; } }
+.about-template {
+  height: 320px; }
+  .about-template a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #c52033; }
+    .about-template a:hover {
+      color: #c52033;
+      font-weight: 700; }
+  .about-template .h5 {
+    line-height: 18px;
+    margin: 12px 0px; }
+  @media (max-width: 767px) {
+    .about-template .text-content {
+      padding: 0px 20px; } }
 
 @media (min-width: 768px) {
   .contact-template {
@@ -258,7 +273,7 @@ body {
       margin-right: 4px; }
   .contact-template .copyright {
     text-align: center;
-    margin-top: 34px; } }
+    margin-top: 80px; } }
 
 .not-found-template {
   text-align: center; }
