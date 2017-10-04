@@ -177,9 +177,7 @@ body {
           height: 420px; } }
       @media (max-width: 767px) {
         .photos-template .photos-container .photos .photo .photo-mask {
-          height: 260px; }
-          .photos-template .photos-container .photos .photo .photo-mask .image {
-            pointer-events: none; } }
+          height: 260px; } }
       .photos-template .photos-container .photos .photo .photo-mask img {
         height: 100%;
         object-fit: cover;
