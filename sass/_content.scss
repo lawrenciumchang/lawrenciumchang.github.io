@@ -14,17 +14,11 @@
     }
     // Larger than mobile
     @media(min-width: 768px) {
-        margin-top: 32px;
-        margin-right: 24px;
-        margin-bottom: 32px;
+        margin-top: 12px;
+        margin-right: 12px;
+        margin-bottom: 26px;
         margin-left: 292px;
         padding-left: 24px;
-        .title {
-
-        }
-        .section {
-            margin-bottom: 36px;
-        }
     }
     // Mobile
     @media(max-width: 767px) {

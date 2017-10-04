@@ -1,12 +1,11 @@
 <div ng-controller="PhotosController as vm" class="photos-template">
-    <p class="title font-regular space-05">PHOTOS</p>
     <div class="photos-container">
         <div class="photos clearfix" ng-repeat="photoSet in vm.photos">
             <div class="photo center lg-col lg-col-6" ng-repeat="photo in photoSet">
                 <div class="photo-mask" ng-mouseover="vm.showTitle(photo.id)" ng-mouseleave="vm.hideTitle(photo.id)">
                     <a href="{{photo.url_large}}" data-lightbox="photos" data-title="{{photo.title}}"><img img-preload ng-src="{{photo.url}}" width="100%"/></a>
                     <div class="banner-hide" ng-class="{'banner-show': vm.displayTitle[photo.id]}"></div>
-                    <span class="title-hide font-light relative" ng-class="{'title-show': vm.displayTitle[photo.id]}">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
+                    <span class="title-hide font-light space-10 relative" ng-class="{'title-show': vm.displayTitle[photo.id]}">{{ vm.displayTitle[photo.id] ? photo.title : '&#8203' }}</span>
                 </div>
             </div>
         </div>

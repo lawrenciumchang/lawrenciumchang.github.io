@@ -3,7 +3,7 @@
     @media(min-width: 768px) {
         position: relative;
         height: 460px;
-        .clearfix {
+        .text-content {
             img {
                 cursor: pointer;
                 margin-right: 6px;
@@ -16,19 +16,20 @@
         .copyright {
             position: absolute;
             bottom: 0; 
+            margin-left: 8px;
         }
     }
     // Mobile
     @media(max-width: 767px) {
-        .clearfix {
-            text-align: center;
+        .text-content {
+            padding: 0px 20px;
             img {
-                margin-right: 4px;
+                margin-right: 6px;
             }
         }
         .copyright {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 106px;
        }
     }
 }

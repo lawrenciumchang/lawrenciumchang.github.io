@@ -33,12 +33,12 @@
                     .title-hide {
                         transition: .6s;
                         opacity: 0;
-                        margin-top: -25px;
+                        margin-top: -26px;
                         &.title-show {
                             color: $white;
                             z-index: 1000;
                             font-size: smaller;
-                            margin-top: -25px;
+                            margin-top: -26px;
                             display: block;
                             opacity: 1;
                         }

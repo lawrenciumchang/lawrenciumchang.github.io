@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 body {
   font-family: 'Lato', sans-serif;
+  color: #3F3F3F;
   margin: 0px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
@@ -30,12 +31,12 @@ body {
 
 .sidebar a {
   text-decoration: none;
-  color: #2d3e4f; }
+  color: #2473A6; }
 
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    width: 242px;
+    width: 256px;
     background: #f8f9fa;
     padding: 32px 0;
     height: 100%;
@@ -46,10 +47,12 @@ body {
       cursor: pointer; }
     .sidebar .mobile-header {
       display: none; }
-    .sidebar .navigation a {
-      cursor: pointer; }
-      .sidebar .navigation a:hover, .sidebar .navigation a.active {
-        font-weight: 400; } }
+    .sidebar .navigation {
+      margin-top: 20px; }
+      .sidebar .navigation a {
+        cursor: pointer; }
+        .sidebar .navigation a:hover, .sidebar .navigation a.active {
+          font-weight: 400; } }
 
 @media (max-width: 767px) {
   .sidebar {
@@ -88,13 +91,11 @@ body {
 
 @media (min-width: 768px) {
   .content {
-    margin-top: 32px;
-    margin-right: 24px;
-    margin-bottom: 32px;
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-bottom: 26px;
     margin-left: 292px;
-    padding-left: 24px; }
-    .content .section {
-      margin-bottom: 36px; } }
+    padding-left: 24px; } }
 
 @media (max-width: 767px) {
   .content .title {
@@ -125,8 +126,7 @@ body {
   .home-template .hero-image, .home-template .tile {
     height: 600px;
     position: relative;
-    overflow: hidden;
-    margin-bottom: 36px; }
+    overflow: hidden; }
     .home-template .hero-image .photo, .home-template .tile .photo {
       animation: fadeInLoad 1.4s; }
   .home-template .photo {
@@ -194,12 +194,12 @@ body {
       .photos-template .photos-container .photos .photo .photo-mask .title-hide {
         transition: .6s;
         opacity: 0;
-        margin-top: -25px; }
+        margin-top: -26px; }
         .photos-template .photos-container .photos .photo .photo-mask .title-hide.title-show {
           color: #ffffff;
           z-index: 1000;
           font-size: smaller;
-          margin-top: -25px;
+          margin-top: -26px;
           display: block;
           opacity: 1; }
       .photos-template .photos-container .photos .photo .photo-mask .banner-hide {
@@ -222,7 +222,7 @@ body {
 .the-image-project-template a {
   text-decoration: none;
   cursor: pointer;
-  color: #2d3e4f; }
+  color: #2473A6; }
   .the-image-project-template a:hover {
     color: #425160; }
 
@@ -236,49 +236,50 @@ body {
   .the-image-project-template .text-content {
     padding: 0px 20px; } }
 
-.about-template {
-  height: 320px; }
-  .about-template a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #c52033; }
-    .about-template a:hover {
-      color: #c52033;
-      font-weight: 700; }
-  .about-template .h5 {
-    line-height: 18px;
-    margin: 12px 0px; }
-  @media (max-width: 767px) {
-    .about-template .text-content {
-      padding: 0px 20px; } }
+.about-template a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #c52033; }
+  .about-template a:hover {
+    color: #c52033;
+    font-weight: 700; }
+
+.about-template .h5 {
+  line-height: 18px;
+  margin: 12px 0px; }
+
+@media (max-width: 767px) {
+  .about-template .text-content {
+    padding: 0px 20px; } }
 
 @media (min-width: 768px) {
   .contact-template {
     position: relative;
     height: 460px; }
-    .contact-template .clearfix img {
+    .contact-template .text-content img {
       cursor: pointer;
       margin-right: 6px;
       transition: .2s; }
-      .contact-template .clearfix img:hover {
+      .contact-template .text-content img:hover {
         transform: scale(1.2); }
     .contact-template .copyright {
       position: absolute;
-      bottom: 0; } }
+      bottom: 0;
+      margin-left: 8px; } }
 
 @media (max-width: 767px) {
-  .contact-template .clearfix {
-    text-align: center; }
-    .contact-template .clearfix img {
-      margin-right: 4px; }
+  .contact-template .text-content {
+    padding: 0px 20px; }
+    .contact-template .text-content img {
+      margin-right: 6px; }
   .contact-template .copyright {
     text-align: center;
-    margin-top: 80px; } }
+    margin-top: 106px; } }
 
 .not-found-template {
   text-align: center; }
   .not-found-template .container {
-    color: #2d3e4f;
+    color: #2473A6;
     margin-top: 210px; }
     .not-found-template .container h1 {
       font-size: 160px; }
