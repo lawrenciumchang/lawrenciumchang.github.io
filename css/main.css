@@ -213,10 +213,16 @@ body {
           margin-top: -40px;
           height: 36px; }
 
+@media (min-width: 768px) {
+  .photos-template .mobile-img {
+    display: none; } }
+
 @media (max-width: 767px) {
   .photos-template {
     margin-top: -24px; }
     .photos-template .title {
+      display: none; }
+    .photos-template .desktop-img {
       display: none; } }
 
 .the-image-project-template a {

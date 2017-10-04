@@ -59,10 +59,19 @@
             }
         }
     }
+    // Larger than mobile
+    @media(min-width: 768px) {
+        .mobile-img {
+            display: none;
+        }
+    }
     // Mobile
     @media(max-width: 767px) {
         margin-top: -24px;
         .title {
+            display: none;
+        }
+        .desktop-img {
             display: none;
         }
     }
