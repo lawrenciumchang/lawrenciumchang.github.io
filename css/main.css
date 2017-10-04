@@ -201,7 +201,8 @@ body {
           font-size: smaller;
           margin-top: -26px;
           display: block;
-          opacity: 1; }
+          opacity: 1;
+          cursor: default; }
       .photos-template .photos-container .photos .photo .photo-mask .banner-hide {
         transition: .6s;
         opacity: 0;
