@@ -6,6 +6,7 @@ app
 /* @ngInject */
 function LandingController($q) {
     var vm = this;
+    vm.navigateToPhotos = navigateToPhotos;
 
     activate();
 
@@ -15,6 +16,12 @@ function LandingController($q) {
             displayFirstSentence();
         });
     }
+
+    function navigateToPhotos() {
+        Jump('.photos-template', {
+            duration: 800
+        });
+    };
 
     function displayFirstSentence() {
         var typed = new Typed('.landing-text .first', {
