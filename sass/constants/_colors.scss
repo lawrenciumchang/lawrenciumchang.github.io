@@ -1,5 +1,20 @@
-$dark-gray: #3F3F3F;
-$light-gray: #f8f9fa;
-$white: #ffffff;
-$credera-red: #c52033;
+$dark-gray: #5C5C5C;
+$light-gray: #F8F9FA;
+$almost-white: #FCFDFD;
 $blue: #2473A6;
+
+.dark-gray {
+    color: $dark-gray;
+}
+
+.light-gray {
+    color: $light-gray;
+}
+
+.almost-white {
+    color: $almost-white;
+}
+
+.blue {
+    color: $blue;
+}

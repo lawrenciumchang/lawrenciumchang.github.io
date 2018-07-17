@@ -1,3 +1,21 @@
 .landing-template {
 
+    height: 100vh;
+    background-color: $light-gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .landing-text {
+        letter-spacing: 1.6px;
+        font-size: 28px;
+        line-height: 50px;
+        padding-bottom: 36px;
+        width: 800px;
+        @media (max-width: 1024px) {
+            width: 80vw;
+        }
+    }
+
 }

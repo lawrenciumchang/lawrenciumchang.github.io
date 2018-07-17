@@ -2,10 +2,11 @@
 @import "constants/_breakpoints.scss";
 @import "constants/_colors.scss";
 @import "constants/_fonts.scss";
+@import "constants/_positioning.scss";
 
 // Views
 @import "views/_404.scss";
-@import "constants/_body.scss";
+@import "views/_body.scss";
 @import "views/_contact.scss";
 @import "views/_landing.scss";
 @import "views/_photos.scss";
