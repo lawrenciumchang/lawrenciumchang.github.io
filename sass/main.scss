@@ -1,14 +1,11 @@
-@import "_constants.scss";
-@import "_body.scss";
-@import "_fonts.scss";
+// Constants
+@import "constants/_breakpoints.scss";
+@import "constants/_colors.scss";
+@import "constants/_fonts.scss";
 
-@import "_sidebar.scss";
-@import "_content.scss";
-
-@import "_home.scss";
-@import "_photos.scss";
-@import "_theImageProject.scss";
-@import "_about.scss";
-@import "_contact.scss";
-
-@import "_404.scss";
+// Views
+@import "views/_404.scss";
+@import "constants/_body.scss";
+@import "views/_contact.scss";
+@import "views/_landing.scss";
+@import "views/_photos.scss";
