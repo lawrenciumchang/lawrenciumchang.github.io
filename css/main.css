@@ -114,6 +114,9 @@ body {
     @media (max-width: 1024px) {
       .landing-template .landing-text {
         width: 80vw; } }
+  .landing-template .navigation {
+    position: absolute;
+    bottom: 20px; }
 
 .photos-template .photos-container .photos {
   padding: 0px 1px; }
