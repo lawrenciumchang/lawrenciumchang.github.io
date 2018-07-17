@@ -89,7 +89,7 @@ body {
     font-size: 28px;
     line-height: 50px;
     padding-bottom: 36px;
-    width: 800px; }
+    width: 768px; }
     @media (max-width: 1024px) {
       .landing-template .landing-text {
         width: 80vw; } }
