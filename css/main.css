@@ -83,6 +83,13 @@ body {
     text-align: center;
     margin-top: 106px; } }
 
+.footer-template {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F9FA; }
+
 .header-template {
   position: absolute;
   top: 0;

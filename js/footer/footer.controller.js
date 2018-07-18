@@ -1,11 +1,12 @@
 'use strict';
 
 app
-    .controller('ContactController', ContactController);
+    .controller('FooterController', FooterController);
 
 /* @ngInject */
-function ContactController($q) {
+function FooterController($q) {
     var vm = this;
+    vm.currentYear = new Date().getFullYear();
 
     activate();
 
