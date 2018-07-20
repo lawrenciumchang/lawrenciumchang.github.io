@@ -18,7 +18,7 @@ function ContentController($q, $http) {
 
     function getPhotos() {
         $http.get('data/photos.json').then(function(data) {
-            vm.photos = data;
+            vm.photos = data.data;
         });
     };
 
