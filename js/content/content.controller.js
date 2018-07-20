@@ -20,6 +20,10 @@ function ContentController($q, $http) {
         $http.get('data/photos.json').then(function(data) {
             vm.photos = data.data;
         });
-    };
+    }; 
 
+    ///
+
+
+    
 }

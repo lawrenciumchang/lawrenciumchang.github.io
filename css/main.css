@@ -83,6 +83,9 @@ body {
     text-align: center;
     margin-top: 106px; } }
 
+.content-template .photos-container img {
+  width: 100%; }
+
 .footer-template {
   height: 130px;
   display: flex;
