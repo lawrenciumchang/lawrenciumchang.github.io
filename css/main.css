@@ -106,6 +106,8 @@ body {
       letter-spacing: 1.6px;
       margin: 20px;
       cursor: pointer; }
+      .content-template .filter-row h2.active-filter {
+        font-weight: 400; }
   .content-template .photos-container .photo {
     padding: 10px; }
   .content-template .photos-container img {

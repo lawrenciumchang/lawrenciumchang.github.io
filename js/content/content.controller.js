@@ -6,7 +6,9 @@ app
 /* @ngInject */
 function ContentController($q, $http) {
     var vm = this;
-
+    vm.filterTerm = '';
+    vm.applyFilter = applyFilter;
+    
     activate();
 
     function activate() {
@@ -21,5 +23,16 @@ function ContentController($q, $http) {
             vm.photos = data.data;
         });
     }; 
+
+    function applyFilter(filterTerm) {
+        if (vm.filterTerm === filterTerm) {
+            vm.filterTerm = '';
+            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+        } else {
+            vm.filterTerm = filterTerm;
+            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+            angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
+        }
+    };
 
 }

@@ -1,14 +1,14 @@
 <div ng-controller="ContentController as vm" class="content-template">
     <div class="filter-row">
-        <h2 class="font-light blue">ANIMALS</h2>
-        <h2 class="font-light blue">HUMANS</h2>
-        <h2 class="font-light blue">CITIES</h2>
-        <h2 class="font-light blue">LANDSCAPES</h2>
-        <h2 class="font-light blue">ABSTRACT</h2>
-        <h2 class="font-light blue">PRODUCT</h2>
+        <h2 id="animals-filter" class="font-light blue filter" ng-click="vm.applyFilter('animals')">ANIMALS</h2>
+        <h2 id="humans-filter" class="font-light blue filter" ng-click="vm.applyFilter('humans')">HUMANS</h2>
+        <h2 id="cities-filter" class="font-light blue filter" ng-click="vm.applyFilter('cities')">CITIES</h2>
+        <h2 id="landscapes-filter" class="font-light blue filter" ng-click="vm.applyFilter('landscapes')">LANDSCAPES</h2>
+        <h2 id="abstract-filter" class="font-light blue filter" ng-click="vm.applyFilter('abstract')">ABSTRACT</h2>
+        <h2 id="products-filter" class="font-light blue filter" ng-click="vm.applyFilter('products')">PRODUCTS</h2>
     </div>
     <div class="photos-container clearfix">
-        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy: '-date'">
+        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
             <img img-preload ng-src="assets/photos/{{photo.group}}/{{photo.fileName}}"/>
         </div>
     </div>
