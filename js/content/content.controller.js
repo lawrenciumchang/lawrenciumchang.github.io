@@ -7,8 +7,10 @@ app
 function ContentController($q, $http) {
     var vm = this;
     vm.filterTerm = '';
+    vm.gallery;
     vm.applyFilter = applyFilter;
-    
+    vm.openGallery = openGallery;
+
     activate();
 
     function activate() {
@@ -33,6 +35,21 @@ function ContentController($q, $http) {
             angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
             angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
         }
+    };
+
+    function openGallery(index) {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        var photoSwipeOptions = {
+            index: index+1,
+            history: false, 
+            pinchToClose: true, 
+            escKey: true, 
+            arrowKeys: true
+        };
+
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, vm.photos, photoSwipeOptions);
+        gallery.init();
     };
 
 }
