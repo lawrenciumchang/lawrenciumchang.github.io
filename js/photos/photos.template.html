@@ -9,7 +9,7 @@
     </div>
     <div class="photos-container clearfix">
         <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
-            <img img-preload ng-src="{{photo.src}}" ng-click="vm.openGallery($index)"/>
+            <img img-preload data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} ng-src="{{photo.src}}" ng-click="vm.openGallery($event, $index)"/>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
                 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
                 </button>
                 <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
+                    <div class="pswp__caption__center text-center"></div>
                 </div>
             </div>
         </div>

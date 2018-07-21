@@ -36,19 +36,46 @@ function PhotosController($q, $http) {
         }
     };
 
-    function openGallery(index) {
+    function openGallery($event, index) {
         var pswpElement = document.querySelectorAll('.pswp')[0];
 
+        var photos = parsePhotos($event);
+        
         var photoSwipeOptions = {
-            index: index+1,
+            index: index,
             history: false, 
             pinchToClose: true, 
             escKey: true, 
-            arrowKeys: true
+            arrowKeys: true,
+            closeOnScroll: false
         };
 
-        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, vm.photos, photoSwipeOptions);
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, photos, photoSwipeOptions);
+
         gallery.init();
+    };
+
+    function parsePhotos($event) {
+        var photos = [];
+        var photoGroup = angular.element($event.target).parent().parent().children();
+
+        for (var i = 0; i < photoGroup.length; i++) {
+            var src = photoGroup[i].children[0].src;
+            var width = photoGroup[i].children[0].getAttribute('data-width');
+            var height = photoGroup[i].children[0].getAttribute('data-height');
+            var title = photoGroup[i].children[0].getAttribute('data-title');
+
+            var photo = {
+                src: src,
+                w: width, 
+                h: height,
+                title: title
+            };
+
+            photos.push(photo);
+        }
+
+        return photos;
     };
 
 }
