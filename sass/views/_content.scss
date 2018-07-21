@@ -1,8 +1,28 @@
 .content-template {
-    background-color: $almost-white;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 10px 5px;
+    .filter-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15%;
+        margin: 20px 0;
+        @media (max-width: 1024px) {
+            padding: 0 20px;
+            overflow: scroll;
+            margin: 20px 20px 0px 20px;
+            h2 {
+                margin: 0;
+            }
+        }
+        h2 {
+            display: inline-flex;
+            font-size: 18px;
+            letter-spacing: 1.6px;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
     .photos-container {
         .photo {
             padding: 10px;
@@ -25,4 +45,9 @@
             }
         }
     }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
