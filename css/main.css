@@ -96,11 +96,14 @@ body {
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     visibility: hidden;
-    transition: 1.6s;
+    transition: 0.6s;
     opacity: 0; }
     .content-template .photos-container img.reveal-image {
       visibility: visible;
       opacity: 1; }
+    .content-template .photos-container img:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); }
 
 .footer-template {
   height: 130px;
