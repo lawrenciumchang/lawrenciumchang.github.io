@@ -1,3 +1,3 @@
 'use strict';
 
-var app = angular.module('app.core', ['ngResource']);
+var app = angular.module('app.core', ['ngAnimate', 'ngResource']);

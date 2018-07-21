@@ -29,6 +29,19 @@
     .photos-container {
         .photo {
             padding: 10px;
+            &.ng-leave {
+                -webkit-transition:0.3s linear all;
+                -moz-transition:0.3s linear all;
+                -ms-transition:0.3s linear all;
+                -o-transition:0.3s linear all;
+                transition:0.3s linear all;
+                -ms-opacity: 1;
+                opacity: 1;
+            }
+            &.ng-leave.ng-leave-active {
+                -ms-opacity: 0;
+                opacity: 0;
+            }
         }
         img {
             width: 100%;
