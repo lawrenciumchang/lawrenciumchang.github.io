@@ -4,7 +4,6 @@
         "w": 2048,
         "h": 1365,
         "date": "2016-12-25",
-        "group": "animals",
         "title": "simba | nj | december 2016"
     },
     {
@@ -12,7 +11,6 @@
         "w": 2048,
         "h": 1365,
         "date": "2017-08-06",
-        "group": "animals",
         "title": "sushi | phoenix, az | august 2017"
     },
     {
@@ -20,15 +18,42 @@
         "w": 2048,
         "h": 1365,
         "date": "2017-04-25",
-        "group": "landscapes",
         "title": "lady in the wind at antelope canyon | page, az | april 2017"
     },
     {
-        "src": "assets/photos/products/33730063745_d48dadc14a_k.jpg",
+        "src": "assets/photos/objects/33730063745_d48dadc14a_k.jpg",
         "w": 2048,
         "h": 1365,
         "date": "2017-03-24",
-        "group": "products",
         "title": "harden vol. 1 'home'"
+    },
+    {
+        "src": "assets/photos/animals/25692833384_bcb574e423_k.jpg",
+        "w": 2048,
+        "h": 1365,
+        "date": "2016-04-02",
+        "title": "dallas zoo | dallas, tx | april 2016"
+    },
+    {
+        "src": "assets/photos/animals/25692836884_e5dd0dbf5a_k.jpg",
+        "w": 2048,
+        "h": 1365,
+        "date": "2016-04-02",
+        "title": "dallas zoo | dallas, tx | april 2016"
+    },
+    {
+        "src": "assets/photos/animals/26297684665_54d3b4b592_k.jpg",
+        "w": 2048,
+        "h": 1365,
+        "date": "2016-04-02",
+        "title": "dallas zoo | dallas, tx | april 2016"
+    },
+    {
+        "src": "assets/photos/humans/27582591284_132f4a22da_k.jpg",
+        "w": 2048,
+        "h": 1152,
+        "date": "2016-06-02",
+        "title": "enchanted rock | tx | july 2016"
     }
+    
 ]
