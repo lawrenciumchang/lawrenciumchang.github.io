@@ -8,7 +8,7 @@
         <h2 class="font-light blue">PRODUCT</h2>
     </div>
     <div class="photos-container clearfix">
-        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos">
+        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy: '-date'">
             <img img-preload ng-src="assets/photos/{{photo.group}}/{{photo.fileName}}"/>
         </div>
     </div>
