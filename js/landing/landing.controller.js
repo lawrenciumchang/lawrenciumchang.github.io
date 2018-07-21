@@ -48,23 +48,11 @@ function LandingController($q) {
 
     function displayThirdSentence() {
         var typed = new Typed('.landing-text .third', {
-            strings: ["<span class='font-light dark-gray'> I like making things.</span>"],
-            typeSpeed: 40,
-            showCursor: false,
-            startDelay: 500,
-            onComplete: function() {
-                displayFourthSentence();
-            }
-        });
-    };
-
-    function displayFourthSentence() {
-        var typed = new Typed('.landing-text .fourth', {
-            strings: ["<span class='font-light dark-gray'> I also take photos.</span>"],
+            strings: ["<span class='font-light dark-gray'> I like making things and taking photos.</span>"],
             typeSpeed: 40,
             showCursor: false,
             startDelay: 500
         });
     };
-    
+
 }
