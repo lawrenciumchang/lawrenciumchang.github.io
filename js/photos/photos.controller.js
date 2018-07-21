@@ -4,65 +4,51 @@ app
     .controller('PhotosController', PhotosController);
 
 /* @ngInject */
-function PhotosController($q, PhotosService) {
+function PhotosController($q, $http) {
     var vm = this;
-    vm.showTitle = showTitle;
-    vm.hideTitle = hideTitle;
-
-    vm.photos = [];
-    vm.displayTitle = [];
+    vm.filterTerm = '';
+    vm.applyFilter = applyFilter;
+    vm.openGallery = openGallery;
 
     activate();
 
     function activate() {
-        var promises = [getPhotos()];
+        var promises = [];
         return $q.all(promises).then(function() {
-            generatePhotos(vm.photoData.photo);
+            getPhotos();
         });
     }
 
     function getPhotos() {
-        return PhotosService.getPhotos().then(function(response) {
-            vm.photoData = response;
+        $http.get('data/photos.json').then(function(data) {
+            vm.photos = data.data;
         });
-    }
+    }; 
 
-    function generatePhotos(photos) {
-        photos = photos.sort(function(a, b) {
-            return (a.datetaken > b.datetaken) ? 1 : (a.datetaken < b.datetaken) ? -1 : 0;
-        });
-        var array = [];
-        for(var i = 0; i < photos.length; i++) {
-            var p = {
-                'id': i,
-                'title': photos[i].title,
-                'url': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_b' + '.jpg',
-                'url_large': 'https://farm' + photos[i].farm + '.staticflickr.com/' + photos[i].server + '/' + photos[i].id + '_' + photos[i].secret + '_h' + '.jpg'
-            }; 
-            array.push(p);
-            if((i+1) % 2 == 0) {
-                vm.photos.push(array);
-                array = [];
-            }
-            if(i == photos.length-1) {
-                vm.photos.push(array);
-            }
-        } 
-    }
+    function applyFilter(filterTerm) {
+        if (vm.filterTerm === filterTerm) {
+            vm.filterTerm = '';
+            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+        } else {
+            vm.filterTerm = filterTerm;
+            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+            angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
+        }
+    };
 
-    function showTitle(id) {
-        vm.displayTitle[id] = true;
-    }
+    function openGallery(index) {
+        var pswpElement = document.querySelectorAll('.pswp')[0];
 
-    function hideTitle(id) {
-        vm.displayTitle[id] = false;
-    }
+        var photoSwipeOptions = {
+            index: index+1,
+            history: false, 
+            pinchToClose: true, 
+            escKey: true, 
+            arrowKeys: true
+        };
 
-    lightbox.option({
-        'disableScrolling': true,
-        'imageFadeDuration': 200,
-        'resizeDuration': 200,
-        'showImageNumberLabel': false
-    });
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, vm.photos, photoSwipeOptions);
+        gallery.init();
+    };
 
 }

@@ -1,79 +1,69 @@
 .photos-template {
-    .photos-container {
-        .photos {
-            padding: 0px 1px;
-            .photo {
-                padding: 0px 1px 2px 1px;
-                .photo-mask {
-                    height: 340px;
-                    // Giant desktops
-                    @media(min-width: 1440px) {
-                        height: 420px;
-                    }
-                    // Mobile
-                    @media(max-width: 767px) {
-                        height: 260px;
-                    }
-                    img {
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: 50% 50%;
-                        filter: grayscale(100%);
-                        visibility: hidden;
-                        transition: 1.4s;
-                        opacity: 0;
-                        &:hover {
-                            filter: grayscale(0%);
-                        }
-                        &.reveal-image {
-                            visibility: visible;
-                            opacity: 1;
-                        }
-                    }
-                    .title-hide {
-                        transition: .6s;
-                        opacity: 0;
-                        margin-top: -26px;
-                        &.title-show {
-                            color: $almost-white;
-                            z-index: 1000;
-                            font-size: smaller;
-                            margin-top: -26px;
-                            display: block;
-                            opacity: 1;
-                            cursor: default;
-                        }
-                    }
-                    .banner-hide {
-                        transition: .6s;
-                        opacity: 0;
-                        margin-top: -40px;
-                        height: 36px;
-                        &.banner-show {
-                            background: #2a2a2a;
-                            opacity: .5;
-                            margin-top: -40px;
-                            height: 36px;
-                        }
-                    }
-                }
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 5px;
+    .filter-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15%;
+        margin: 20px 0;
+        @media (max-width: 1024px) {
+            padding: 0 20px;
+            overflow: scroll;
+            margin: 20px 20px 0px 20px;
+            h2 {
+                margin: 0;
+            }
+        }
+        h2 {
+            display: inline-flex;
+            font-size: 18px;
+            letter-spacing: 1.6px;
+            margin: 20px;
+            cursor: pointer;
+            &.active-filter {
+                font-weight: 400;
             }
         }
     }
-    // Larger than mobile
-    @media(min-width: 768px) {
-        .mobile-img {
-            display: none;
+    .photos-container {
+        .photo {
+            padding: 10px;
+            &.ng-leave {
+                -webkit-transition:0.3s linear all;
+                -moz-transition:0.3s linear all;
+                -ms-transition:0.3s linear all;
+                -o-transition:0.3s linear all;
+                transition:0.3s linear all;
+                -ms-opacity: 1;
+                opacity: 1;
+            }
+            &.ng-leave.ng-leave-active {
+                -ms-opacity: 0;
+                opacity: 0;
+            }
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 12px 20px 0px rgba(0,0,0,.2);
+            cursor: pointer;
+            visibility: hidden;
+            transition: 0.6s;
+            opacity: 0;
+            &.reveal-image {
+                visibility: visible;
+                opacity: 1;
+            }
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0px 18px 20px -10px rgba(0,0,0,.2);
+            }
         }
     }
-    // Mobile
-    @media(max-width: 767px) {
-        margin-top: -24px;
-        .title {
-            display: none;
-        }
-        .desktop-img {
-            display: none;
-        }
-    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
