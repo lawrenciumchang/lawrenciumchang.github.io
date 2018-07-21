@@ -22,8 +22,4 @@ function ContentController($q, $http) {
         });
     }; 
 
-    ///
-
-
-    
 }

@@ -93,7 +93,14 @@ body {
   .content-template .photos-container img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    visibility: hidden;
+    transition: 1.6s;
+    opacity: 0; }
+    .content-template .photos-container img.reveal-image {
+      visibility: visible;
+      opacity: 1; }
 
 .footer-template {
   height: 130px;

@@ -2,7 +2,7 @@
     <div class="photos-container">
         <div class="photos clearfix">
             <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos">
-                <img ng-src="assets/photos/{{photo.group}}/{{photo.fileName}}"/>
+                <img img-preload ng-src="assets/photos/{{photo.group}}/{{photo.fileName}}"/>
             </div>
         </div>
     </div>
