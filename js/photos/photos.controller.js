@@ -24,6 +24,8 @@ function PhotosController($q, PhotosService) {
     function getPhotos() {
         return PhotosService.getPhotos().then(function(response) {
             vm.photoData = response.photo;
+        }).catch(function(error) {
+            console.log('Error getting photos from Flickr service...', error);
         });
     }; 
 
@@ -50,6 +52,8 @@ function PhotosController($q, PhotosService) {
                 };
     
                 photos.push(item);
+            }).catch(function(error) {
+                console.log('Error getting image dimensions from Flickr service...', error);
             });
         });
 
