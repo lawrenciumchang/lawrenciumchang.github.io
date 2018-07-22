@@ -65,6 +65,7 @@ function PhotosController($q, PhotosService) {
             angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
             angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
         }
+        Jump(1); // used to display rest of photos in viewport due to scroll reveal
     };
 
     function openGallery($event, index) {
