@@ -163,17 +163,18 @@ body {
     .header-template .hover-btn.scroll-top-btn {
       margin-bottom: 12px;
       background: #2473A6;
-      background-image: url("../assets/icons/up.svg");
+      background-image: url("../assets/icons/arrow-up.svg");
       background-repeat: no-repeat;
       background-position-x: center;
-      background-position-y: 19px;
+      background-position-y: center;
       background-size: 18px; }
     .header-template .hover-btn.contact-btn {
       background: #5C5C5C;
       background-image: url("../assets/icons/mail.svg");
       background-repeat: no-repeat;
       background-position-x: center;
-      background-position-y: center; }
+      background-position-y: 11px;
+      background-size: 24px; }
       .header-template .hover-btn.contact-btn a {
         display: block;
         height: 100%; }
