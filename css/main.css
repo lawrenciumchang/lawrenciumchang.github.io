@@ -50,10 +50,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   text-align: center; }
 
 .not-found-template {
-  text-align: center; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
   .not-found-template .container {
-    color: #2473A6;
-    margin-top: 210px; }
+    color: #2473A6; }
     .not-found-template .container h1 {
       font-size: 160px; }
     .not-found-template .container a {
