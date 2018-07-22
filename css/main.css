@@ -55,6 +55,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   .invisible.visible {
     opacity: 1; }
 
+.hide-hover-btn {
+  transition: 2s;
+  opacity: 0;
+  pointer-events: none; }
+  .hide-hover-btn.show-hover-btn {
+    opacity: 1;
+    pointer-events: all; }
+
 .not-found-template {
   display: flex;
   align-items: center;
@@ -124,16 +132,50 @@ body {
     font-size: 18px;
     padding-left: 48px;
     letter-spacing: 2px; }
-  .header-template .desktop-menu {
+  .header-template .desktop-header {
     display: contents; }
     @media (max-width: 768px) {
-      .header-template .desktop-menu {
+      .header-template .desktop-header {
         display: none; } }
   .header-template .mobile-menu {
     display: none; }
     @media (max-width: 768px) {
       .header-template .mobile-menu {
         display: block; } }
+  .header-template .hover-btn-container {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    bottom: 50px;
+    right: 50px; }
+    @media (max-width: 768px) {
+      .header-template .hover-btn-container {
+        display: none; } }
+  .header-template .hover-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 8px 20px -2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.3s; }
+    .header-template .hover-btn:hover {
+      transform: scale(1.1); }
+    .header-template .hover-btn.scroll-top-btn {
+      margin-bottom: 12px;
+      background: #2473A6;
+      background-image: url("../assets/icons/chevron-up.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 20px; }
+    .header-template .hover-btn.contact-btn {
+      background: #5C5C5C;
+      background-image: url("../assets/icons/mail.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: center; }
+      .header-template .hover-btn.contact-btn a {
+        display: block;
+        height: 100%; }
   .header-template .menu, .header-template .menu-bg, .header-template .menu-burger {
     z-index: 100;
     position: fixed;
@@ -261,37 +303,39 @@ body {
       cursor: pointer; }
       .photos-template .filter-row h2.active-filter {
         font-weight: 400; }
-  .photos-template .photos-container .photo {
-    padding: 10px; }
-    .photos-template .photos-container .photo.ng-leave {
-      -webkit-transition: 0.3s linear all;
-      -moz-transition: 0.3s linear all;
-      -ms-transition: 0.3s linear all;
-      -o-transition: 0.3s linear all;
-      transition: 0.3s linear all;
-      -ms-opacity: 1;
-      opacity: 1; }
-    .photos-template .photos-container .photo.ng-leave.ng-leave-active {
-      -ms-opacity: 0;
+  .photos-template .photos-container {
+    margin-bottom: 20px; }
+    .photos-template .photos-container .photo {
+      padding: 10px; }
+      .photos-template .photos-container .photo.ng-leave {
+        -webkit-transition: 0.3s linear all;
+        -moz-transition: 0.3s linear all;
+        -ms-transition: 0.3s linear all;
+        -o-transition: 0.3s linear all;
+        transition: 0.3s linear all;
+        -ms-opacity: 1;
+        opacity: 1; }
+      .photos-template .photos-container .photo.ng-leave.ng-leave-active {
+        -ms-opacity: 0;
+        opacity: 0; }
+    .photos-template .photos-container .image-container {
+      height: 460px; }
+      @media (max-width: 1024px) {
+        .photos-template .photos-container .image-container {
+          height: 340px; } }
+    .photos-template .photos-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      visibility: hidden;
+      transition: 0.6s;
       opacity: 0; }
-  .photos-template .photos-container .image-container {
-    height: 460px; }
-    @media (max-width: 1024px) {
-      .photos-template .photos-container .image-container {
-        height: 340px; } }
-  .photos-template .photos-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    visibility: hidden;
-    transition: 0.6s;
-    opacity: 0; }
-    .photos-template .photos-container img.reveal-image {
-      visibility: visible;
-      opacity: 1; }
-    .photos-template .photos-container img:hover {
-      transform: scale(1.02);
-      box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); }
+      .photos-template .photos-container img.reveal-image {
+        visibility: visible;
+        opacity: 1; }
+      .photos-template .photos-container img:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); }

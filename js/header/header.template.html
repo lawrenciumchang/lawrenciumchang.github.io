@@ -1,5 +1,5 @@
 <div ng-controller="HeaderController as vm" class="header-template invisible">
-    <div class="desktop-menu">
+    <div class="desktop-header">
         <div class="logo">&nbsp;</div>
         <div class="navigation">
             <h2 class="font-light"><a ng-href="https://www.flickr.com/photos/lawrenciumchang" target="_blank">FLICKR</a></h2>
@@ -15,5 +15,10 @@
             <div><h2 class="font-light"><a ng-href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank">LINKEDIN</a></h2></div>
             <div><h2 class="font-light"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top">EMAIL</a></h2></div>
         </div>
+    </div>
+
+    <div class="hover-btn-container hide-hover-btn">
+        <div class="scroll-top-btn hover-btn" ng-click="vm.scrollToTop()"></div>
+        <div class="contact-btn hover-btn"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top"></a></div>
     </div>
 </div>

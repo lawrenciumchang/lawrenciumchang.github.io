@@ -6,13 +6,14 @@ app
 /* @ngInject */
 function HeaderController($q) {
     var vm = this;
+    vm.scrollToTop = scrollToTop;
 
     activate();
 
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
-
+            window.onscroll = function() {scrollFunction()};
         });
     }
 
@@ -36,5 +37,23 @@ function HeaderController($q) {
         $(document).unbind('scroll'); 
         $('body').css({'overflow':'visible'});
     };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+            var elements = document.querySelectorAll('.hide-hover-btn');
+            angular.forEach(elements, function(el) {
+                el.classList.add('show-hover-btn');
+            }); 
+        } else {
+            var elements = document.querySelectorAll('.show-hover-btn');
+            angular.forEach(elements, function(el) {
+                el.classList.remove('show-hover-btn');
+            }); 
+        }
+    }
+
+    function scrollToTop() {
+        Jump('.header-template');
+    }
 
 }
