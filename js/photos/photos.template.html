@@ -8,7 +8,7 @@
         <h2 id="objects-filter" class="font-light blue filter" ng-click="vm.applyFilter('objects')">OBJECTS</h2>
     </div>
     <div class="photos-container clearfix">
-        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
+        <div ng-scroll-reveal class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
             <img img-preload data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} ng-src="{{photo.src}}" ng-click="vm.openGallery($event, $index)"/>
         </div>
     </div>
