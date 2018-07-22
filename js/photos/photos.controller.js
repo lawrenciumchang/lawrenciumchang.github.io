@@ -36,7 +36,7 @@ function PhotosController($q, PhotosService) {
                 var src = imageDimensionData.source;
                 var width = parseInt(imageDimensionData.width);
                 var height = parseInt(imageDimensionData.height);
-                var title = JSON.stringify(photo.title);
+                var title = photo.title;
                 var tags = JSON.stringify(photo.tags);
                 var date = photo.datetaken;
 
