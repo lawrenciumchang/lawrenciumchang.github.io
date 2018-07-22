@@ -49,6 +49,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 .text-center {
   text-align: center; }
 
+.invisible {
+  transition: 3s;
+  opacity: 0; }
+  .invisible.visible {
+    opacity: 1; }
+
 .not-found-template {
   display: flex;
   align-items: center;
@@ -213,6 +219,8 @@ body {
     position: absolute;
     bottom: 32px;
     cursor: pointer; }
+    .landing-template .navigation img {
+      height: 12px; }
   .landing-template .bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;

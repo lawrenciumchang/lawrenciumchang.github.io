@@ -13,6 +13,12 @@ function LandingController($q) {
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
+            // Lock scroll
+            $('body').css({'overflow':'hidden'});
+            $(document).bind('scroll',function () { 
+                window.scrollTo(0,0); 
+            });
+
             displayFirstSentence();
         });
     }
@@ -51,8 +57,23 @@ function LandingController($q) {
             strings: ["<span class='font-light dark-gray'> I like making things and taking photos.</span>"],
             typeSpeed: 40,
             showCursor: false,
-            startDelay: 500
+            startDelay: 500,
+            onComplete: function() {
+                unhideContent();
+            }
         });
+    };
+
+    function unhideContent() {
+        var elements = document.querySelectorAll('.invisible');
+       
+        angular.forEach(elements, function(el) {
+            el.classList.add('visible');
+        });
+
+        // Enable scroll
+        $(document).unbind('scroll'); 
+        $('body').css({'overflow':'visible'});
     };
 
 }

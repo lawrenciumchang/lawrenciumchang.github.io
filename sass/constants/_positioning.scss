@@ -1,3 +1,11 @@
 .text-center {
     text-align: center;
 }
+
+.invisible {
+    transition: 3s;
+    opacity: 0;
+    &.visible {
+        opacity: 1;
+    }
+}

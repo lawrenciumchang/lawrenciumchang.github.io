@@ -23,6 +23,7 @@ function HeaderController($q) {
 
     function openMenu() {
         $('.menu-burger').text('✕');
+        // Lock scroll
         $('body').css({'overflow':'hidden'});
         $(document).bind('scroll',function () { 
             window.scrollTo(0,0); 
@@ -31,6 +32,7 @@ function HeaderController($q) {
 
     function closeMenu() {
         $('.menu-burger').text('☰');
+        // Enable scroll
         $(document).unbind('scroll'); 
         $('body').css({'overflow':'visible'});
     };
