@@ -4,26 +4,57 @@ app
     .controller('PhotosController', PhotosController);
 
 /* @ngInject */
-function PhotosController($q, $http) {
+function PhotosController($q, $http, PhotosService) {
     var vm = this;
     vm.filterTerm = '';
     vm.applyFilter = applyFilter;
     vm.openGallery = openGallery;
+    
+    var PHOTO_SIZE_GROUP = 9; // as defined by Flickr
 
     activate();
 
     function activate() {
-        var promises = [];
+        var promises = [getPhotos()];
         return $q.all(promises).then(function() {
-            getPhotos();
+            generateImages();
         });
     }
 
     function getPhotos() {
-        $http.get('data/photos.json').then(function(data) {
-            vm.photos = data.data;
+        return PhotosService.getPhotos().then(function(response) {
+            vm.photoData = response.photo;
         });
     }; 
+
+    function generateImages() {
+        var photos = [];
+
+        angular.forEach(vm.photoData, function(photo) {
+            PhotosService.getImageDimensions(photo.id).then(function(response) {
+                var imageDimensionData = response[PHOTO_SIZE_GROUP];
+                var src = imageDimensionData.source;
+                var width = parseInt(imageDimensionData.width);
+                var height = parseInt(imageDimensionData.height);
+                var title = JSON.stringify(photo.title);
+                var tags = JSON.stringify(photo.tags);
+                var date = photo.datetaken;
+
+                var item = {
+                    src: src,
+                    w: width, 
+                    h: height,
+                    title: title, 
+                    tags: tags,
+                    date: date
+                };
+    
+                photos.push(item);
+            });
+        });
+
+        vm.photos = photos;
+    };
 
     function applyFilter(filterTerm) {
         if (vm.filterTerm === filterTerm) {
@@ -65,14 +96,14 @@ function PhotosController($q, $http) {
             var height = photoGroup[i].children[0].getAttribute('data-height');
             var title = photoGroup[i].children[0].getAttribute('data-title');
 
-            var photo = {
+            var item = {
                 src: src,
                 w: width, 
                 h: height,
                 title: title
             };
 
-            photos.push(photo);
+            photos.push(item);
         }
 
         return photos;
