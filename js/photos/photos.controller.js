@@ -88,13 +88,14 @@ function PhotosController($q, PhotosService) {
 
     function parsePhotos($event) {
         var photos = [];
-        var photoGroup = angular.element($event.target).parent().parent().children();
+        var photoGroup = angular.element($event.target).parent().parent().parent().children();
 
         for (var i = 0; i < photoGroup.length; i++) {
-            var src = photoGroup[i].children[0].src;
-            var width = photoGroup[i].children[0].getAttribute('data-width');
-            var height = photoGroup[i].children[0].getAttribute('data-height');
-            var title = photoGroup[i].children[0].getAttribute('data-title');
+            var photoElement = photoGroup[i].children[0].children[0];
+            var src = photoElement.src;
+            var width = photoElement.getAttribute('data-width');
+            var height = photoElement.getAttribute('data-height');
+            var title = photoElement.getAttribute('data-title');
 
             var item = {
                 src: src,
