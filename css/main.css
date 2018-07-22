@@ -179,11 +179,7 @@ body {
       .photos-template .filter-row h2.active-filter {
         font-weight: 400; }
   .photos-template .photos-container .photo {
-    padding: 10px;
-    height: 460px; }
-    @media (max-width: 1024px) {
-      .photos-template .photos-container .photo {
-        height: 340px; } }
+    padding: 10px; }
     .photos-template .photos-container .photo.ng-leave {
       -webkit-transition: 0.3s linear all;
       -moz-transition: 0.3s linear all;
@@ -195,6 +191,11 @@ body {
     .photos-template .photos-container .photo.ng-leave.ng-leave-active {
       -ms-opacity: 0;
       opacity: 0; }
+  .photos-template .photos-container .image-container {
+    height: 460px; }
+    @media (max-width: 1024px) {
+      .photos-template .photos-container .image-container {
+        height: 340px; } }
   .photos-template .photos-container img {
     width: 100%;
     height: 100%;

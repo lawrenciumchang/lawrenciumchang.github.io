@@ -29,10 +29,6 @@
     .photos-container {
         .photo {
             padding: 10px;
-            height: 460px;
-            @media (max-width: 1024px) {
-                height: 340px;   
-            }
             &.ng-leave {
                 -webkit-transition:0.3s linear all;
                 -moz-transition:0.3s linear all;
@@ -45,6 +41,12 @@
             &.ng-leave.ng-leave-active {
                 -ms-opacity: 0;
                 opacity: 0;
+            }
+        }
+        .image-container {
+            height: 460px;
+            @media (max-width: 1024px) {
+                height: 340px;   
             }
         }
         img {
