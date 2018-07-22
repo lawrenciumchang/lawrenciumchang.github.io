@@ -7,10 +7,15 @@
         justify-content: space-between;
         padding: 0 15%;
         margin: 20px 0;
+        @media (max-width: 890px) {
+            #objects-filter {
+                padding-right: 40px;
+            }
+        }
         @media (max-width: 1024px) {
             padding: 0 20px;
             overflow: scroll;
-            margin: 20px 20px 0px 20px;
+            margin: 16px 20px 0px 20px;
             h2 {
                 margin: 0;
             }

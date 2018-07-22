@@ -235,11 +235,14 @@ body {
     justify-content: space-between;
     padding: 0 15%;
     margin: 20px 0; }
+    @media (max-width: 890px) {
+      .photos-template .filter-row #objects-filter {
+        padding-right: 40px; } }
     @media (max-width: 1024px) {
       .photos-template .filter-row {
         padding: 0 20px;
         overflow: scroll;
-        margin: 20px 20px 0px 20px; }
+        margin: 16px 20px 0px 20px; }
         .photos-template .filter-row h2 {
           margin: 0; } }
     .photos-template .filter-row h2 {
