@@ -19,8 +19,7 @@ function LandingController($q) {
                 window.scrollTo(0,0); 
             });
 
-            // displayFirstSentence();
-            displayThirdSentence();
+            displayFirstSentence();
         });
     }
 
