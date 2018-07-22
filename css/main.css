@@ -73,29 +73,23 @@ body {
   width: 0px;
   background: transparent; }
 
-@media (min-width: 768px) {
-  .contact-template {
-    position: relative;
-    height: 460px; }
-    .contact-template .text-content img {
-      cursor: pointer;
-      margin-right: 6px;
-      transition: .2s; }
-      .contact-template .text-content img:hover {
-        transform: scale(1.2); }
-    .contact-template .copyright {
-      position: absolute;
-      bottom: 0;
-      margin-left: 8px; } }
-
-@media (max-width: 767px) {
+.contact-template {
+  height: 400px;
+  position: relative; }
   .contact-template .text-content {
-    padding: 0px 20px; }
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0; }
+    .contact-template .text-content a {
+      letter-spacing: 1.2px;
+      color: #2473A6;
+      margin-left: 10px; }
     .contact-template .text-content img {
-      margin-right: 6px; }
-  .contact-template .copyright {
-    text-align: center;
-    margin-top: 106px; } }
+      position: relative;
+      left: -8px;
+      top: 6px;
+      height: 24px; }
 
 .footer-template {
   height: 130px;

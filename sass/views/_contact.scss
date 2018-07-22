@@ -1,35 +1,21 @@
 .contact-template {
-    // Larger than mobile
-    @media(min-width: 768px) {
-        position: relative;
-        height: 460px;
-        .text-content {
-            img {
-                cursor: pointer;
-                margin-right: 6px;
-                transition: .2s;
-                &:hover{ 
-                    transform: scale(1.2); 
-                }
-            }
+    height: 400px;
+    position: relative;
+    .text-content {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        a {
+            letter-spacing: 1.2px;
+            color: $blue;
+            margin-left: 10px;
         }
-        .copyright {
-            position: absolute;
-            bottom: 0; 
-            margin-left: 8px;
+        img {
+            position: relative;
+            left: -8px;
+            top: 6px;
+            height: 24px;
         }
-    }
-    // Mobile
-    @media(max-width: 767px) {
-        .text-content {
-            padding: 0px 20px;
-            img {
-                margin-right: 6px;
-            }
-        }
-        .copyright {
-            text-align: center;
-            margin-top: 106px;
-       }
     }
 }
