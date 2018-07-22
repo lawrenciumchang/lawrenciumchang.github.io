@@ -4,7 +4,7 @@ app
     .controller('PhotosController', PhotosController);
 
 /* @ngInject */
-function PhotosController($q, $http, PhotosService) {
+function PhotosController($q, PhotosService) {
     var vm = this;
     vm.filterTerm = '';
     vm.applyFilter = applyFilter;
