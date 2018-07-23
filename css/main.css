@@ -292,9 +292,10 @@ body {
         padding-right: 40px; } }
     @media (max-width: 1024px) {
       .photos-template .filter-row {
-        padding: 0 20px;
         overflow: scroll;
-        margin: 16px 20px 0px 20px; }
+        -webkit-overflow-scrolling: touch;
+        margin: 0px 20px;
+        padding: 16px 20px; }
         .photos-template .filter-row h2 {
           margin: 0; } }
     .photos-template .filter-row h2 {

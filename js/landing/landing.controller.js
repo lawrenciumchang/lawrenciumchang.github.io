@@ -14,7 +14,7 @@ function LandingController($q) {
         var promises = [];
         return $q.all(promises).then(function() {
             // Lock scroll
-            $('body').css({'overflow':'hidden'});
+            $('body').css({'overflow':'0'});
             $(document).bind('scroll',function () { 
                 window.scrollTo(0,0); 
             });

@@ -25,7 +25,7 @@ function HeaderController($q) {
     function openMenu() {
         $('.menu-burger').text('✕');
         // Lock scroll
-        $('body').css({'overflow':'hidden'});
+        $('body').css({'overflow':'0'});
         $(document).bind('scroll',function () { 
             window.scrollTo(0,0); 
         });
