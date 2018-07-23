@@ -1,5 +1,5 @@
 <div ng-controller="PhotosController as vm" class="photos-template">
-    <div class="filter-row">
+    <div ng-scroll-reveal class="filter-row">
         <h2 id="animals-filter" class="font-light blue filter" ng-click="vm.applyFilter('animals')">ANIMALS</h2>
         <h2 id="humans-filter" class="font-light blue filter" ng-click="vm.applyFilter('humans')">HUMANS</h2>
         <h2 id="cities-filter" class="font-light blue filter" ng-click="vm.applyFilter('cities')">CITIES</h2>

@@ -49,10 +49,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 .text-center {
   text-align: center; }
 
-.invisible {
-  transition: 3s;
+.hidden {
+  transition: 2s;
   opacity: 0; }
-  .invisible.visible {
+  .hidden.reveal {
     opacity: 1; }
 
 .hide-hover-btn {
