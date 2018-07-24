@@ -26,9 +26,13 @@
             font-size: 18px;
             letter-spacing: 2px;
             margin: 20px;
+            transition: 0.6s;
             cursor: pointer;
             &.active-filter {
-                font-weight: 400;
+                transform: scale(1.15);
+            }
+            &:hover {
+                transform: scale(1.15);
             }
         }
     }
