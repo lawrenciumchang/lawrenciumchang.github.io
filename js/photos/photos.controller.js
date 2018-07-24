@@ -10,7 +10,8 @@ function PhotosController($q, PhotosService) {
     vm.applyFilter = applyFilter;
     vm.openGallery = openGallery;
     
-    var PHOTO_SIZE_GROUP = 9; // as defined by Flickr
+    var FLICKR_MEDIUM = 3;
+    var FLICKR_LARGE_1600 = 9; 
 
     activate();
 
@@ -34,16 +35,18 @@ function PhotosController($q, PhotosService) {
 
         angular.forEach(vm.photoData, function(photo) {
             PhotosService.getImageDimensions(photo.id).then(function(response) {
-                var imageDimensionData = response[PHOTO_SIZE_GROUP];
-                var src = imageDimensionData.source;
-                var width = parseInt(imageDimensionData.width);
-                var height = parseInt(imageDimensionData.height);
+                var largeImageDimensionData = response[FLICKR_LARGE_1600];
+                var src = largeImageDimensionData.source;
+                var msrc = response[FLICKR_MEDIUM].source;
+                var width = parseInt(largeImageDimensionData.width);
+                var height = parseInt(largeImageDimensionData.height);
                 var title = photo.title;
                 var tags = JSON.stringify(photo.tags);
                 var date = photo.datetaken;
 
                 var item = {
                     src: src,
+                    msrc: msrc,
                     w: width, 
                     h: height,
                     title: title, 
@@ -98,12 +101,14 @@ function PhotosController($q, PhotosService) {
         for (var i = 0; i < photoGroup.length; i++) {
             var photoElement = photoGroup[i].children[0].children[0];
             var src = photoElement.src;
+            var msrc = photoElement.getAttribute('data-msrc');
             var width = photoElement.getAttribute('data-width');
             var height = photoElement.getAttribute('data-height');
             var title = photoElement.getAttribute('data-title');
 
             var item = {
                 src: src,
+                msrc: msrc,
                 w: width, 
                 h: height,
                 title: title
