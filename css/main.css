@@ -239,7 +239,9 @@ body {
       opacity: 1; }
       .header-template .menu-items.fs div {
         opacity: 1;
-        margin-top: 75px; }
+        margin-top: 60px; }
+    .header-template .menu-items h2 {
+      margin: 0; }
     .header-template .menu-items a {
       font-size: 24px;
       letter-spacing: 6px;

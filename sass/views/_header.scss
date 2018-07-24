@@ -149,10 +149,13 @@
             pointer-events: auto;
             opacity: 1;
             div{
-            opacity: 1;
-            margin-top: 75px;
+                opacity: 1;
+                margin-top: 60px;
             }
         }  
+        h2 {
+            margin: 0;
+        }
         a {
             font-size: 24px;
             letter-spacing: 6px;
