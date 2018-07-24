@@ -34,6 +34,7 @@ function HeaderController($q) {
         $(document).bind('scroll',function () { 
             window.scrollTo(0,0); 
         });
+        gaTrackClick('mobile menu', 'open');
     };
 
     function closeMenu() {
@@ -41,6 +42,7 @@ function HeaderController($q) {
         // Enable scroll
         $(document).unbind('scroll'); 
         $('body').css({'overflow':'visible'});
+        gaTrackClick('mobile menu', 'close');
     };
 
     function scrollFunction() {
