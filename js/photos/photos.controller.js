@@ -9,9 +9,14 @@ function PhotosController($q, PhotosService) {
     vm.filterTerm = '';
     vm.applyFilter = applyFilter;
     vm.openGallery = openGallery;
+    vm.gaTrackClick = gaTrackClick;
     
     var FLICKR_MEDIUM = 3;
     var FLICKR_LARGE_1600 = 9; 
+
+    function gaTrackClick(category, label) {
+        ga('send', 'event', category, 'click' , label);
+    };
 
     activate();
 

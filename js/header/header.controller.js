@@ -7,6 +7,11 @@ app
 function HeaderController($q) {
     var vm = this;
     vm.scrollToTop = scrollToTop;
+    vm.gaTrackClick = gaTrackClick;
+
+    function gaTrackClick(category, label) {
+        ga('send', 'event', category, 'click' , label);
+    };
 
     activate();
 

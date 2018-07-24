@@ -7,7 +7,7 @@
             <span class="fourth"></span>
         </h1>
     </div>
-    <div class="navigation bounce hidden" ng-click="vm.navigateToPhotos()">
+    <div class="navigation bounce hidden" ng-click="vm.navigateToPhotos(); vm.gaTrackClick('navigation', 'photos')">
         <img ng-src="assets/icons/chevron-down.svg"/>
     </div>
 </div>

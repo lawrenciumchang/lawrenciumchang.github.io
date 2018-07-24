@@ -1,16 +1,16 @@
 <div ng-controller="PhotosController as vm" class="photos-template">
     <div ng-scroll-reveal class="filter-row">
-        <h2 id="animals-filter" class="font-light blue filter" ng-click="vm.applyFilter('animals')">ANIMALS</h2>
-        <h2 id="humans-filter" class="font-light blue filter" ng-click="vm.applyFilter('humans')">HUMANS</h2>
-        <h2 id="cities-filter" class="font-light blue filter" ng-click="vm.applyFilter('cities')">CITIES</h2>
-        <h2 id="landscapes-filter" class="font-light blue filter" ng-click="vm.applyFilter('landscapes')">LANDSCAPES</h2>
-        <h2 id="abstract-filter" class="font-light blue filter" ng-click="vm.applyFilter('abstract')">ABSTRACT</h2>
-        <h2 id="things-filter" class="font-light blue filter" ng-click="vm.applyFilter('things')">THINGS</h2>
+        <h2 id="animals-filter" class="font-light blue filter" ng-click="vm.applyFilter('animals'); vm.gaTrackClick('photo filters', 'animals')">ANIMALS</h2>
+        <h2 id="humans-filter" class="font-light blue filter" ng-click="vm.applyFilter('humans'); vm.gaTrackClick('photo filters', 'humans')">HUMANS</h2>
+        <h2 id="cities-filter" class="font-light blue filter" ng-click="vm.applyFilter('cities'); vm.gaTrackClick('photo filters', 'cities')">CITIES</h2>
+        <h2 id="landscapes-filter" class="font-light blue filter" ng-click="vm.applyFilter('landscapes'); vm.gaTrackClick('photo filters', 'landscapes')">LANDSCAPES</h2>
+        <h2 id="abstract-filter" class="font-light blue filter" ng-click="vm.applyFilter('abstract'); vm.gaTrackClick('photo filters', 'abstract')">ABSTRACT</h2>
+        <h2 id="things-filter" class="font-light blue filter" ng-click="vm.applyFilter('things'); vm.gaTrackClick('photo filters', 'things')">THINGS</h2>
     </div>
     <div class="photos-container clearfix">
         <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
             <div ng-scroll-reveal class="image-container">
-                <img img-preload data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} data-msrc="{{photo.msrc}}" ng-src="{{photo.src}}" ng-click="vm.openGallery($event, $index)"/>
+                <img img-preload data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} data-msrc="{{photo.msrc}}" ng-src="{{photo.src}}" ng-click="vm.openGallery($event, $index); vm.gaTrackClick('photos', photo.title)"/>
             </div>
         </div>
     </div>

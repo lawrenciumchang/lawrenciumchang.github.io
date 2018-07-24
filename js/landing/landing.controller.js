@@ -7,6 +7,11 @@ app
 function LandingController($q) {
     var vm = this;
     vm.navigateToPhotos = navigateToPhotos;
+    vm.gaTrackClick = gaTrackClick;
+
+    function gaTrackClick(category, label) {
+        ga('send', 'event', category, 'click' , label);
+    };
 
     activate();
 
