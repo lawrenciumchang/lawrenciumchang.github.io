@@ -10,7 +10,10 @@ function LandingController($q) {
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
-        ga('send', 'event', category, 'click' , label);
+        var host = window.location.hostname;
+        if (host != 'localhost') {
+            ga('send', 'event', category, 'click' , label);
+        }
     };
 
     activate();
