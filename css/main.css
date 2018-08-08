@@ -311,6 +311,8 @@ body {
       cursor: pointer; }
       .photos-template .filter-row h2.active-filter {
         transform: scale(1.15); }
+        .photos-template .filter-row h2.active-filter:hover {
+          transform: scale(1); }
       .photos-template .filter-row h2:hover {
         transform: scale(1.15); }
   .photos-template .photos-container {

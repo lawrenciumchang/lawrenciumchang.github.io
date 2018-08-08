@@ -30,6 +30,9 @@
             cursor: pointer;
             &.active-filter {
                 transform: scale(1.15);
+                &:hover {
+                    transform: scale(1);
+                }
             }
             &:hover {
                 transform: scale(1.15);
