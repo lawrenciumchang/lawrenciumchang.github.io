@@ -283,6 +283,7 @@ body {
     transform: translateY(-6px); } }
 
 .photos-template {
+  min-height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 5px; }
