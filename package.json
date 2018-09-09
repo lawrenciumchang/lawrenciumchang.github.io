@@ -19,6 +19,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-webserver": "^0.9.1",
+    "hoek": "^5.0.4",
     "opn": "^4.0.2"
   }
 }
