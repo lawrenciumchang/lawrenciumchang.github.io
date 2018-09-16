@@ -313,13 +313,13 @@ body {
     padding: 0 15%;
     margin: 20px 0; }
     @media (max-width: 890px) {
-      .photos-template .filter-row #things-filter {
-        padding-right: 40px; } }
+      .photos-template .filter-row #animals-filter {
+        margin-left: -20px; } }
     @media (max-width: 1024px) {
       .photos-template .filter-row {
         overflow: scroll;
         -webkit-overflow-scrolling: touch;
-        margin: 0px 20px;
+        margin: 0 24px;
         padding: 16px 20px; }
         .photos-template .filter-row h2 {
           margin: 0; } }
