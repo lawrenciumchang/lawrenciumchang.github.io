@@ -131,10 +131,30 @@ body {
     display: inline-block;
     font-size: 18px;
     padding-left: 48px;
-    letter-spacing: 2px;
-    transition: 0.6s; }
-    .header-template .navigation h2:hover {
-      transform: scale(1.1); }
+    letter-spacing: 2px; }
+  .header-template .navigation * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .header-template .navigation a {
+    position: relative;
+    padding-bottom: 6px; }
+  .header-template .navigation a:before {
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+    left: 15%;
+    right: 15%;
+    top: 0;
+    bottom: 0;
+    border-bottom: 1px solid #5C5C5C; }
+  .header-template .navigation a:hover:before {
+    opacity: 1;
+    left: 0;
+    right: 0; }
   .header-template .desktop-header {
     display: contents; }
     @media (max-width: 768px) {
@@ -308,14 +328,30 @@ body {
       font-size: 18px;
       letter-spacing: 2px;
       margin: 20px;
-      transition: 0.6s;
       cursor: pointer; }
-      .photos-template .filter-row h2.active-filter {
-        transform: scale(1.15); }
-        .photos-template .filter-row h2.active-filter:hover {
-          transform: scale(1); }
-      .photos-template .filter-row h2:hover {
-        transform: scale(1.15); }
+    .photos-template .filter-row * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease; }
+    .photos-template .filter-row .filter {
+      position: relative;
+      padding-bottom: 6px; }
+    .photos-template .filter-row .filter:before {
+      position: absolute;
+      content: '';
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      opacity: 0;
+      left: 15%;
+      right: 15%;
+      top: 0;
+      bottom: 0;
+      border-bottom: 1px solid #2473A6; }
+    .photos-template .filter-row .filter:hover:before, .photos-template .filter-row .active-filter:before {
+      opacity: 1;
+      left: 0;
+      right: 0; }
   .photos-template .photos-container {
     margin-bottom: 20px; }
     .photos-template .photos-container .photo {
