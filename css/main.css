@@ -348,10 +348,15 @@ body {
       top: 0;
       bottom: 0;
       border-bottom: 1px solid #2473A6; }
-    .photos-template .filter-row .filter:hover:before, .photos-template .filter-row .active-filter:before {
+    .photos-template .filter-row .active-filter:before {
       opacity: 1;
       left: 0;
       right: 0; }
+    @media (hover: hover) {
+      .photos-template .filter-row .filter:hover:before {
+        opacity: 1;
+        left: 0;
+        right: 0; } }
   .photos-template .photos-container {
     margin-bottom: 20px; }
     .photos-template .photos-container .photo {
@@ -385,6 +390,7 @@ body {
       .photos-template .photos-container img.reveal-image {
         visibility: visible;
         opacity: 1; }
-      .photos-template .photos-container img:hover {
-        transform: scale(1.02);
-        box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); }
+      @media (hover: hover) {
+        .photos-template .photos-container img:hover {
+          transform: scale(1.02);
+          box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); } }

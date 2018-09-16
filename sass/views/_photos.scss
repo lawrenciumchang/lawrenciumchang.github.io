@@ -51,10 +51,17 @@
             bottom: 0;
             border-bottom: 1px solid $blue;
         }
-        .filter:hover:before, .active-filter:before {
+        .active-filter:before {
             opacity: 1;
             left: 0;
             right: 0;
+        }
+        @media (hover: hover) {
+            .filter:hover:before {
+                opacity: 1;
+                left: 0;
+                right: 0;
+            }
         }
     }
     .photos-container {
@@ -95,9 +102,11 @@
                 visibility: visible;
                 opacity: 1;
             }
-            &:hover {
-                transform: scale(1.02);
-                box-shadow: 0px 18px 20px -10px rgba(0,0,0,.2);
+            @media (hover: hover) {
+                &:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0px 18px 20px -10px rgba(0,0,0,.2);
+                }
             }
         }
     }
