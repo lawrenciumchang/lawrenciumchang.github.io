@@ -21,7 +21,7 @@ function FooterController($q) {
 
     function scrollToFilters() {
         Jump('.photos-template', {
-            offset: -100
+            offset: -50
         });
     }
 

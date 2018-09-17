@@ -302,11 +302,11 @@ body {
     @media (max-width: 1024px) {
       .landing-template .landing-text {
         width: 80vw; } }
-  .landing-template .navigation {
+  .landing-template .navigation-arrow {
     position: absolute;
     bottom: 32px;
     cursor: pointer; }
-    .landing-template .navigation img {
+    .landing-template .navigation-arrow img {
       height: 12px; }
   .landing-template .bounce {
     -moz-animation: bounce 2s infinite;

@@ -22,6 +22,7 @@ function LandingController($q) {
         var promises = [];
         return $q.all(promises).then(function() {
             displayFirstSentence();
+            window.onscroll = function() {scrollFunction()};
         });
     }
 
@@ -71,5 +72,17 @@ function LandingController($q) {
             el.classList.add('reveal');
         });
     };
+
+    // Hides down navigation arrow on scroll, reveals when scrolled back to top.
+    function scrollFunction() {
+        if (document.body.scrollTop > (window.innerHeight/2) || document.documentElement.scrollTop > (window.innerHeight/2)) {
+            var navigationArrow = document.querySelector('.navigation-arrow');
+            navigationArrow.classList.remove('reveal');
+        }
+        else {
+            var navigationArrow = document.querySelector('.navigation-arrow');
+            navigationArrow.classList.add('reveal');
+        }
+    }
 
 }
