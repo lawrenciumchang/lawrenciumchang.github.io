@@ -134,6 +134,7 @@ body {
         .footer-template .hover-btn-container.hover-btn-container-mobile {
           display: none; } }
   .footer-template .scroll-to-filters {
+    cursor: pointer;
     text-align: center;
     border: 1px solid #F8F9FA;
     width: 170px;
