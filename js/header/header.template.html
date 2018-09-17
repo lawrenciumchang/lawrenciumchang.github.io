@@ -1,12 +1,14 @@
 <div ng-controller="HeaderController as vm" class="header-template hidden">
+    <!-- Top Navigation Desktop-->
     <div class="desktop-header">
         <div class="logo">&nbsp;</div>
         <div class="navigation">
-            <h2 class="font-light"><a ng-href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" ng-click="vm.gaTrackClick('header', 'flickr')">FLICKR</a></h2>
-            <h2 class="font-light"><a ng-href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" ng-click="vm.gaTrackClick('header', 'linkedin')">LINKEDIN</a></h2>
-            <h2 class="font-light"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top" ng-click="vm.gaTrackClick('header', 'email')">EMAIL</a></h2>
+            <h2 class="font-light space-20"><a ng-href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" ng-click="vm.gaTrackClick('header', 'flickr')">FLICKR</a></h2>
+            <h2 class="font-light space-20"><a ng-href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" ng-click="vm.gaTrackClick('header', 'linkedin')">LINKEDIN</a></h2>
+            <h2 class="font-light space-20"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top" ng-click="vm.gaTrackClick('header', 'email')">EMAIL</a></h2>
         </div>
     </div>
+    <!-- Top Navigation Mobile -->
     <div class="mobile-menu">
         <div class="menu-bg"></div>
         <div class="menu-burger">☰</div>
@@ -17,7 +19,8 @@
         </div>
     </div>
 
-    <div class="hover-btn-container hide-hover-btn">
+    <!-- Desktop Hover Buttons -->
+    <div class="hover-btn-container hover-btn-container-desktop hide-hover-btn">
         <div class="scroll-top-btn hover-btn" ng-click="vm.scrollToTop(); vm.gaTrackClick('hover buttons', 'scroll to top')"></div>
         <div class="contact-btn hover-btn"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top" ng-click="vm.gaTrackClick('hover buttons', 'email')"></a></div>
     </div>

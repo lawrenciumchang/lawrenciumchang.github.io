@@ -48,6 +48,7 @@ function HeaderController($q) {
         gaTrackClick('mobile menu', 'close');
     };
 
+    // Controls scroll reveal for hover button elements. Use .hide-hover-btn class on element to reveal/hide past first panel. 
     function scrollFunction() {
         if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
             var elements = document.querySelectorAll('.hide-hover-btn');

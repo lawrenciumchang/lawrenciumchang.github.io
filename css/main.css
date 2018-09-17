@@ -108,14 +108,42 @@ body {
       height: 24px; }
 
 .footer-template {
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F8F9FA; }
-  .footer-template .copyright {
-    margin: 16px 40px;
-    letter-spacing: 0.5px; }
+  height: 130px; }
+  @media (max-width: 768px) {
+    .footer-template {
+      margin-top: -30px; } }
+  .footer-template .copyright-container {
+    display: flex;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F9FA; }
+    .footer-template .copyright-container .copyright {
+      margin: 16px 40px;
+      letter-spacing: 0.5px;
+      line-height: 24px; }
+  .footer-template .hover-btn-container {
+    visibility: visible;
+    position: relative; }
+    .footer-template .hover-btn-container.hover-btn-container-mobile {
+      z-index: 900;
+      bottom: -18px;
+      left: 0;
+      right: 0; }
+      @media (min-width: 769px) {
+        .footer-template .hover-btn-container.hover-btn-container-mobile {
+          display: none; } }
+  .footer-template .scroll-to-filters {
+    text-align: center;
+    border: 1px solid #F8F9FA;
+    width: 170px;
+    margin: 0 auto;
+    padding: 9px 17px;
+    border-radius: 16px;
+    background-color: #FCFDFD;
+    font-size: 14px;
+    color: #2473A6;
+    box-shadow: 0px 8px 20px -6px rgba(0, 0, 0, 0.2); }
 
 .header-template {
   position: absolute;
@@ -130,21 +158,15 @@ body {
   .header-template .navigation h2 {
     display: inline-block;
     font-size: 18px;
-    padding-left: 48px;
-    letter-spacing: 2px; }
-  .header-template .navigation * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease; }
+    padding-left: 48px; }
   .header-template .navigation a {
     position: relative;
     padding-bottom: 6px; }
   .header-template .navigation a:before {
     position: absolute;
     content: '';
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     opacity: 0;
     left: 15%;
     right: 15%;
@@ -167,13 +189,14 @@ body {
         display: block; } }
   .header-template .hover-btn-container {
     visibility: visible;
-    position: fixed;
-    z-index: 1000;
-    bottom: 50px;
-    right: 50px; }
-    @media (max-width: 768px) {
-      .header-template .hover-btn-container {
-        display: none; } }
+    position: fixed; }
+    .header-template .hover-btn-container.hover-btn-container-desktop {
+      z-index: 1000;
+      bottom: 50px;
+      right: 50px; }
+      @media (max-width: 768px) {
+        .header-template .hover-btn-container.hover-btn-container-desktop {
+          display: none; } }
   .header-template .hover-btn {
     width: 50px;
     height: 50px;
@@ -202,7 +225,7 @@ body {
         display: block;
         height: 100%; }
   .header-template .menu, .header-template .menu-bg, .header-template .menu-burger {
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
     width: 46px;
     height: 46px;
@@ -236,12 +259,8 @@ body {
     .header-template .menu-burger.fs {
       transform: rotate(-180deg) translateY(10px); }
   .header-template .menu-items {
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
-    font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 10px;
-    color: #FCFDFD;
     text-align: center;
     opacity: 0;
     transition: 0.4s;
@@ -326,22 +345,21 @@ body {
     .photos-template .filter-row h2 {
       display: inline-flex;
       font-size: 18px;
-      letter-spacing: 2px;
       margin: 20px;
       cursor: pointer; }
     .photos-template .filter-row * {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      -webkit-transition: all 0.35s ease;
-      transition: all 0.35s ease; }
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
     .photos-template .filter-row .filter {
       position: relative;
       padding-bottom: 6px; }
     .photos-template .filter-row .filter:before {
       position: absolute;
       content: '';
-      -webkit-transition: all 0.35s ease;
-      transition: all 0.35s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       opacity: 0;
       left: 15%;
       right: 15%;

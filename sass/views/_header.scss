@@ -15,14 +15,13 @@
             display: inline-block;
             font-size: 18px;
             padding-left: 48px;
-            letter-spacing: 2px;
         }
-        * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition: all 0.35s ease;
-            transition: all 0.35s ease;
-        }
+        // * {
+        //     -webkit-box-sizing: border-box;
+        //     box-sizing: border-box;
+        //     -webkit-transition: all 0.35s ease;
+        //     transition: all 0.35s ease;
+        // }
         a {
             position: relative;
             padding-bottom: 6px;
@@ -30,8 +29,8 @@
         a:before {
             position: absolute;
             content: '';
-            -webkit-transition: all 0.35s ease;
-            transition: all 0.35s ease;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
             opacity: 0;
             left: 15%;
             right: 15%;
@@ -62,13 +61,15 @@
 
     .hover-btn-container {
         visibility: visible;
-        @media (max-width: 768px) {
-            display: none;
-        }
         position: fixed;
-        z-index: 1000;
-        bottom: 50px;
-        right: 50px;
+        &.hover-btn-container-desktop {
+            z-index: 1000;
+            bottom: 50px;
+            right: 50px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
     }
 
     .hover-btn {
@@ -107,7 +108,7 @@
     ////////////
 
     .menu {
-        z-index: 100;
+        z-index: 1000;
         position: fixed;
         width: 46px;
         height: 46px;
@@ -149,12 +150,8 @@
         }
     }
     .menu-items{
-        z-index: 100;
+        z-index: 1000;
         position: fixed;
-        font-weight: bold;
-        font-size: 40px;
-        letter-spacing: 10px;
-        color: $almost-white;
         text-align: center;
         opacity: 0;
         transition: 0.4s;
