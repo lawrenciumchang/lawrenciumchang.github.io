@@ -21,7 +21,7 @@ function HeaderController($q) {
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
-            window.onscroll = function() {scrollFunction()};
+
         });
     }
 
@@ -47,21 +47,6 @@ function HeaderController($q) {
         $('body').css({'overflow':'visible'});
         gaTrackClick('mobile menu', 'close');
     };
-
-    // Controls scroll reveal for hover button elements. Use .hide-hover-btn class on element to reveal/hide past first panel. 
-    function scrollFunction() {
-        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
-            var elements = document.querySelectorAll('.hide-hover-btn');
-            angular.forEach(elements, function(el) {
-                el.classList.add('show-hover-btn');
-            }); 
-        } else {
-            var elements = document.querySelectorAll('.show-hover-btn');
-            angular.forEach(elements, function(el) {
-                el.classList.remove('show-hover-btn');
-            }); 
-        }
-    }
 
     function scrollToTop() {
         Jump('.header-template');

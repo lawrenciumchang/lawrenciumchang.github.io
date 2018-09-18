@@ -73,8 +73,8 @@ function LandingController($q) {
         });
     };
 
-    // Hides down navigation arrow on scroll, reveals when scrolled back to top.
     function scrollFunction() {
+        // Hides down navigation arrow on scroll, reveals when scrolled back to top.
         if (document.body.scrollTop > (window.innerHeight/2) || document.documentElement.scrollTop > (window.innerHeight/2)) {
             var navigationArrow = document.querySelector('.navigation-arrow');
             navigationArrow.classList.remove('reveal');
@@ -82,6 +82,19 @@ function LandingController($q) {
         else {
             var navigationArrow = document.querySelector('.navigation-arrow');
             navigationArrow.classList.add('reveal');
+        }
+
+        // Controls scroll reveal for hover button elements. Use .hide-hover-btn class on element to reveal/hide past first panel. 
+        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+            var elements = document.querySelectorAll('.hide-hover-btn');
+            angular.forEach(elements, function(el) {
+                el.classList.add('show-hover-btn');
+            }); 
+        } else {
+            var elements = document.querySelectorAll('.show-hover-btn');
+            angular.forEach(elements, function(el) {
+                el.classList.remove('show-hover-btn');
+            }); 
         }
     }
 
