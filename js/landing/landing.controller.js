@@ -6,6 +6,7 @@ app
 /* @ngInject */
 function LandingController($q) {
     var vm = this;
+    vm.scrollToTop = scrollToTop;
     vm.navigateToPhotos = navigateToPhotos;
     vm.gaTrackClick = gaTrackClick;
 
@@ -96,6 +97,10 @@ function LandingController($q) {
                 el.classList.remove('show-hover-btn');
             }); 
         }
+    }
+
+    function scrollToTop() {
+        Jump('.header-template');
     }
 
 }

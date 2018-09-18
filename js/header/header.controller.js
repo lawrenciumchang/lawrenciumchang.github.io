@@ -6,7 +6,6 @@ app
 /* @ngInject */
 function HeaderController($q) {
     var vm = this;
-    vm.scrollToTop = scrollToTop;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -47,9 +46,5 @@ function HeaderController($q) {
         $('body').css({'overflow':'visible'});
         gaTrackClick('mobile menu', 'close');
     };
-
-    function scrollToTop() {
-        Jump('.header-template');
-    }
 
 }
