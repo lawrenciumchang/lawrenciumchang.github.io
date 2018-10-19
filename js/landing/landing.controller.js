@@ -35,11 +35,10 @@ function LandingController($q) {
 
     function displayFirstSentence() {
         var typed = new Typed('.landing-text .first', {
-            strings: ["<span class='font-regular blue'>Hi, I'm Lawrence.</span>"],
+            strings: ["Hi, I'm Lawrence."],
             typeSpeed: 40,
             showCursor: false,
             onComplete: function() {
-                revealContent();
                 displaySecondSentence();
             }
         });
@@ -47,22 +46,13 @@ function LandingController($q) {
 
     function displaySecondSentence() {
         var typed = new Typed('.landing-text .second', {
-            strings: ["<span class='font-light dark-gray'> A technology consultant and software developer located in Dallas, TX.</span>"],
+            strings: ["I design things, take photos, and build websites."],
             typeSpeed: 40,
             showCursor: false,
             startDelay: 500,
             onComplete: function() {
-                displayThirdSentence();
+                revealContent();
             }
-        });
-    };
-
-    function displayThirdSentence() {
-        var typed = new Typed('.landing-text .third', {
-            strings: ["<span class='font-light dark-gray'> I like making things and taking photos.</span>"],
-            typeSpeed: 40,
-            showCursor: false,
-            startDelay: 500
         });
     };
 

@@ -8,13 +8,21 @@
     justify-content: center;
     
     .landing-text {
-        letter-spacing: 2px;
-        font-size: 28px;
-        line-height: 50px;
         padding-bottom: 36px;
         width: 770px;
+        p {
+            margin: 0;
+        }
         @media (max-width: 1024px) {
             width: 80vw;
+        }
+        .first {
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+        .second {
+            font-size: 18px;
+            line-height: 28px;
         }
     }
 

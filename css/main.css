@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 .font-bold {
   font-weight: 700; }
 
+.space-25 {
+  letter-spacing: 2.5px; }
+
 .space-20 {
   letter-spacing: 2.0px; }
 
@@ -197,8 +200,8 @@ body {
   padding: 0 80px; }
   .header-template .navigation h2 {
     display: inline-block;
-    font-size: 18px;
-    padding-left: 48px; }
+    font-size: 16px;
+    padding-left: 56px; }
   .header-template .navigation a {
     position: relative;
     padding-bottom: 6px; }
@@ -297,14 +300,19 @@ body {
   align-items: center;
   justify-content: center; }
   .landing-template .landing-text {
-    letter-spacing: 2px;
-    font-size: 28px;
-    line-height: 50px;
     padding-bottom: 36px;
     width: 770px; }
+    .landing-template .landing-text p {
+      margin: 0; }
     @media (max-width: 1024px) {
       .landing-template .landing-text {
         width: 80vw; } }
+    .landing-template .landing-text .first {
+      font-size: 32px;
+      margin-bottom: 6px; }
+    .landing-template .landing-text .second {
+      font-size: 18px;
+      line-height: 28px; }
   .landing-template .navigation-arrow {
     position: absolute;
     bottom: 32px;
