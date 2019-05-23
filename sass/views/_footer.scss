@@ -1,11 +1,12 @@
 .footer-template {
-    height: 90px;
+    height: 100px;
     // @media (max-width: 768px) { 
     //     margin-top: -30px;
     // }
     .copyright-container {
         display: flex;
-        height: 90px;
+        height: 100px;
+        margin-bottom: 40px;
         align-items: center;
         justify-content: center;
         .copyright {

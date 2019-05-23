@@ -28,6 +28,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 .font-regular {
   font-weight: 300; }
 
+.space-30 {
+  letter-spacing: 3.0px; }
+
 .space-25 {
   letter-spacing: 2.5px; }
 
@@ -86,45 +89,6 @@ body {
   width: 0px;
   background: transparent; }
 
-.hover-btn-container {
-  visibility: visible;
-  position: fixed; }
-  .hover-btn-container.hover-btn-container-desktop {
-    z-index: 1000;
-    bottom: 50px;
-    right: 50px; }
-    @media (max-width: 768px) {
-      .hover-btn-container.hover-btn-container-desktop {
-        display: none; } }
-
-.hover-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  box-shadow: 0px 8px 20px -2px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: 0.6s; }
-  .hover-btn:hover {
-    transform: scale(1.1); }
-  .hover-btn.scroll-top-btn {
-    margin-bottom: 12px;
-    background: #2473A6;
-    background-image: url("../assets/icons/arrow-up.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 18px; }
-  .hover-btn.contact-btn {
-    background: #2E2E2E;
-    background-image: url("../assets/icons/mail.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 11px;
-    background-size: 24px; }
-    .hover-btn.contact-btn a {
-      display: block;
-      height: 100%; }
-
 .contact-template {
   height: 400px;
   position: relative; }
@@ -144,10 +108,11 @@ body {
       height: 24px; }
 
 .footer-template {
-  height: 90px; }
+  height: 100px; }
   .footer-template .copyright-container {
     display: flex;
-    height: 90px;
+    height: 100px;
+    margin-bottom: 40px;
     align-items: center;
     justify-content: center; }
     .footer-template .copyright-container .copyright {
@@ -275,8 +240,7 @@ body {
       .landing-template .landing-text {
         width: 90vw; } }
     .landing-template .landing-text .first {
-      font-size: 52px;
-      letter-spacing: 4px;
+      font-size: 54px;
       line-height: 52px;
       margin-bottom: 4px;
       margin-top: 40px; }
@@ -284,9 +248,22 @@ body {
       font-size: 18px;
       line-height: 28px;
       margin: 0 0 0 4px; }
+  .landing-template .hover-btn-container {
+    visibility: visible;
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    right: 40px; }
+    .landing-template .hover-btn-container img {
+      width: 40px; }
+  .landing-template .hover-btn {
+    cursor: pointer;
+    transition: 0.6s; }
+    .landing-template .hover-btn:hover {
+      transform: scale(1.1); }
 
 .photos-template {
-  min-height: 100vh;
+  min-height: 200vh;
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 5px; }
