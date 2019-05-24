@@ -1,15 +1,20 @@
+$almost-black: #171717;
 $dark-gray: #2E2E2E;
+$gray: #b0b1b1;
 $almost-white: #FCFDFD;
-$blue: #2473A6;
+
+.almost-black {
+    color: $almost-black;
+}
 
 .dark-gray {
     color: $dark-gray;
 }
 
-.almost-white {
-    color: $almost-white;
+.gray {
+    color: #gray;
 }
 
-.blue {
-    color: $blue;
+.almost-white {
+    color: $almost-white;
 }
