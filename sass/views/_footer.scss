@@ -5,12 +5,13 @@
     // }
     .copyright-container {
         display: flex;
-        height: 100px;
-        margin-bottom: 40px;
+        height: 80px;
+        margin-bottom: 100px;
         align-items: center;
         justify-content: center;
         .copyright {
             width: 95vw;
+            margin: 0 0 0 10px;
             @media (max-width: 1024px) {
                 width: 90vw;
             }

@@ -26,7 +26,9 @@ function PhotosController($q, PhotosService) {
     function activate() {
         var promises = [getPhotos()];
         return $q.all(promises).then(function() {
-            generateImages();
+            generateImages().then(function() {
+                initJustifiedGallery();
+            });
         });
     }
 
@@ -39,36 +41,48 @@ function PhotosController($q, PhotosService) {
     }; 
 
     function generateImages() {
+        var promises = [];
         var photos = [];
 
         angular.forEach(vm.photoData, function(photo) {
-            PhotosService.getImageDimensions(photo.id).then(function(response) {
-                var largeImageDimensionData = response[FLICKR_LARGE_1600];
-                var src = largeImageDimensionData.source;
-                var msrc = response[FLICKR_MEDIUM].source;
-                var width = parseInt(largeImageDimensionData.width);
-                var height = parseInt(largeImageDimensionData.height);
-                var title = photo.title;
-                var tags = JSON.stringify(photo.tags);
-                var date = photo.datetaken;
+            promises.push(
+                PhotosService.getImageDimensions(photo.id).then(function(response) {
+                    var largeImageDimensionData = response[FLICKR_LARGE_1600];
+                    var src = largeImageDimensionData.source;
+                    var msrc = response[FLICKR_MEDIUM].source;
+                    var width = parseInt(largeImageDimensionData.width);
+                    var height = parseInt(largeImageDimensionData.height);
+                    var title = photo.title;
+                    var tags = JSON.stringify(photo.tags);
+                    var date = photo.datetaken;
 
-                var item = {
-                    src: src,
-                    msrc: msrc,
-                    w: width, 
-                    h: height,
-                    title: title, 
-                    tags: tags,
-                    date: date
-                };
-    
-                photos.push(item);
-            }).catch(function(error) {
-                console.log('Error getting image dimensions from Flickr service...', error);
-            });
+                    var item = {
+                        src: src,
+                        msrc: msrc,
+                        w: width, 
+                        h: height,
+                        title: title, 
+                        tags: tags,
+                        date: date
+                    };
+        
+                    photos.push(item);
+                }).catch(function(error) {
+                    console.log('Error getting image dimensions from Flickr service...', error);
+                })
+            );
         });
 
         vm.photos = photos;
+        return $q.all(promises);
+    }
+
+    function initJustifiedGallery() {
+        $('.gallery-container').justifiedGallery({
+            rowHeight: 320,
+            margins: 4,
+            lastRow: 'justify'
+        });
     };
 
     // function applyFilter(filterTerm) {
@@ -104,10 +118,11 @@ function PhotosController($q, PhotosService) {
 
     function parsePhotos($event) {
         var photos = [];
-        var photoGroup = angular.element($event.target).parent().parent().parent().children();
+        var photoGroup = angular.element($event.target).parent().parent().children();
+        console.log(photoGroup);
 
         for (var i = 0; i < photoGroup.length; i++) {
-            var photoElement = photoGroup[i].children[0].children[0];
+            var photoElement = photoGroup[i].children[0];
             var src = photoElement.src;
             var msrc = photoElement.getAttribute('data-msrc');
             var width = photoElement.getAttribute('data-width');

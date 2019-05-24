@@ -96,12 +96,13 @@ body {
   height: 100px; }
   .footer-template .copyright-container {
     display: flex;
-    height: 100px;
-    margin-bottom: 40px;
+    height: 80px;
+    margin-bottom: 100px;
     align-items: center;
     justify-content: center; }
     .footer-template .copyright-container .copyright {
       width: 95vw;
+      margin: 0 0 0 10px;
       line-height: 24px; }
       @media (max-width: 1024px) {
         .footer-template .copyright-container .copyright {
@@ -112,7 +113,7 @@ body {
   cursor: pointer;
   z-index: 1000;
   position: fixed;
-  top: 16px;
+  top: 20px;
   right: 20px;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
@@ -179,7 +180,7 @@ body {
 .header-template .menu-overlay .menu-contents {
   display: none;
   padding-left: 3vw;
-  padding-top: 30vh; }
+  padding-top: 35vh; }
   .header-template .menu-overlay .menu-contents h3 {
     margin: 24px 0; }
   .header-template .menu-overlay .menu-contents a:hover {
@@ -196,7 +197,7 @@ body {
   align-items: center;
   justify-content: center; }
   .landing-template .landing-text {
-    padding-bottom: 36px;
+    padding-bottom: 26px;
     width: 95vw; }
     .landing-template .landing-text p {
       margin: 0; }
@@ -207,7 +208,7 @@ body {
       font-size: 54px;
       line-height: 52px;
       margin-bottom: 6px;
-      margin-top: 30px; }
+      margin-top: 36px; }
     .landing-template .landing-text .second {
       font-size: 18px;
       line-height: 28px;
@@ -219,7 +220,7 @@ body {
     bottom: 40px;
     right: 40px; }
     .landing-template .hover-btn-container img {
-      width: 34px; }
+      width: 32px; }
     @media (max-width: 768px) {
       .landing-template .hover-btn-container {
         bottom: 26px;
@@ -231,44 +232,8 @@ body {
       transform: scale(1.1); }
 
 .photos-template {
-  min-height: 200vh;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 10px 5px; }
-  .photos-template .photos-container {
-    margin-bottom: 20px; }
-    .photos-template .photos-container .photo {
-      padding: 10px; }
-      .photos-template .photos-container .photo.ng-leave {
-        -webkit-transition: 0.3s linear all;
-        -moz-transition: 0.3s linear all;
-        -ms-transition: 0.3s linear all;
-        -o-transition: 0.3s linear all;
-        transition: 0.3s linear all;
-        -ms-opacity: 1;
-        opacity: 1; }
-      .photos-template .photos-container .photo.ng-leave.ng-leave-active {
-        -ms-opacity: 0;
-        opacity: 0; }
-    .photos-template .photos-container .image-container {
-      height: 460px; }
-      @media (max-width: 1024px) {
-        .photos-template .photos-container .image-container {
-          height: 340px; } }
-    .photos-template .photos-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      visibility: hidden;
-      transition: 0.6s;
-      opacity: 0; }
-      .photos-template .photos-container img.reveal-image {
-        visibility: visible;
-        opacity: 1; }
-      @media (hover: hover) {
-        .photos-template .photos-container img:hover {
-          transform: scale(1.02);
-          box-shadow: 0px 18px 20px -10px rgba(0, 0, 0, 0.2); } }
+  min-height: 100vh;
+  width: 95vw;
+  margin: 0 auto; }
+  .photos-template .image-thumbnail {
+    cursor: pointer; }

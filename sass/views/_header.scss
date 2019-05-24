@@ -15,7 +15,7 @@
         cursor: pointer;
         z-index: 1000;
         position: fixed;
-        top: 16px;
+        top: 20px;
         right: 20px;
         -webkit-tap-highlight-color: transparent;
         transition: transform 400ms;
@@ -96,7 +96,7 @@
         .menu-contents {
             display: none;
             padding-left: 3vw;
-            padding-top: 30vh;
+            padding-top: 35vh;
             h3 {
                 margin: 24px 0;
             }
