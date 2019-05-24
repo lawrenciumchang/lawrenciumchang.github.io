@@ -182,7 +182,7 @@ body {
   padding-left: 3vw;
   padding-top: 35vh; }
   .header-template .menu-overlay .menu-contents h3 {
-    margin: 24px 0; }
+    margin: 26px 0; }
   .header-template .menu-overlay .menu-contents a:hover {
     color: #FCFDFD;
     transition: 0.5s; }
@@ -197,7 +197,8 @@ body {
   align-items: center;
   justify-content: center; }
   .landing-template .landing-text {
-    padding-bottom: 26px;
+    margin-top: 256px;
+    margin-bottom: 186px;
     width: 95vw; }
     .landing-template .landing-text p {
       margin: 0; }
@@ -207,8 +208,7 @@ body {
     .landing-template .landing-text .first {
       font-size: 54px;
       line-height: 52px;
-      margin-bottom: 6px;
-      margin-top: 36px; }
+      margin-bottom: 6px; }
     .landing-template .landing-text .second {
       font-size: 18px;
       line-height: 28px;
@@ -233,7 +233,7 @@ body {
 
 .photos-template {
   min-height: 100vh;
-  width: 95vw;
+  width: 96vw;
   margin: 0 auto; }
   .photos-template .image-thumbnail {
     cursor: pointer; }

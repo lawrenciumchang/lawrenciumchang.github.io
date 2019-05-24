@@ -79,9 +79,10 @@ function PhotosController($q, PhotosService) {
 
     function initJustifiedGallery() {
         $('.gallery-container').justifiedGallery({
-            rowHeight: 320,
+            rowHeight: 340,
             margins: 4,
-            lastRow: 'justify'
+            lastRow: 'justify',
+            captions: false
         });
     };
 
