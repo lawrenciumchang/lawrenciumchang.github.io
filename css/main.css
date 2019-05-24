@@ -5,14 +5,14 @@
 .dark-gray {
   color: #2E2E2E; }
 
+.gray {
+  color: #gray; }
+
 .almost-white {
   color: #FCFDFD; }
 
-.blue {
-  color: #2473A6; }
-
 a {
-  color: #2E2E2E;
+  color: #b0b1b1;
   cursor: pointer;
   text-decoration: none; }
 
@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   justify-content: center;
   height: 100vh; }
   .not-found-template .container {
-    color: #2473A6; }
+    color: #171717; }
     .not-found-template .container h1 {
       font-size: 160px; }
     .not-found-template .container a {
@@ -91,24 +91,6 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; }
-
-.contact-template {
-  height: 400px;
-  position: relative; }
-  .contact-template .text-content {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    right: 0; }
-    .contact-template .text-content a {
-      letter-spacing: 1.2px;
-      color: #2473A6;
-      margin-left: 10px; }
-    .contact-template .text-content img {
-      position: relative;
-      left: -8px;
-      top: 6px;
-      height: 24px; }
 
 .footer-template {
   height: 100px; }
@@ -140,6 +122,10 @@ body {
   user-select: none; }
   .header-template .ham:hover {
     transform: scale(0.9); }
+  @media (max-width: 768px) {
+    .header-template .ham {
+      top: 12px;
+      right: 6px; } }
 
 .header-template .ham-rotate.active {
   transform: rotate(45deg); }
@@ -196,13 +182,14 @@ body {
   padding-top: 30vh; }
   .header-template .menu-overlay .menu-contents h3 {
     margin: 24px 0; }
-  .header-template .menu-overlay .menu-contents a {
-    color: #b0b1b1; }
-    .header-template .menu-overlay .menu-contents a:hover {
-      color: #FCFDFD;
-      transition: 0.5s; }
+  .header-template .menu-overlay .menu-contents a:hover {
+    color: #FCFDFD;
+    transition: 0.5s; }
   .header-template .menu-overlay .menu-contents.active {
     display: block; }
+  @media (max-width: 768px) {
+    .header-template .menu-overlay .menu-contents {
+      padding-left: 6vw; } }
 
 .landing-template {
   display: flex;
@@ -232,7 +219,11 @@ body {
     bottom: 40px;
     right: 40px; }
     .landing-template .hover-btn-container img {
-      width: 36px; }
+      width: 34px; }
+    @media (max-width: 768px) {
+      .landing-template .hover-btn-container {
+        bottom: 26px;
+        right: 26px; } }
   .landing-template .hover-btn {
     cursor: pointer;
     transition: 0.6s; }
@@ -283,7 +274,7 @@ body {
       right: 15%;
       top: 0;
       bottom: 0;
-      border-bottom: 1px solid #2473A6; }
+      border-bottom: 1px solid #171717; }
     .photos-template .filter-row .active-filter:before {
       opacity: 1;
       left: 0;

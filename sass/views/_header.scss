@@ -26,6 +26,10 @@
         &:hover {
             transform: scale(0.9);
         }
+        @media (max-width: 768px) {
+            top: 12px;
+            right: 6px;
+        }
     }
 
     .ham-rotate.active {
@@ -104,6 +108,9 @@
             }
             &.active {
                 display: block;
+            }
+            @media (max-width: 768px) {
+                padding-left: 6vw;
             }
         }
     }
