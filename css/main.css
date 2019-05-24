@@ -235,55 +235,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 5px; }
-  .photos-template .filter-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15%;
-    margin: 20px 0; }
-    @media (max-width: 890px) {
-      .photos-template .filter-row #animals-filter {
-        margin-left: -20px; } }
-    @media (max-width: 1024px) {
-      .photos-template .filter-row {
-        overflow: scroll;
-        -webkit-overflow-scrolling: touch;
-        margin: 0 24px;
-        padding: 16px 20px; }
-        .photos-template .filter-row h2 {
-          margin: 0; } }
-    .photos-template .filter-row h2 {
-      display: inline-flex;
-      font-size: 18px;
-      margin: 20px;
-      cursor: pointer; }
-    .photos-template .filter-row * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-    .photos-template .filter-row .filter {
-      position: relative;
-      padding-bottom: 6px; }
-    .photos-template .filter-row .filter:before {
-      position: absolute;
-      content: '';
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      opacity: 0;
-      left: 15%;
-      right: 15%;
-      top: 0;
-      bottom: 0;
-      border-bottom: 1px solid #171717; }
-    .photos-template .filter-row .active-filter:before {
-      opacity: 1;
-      left: 0;
-      right: 0; }
-    @media (hover: hover) {
-      .photos-template .filter-row .filter:hover:before {
-        opacity: 1;
-        left: 0;
-        right: 0; } }
   .photos-template .photos-container {
     margin-bottom: 20px; }
     .photos-template .photos-container .photo {

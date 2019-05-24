@@ -6,8 +6,8 @@ app
 /* @ngInject */
 function PhotosController($q, PhotosService) {
     var vm = this;
-    vm.filterTerm = '';
-    vm.applyFilter = applyFilter;
+    // vm.filterTerm = '';
+    // vm.applyFilter = applyFilter;
     vm.openGallery = openGallery;
     vm.gaTrackClick = gaTrackClick;
     
@@ -71,17 +71,17 @@ function PhotosController($q, PhotosService) {
         vm.photos = photos;
     };
 
-    function applyFilter(filterTerm) {
-        if (vm.filterTerm === filterTerm) {
-            vm.filterTerm = '';
-            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
-        } else {
-            vm.filterTerm = filterTerm;
-            angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
-            angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
-        }
-        Jump(1); // used to display rest of photos in viewport due to scroll reveal
-    };
+    // function applyFilter(filterTerm) {
+    //     if (vm.filterTerm === filterTerm) {
+    //         vm.filterTerm = '';
+    //         angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+    //     } else {
+    //         vm.filterTerm = filterTerm;
+    //         angular.element(document.getElementsByClassName('filter')).removeClass('active-filter');
+    //         angular.element(document.querySelector('#' + filterTerm + '-filter')).addClass('active-filter');
+    //     }
+    //     Jump(1); // used to display rest of photos in viewport due to scroll reveal
+    // };
 
     function openGallery($event, index) {
         var pswpElement = document.querySelectorAll('.pswp')[0];
