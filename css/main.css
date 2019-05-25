@@ -234,5 +234,13 @@ body {
   min-height: 100vh;
   width: 96vw;
   margin: 0 auto; }
-  .photos-template .image-thumbnail {
-    cursor: pointer; }
+  .photos-template .justified-gallery .entry-visible img {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out; }
+    .photos-template .justified-gallery .entry-visible img:hover {
+      transform: scale(1.02);
+      transition: transform .5s ease-in-out;
+      -moz-transition: transform .5s ease-in-out;
+      -webkit-transition: transform .5s ease-in-out; }
