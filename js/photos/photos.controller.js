@@ -120,7 +120,6 @@ function PhotosController($q, PhotosService) {
     function parsePhotos($event) {
         var photos = [];
         var photoGroup = angular.element($event.target).parent().parent().children();
-        console.log(photoGroup);
 
         for (var i = 0; i < photoGroup.length; i++) {
             var photoElement = photoGroup[i].children[0];
