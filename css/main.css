@@ -195,10 +195,9 @@ body {
 .landing-template {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  height: 85vh; }
   .landing-template .landing-text {
-    margin-top: 256px;
-    margin-bottom: 186px;
     width: 95vw; }
     .landing-template .landing-text p {
       margin: 0; }
