@@ -69,16 +69,29 @@ h1, h2, h3, h4, h5, h6, p, a {
 .not-found-template {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh; }
+  margin: 0 auto;
+  height: 100vh;
+  width: 96vw; }
   .not-found-template .container {
     color: #171717; }
     .not-found-template .container h1 {
-      font-size: 160px; }
+      font-size: 100px; }
+      @media (max-width: 768px) {
+        .not-found-template .container h1 {
+          line-height: 76px; } }
     .not-found-template .container a {
-      text-decoration: none; }
+      text-decoration: none;
+      margin-top: 2px;
+      display: block; }
+      .not-found-template .container a:hover {
+        transition: 0.5s;
+        color: #171717; }
     .not-found-template .container .message {
-      margin-top: -14px; }
+      margin-top: -18px;
+      margin-left: 6px; }
+      @media (max-width: 768px) {
+        .not-found-template .container .message {
+          margin-top: 26px; } }
 
 body {
   font-family: 'filson-pro', sans-serif;
