@@ -169,28 +169,34 @@ body {
 .header-template .ham-strokes.active .bottom {
   stroke-dashoffset: -64px; }
 
-.header-template .menu-overlay.active {
-  z-index: 900;
+.header-template .menu-overlay {
   position: fixed;
   background-color: #171717;
-  transition: 0.5s;
+  transition: 0.6s;
   width: 100vw;
   height: 100vh; }
-
-.header-template .menu-overlay .menu-contents {
-  display: none;
-  padding-left: 3vw;
-  padding-top: 35vh; }
-  .header-template .menu-overlay .menu-contents h3 {
-    margin: 26px 0; }
-  .header-template .menu-overlay .menu-contents a:hover {
-    color: #FCFDFD;
-    transition: 0.5s; }
-  .header-template .menu-overlay .menu-contents.active {
-    display: block; }
-  @media (max-width: 768px) {
-    .header-template .menu-overlay .menu-contents {
-      padding-left: 6vw; } }
+  .header-template .menu-overlay.active {
+    opacity: 1;
+    z-index: 900; }
+  .header-template .menu-overlay.inactive {
+    opacity: 0;
+    z-index: -1; }
+  .header-template .menu-overlay .menu-contents {
+    transition: 0.5s;
+    padding-left: 3vw;
+    padding-top: 35vh; }
+    .header-template .menu-overlay .menu-contents h3 {
+      margin: 26px 0; }
+    .header-template .menu-overlay .menu-contents a:hover {
+      color: #FCFDFD;
+      transition: 0.5s; }
+    .header-template .menu-overlay .menu-contents.active {
+      opacity: 1; }
+    .header-template .menu-overlay .menu-contents.inactive {
+      opacity: 0; }
+    @media (max-width: 768px) {
+      .header-template .menu-overlay .menu-contents {
+        padding-left: 6vw; } }
 
 .landing-template {
   display: flex;

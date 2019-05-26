@@ -6,7 +6,7 @@ app
 /* @ngInject */
 function HeaderController($q) {
     var vm = this;
-    vm.openMenu = openMenu;
+    vm.toggleMenuOverlay = toggleMenuOverlay;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -30,11 +30,14 @@ function HeaderController($q) {
     //     $('.menu-burger').text() == "☰" ? openMenu() : closeMenu();
     // });
 
-    function openMenu(element) {
+    function toggleMenuOverlay(element) {
         element.classList.toggle('active');
 
+        // Open Menu
         if (element.classList.contains('active')) {
+            document.querySelector('.menu-overlay').classList.remove('inactive');
             document.querySelector('.menu-overlay').classList.add('active');
+            document.querySelector('.menu-contents').classList.remove('inactive');
             document.querySelector('.menu-contents').classList.add('active');
             // Lock scroll
             $('body').css({'overflow':'0'});
@@ -42,8 +45,12 @@ function HeaderController($q) {
                 window.scrollTo(0,0); 
             });
             gaTrackClick('mobile menu', 'open');
-        } else {
+        } 
+        // Close Menu
+        else {
+            document.querySelector('.menu-overlay').classList.add('inactive');
             document.querySelector('.menu-overlay').classList.remove('active');
+            document.querySelector('.menu-contents').classList.add('inactive');
             document.querySelector('.menu-contents').classList.remove('active');
             // Enable scroll
             $(document).unbind('scroll'); 
