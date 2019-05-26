@@ -185,7 +185,7 @@ body {
 .header-template .menu-overlay {
   position: fixed;
   background-color: #171717;
-  transition: 0.6s;
+  transition: 0.5s;
   width: 100vw;
   height: 100vh; }
   .header-template .menu-overlay.active {
@@ -200,9 +200,10 @@ body {
     padding-top: 35vh; }
     .header-template .menu-overlay .menu-contents h3 {
       margin: 26px 0; }
-    .header-template .menu-overlay .menu-contents a:hover {
-      color: #FCFDFD;
+    .header-template .menu-overlay .menu-contents a {
       transition: 0.5s; }
+      .header-template .menu-overlay .menu-contents a:hover {
+        color: #FCFDFD; }
     .header-template .menu-overlay .menu-contents.active {
       opacity: 1; }
     .header-template .menu-overlay .menu-contents.inactive {
@@ -245,7 +246,7 @@ body {
         right: 26px; } }
   .landing-template .hover-btn {
     cursor: pointer;
-    transition: 0.6s; }
+    transition: 0.5s; }
     .landing-template .hover-btn:hover {
       transform: scale(1.1); }
 
