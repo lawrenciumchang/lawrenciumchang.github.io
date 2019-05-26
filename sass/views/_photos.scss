@@ -4,20 +4,8 @@
     margin: 0 auto;
 
     .justified-gallery {
-        .entry-visible {
-            img {
-                cursor: pointer;
-                transition: transform 0.5s ease-in-out;
-                -moz-transition: transform 0.5s ease-in-out;
-                -webkit-transition: transform 0.5s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.02);
-                    transition: transform 0.5s ease-in-out;
-                    -moz-transition: transform 0.5s ease-in-out;
-                    -webkit-transition: transform 0.5s ease-in-out;
-                }
-            }
+        img {
+            cursor: pointer;
         }
     }
 }
