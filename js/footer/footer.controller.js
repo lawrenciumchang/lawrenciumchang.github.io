@@ -6,8 +6,6 @@ app
 /* @ngInject */
 function FooterController($q) {
     var vm = this;
-    vm.scrollToFilters = scrollToFilters;
-
     vm.currentYear = new Date().getFullYear();
 
     activate();
@@ -18,11 +16,4 @@ function FooterController($q) {
 
         });
     }
-
-    function scrollToFilters() {
-        Jump('.photos-template', {
-            offset: -50
-        });
-    }
-
 }

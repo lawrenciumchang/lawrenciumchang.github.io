@@ -1,17 +1,7 @@
 <div ng-controller="PhotosController as vm" class="photos-template">
-    <div ng-scroll-reveal class="filter-row">
-        <h2 id="animals-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('animals'); vm.gaTrackClick('photo filters', 'animals')">Animals</h2>
-        <h2 id="humans-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('humans'); vm.gaTrackClick('photo filters', 'humans')">Humans</h2>
-        <h2 id="cities-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('cities'); vm.gaTrackClick('photo filters', 'cities')">Cities</h2>
-        <h2 id="landscapes-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('landscapes'); vm.gaTrackClick('photo filters', 'landscapes')">Landscapes</h2>
-        <h2 id="abstract-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('abstract'); vm.gaTrackClick('photo filters', 'abstract')">Abstract</h2>
-        <h2 id="things-filter" class="font-light blue space-20 filter" ng-click="vm.applyFilter('things'); vm.gaTrackClick('photo filters', 'things')">Things</h2>
-    </div>
-    <div class="photos-container clearfix">
-        <div class="photo center lg-col lg-col-6" ng-repeat="photo in vm.photos | orderBy : '-date' | filter: vm.filterTerm">
-            <div ng-scroll-reveal class="image-container">
-                <img img-preload data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} data-msrc="{{photo.msrc}}" ng-src="{{photo.src}}" ng-click="vm.openGallery($event, $index); vm.gaTrackClick('photos', photo.title)"/>
-            </div>
+    <div class="gallery-container clearfix justified-gallery">
+        <div ng-repeat="photo in vm.photos | orderBy : '-date'">
+            <img img-preload class="image-thumbnail" data-width={{photo.w}} data-height={{photo.h}} data-title={{photo.title}} data-msrc="{{photo.msrc}}" ng-src="{{photo.src}}" alt="{{photo.title}}" ng-click="vm.openGallery($event, $index); vm.gaTrackClick('photos', photo.title)"/>
         </div>
     </div>
 

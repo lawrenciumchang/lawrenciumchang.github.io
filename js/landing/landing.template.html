@@ -1,17 +1,13 @@
 <div ng-controller="LandingController as vm" class="landing-template">
-    <div class="content text-center">
-        <h1 class="landing-text space-25">
-            <p class="first font-regular blue"></p>
-            <p class="second font-light dark-gray"></p>
-        </h1>
-    </div>
-    <div class="navigation-arrow bounce hidden" ng-click="vm.navigateToPhotos(); vm.gaTrackClick('navigation', 'photos')">
-        <img ng-src="assets/icons/chevron-down.svg"/>
+    <div class="landing-text">
+        <h1 class="first font-regular dark-gray space-10"></h1>
+        <h2 class="second font-light dark-gray space-20"></h2>
     </div>
 
-    <!-- Desktop Hover Buttons -->
-    <div class="hover-btn-container hover-btn-container-desktop hide-hover-btn">
-        <div class="scroll-top-btn hover-btn" ng-click="vm.scrollToTop(); vm.gaTrackClick('hover buttons', 'scroll to top')"></div>
-        <div class="contact-btn hover-btn"><a ng-href="mailto:lawrencium.chang@gmail.com" target="_top" ng-click="vm.gaTrackClick('hover buttons', 'email')"></a></div>
+    <!-- Scroll To Top Hover Button -->
+    <div class="hover-btn-container hide-hover-btn">
+        <div class="hover-btn scroll-top-btn" ng-click="vm.scrollToTop(); vm.gaTrackClick('hover buttons', 'scroll to top')">
+            <img ng-src="assets/icons/chevron-up.svg"/>
+        </div>
     </div>
 </div>

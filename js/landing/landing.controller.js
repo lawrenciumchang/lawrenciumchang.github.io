@@ -7,7 +7,6 @@ app
 function LandingController($q) {
     var vm = this;
     vm.scrollToTop = scrollToTop;
-    vm.navigateToPhotos = navigateToPhotos;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -26,12 +25,6 @@ function LandingController($q) {
             window.onscroll = function() {scrollFunction()};
         });
     }
-
-    function navigateToPhotos() {
-        Jump('.photos-template', {
-            duration: 800
-        });
-    };
 
     function displayFirstSentence() {
         var typed = new Typed('.landing-text .first', {
@@ -65,16 +58,6 @@ function LandingController($q) {
     };
 
     function scrollFunction() {
-        // Hides down navigation arrow on scroll, reveals when scrolled back to top.
-        if (document.body.scrollTop > (window.innerHeight/2) || document.documentElement.scrollTop > (window.innerHeight/2)) {
-            var navigationArrow = document.querySelector('.navigation-arrow');
-            navigationArrow.classList.remove('reveal');
-        }
-        else {
-            var navigationArrow = document.querySelector('.navigation-arrow');
-            navigationArrow.classList.add('reveal');
-        }
-
         // Controls scroll reveal for hover button elements. Use .hide-hover-btn class on element to reveal/hide past first panel. 
         if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
             var elements = document.querySelectorAll('.hide-hover-btn');
@@ -92,5 +75,4 @@ function LandingController($q) {
     function scrollToTop() {
         Jump('.header-template');
     }
-
 }

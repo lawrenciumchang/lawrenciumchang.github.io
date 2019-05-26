@@ -6,6 +6,7 @@ app
 /* @ngInject */
 function HeaderController($q) {
     var vm = this;
+    vm.toggleMenuOverlay = toggleMenuOverlay;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -24,27 +25,32 @@ function HeaderController($q) {
         });
     }
 
-    $('.menu-burger, .menu-items').on('click', function() {
-        $('.menu-bg, .menu-items, .menu-burger').toggleClass('fs');
-        $('.menu-burger').text() == "☰" ? openMenu() : closeMenu();
-    });
+    function toggleMenuOverlay(element) {
+        element.classList.toggle('active');
 
-    function openMenu() {
-        $('.menu-burger').text('✕');
-        // Lock scroll
-        $('body').css({'overflow':'0'});
-        $(document).bind('scroll',function () { 
-            window.scrollTo(0,0); 
-        });
-        gaTrackClick('mobile menu', 'open');
-    };
-
-    function closeMenu() {
-        $('.menu-burger').text('☰');
-        // Enable scroll
-        $(document).unbind('scroll'); 
-        $('body').css({'overflow':'visible'});
-        gaTrackClick('mobile menu', 'close');
-    };
-
+        // Open Menu
+        if (element.classList.contains('active')) {
+            document.querySelector('.menu-overlay').classList.remove('inactive');
+            document.querySelector('.menu-overlay').classList.add('active');
+            document.querySelector('.menu-contents').classList.remove('inactive');
+            document.querySelector('.menu-contents').classList.add('active');
+            // Lock scroll
+            $('body').css({'overflow':'0'});
+            $(document).bind('scroll',function () { 
+                window.scrollTo(0,0); 
+            });
+            gaTrackClick('mobile menu', 'open');
+        } 
+        // Close Menu
+        else {
+            document.querySelector('.menu-overlay').classList.add('inactive');
+            document.querySelector('.menu-overlay').classList.remove('active');
+            document.querySelector('.menu-contents').classList.add('inactive');
+            document.querySelector('.menu-contents').classList.remove('active');
+            // Enable scroll
+            $(document).unbind('scroll'); 
+            $('body').css({'overflow':'visible'});
+            gaTrackClick('mobile menu', 'close');
+        }
+    }
 }
