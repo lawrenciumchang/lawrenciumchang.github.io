@@ -25,11 +25,6 @@ function HeaderController($q) {
         });
     }
 
-    // $('.menu-burger, .menu-items').on('click', function() {
-    //     $('.menu-bg, .menu-items, .menu-burger').toggleClass('fs');
-    //     $('.menu-burger').text() == "☰" ? openMenu() : closeMenu();
-    // });
-
     function toggleMenuOverlay(element) {
         element.classList.toggle('active');
 
@@ -58,23 +53,4 @@ function HeaderController($q) {
             gaTrackClick('mobile menu', 'close');
         }
     }
-
-    // function openMenu() {
-    //     $('.menu-burger').text('✕');
-    //     // Lock scroll
-    //     $('body').css({'overflow':'0'});
-    //     $(document).bind('scroll',function () { 
-    //         window.scrollTo(0,0); 
-    //     });
-    //     gaTrackClick('mobile menu', 'open');
-    // };
-
-    // function closeMenu() {
-    //     $('.menu-burger').text('☰');
-    //     // Enable scroll
-    //     $(document).unbind('scroll'); 
-    //     $('body').css({'overflow':'visible'});
-    //     gaTrackClick('mobile menu', 'close');
-    // };
-
 }
