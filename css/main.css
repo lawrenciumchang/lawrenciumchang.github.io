@@ -3,16 +3,16 @@
   color: #171717; }
 
 .dark-gray {
-  color: #2E2E2E; }
+  color: #3B3B3B; }
 
 .gray {
-  color: #b0b1b1; }
+  color: #B0B1B1; }
 
 .almost-white {
   color: #FCFDFD; }
 
 a {
-  color: #b0b1b1;
+  color: #B0B1B1;
   cursor: pointer;
   text-decoration: none; }
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 body {
   font-family: 'filson-pro', sans-serif;
   font-weight: 300;
-  color: #2E2E2E;
+  color: #3B3B3B;
   margin: 0px;
   background-color: #FCFDFD;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
@@ -156,7 +156,7 @@ body {
 .header-template .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #2E2E2E;
+  stroke: #3B3B3B;
   stroke-width: 3.5;
   stroke-linecap: round; }
 
