@@ -8,4 +8,11 @@
             cursor: pointer;
         }
     }
+
+    .photo-container {
+        transition: all 400ms ease-in-out;
+        &:hover {
+            transform: scale(0.98);
+        }
+    }
 }

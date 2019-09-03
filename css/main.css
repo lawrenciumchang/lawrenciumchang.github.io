@@ -256,3 +256,7 @@ body {
   margin: 0 auto; }
   .photos-template .justified-gallery img {
     cursor: pointer; }
+  .photos-template .photo-container {
+    transition: all 400ms ease-in-out; }
+    .photos-template .photo-container:hover {
+      transform: scale(0.98); }
