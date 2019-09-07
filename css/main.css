@@ -146,6 +146,8 @@ body {
       width: 75vw; }
     .footer-template .footer-container .cta-inverse {
       margin-top: 48px; }
+      .footer-template .footer-container .cta-inverse a {
+        color: #171717; }
     .footer-template .footer-container .copyright {
       position: absolute;
       bottom: 74px;
