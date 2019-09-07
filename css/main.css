@@ -276,14 +276,14 @@ body {
       .landing-template .landing-text {
         width: 90vw; } }
     .landing-template .landing-text .first {
-      font-size: 54px;
-      line-height: 52px;
-      margin-bottom: 6px; }
+      font-size: 40px;
+      margin-bottom: 4px;
+      line-height: 43px; }
     .landing-template .landing-text .second {
-      font-size: 20px;
-      line-height: 28px;
-      margin: 0 0 24px 4px;
-      padding-right: 10px; }
+      font-size: 36px;
+      margin: 0 0 36px 0;
+      padding-right: 10px;
+      line-height: 43px; }
   .landing-template .cta {
     margin-bottom: 20px; }
 
