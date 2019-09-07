@@ -1,11 +1,12 @@
 .header-template {
     .ham {
-        width: 70px;
+        width: 64px;
         cursor: pointer;
         z-index: 1000;
         position: fixed;
-        top: 20px;
-        right: 20px;
+        top: 24px;
+        right: 24px;
+        background-color: $almost-black;
         -webkit-tap-highlight-color: transparent;
         transition: transform 400ms;
         -moz-user-select: none;
@@ -16,8 +17,9 @@
             transform: scale(0.9);
         }
         @media (max-width: 768px) {
+            width: 56px;
             top: 12px;
-            right: 6px;
+            right: 12px;
         }
     }
 
@@ -41,7 +43,7 @@
     .line {
         fill: none;
         transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke: $dark-gray;
+        stroke: $almost-white;
         stroke-width: 3.5;
         stroke-linecap: round;
     }
@@ -93,7 +95,7 @@
             padding-top: 30vh;
 
             .menu-item {
-                margin: 48px 0;
+                margin: 52px 0;
 
                 &.fade-down {
                     opacity: 0;

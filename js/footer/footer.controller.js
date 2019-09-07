@@ -7,6 +7,14 @@ app
 function FooterController($q) {
     var vm = this;
     vm.currentYear = new Date().getFullYear();
+    vm.gaTrackClick = gaTrackClick;
+
+    function gaTrackClick(category, label) {
+        var host = window.location.hostname;
+        if (host != 'localhost') {
+            ga('send', 'event', category, 'click' , label);
+        }
+    };
 
     activate();
 

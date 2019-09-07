@@ -6,13 +6,13 @@
   color: #3B3B3B; }
 
 .gray {
-  color: #80888C; }
+  color: #9B9FA2; }
 
 .almost-white {
   color: #FCFDFD; }
 
 a {
-  color: #80888C;
+  color: #9B9FA2;
   cursor: pointer;
   text-decoration: none; }
 
@@ -69,6 +69,28 @@ h1, h2, h3, h4, h5, h6, p, a {
     opacity: 1;
     pointer-events: all; }
 
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer; }
+  .cta:hover {
+    transition: 0.5s;
+    transform: scale(0.97); }
+  .cta.cta-primary {
+    background-color: #171717;
+    color: #FCFDFD;
+    width: 244px;
+    height: 64px; }
+  .cta.cta-inverse {
+    background-color: #FCFDFD;
+    color: #171717;
+    width: 172px;
+    height: 58px;
+    transition: 0.5s; }
+
 .not-found-template {
   display: flex;
   align-items: center;
@@ -109,28 +131,42 @@ body {
   background: transparent; }
 
 .footer-template {
-  height: 100px; }
-  .footer-template .copyright-container {
-    display: flex;
-    height: 80px;
-    margin-bottom: 100px;
-    align-items: center;
-    justify-content: center; }
-    .footer-template .copyright-container .copyright {
-      width: 96vw;
-      margin: 0 0 0 10px;
-      line-height: 24px; }
-      @media (max-width: 1024px) {
-        .footer-template .copyright-container .copyright {
-          width: 90vw; } }
+  margin-top: 84px;
+  background-color: #171717; }
+  .footer-template .footer-container {
+    width: 96vw;
+    max-height: 600px;
+    height: 60vh;
+    margin: 0 auto;
+    padding-top: 120px;
+    position: relative; }
+    .footer-template .footer-container h2 {
+      font-size: 36px;
+      margin: 0 0 4px 0;
+      width: 75vw; }
+    .footer-template .footer-container .cta-inverse {
+      margin-top: 48px; }
+    .footer-template .footer-container .copyright {
+      position: absolute;
+      bottom: 74px;
+      color: #9B9FA2;
+      font-size: 14px; }
+    @media (max-width: 1024px) {
+      .footer-template .footer-container {
+        width: 90vw; } }
+    @media (max-width: 768px) {
+      .footer-template .footer-container {
+        height: 80vh;
+        min-height: 700px; } }
 
 .header-template .ham {
-  width: 70px;
+  width: 64px;
   cursor: pointer;
   z-index: 1000;
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 24px;
+  right: 24px;
+  background-color: #171717;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;
@@ -141,8 +177,9 @@ body {
     transform: scale(0.9); }
   @media (max-width: 768px) {
     .header-template .ham {
+      width: 56px;
       top: 12px;
-      right: 6px; } }
+      right: 12px; } }
 
 .header-template .ham-rotate.active {
   transform: rotate(45deg); }
@@ -159,7 +196,7 @@ body {
 .header-template .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #3B3B3B;
+  stroke: #FCFDFD;
   stroke-width: 3.5;
   stroke-linecap: round; }
 
@@ -202,7 +239,7 @@ body {
     padding-left: 3vw;
     padding-top: 30vh; }
     .header-template .menu-overlay .menu-contents .menu-item {
-      margin: 48px 0; }
+      margin: 52px 0; }
       .header-template .menu-overlay .menu-contents .menu-item.fade-down {
         opacity: 0;
         animation: fadeIn 0.5s ease-in both; }
@@ -236,7 +273,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh; }
+  height: 100vh; }
   .landing-template .landing-text {
     width: 96vw; }
     .landing-template .landing-text p {
@@ -249,30 +286,15 @@ body {
       line-height: 52px;
       margin-bottom: 6px; }
     .landing-template .landing-text .second {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 28px;
-      margin: 0 0 0 4px;
+      margin: 0 0 24px 4px;
       padding-right: 10px; }
-  .landing-template .hover-btn-container {
-    visibility: visible;
-    position: fixed;
-    z-index: 1000;
-    bottom: 40px;
-    right: 40px; }
-    .landing-template .hover-btn-container img {
-      width: 32px; }
-    @media (max-width: 768px) {
-      .landing-template .hover-btn-container {
-        bottom: 26px;
-        right: 26px; } }
-  .landing-template .hover-btn {
-    cursor: pointer;
-    transition: 0.5s; }
-    .landing-template .hover-btn:hover {
-      transform: scale(1.1); }
+  .landing-template .cta {
+    margin-bottom: 20px; }
 
 .photos-template {
-  min-height: 100vh;
+  min-height: 200vh;
   width: 96vw;
   margin: 0 auto; }
   .photos-template .justified-gallery img {

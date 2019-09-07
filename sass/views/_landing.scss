@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
     
     .landing-text {
         width: 96vw;
@@ -18,33 +18,14 @@
             margin-bottom: 6px;
         }
         .second {
-            font-size: 18px;
+            font-size: 20px;
             line-height: 28px;
-            margin: 0 0 0 4px;
+            margin: 0 0 24px 4px;
             padding-right: 10px;
         }
     }
-
-    .hover-btn-container {
-        visibility: visible;
-        position: fixed;
-        z-index: 1000;
-        bottom: 40px;
-        right: 40px;
-        img {
-            width: 32px;
-        }
-        @media (max-width: 768px) {
-            bottom: 26px;
-            right: 26px;
-        }
-    }
-
-    .hover-btn {
-        cursor: pointer;
-        transition: 0.5s;
-        &:hover {
-            transform: scale(1.1);
-        }
+    
+    .cta {
+        margin-bottom: 20px;
     }
 }

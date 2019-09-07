@@ -6,7 +6,7 @@ app
 /* @ngInject */
 function LandingController($q) {
     var vm = this;
-    vm.scrollToTop = scrollToTop;
+    vm.scrollToPhotos = scrollToPhotos;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -29,7 +29,7 @@ function LandingController($q) {
     function displayFirstSentence() {
         var typed = new Typed('.landing-text .first', {
             strings: ["Hi, I'm Lawrence."],
-            typeSpeed: 40,
+            typeSpeed: 35,
             showCursor: false,
             onComplete: function() {
                 displaySecondSentence();
@@ -40,7 +40,7 @@ function LandingController($q) {
     function displaySecondSentence() {
         var typed = new Typed('.landing-text .second', {
             strings: ["I design things, take photos, and build websites."],
-            typeSpeed: 40,
+            typeSpeed: 25,
             showCursor: false,
             startDelay: 500,
             onComplete: function() {
@@ -72,7 +72,9 @@ function LandingController($q) {
         }
     }
 
-    function scrollToTop() {
-        Jump('.header-template');
+    function scrollToPhotos() {
+        Jump('.photos-template', {
+            offset: -28
+        });
     }
 }

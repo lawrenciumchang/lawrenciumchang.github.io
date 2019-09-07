@@ -1,18 +1,39 @@
 .footer-template {
-    height: 100px;
-    .copyright-container {
-        display: flex;
-        height: 80px;
-        margin-bottom: 100px;
-        align-items: center;
-        justify-content: center;
+    margin-top: 84px;
+    background-color: $almost-black;
+
+    .footer-container {
+        width: 96vw;
+        max-height: 600px;
+        height: 60vh;
+        margin: 0 auto;
+        padding-top: 120px;
+        position: relative;
+        
+        h2 {
+            font-size: 36px;
+            margin: 0 0 4px 0;
+            width: 75vw;
+        }
+
+        .cta-inverse {
+            margin-top: 48px;
+        }
+
         .copyright {
-            width: 96vw;
-            margin: 0 0 0 10px;
-            @media (max-width: 1024px) {
-                width: 90vw;
-            }
-            line-height: 24px;
+            position: absolute;
+            bottom: 74px;
+            color: $gray;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            width: 90vw;
+        }
+
+        @media (max-width: 768px) {
+            height: 80vh;
+            min-height: 700px;
         }
     }
 }
