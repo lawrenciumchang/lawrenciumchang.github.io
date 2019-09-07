@@ -9,13 +9,3 @@
         opacity: 1;
     }
 }
-
-.hide-hover-btn {
-    transition: 2s;
-    opacity: 0;
-    pointer-events: none;
-    &.show-hover-btn {
-        opacity: 1;
-        pointer-events: all;
-    }
-}
