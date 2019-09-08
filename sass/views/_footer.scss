@@ -16,10 +16,22 @@
             width: 75vw;
         }
 
-        .cta-inverse {
+        .contact-container {
             margin-top: 48px;
-            a {
-                color: $almost-black;
+            display: flex;
+
+            .copied-text {
+                width: 40vw;
+                margin-left: 20px;
+                align-items: center;
+                display: flex;
+                color: $almost-white;
+                font-size: 12px;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+                &.reveal {
+                    opacity: 1;
+                }
             }
         }
 
@@ -41,3 +53,4 @@
         }
     }
 }
+

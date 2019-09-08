@@ -136,10 +136,20 @@ body {
       font-size: 36px;
       margin: 0 0 4px 0;
       width: 75vw; }
-    .footer-template .footer-container .cta-inverse {
-      margin-top: 48px; }
-      .footer-template .footer-container .cta-inverse a {
-        color: #171717; }
+    .footer-template .footer-container .contact-container {
+      margin-top: 48px;
+      display: flex; }
+      .footer-template .footer-container .contact-container .copied-text {
+        width: 40vw;
+        margin-left: 20px;
+        align-items: center;
+        display: flex;
+        color: #FCFDFD;
+        font-size: 12px;
+        opacity: 0;
+        transition: all 1s ease-in-out; }
+        .footer-template .footer-container .contact-container .copied-text.reveal {
+          opacity: 1; }
     .footer-template .footer-container .copyright {
       position: absolute;
       bottom: 74px;
@@ -250,6 +260,18 @@ body {
         transition: 0.5s; }
         .header-template .menu-overlay .menu-contents .menu-item a:hover {
           color: #FCFDFD; }
+    .header-template .menu-overlay .menu-contents .mail {
+      margin-bottom: 8px; }
+    .header-template .menu-overlay .menu-contents .copied-text {
+      margin: 0 0 44px 0;
+      align-items: center;
+      display: flex;
+      color: #FCFDFD;
+      font-size: 12px;
+      opacity: 0;
+      transition: all 1s ease-in-out; }
+      .header-template .menu-overlay .menu-contents .copied-text.reveal {
+        opacity: 1; }
     .header-template .menu-overlay .menu-contents.active {
       opacity: 1; }
     .header-template .menu-overlay .menu-contents.inactive {

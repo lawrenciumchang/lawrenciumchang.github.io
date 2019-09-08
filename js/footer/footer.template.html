@@ -2,10 +2,13 @@
     <div class="footer-container">
         <h2 class="font-bold almost-white space-10">Say hello!</h2>
         <h2 class="font-bold gray">Let’s grab a coffee and chat about anything from photography to design to mechanical keyboards.</h2>
-        <div class="cta cta-inverse">
-            <a ng-href="mailto:lawrencium.chang@gmail.com" target="_top" ng-click="vm.gaTrackClick('cta', 'get in touch')">Get in touch</a>
+        <div class="contact-container">
+            <div class="cta cta-inverse" data-clipboard-text="lawrencium.chang@gmail.com" ng-click="vm.gaTrackClick('cta', 'get in touch'); vm.revealCopiedText()">
+                Get in touch
+            </div>
+            <span class="copied-text">My email has been copied to your clipboard!</span>
         </div>
-
+        
         <p class="copyright font-light space-05">All images and content Copyright © 2015-{{vm.currentYear}} Lawrence Chang</p>
     </div>
 </div>
