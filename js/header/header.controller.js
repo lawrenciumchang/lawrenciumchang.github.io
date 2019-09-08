@@ -7,6 +7,7 @@ app
 function HeaderController($q) {
     var vm = this;
     vm.toggleMenuOverlay = toggleMenuOverlay;
+    vm.revealCopiedText = revealCopiedText;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -21,7 +22,7 @@ function HeaderController($q) {
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
-
+            new ClipboardJS('.mail');
         });
     }
 
@@ -58,5 +59,12 @@ function HeaderController($q) {
             $('body').css({'overflow':'visible'});
             gaTrackClick('mobile menu', 'close');
         }
+    }
+
+    function revealCopiedText() {
+        $('.copied-text').addClass('reveal');
+        setTimeout(function() { 
+            $('.copied-text').removeClass('reveal');
+        }, 2000);
     }
 }

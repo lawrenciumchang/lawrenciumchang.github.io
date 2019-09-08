@@ -7,6 +7,7 @@ app
 function FooterController($q) {
     var vm = this;
     vm.currentYear = new Date().getFullYear();
+    vm.revealCopiedText = revealCopiedText;
     vm.gaTrackClick = gaTrackClick;
 
     function gaTrackClick(category, label) {
@@ -21,7 +22,14 @@ function FooterController($q) {
     function activate() {
         var promises = [];
         return $q.all(promises).then(function() {
-
+            new ClipboardJS('.cta');
         });
+    }
+
+    function revealCopiedText() {
+        $('.copied-text').addClass('reveal');
+        setTimeout(function() { 
+            $('.copied-text').removeClass('reveal');
+        }, 2000);
     }
 }
