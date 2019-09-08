@@ -144,7 +144,8 @@ body {
       position: absolute;
       bottom: 74px;
       color: #9B9FA2;
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 20px; }
     @media (max-width: 1024px) {
       .footer-template .footer-container {
         width: 90vw; } }
@@ -221,7 +222,9 @@ body {
   background-color: #171717;
   transition: 0.5s;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  align-items: center; }
   .header-template .menu-overlay.active {
     opacity: 1;
     z-index: 900; }
@@ -230,8 +233,8 @@ body {
     z-index: -1; }
   .header-template .menu-overlay .menu-contents {
     transition: 0.5s;
-    padding-left: 3vw;
-    padding-top: 30vh; }
+    width: 96vw;
+    margin: 0 auto; }
     .header-template .menu-overlay .menu-contents .menu-item {
       margin: 52px 0; }
       .header-template .menu-overlay .menu-contents .menu-item.fade-down {
@@ -251,9 +254,9 @@ body {
       opacity: 1; }
     .header-template .menu-overlay .menu-contents.inactive {
       opacity: 0; }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .header-template .menu-overlay .menu-contents {
-        padding-left: 6vw; } }
+        width: 90vw; } }
 
 @keyframes fadeIn {
   from {
