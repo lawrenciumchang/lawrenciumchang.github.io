@@ -1,11 +1,18 @@
 .photos-template {
-    min-height: 100vh;
+    min-height: 200vh;
     width: 96vw;
     margin: 0 auto;
 
     .justified-gallery {
         img {
             cursor: pointer;
+        }
+    }
+
+    .photo-container {
+        transition: all 400ms ease-in-out;
+        &:hover {
+            transform: scale(0.98);
         }
     }
 }

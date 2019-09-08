@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
     
     .landing-text {
         width: 96vw;
@@ -13,37 +13,19 @@
             width: 90vw;
         }
         .first {
-            font-size: 54px;
-            line-height: 52px;
-            margin-bottom: 6px;
+            font-size: 40px;
+            margin-bottom: 4px;
+            line-height: 43px;
         }
         .second {
-            font-size: 18px;
-            line-height: 28px;
-            margin: 0 0 0 4px;
+            font-size: 36px;
+            margin: 0 0 36px 0;
+            padding-right: 10px;
+            line-height: 43px;
         }
     }
-
-    .hover-btn-container {
-        visibility: visible;
-        position: fixed;
-        z-index: 1000;
-        bottom: 40px;
-        right: 40px;
-        img {
-            width: 32px;
-        }
-        @media (max-width: 768px) {
-            bottom: 26px;
-            right: 26px;
-        }
-    }
-
-    .hover-btn {
-        cursor: pointer;
-        transition: 0.5s;
-        &:hover {
-            transform: scale(1.1);
-        }
+    
+    .cta {
+        margin-bottom: 20px;
     }
 }

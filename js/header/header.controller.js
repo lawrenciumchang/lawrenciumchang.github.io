@@ -34,6 +34,9 @@ function HeaderController($q) {
             document.querySelector('.menu-overlay').classList.add('active');
             document.querySelector('.menu-contents').classList.remove('inactive');
             document.querySelector('.menu-contents').classList.add('active');
+
+            $('.menu-item').addClass('fade-down');
+
             // Lock scroll
             $('body').css({'overflow':'0'});
             $(document).bind('scroll',function () { 
@@ -47,6 +50,9 @@ function HeaderController($q) {
             document.querySelector('.menu-overlay').classList.remove('active');
             document.querySelector('.menu-contents').classList.add('inactive');
             document.querySelector('.menu-contents').classList.remove('active');
+
+            $('.menu-item').removeClass('fade-down');
+
             // Enable scroll
             $(document).unbind('scroll'); 
             $('body').css({'overflow':'visible'});

@@ -1,0 +1,27 @@
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+        transition: 0.5s;
+        transform: scale(0.97);
+    }
+
+    &.cta-primary {
+        background-color: $almost-black;
+        color: $almost-white;
+        width: 244px;
+        height: 64px;
+    }
+
+    &.cta-inverse {
+        background-color: $almost-white;
+        color: $almost-black;
+        width: 172px;
+        height: 58px;
+        transition: 0.5s;
+    }
+}
