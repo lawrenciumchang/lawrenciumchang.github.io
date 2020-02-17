@@ -8,13 +8,21 @@
 .gray {
   color: #9B9FA2; }
 
+.blue {
+  color: #69AAF3; }
+
 .almost-white {
   color: #FCFDFD; }
 
 a {
-  color: #9B9FA2;
+  color: #69AAF3;
   cursor: pointer;
-  text-decoration: none; }
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 500ms; }
+  a:hover {
+    color: #171717; }
 
 h1, h2, h3, h4, h5, h6, p, a {
   -webkit-user-select: none;
@@ -92,23 +100,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   .not-found-template .container {
     color: #171717; }
     .not-found-template .container h1 {
-      font-size: 100px; }
-      @media (max-width: 768px) {
-        .not-found-template .container h1 {
-          line-height: 76px; } }
-    .not-found-template .container a {
-      text-decoration: none;
-      margin-top: 2px;
-      display: block; }
-      .not-found-template .container a:hover {
-        transition: 0.5s;
-        color: #171717; }
-    .not-found-template .container .message {
-      margin-top: -18px;
-      margin-left: 6px; }
-      @media (max-width: 768px) {
-        .not-found-template .container .message {
-          margin-top: 26px; } }
+      font-size: 40px;
+      margin-bottom: 4px;
+      line-height: 43px; }
+    .not-found-template .container h2 {
+      font-size: 28px;
+      margin: 6px 0 8px; }
 
 body {
   font-family: 'museo-sans', sans-serif;

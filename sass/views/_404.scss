@@ -7,26 +7,13 @@
     .container {
         color: $almost-black;
         h1 {
-            font-size: 100px;
-            @media (max-width: 768px) {
-                line-height: 76px;
-            }
+            font-size: 40px;
+            margin-bottom: 4px;
+            line-height: 43px;
         }
-        a {
-            text-decoration: none;
-            margin-top: 2px;
-            display: block;
-            &:hover {
-                transition: 0.5s;
-                color: $almost-black;
-            }
-        }
-        .message {
-            margin-top: -18px;
-            margin-left: 6px;
-            @media (max-width: 768px) {
-                margin-top: 26px;
-            }
+        h2 {
+            font-size: 28px;
+            margin: 6px 0 8px;
         }
     }
 }
