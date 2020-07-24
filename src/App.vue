@@ -8,9 +8,13 @@
   </div>
 </template>
 
+<style scoped>
+    @import url('https://use.typekit.net/bpp7urt.css');
+</style>
+
 <style lang="scss">
   #app {
-    font-family: 'MuseoSans', sans-serif;
+    font-family: 'museo-sans', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
