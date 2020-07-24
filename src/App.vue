@@ -1,14 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    </div> -->
+    <router-view />
+    <Footer />
   </div>
 </template>
 
+<script>
+import Footer from '@/components/Footer.vue';
+
+export default {
+  components: {
+    Footer
+  }
+}
+</script>
+
 <style scoped>
+
     @import url('https://use.typekit.net/bpp7urt.css');
 </style>
 
@@ -17,9 +29,6 @@
     font-family: 'museo-sans', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    text-align: center;
-    color: #2c3e50;
   }
 
   #nav {
