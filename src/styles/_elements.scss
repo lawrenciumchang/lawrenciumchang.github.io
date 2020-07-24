@@ -1,0 +1,33 @@
+h1 {
+  color: $header-gray;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  color: $header-gray;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  color: $header-gray;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+p, li {
+  color: $gray-medium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+a {
+  color: $blue-primary;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
