@@ -7,7 +7,7 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h3><router-link :to="project.id">{{ project.name }}</router-link></h3>
+        <h2><router-link :to="project.id"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </div>
@@ -34,21 +34,25 @@ export default {
         {
           id: 'gundam-kingdom',
           name: 'Gundam Kingdom e-Commerce Platform',
+          titleMarkup: 'Gundam Kingdom <span class="underline">e-Comerce Platform</span>',
           description: 'Short description here.'
         },
         {
           id: 'seatz',
           name: 'sEATz Mobile App',
+          titleMarkup: 'sEATz <span class="underline">Mobile App</span>',
           description: 'Short description here.'
         },
         {
           id: 'icon-go',
           name: 'Icon GO Mobile App Concept',
+          titleMarkup: 'Icon GO Mobile App <span class="underline>Concept</span>',
           description: 'Short description here.'
         },
         {
           id: 'adidas',
           name: 'Adidas Product Page',
+          titleMarkup: 'Adidas <span class="underline">Product</span> Page',
           description: 'Short description here.'
         },
         {
@@ -59,6 +63,7 @@ export default {
         {
           id: 'anylist',
           name: 'AnyList Usability Assessment',
+          titleMarkup: 'AnyList <span class="underline">Usability Assessment</span>',
           description: 'Short description here.'
         },
         {
@@ -69,6 +74,7 @@ export default {
         {
           id: 'other-works',
           name: 'Other Works',
+          titleMarkup: 'Other <span class="underline">Works</span>',
           description: 'Short description here.'
         }
       ]
@@ -109,10 +115,10 @@ export default {
 
   .projects-list {
     .project {
-      h3 {
+      h2 {
         a {
           color: $header-gray;
-          font-size: 20px;
+          font-size: 24px;
           font-weight: 700;
           margin-bottom: 16px;
           text-decoration: none;
