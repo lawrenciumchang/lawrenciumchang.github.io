@@ -85,7 +85,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 .homepage {
   @include page-layout;
 
@@ -156,5 +155,4 @@ export default {
     }
   }
 }
-
 </style>

@@ -23,8 +23,13 @@
 </template>
 
 <script>
+import ClipboardJS from 'clipboard';
+
 export default {
   name: 'Header',
+  mounted: function() {
+    new ClipboardJS('.mail');
+  },
   methods: {
     toggleMenuOverlay: function(element) {
       element.classList.toggle('active');
@@ -72,7 +77,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 .header {
   .ham {
     background-color: $almost-black;
@@ -227,20 +231,17 @@ export default {
       }
 
       .mail {
-        margin-bottom: 8px;
+        margin-bottom: 12px;
       }
 
       .copied-text {
-        align-items: center;
-        display: flex;
         color: $blue-primary;
         font-size: 14px;
-        margin: 0 0 44px 0;
         opacity: 0;
         transition: all 1s ease-in-out;
 
         &.reveal {
-            opacity: 1;
+          opacity: 1;
         }
       }
       
@@ -265,5 +266,4 @@ export default {
 		transform: translate3d(0, 0, 0);
 	}
 }
-
 </style>

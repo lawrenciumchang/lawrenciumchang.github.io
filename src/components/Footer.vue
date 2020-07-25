@@ -3,25 +3,41 @@
     <div class="container">
       <span class="hello">Say hello!</span>
       <span class="message">Let's grab a virtual coffee and chat about anything from photography to design to mechanical keyboards.</span>
-      <div class="btn-primary">Get in touch</div>
+      <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" v-on:click="revealCopiedText()">Get in touch</div>
+      <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <span class="copyright">All images and content Copyright © 2015-{{ currentYear }} Lawrence Chang</span>
     </div>
   </div>
 </template>
 
 <script>
+import ClipboardJS from 'clipboard';
+
 export default {
   name: 'Footer',
+  mounted: function() {
+    new ClipboardJS('.btn-primary');
+  },
   data() {
     return {
       currentYear: new Date().getFullYear()
+    }
+  },
+  methods: {
+    revealCopiedText: function() {
+      this.$refs.copiedText.classList.add('reveal');
+      setTimeout(function() { 
+        this.hideCopiedText();
+      }.bind(this), 2000);
+    },
+    hideCopiedText: function() {
+      this.$refs.copiedText.classList.remove('reveal');
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-
 .footer {
   background-color: $almost-black;
 
@@ -46,16 +62,28 @@ export default {
     }
 
     .btn-primary {
-      margin-bottom: 160px;
+      margin-bottom: 12px;
+    }
+
+    .copied-text{
+      color: $blue-primary;
+      font-size: 14px;
+      opacity: 0;
+      transition: $in-out-transition;
+
+      &.reveal {
+        opacity: 1;
+      }
     }
 
     .copyright {
       color: $gray-light;
+      display: block;
       font-size: 16px;
       font-weight: 500;
       line-height: 24px;
+      margin-top: 160px;
     }
   }
 }
-
 </style>
