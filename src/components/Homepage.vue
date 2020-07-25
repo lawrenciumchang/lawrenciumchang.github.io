@@ -99,16 +99,23 @@ export default {
   .about-me {
     margin-top: 100px;
 
+    h1, h2, span {
+      line-height: 36px;
+    }
+
     h1, h2 {
       &:not(:last-child) {
          margin-bottom: 40px;
       }
     }
 
-    span, h2 {
+    h2, span {
       color: $gray-medium;
-      font-size: 28px;
       font-weight: 500;
+    }
+
+    span {
+      font-size: 24px;
     }
   }
 
