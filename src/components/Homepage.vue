@@ -10,6 +10,14 @@
     </div>
     <div class="bullets section">
       <h2>Things I can help you with:</h2>
+      <ul>
+        <li>User interface and experience design</li>
+        <li>User interviews and research</li>
+        <li>Usability audit and user testing</li>
+        <li>Design systems</li>
+        <li>Data-driven design</li>
+        <li>Design sprints</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -49,6 +57,21 @@ export default {
   
   .bullets {
     margin-bottom: 80px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    ul {
+      display: grid;
+      grid-gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      list-style: circle;
+
+      @media (max-width: $mobile-breakpoint) {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }
 
