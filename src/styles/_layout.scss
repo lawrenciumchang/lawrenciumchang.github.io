@@ -7,3 +7,12 @@ body {
   margin: 0 auto;
   padding: 0 24px;
 }
+
+// Text highlight colors
+::selection {
+  background: $blue-underline; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: $blue-underline; /* Gecko Browsers */
+}
