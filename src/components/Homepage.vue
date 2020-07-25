@@ -126,6 +126,22 @@ export default {
           &:hover {
             color: $blue-hover;
             cursor: pointer;
+
+            ::v-deep .underline {
+              background-size: 100% 100%;
+            }
+          }
+
+          ::v-deep .underline {
+            background-image: linear-gradient(120deg, $blue-underline 0%, $blue-underline 100%);
+            background-position: 0 92%;
+            background-repeat: no-repeat;
+            background-size: 100% 8px;
+            transition: background-size $hover-transition;
+            
+            &:hover {
+              background-size: 100% 100%;
+            }
           }
         }
       }
