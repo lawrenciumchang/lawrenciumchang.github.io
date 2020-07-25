@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <Homepage />
-    <!-- <router-link to="/gundam-kingdom">Gundam Kingdom</router-link> -->
   </div>
 </template>
 

@@ -6,7 +6,10 @@
       <h2>Take a look at my <a>resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
     </div>
     <div class="projects-list section">
-
+      <div class="project" v-for="project in projects" v-bind:key="project.id">
+        <h3><router-link :to="project.id">{{ project.name }}</router-link></h3>
+        <p>{{ project.description }}</p>
+      </div>
     </div>
     <div class="bullets section">
       <h2>Things I can help you with:</h2>
@@ -24,7 +27,54 @@
 
 <script>
 export default {
-  name: 'Homepage'
+  name: 'Homepage',
+  data() {
+    return {
+      projects: [
+        {
+          id: 'gundam-kingdom',
+          name: 'Gundam Kingdom e-Commerce Platform',
+          description: 'Short description here.'
+        },
+        {
+          id: 'seatz',
+          name: 'sEATz Mobile App',
+          description: 'Short description here.'
+        },
+        {
+          id: 'icon-go',
+          name: 'Icon GO Mobile App Concept',
+          description: 'Short description here.'
+        },
+        {
+          id: 'adidas',
+          name: 'Adidas Product Page',
+          description: 'Short description here.'
+        },
+        {
+          id: 'pinnacle-propane',
+          name: 'Pinnacle Propane Inquiry Tracker',
+          description: 'Short description here.'
+        },
+        {
+          id: 'anylist',
+          name: 'AnyList Usability Assessment',
+          description: 'Short description here.'
+        },
+        {
+          id: 'music-player',
+          name: 'Unnamed Music Player',
+          description: 'Short description here.'
+        },
+        {
+          id: 'other-works',
+          name: 'Other Works',
+          description: 'Short description here.'
+        }
+      ]
+    }
+  
+  }
 }
 </script>
 
@@ -45,13 +95,39 @@ export default {
     margin-top: 100px;
 
     h1, h2 {
-      margin-bottom: 40px;
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
     }
 
     span, h2 {
       color: $gray-medium;
       font-size: 28px;
       font-weight: 500;
+    }
+  }
+
+  .projects-list {
+    .project {
+      h3 {
+        a {
+          color: $header-gray;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          text-decoration: none;
+          transition: $hover-transition;
+
+          &:hover {
+            color: $blue-hover;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 60px;
+      }
     }
   }
   
