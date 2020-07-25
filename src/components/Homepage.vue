@@ -33,8 +33,8 @@ export default {
       projects: [
         {
           id: 'gundam-kingdom',
-          name: 'Gundam Kingdom e-Commerce Platform',
-          titleMarkup: 'Gundam Kingdom <span class="underline">e-Comerce Platform</span>',
+          name: 'Gundam Kingdom E-Commerce Platform',
+          titleMarkup: 'Gundam Kingdom <span class="underline">E-Commerce Platform</span>',
           description: 'Short description here.'
         },
         {
