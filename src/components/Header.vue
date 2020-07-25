@@ -2,17 +2,23 @@
   <div class="header">
     <svg class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" v-on:click="toggleMenuOverlay($event.currentTarget)">
       <path
-          class="line top"
-          d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+          class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
       <path
-          class="line middle"
-          d="m 30,50 h 40" />
+          class="line middle" d="m 30,50 h 40" />
       <path
-          class="line bottom"
-          d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
     </svg>
 
-
+    <div ref="menuOverlay" class="menu-overlay inactive">
+      <div ref="menuContents" class="menu-contents inactive">
+        <h2 class="menu-item"><a href="/">Design</a></h2>
+        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank">Photography</a></h2>
+        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank">Flickr</a></h2>
+        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank">LinkedIn</a></h2>
+        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" v-on:click="revealCopiedText()"><a>Mail</a></h2>
+        <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,8 +26,46 @@
 export default {
   name: 'Header',
   methods: {
-    toggleMenuOverlay: function(event) {
-      console.log('toggleMenuOverlay function called', event);
+    toggleMenuOverlay: function(element) {
+      element.classList.toggle('active');
+
+      // Open Menu
+      if (element.classList.contains('active')) {
+        this.$refs.menuOverlay.classList.remove('inactive');
+        this.$refs.menuOverlay.classList.add('active');
+        this.$refs.menuContents.classList.remove('inactive');
+        this.$refs.menuContents.classList.add('active');
+
+
+        document.getElementsByClassName('menu-item').forEach(element => {
+          element.classList.add('fade-down');
+        });
+
+        // gaTrackClick('mobile menu', 'open');
+      } 
+
+      // Close Menu
+      else {
+        this.$refs.menuOverlay.classList.add('inactive');
+        this.$refs.menuOverlay.classList.remove('active');
+        this.$refs.menuContents.classList.add('inactive');
+        this.$refs.menuContents.classList.remove('active');
+
+        // document.getElementsByClassName('menu-item').forEach(element => {
+        //   element.classList.remove('fade-down');
+        // });
+
+        // gaTrackClick('mobile menu', 'close');
+      }
+    },
+    revealCopiedText: function() {
+      this.$refs.copiedText.classList.add('reveal');
+      setTimeout(function() { 
+        this.hideCopiedText();
+      }.bind(this), 2000);
+    },
+    hideCopiedText: function() {
+      this.$refs.copiedText.classList.remove('reveal');
     }
   }
 }
@@ -36,22 +80,22 @@ export default {
     position: fixed;
     right: 40px;
     top: 40px;
-    transition: transform $hover-transition;
+    transition: $hover-transition;
     user-select: none;
-    width: 64px;
+    width: 60px;
     z-index: 1000;
-    -webkit-tap-highlight-color: transparent;
     -moz-user-select: none;
-    -webkit-user-select: none;
     -ms-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
 
     &:hover {
-      transform: scale(0.94);
+      background-color: $blue-hover;
     }
 
-    @media (max-width: $mobile-breakpoint) {
-      right: 12px;
-      top: 12px;
+    @media (max-width: $desktop-breakpoint) {
+      right: 24px;
+      top: 24px;
       width: 56px;
     }
   }
@@ -122,6 +166,7 @@ export default {
     display: flex;
     height: 100vh;
     position: fixed;
+    top: 0;
     transition: $hover-transition;
     width: 100vw;
 
@@ -136,37 +181,49 @@ export default {
     }
 
     .menu-contents {
-      margin: 0 auto;
+      @include page-layout;
       transition: $hover-transition;
-      width: 96vw;
+      width: 100%;
 
       .menu-item {
-          margin: 52px 0;
+        margin-bottom: 40px;
 
-          &.fade-down {
-            animation: fadeIn $hover-transition both;
-            opacity: 0;
+        &.fade-down {
+          animation: fadeIn $hover-transition both;
+          opacity: 0;
 
-            &:first-child {
-              animation-delay: 0.3s;
-            }
-
-            &:nth-child(2) {
-              animation-delay: 0.8s;
-            }
-
-            &:nth-child(3) {
-              animation-delay: 1.3s;
-            }
+          &:first-child {
+            animation-delay: 0.3s;
           }
 
-          a {
-            transition: $hover-transition;
-
-            &:hover {
-              color: $almost-white;
-            }
+          &:nth-child(2) {
+            animation-delay: 0.6s;
           }
+
+          &:nth-child(3) {
+            animation-delay: 0.9s;
+          }
+
+          &:nth-child(4) {
+            animation-delay: 1.2s;
+          }
+
+          &:nth-child(5) {
+            animation-delay: 1.5s;
+          }
+        }
+
+        a {
+          color: $almost-white;
+          font-size: 20px;
+          font-weight: 500;
+          text-decoration: none;
+          transition: $hover-transition;
+
+          &:hover {
+            color: $blue-hover;
+          }
+        }
       }
 
       .mail {
@@ -176,8 +233,8 @@ export default {
       .copied-text {
         align-items: center;
         display: flex;
-        color: $almost-white;
-        font-size: 12px;
+        color: $blue-primary;
+        font-size: 14px;
         margin: 0 0 44px 0;
         opacity: 0;
         transition: all 1s ease-in-out;
@@ -193,10 +250,6 @@ export default {
 
       &.inactive {
         opacity: 0;
-      }
-
-      @media (max-width: 1024px) {
-        width: 90vw;
       }
     }
   }
