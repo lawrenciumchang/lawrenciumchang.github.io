@@ -195,7 +195,8 @@ export default {
 
     ul {
       display: grid;
-      grid-gap: 40px;
+      grid-column-gap: 72px;
+      grid-row-gap: 40px;
       grid-template-columns: 1fr 1fr;
       list-style: circle;
 
