@@ -115,8 +115,6 @@ export default {
 
 <style scoped lang="scss">
 .homepage {
-  @include page-layout;
-
   .section {
     padding: 80px 0px;
 
