@@ -1,9 +1,11 @@
 <template>
   <div class="homepage">
+    <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
+
     <div class="about-me section">
       <h1>Hi, I'm Lawrence. <span>A UX Designer and photographer based in Houston, TX.</span></h1>
       <h2>I work at Credera where I help our clients craft digital solutions that better impact their business and their users.</h2>
-      <h2>Take a look at my <a>resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
+      <h2>Take a look at my <a @click="showPhotoSwipe()">resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
@@ -26,10 +28,30 @@
 </template>
 
 <script>
+import { PhotoSwipe } from 'v-photoswipe';
+
 export default {
   name: 'Homepage',
+  components: {
+    'v-photoswipe': PhotoSwipe
+  },
   data() {
     return {
+      photoswipeOptions: {
+        isOpen: false,
+        isOpenGallery: false,
+        options: {
+          index: 0
+        },
+        optionsGallery: {},
+        items: [
+          {
+            src: require('@/assets/test_resume_1x.png'),
+            w: 1080,
+            h: 1398
+          }
+        ]
+      },
       projects: [
         {
           id: 'gundam-kingdom',
@@ -79,7 +101,14 @@ export default {
         }
       ]
     }
-  
+  },
+  methods: {
+    showPhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = true;
+    },
+    hidePhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = false;
+    }
   }
 }
 </script>
