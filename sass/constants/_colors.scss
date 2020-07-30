@@ -1,25 +1,34 @@
 $almost-black: #171717;
-$dark-gray: #3B3B3B;
-$gray: #9B9FA2;
-$blue: #69AAF3;
+$header-gray: #3B3B3B;
+$gray-medium: #8D8D8D;
+$gray-light: #9B9FA2;
+$gray-border: #D8D8D8;
 $almost-white: #FCFDFD;
+
+$blue-primary: #69AAF3;
+$blue-hover: #408DE4;
+$blue-underline: #C2E6FF;
 
 .almost-black {
     color: $almost-black;
 }
 
-.dark-gray {
-    color: $dark-gray;
+.header-gray {
+    color: $header-gray;
+}
+
+.gray-medium {
+    color: $gray-medium;
 }
 
 .gray {
-    color: $gray;
-}
-
-.blue {
-    color: $blue;
+    color: $gray-light;
 }
 
 .almost-white {
     color: $almost-white;
+}
+
+.blue-primary {
+    color: $blue-primary;
 }
