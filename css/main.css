@@ -259,9 +259,12 @@ body {
     opacity: 0;
     z-index: -1; }
   .header-template .menu-overlay .menu-contents {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin: 0 auto;
     transition: 0.3s ease-in;
-    width: 96vw;
-    margin: 0 auto; }
+    width: 100%; }
     .header-template .menu-overlay .menu-contents .menu-item {
       margin: 0 0 40px; }
       .header-template .menu-overlay .menu-contents .menu-item.fade-down {

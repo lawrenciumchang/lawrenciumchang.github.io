@@ -92,9 +92,10 @@
             z-index: -1;
         }
         .menu-contents {
-            transition: $hover-transition;
-            width: 96vw;
+            @include page-layout;
             margin: 0 auto;
+            transition: $hover-transition;
+            width: 100%;
 
             .menu-item {
                 margin: 0 0 40px;
