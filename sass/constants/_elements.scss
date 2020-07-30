@@ -1,12 +1,12 @@
 a {
     color: $blue-primary;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
-    transition: 500ms;
+    transition: $hover-transition;
+
     &:hover {
-        color: $almost-black;
+        color: $blue-hover;
+        cursor: pointer;
     }
 }
 

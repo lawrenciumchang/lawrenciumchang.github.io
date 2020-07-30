@@ -78,7 +78,7 @@ function PhotosController($q, PhotosService) {
     function initJustifiedGallery() {
         $('.gallery-container').justifiedGallery({
             rowHeight: 340,
-            margins: 4,
+            margins: 12,
             border: 0,
             lastRow: 'justify',
             captions: false

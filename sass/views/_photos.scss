@@ -1,6 +1,6 @@
 .photos-template {
+    @include page-layout;
     min-height: 200vh;
-    width: 96vw;
     margin: 0 auto;
 
     .justified-gallery {
@@ -12,7 +12,7 @@
     .photo-container {
         transition: all 400ms ease-in-out;
         &:hover {
-            transform: scale(0.98);
+            transform: scale(0.99);
         }
     }
 }

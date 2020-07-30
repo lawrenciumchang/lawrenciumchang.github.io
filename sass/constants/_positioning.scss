@@ -3,7 +3,7 @@
 }
 
 .hidden {
-    transition: 2s;
+    transition: all 1s ease-in-out !important;
     opacity: 0;
     &.reveal {
         opacity: 1;
