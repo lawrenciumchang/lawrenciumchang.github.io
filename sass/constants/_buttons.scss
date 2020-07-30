@@ -25,3 +25,18 @@
         transition: 0.5s;
     }
 }
+
+.btn-primary {
+    background-color: $blue-primary;
+    color: $almost-white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    transition: $hover-transition;
+    width: fit-content;
+  
+    &:hover {
+        background-color: $blue-hover;
+        cursor: pointer;
+    }
+}

@@ -1,14 +1,9 @@
 <div ng-controller="FooterController as vm" class="footer-template">
-    <div class="footer-container">
-        <h2 class="font-bold almost-white space-10">Say hello!</h2>
-        <h2 class="font-bold gray">Let’s grab a coffee and chat about anything from photography to design to mechanical keyboards.</h2>
-        <div class="contact-container">
-            <div class="cta cta-inverse" data-clipboard-text="lawrencium.chang@gmail.com" ng-click="vm.gaTrackClick('cta', 'get in touch'); vm.revealCopiedText()">
-                Get in touch
-            </div>
-            <span class="copied-text">My email has been copied to your clipboard!</span>
-        </div>
-        
-        <p class="copyright font-light space-05">All images and content Copyright © 2015-{{vm.currentYear}} Lawrence Chang</p>
+    <div class="container">
+        <h2 class="hello">Say hello!</h2>
+        <h2 class="message">Let's grab a virtual coffee and chat about anything from photography to design to mechanical keyboards.</h2>
+        <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" ng-click="vm.gaTrackClick('cta', 'get in touch'); vm.revealCopiedText()">Get in touch</div>
+        <span class="copied-text">My email has been copied to your clipboard!</span>
+        <span class="copyright m0">All images and content Copyright © 2015-{{ vm.currentYear }} Lawrence Chang</span>
     </div>
 </div>
