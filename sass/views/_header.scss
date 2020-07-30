@@ -1,25 +1,25 @@
 .header-template {
     .ham {
-        width: 64px;
+        width: 60px;
         cursor: pointer;
         z-index: 1000;
         position: fixed;
-        top: 24px;
-        right: 24px;
+        top: 40px;
+        right: 40px;
         background-color: $almost-black;
         -webkit-tap-highlight-color: transparent;
-        transition: transform 400ms;
+        transition: $hover-transition;
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
         &:hover {
-            transform: scale(0.9);
+            background-color: $blue-hover;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $desktop-breakpoint) {
+            right: 24px;
+            top: 24px;
             width: 56px;
-            top: 12px;
-            right: 12px;
         }
     }
 
@@ -42,7 +42,7 @@
 
     .line {
         fill: none;
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        transition: stroke-dasharray $hover-transition, stroke-dashoffset $hover-transition;
         stroke: $almost-white;
         stroke-width: 3.5;
         stroke-linecap: round;
@@ -55,12 +55,12 @@
         .middle {
             stroke-dasharray: 40 142;
             transform-origin: 50%;
-            transition: transform 400ms;
+            transition: transform $hover-transition;
         }
         .bottom {
             stroke-dasharray: 40 85;
             transform-origin: 50%;
-            transition: transform 400ms, stroke-dashoffset 400ms;
+            transition: transform $hover-transition, stroke-dashoffset $hover-transition;
         }
         &.active {
             .top {
@@ -78,7 +78,7 @@
     .menu-overlay {
         position: fixed;
         background-color: $almost-black;
-        transition: 0.5s;
+        transition: $hover-transition;
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -92,46 +92,47 @@
             z-index: -1;
         }
         .menu-contents {
-            transition: 0.5s;
+            transition: $hover-transition;
             width: 96vw;
             margin: 0 auto;
 
             .menu-item {
-                margin: 52px 0;
+                margin: 0 0 40px;
 
                 &.fade-down {
                     opacity: 0;
-                    animation: fadeIn 0.5s ease-in both;
+                    animation: fadeIn $hover-transition both;
 
                     &:first-child {
                         animation-delay: 0.3s;
                     }
                     &:nth-child(2) {
-                        animation-delay: 0.8s;
+                        animation-delay: 0.6s;
                     }
                     &:nth-child(3) {
-                        animation-delay: 1.3s;
+                        animation-delay: 0.9s;
                     }
                 }
 
                 a {
-                    transition: 0.5s;
+                    color: $almost-white;
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    transition: $hover-transition;
                     &:hover {
-                        color: $almost-white;
+                        color: $blue-hover;
                     }
                 }
             }
 
             .mail {
-                margin-bottom: 8px;
+                margin-bottom: 12px;
             }
 
             .copied-text {
-                margin: 0 0 44px 0;
-                align-items: center;
-                display: flex;
-                color: $almost-white;
-                font-size: 12px;
+                color: $blue-primary;
+                font-size: 14px;
                 opacity: 0;
                 transition: all 1s ease-in-out;
                 &.reveal {

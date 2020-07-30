@@ -52,8 +52,6 @@ function HeaderController($q) {
             document.querySelector('.menu-contents').classList.add('inactive');
             document.querySelector('.menu-contents').classList.remove('active');
 
-            $('.menu-item').removeClass('fade-down');
-
             // Enable scroll
             $(document).unbind('scroll'); 
             $('body').css({'overflow':'visible'});

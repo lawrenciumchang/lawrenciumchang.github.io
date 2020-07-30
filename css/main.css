@@ -5,14 +5,17 @@
 .header-gray {
   color: #3B3B3B; }
 
+.gray-medium {
+  color: #8D8D8D; }
+
 .gray {
   color: #9B9FA2; }
 
-.blue {
-  color: #69AAF3; }
-
 .almost-white {
   color: #FCFDFD; }
+
+.blue-primary {
+  color: #69AAF3; }
 
 a {
   color: #69AAF3;
@@ -110,7 +113,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 body {
   font-family: 'museo-sans', sans-serif;
   font-weight: 500;
-  color: #3B3B3B;
+  color: #8D8D8D;
   margin: 0px;
   background-color: #FCFDFD;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
@@ -162,26 +165,26 @@ body {
         min-height: 700px; } }
 
 .header-template .ham {
-  width: 64px;
+  width: 60px;
   cursor: pointer;
   z-index: 1000;
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 40px;
+  right: 40px;
   background-color: #171717;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
+  transition: 0.3s ease-in;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; }
   .header-template .ham:hover {
-    transform: scale(0.9); }
-  @media (max-width: 768px) {
+    background-color: #408DE4; }
+  @media (max-width: 1200px) {
     .header-template .ham {
-      width: 56px;
-      top: 12px;
-      right: 12px; } }
+      right: 24px;
+      top: 24px;
+      width: 56px; } }
 
 .header-template .ham-rotate.active {
   transform: rotate(45deg); }
@@ -197,7 +200,7 @@ body {
 
 .header-template .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 0.3s ease-in, stroke-dashoffset 0.3s ease-in;
   stroke: #FCFDFD;
   stroke-width: 3.5;
   stroke-linecap: round; }
@@ -208,12 +211,12 @@ body {
 .header-template .ham-strokes .middle {
   stroke-dasharray: 40 142;
   transform-origin: 50%;
-  transition: transform 400ms; }
+  transition: transform 0.3s ease-in; }
 
 .header-template .ham-strokes .bottom {
   stroke-dasharray: 40 85;
   transform-origin: 50%;
-  transition: transform 400ms, stroke-dashoffset 400ms; }
+  transition: transform 0.3s ease-in, stroke-dashoffset 0.3s ease-in; }
 
 .header-template .ham-strokes.active .top {
   stroke-dashoffset: -64px; }
@@ -227,7 +230,7 @@ body {
 .header-template .menu-overlay {
   position: fixed;
   background-color: #171717;
-  transition: 0.5s;
+  transition: 0.3s ease-in;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -239,32 +242,33 @@ body {
     opacity: 0;
     z-index: -1; }
   .header-template .menu-overlay .menu-contents {
-    transition: 0.5s;
+    transition: 0.3s ease-in;
     width: 96vw;
     margin: 0 auto; }
     .header-template .menu-overlay .menu-contents .menu-item {
-      margin: 52px 0; }
+      margin: 0 0 40px; }
       .header-template .menu-overlay .menu-contents .menu-item.fade-down {
         opacity: 0;
-        animation: fadeIn 0.5s ease-in both; }
+        animation: fadeIn 0.3s ease-in both; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:first-child {
           animation-delay: 0.3s; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:nth-child(2) {
-          animation-delay: 0.8s; }
+          animation-delay: 0.6s; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:nth-child(3) {
-          animation-delay: 1.3s; }
+          animation-delay: 0.9s; }
       .header-template .menu-overlay .menu-contents .menu-item a {
-        transition: 0.5s; }
+        color: #FCFDFD;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.3s ease-in; }
         .header-template .menu-overlay .menu-contents .menu-item a:hover {
-          color: #FCFDFD; }
+          color: #408DE4; }
     .header-template .menu-overlay .menu-contents .mail {
-      margin-bottom: 8px; }
+      margin-bottom: 12px; }
     .header-template .menu-overlay .menu-contents .copied-text {
-      margin: 0 0 44px 0;
-      align-items: center;
-      display: flex;
-      color: #FCFDFD;
-      font-size: 12px;
+      color: #69AAF3;
+      font-size: 14px;
       opacity: 0;
       transition: all 1s ease-in-out; }
       .header-template .menu-overlay .menu-contents .copied-text.reveal {

@@ -38,7 +38,7 @@
         .copyright {
             position: absolute;
             bottom: 74px;
-            color: $gray;
+            color: $gray-light;
             font-size: 14px;
             line-height: 20px;
         }
@@ -47,7 +47,7 @@
             width: 90vw;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: $mobile-breakpoint) {
             height: 80vh;
             min-height: 700px;
         }
