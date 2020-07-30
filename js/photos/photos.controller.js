@@ -9,8 +9,9 @@ function PhotosController($q, PhotosService) {
     vm.openGallery = openGallery;
     vm.gaTrackClick = gaTrackClick;
     
-    var FLICKR_MEDIUM = 3;
-    var FLICKR_LARGE_1600 = 9; 
+    // Specifies which image in array to use from Flickr response
+    var FLICKR_MEDIUM = 8;
+    var FLICKR_LARGE_1600 = 10; 
 
     function gaTrackClick(category, label) {
         var host = window.location.hostname;
