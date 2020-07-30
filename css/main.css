@@ -2,8 +2,11 @@
 .almost-black {
   color: #171717; }
 
-.dark-gray {
+.header-gray {
   color: #3B3B3B; }
+
+.gray-medium {
+  color: #8D8D8D; }
 
 .gray {
   color: #9B9FA2; }
@@ -11,10 +14,17 @@
 .almost-white {
   color: #FCFDFD; }
 
+.blue-primary {
+  color: #69AAF3; }
+
 a {
-  color: #9B9FA2;
-  cursor: pointer;
-  text-decoration: none; }
+  color: #69AAF3;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease-in; }
+  a:hover {
+    color: #408DE4;
+    cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6, p, a {
   -webkit-user-select: none;
@@ -56,10 +66,18 @@ h1, h2, h3, h4, h5, h6, p, a {
   text-align: center; }
 
 .hidden {
-  transition: 2s;
+  transition: all 1s ease-in-out !important;
   opacity: 0; }
   .hidden.reveal {
     opacity: 1; }
+
+::selection {
+  background: #C2E6FF;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #C2E6FF;
+  /* Gecko Browsers */ }
 
 .cta {
   display: flex;
@@ -83,40 +101,45 @@ h1, h2, h3, h4, h5, h6, p, a {
     height: 58px;
     transition: 0.5s; }
 
+.btn-primary {
+  background-color: #69AAF3;
+  color: #FCFDFD;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 24px;
+  transition: 0.3s ease-in;
+  width: fit-content; }
+  .btn-primary:hover {
+    background-color: #408DE4;
+    cursor: pointer; }
+
 .not-found-template {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   margin: 0 auto;
-  height: 100vh;
-  width: 96vw; }
+  height: 100vh; }
   .not-found-template .container {
     color: #171717; }
     .not-found-template .container h1 {
-      font-size: 100px; }
-      @media (max-width: 768px) {
-        .not-found-template .container h1 {
-          line-height: 76px; } }
-    .not-found-template .container a {
-      text-decoration: none;
-      margin-top: 2px;
-      display: block; }
-      .not-found-template .container a:hover {
-        transition: 0.5s;
-        color: #171717; }
-    .not-found-template .container .message {
-      margin-top: -18px;
-      margin-left: 6px; }
-      @media (max-width: 768px) {
-        .not-found-template .container .message {
-          margin-top: 26px; } }
+      font-size: 40px;
+      margin-bottom: 4px;
+      line-height: 43px; }
+    .not-found-template .container h2 {
+      font-size: 28px;
+      margin: 6px 0 8px; }
 
 body {
   font-family: 'museo-sans', sans-serif;
   font-weight: 500;
-  color: #3B3B3B;
-  margin: 0px;
+  color: #8D8D8D;
+  margin: 0;
   background-color: #FCFDFD;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -125,66 +148,60 @@ body {
 .footer-template {
   margin-top: 84px;
   background-color: #171717; }
-  .footer-template .footer-container {
-    width: 96vw;
-    max-height: 600px;
-    height: 60vh;
+  .footer-template .container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 120px;
-    position: relative; }
-    .footer-template .footer-container h2 {
+    padding: 0 24px;
+    padding: 120px 24px 100px; }
+    .footer-template .container .hello, .footer-template .container .message {
+      display: block;
       font-size: 36px;
-      margin: 0 0 4px 0;
-      width: 75vw; }
-    .footer-template .footer-container .contact-container {
-      margin-top: 48px;
-      display: flex; }
-      .footer-template .footer-container .contact-container .copied-text {
-        width: 40vw;
-        margin-left: 20px;
-        align-items: center;
-        display: flex;
-        color: #FCFDFD;
-        font-size: 12px;
-        opacity: 0;
-        transition: all 1s ease-in-out; }
-        .footer-template .footer-container .contact-container .copied-text.reveal {
-          opacity: 1; }
-    .footer-template .footer-container .copyright {
-      position: absolute;
-      bottom: 74px;
+      font-weight: 700;
+      margin-top: 0; }
+    .footer-template .container .hello {
+      color: #FCFDFD;
+      margin-bottom: 4px; }
+    .footer-template .container .message {
       color: #9B9FA2;
+      margin-bottom: 36px; }
+    .footer-template .container .btn-primary {
+      margin-bottom: 12px; }
+    .footer-template .container .copied-text {
+      color: #69AAF3;
       font-size: 14px;
-      line-height: 20px; }
-    @media (max-width: 1024px) {
-      .footer-template .footer-container {
-        width: 90vw; } }
-    @media (max-width: 768px) {
-      .footer-template .footer-container {
-        height: 80vh;
-        min-height: 700px; } }
+      opacity: 0;
+      transition: all 1s ease-in-out; }
+      .footer-template .container .copied-text.reveal {
+        opacity: 1; }
+    .footer-template .container .copyright {
+      color: #9B9FA2;
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 160px; }
 
 .header-template .ham {
-  width: 64px;
+  width: 60px;
   cursor: pointer;
   z-index: 1000;
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 40px;
+  right: 40px;
   background-color: #171717;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
+  transition: 0.3s ease-in;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; }
   .header-template .ham:hover {
-    transform: scale(0.9); }
-  @media (max-width: 768px) {
+    background-color: #408DE4; }
+  @media (max-width: 1200px) {
     .header-template .ham {
-      width: 56px;
-      top: 12px;
-      right: 12px; } }
+      right: 24px;
+      top: 24px;
+      width: 56px; } }
 
 .header-template .ham-rotate.active {
   transform: rotate(45deg); }
@@ -200,7 +217,7 @@ body {
 
 .header-template .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 0.3s ease-in, stroke-dashoffset 0.3s ease-in;
   stroke: #FCFDFD;
   stroke-width: 3.5;
   stroke-linecap: round; }
@@ -211,12 +228,12 @@ body {
 .header-template .ham-strokes .middle {
   stroke-dasharray: 40 142;
   transform-origin: 50%;
-  transition: transform 400ms; }
+  transition: transform 0.3s ease-in; }
 
 .header-template .ham-strokes .bottom {
   stroke-dasharray: 40 85;
   transform-origin: 50%;
-  transition: transform 400ms, stroke-dashoffset 400ms; }
+  transition: transform 0.3s ease-in, stroke-dashoffset 0.3s ease-in; }
 
 .header-template .ham-strokes.active .top {
   stroke-dashoffset: -64px; }
@@ -230,7 +247,7 @@ body {
 .header-template .menu-overlay {
   position: fixed;
   background-color: #171717;
-  transition: 0.5s;
+  transition: 0.3s ease-in;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -242,32 +259,36 @@ body {
     opacity: 0;
     z-index: -1; }
   .header-template .menu-overlay .menu-contents {
-    transition: 0.5s;
-    width: 96vw;
-    margin: 0 auto; }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin: 0 auto;
+    transition: 0.3s ease-in;
+    width: 100%; }
     .header-template .menu-overlay .menu-contents .menu-item {
-      margin: 52px 0; }
+      margin: 0 0 40px; }
       .header-template .menu-overlay .menu-contents .menu-item.fade-down {
         opacity: 0;
-        animation: fadeIn 0.5s ease-in both; }
+        animation: fadeIn 0.3s ease-in both; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:first-child {
           animation-delay: 0.3s; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:nth-child(2) {
-          animation-delay: 0.8s; }
+          animation-delay: 0.6s; }
         .header-template .menu-overlay .menu-contents .menu-item.fade-down:nth-child(3) {
-          animation-delay: 1.3s; }
+          animation-delay: 0.9s; }
       .header-template .menu-overlay .menu-contents .menu-item a {
-        transition: 0.5s; }
+        color: #FCFDFD;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.3s ease-in; }
         .header-template .menu-overlay .menu-contents .menu-item a:hover {
-          color: #FCFDFD; }
+          color: #408DE4; }
     .header-template .menu-overlay .menu-contents .mail {
-      margin-bottom: 8px; }
+      margin-bottom: 12px; }
     .header-template .menu-overlay .menu-contents .copied-text {
-      margin: 0 0 44px 0;
-      align-items: center;
-      display: flex;
-      color: #FCFDFD;
-      font-size: 12px;
+      color: #69AAF3;
+      font-size: 14px;
       opacity: 0;
       transition: all 1s ease-in-out; }
       .header-template .menu-overlay .menu-contents .copied-text.reveal {
@@ -276,9 +297,6 @@ body {
       opacity: 1; }
     .header-template .menu-overlay .menu-contents.inactive {
       opacity: 0; }
-    @media (max-width: 1024px) {
-      .header-template .menu-overlay .menu-contents {
-        width: 90vw; } }
 
 @keyframes fadeIn {
   from {
@@ -289,36 +307,30 @@ body {
     transform: translate3d(0, 0, 0); } }
 
 .landing-template {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100vh; }
-  .landing-template .landing-text {
-    width: 96vw; }
-    .landing-template .landing-text p {
-      margin: 0; }
-    @media (max-width: 1024px) {
-      .landing-template .landing-text {
-        width: 90vw; } }
-    .landing-template .landing-text .first {
-      font-size: 40px;
-      margin-bottom: 4px;
-      line-height: 43px; }
-    .landing-template .landing-text .second {
-      font-size: 36px;
-      margin: 0 0 36px 0;
-      padding-right: 10px;
-      line-height: 43px; }
-  .landing-template .cta {
-    margin-bottom: 20px; }
+  .landing-template .landing-text p {
+    margin: 0; }
+  .landing-template .landing-text .first {
+    font-size: 28px;
+    margin-bottom: 4px; }
+  .landing-template .landing-text .second {
+    font-size: 28px;
+    margin: 0 0 28px 0; }
 
 .photos-template {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
   min-height: 200vh;
-  width: 96vw;
   margin: 0 auto; }
   .photos-template .justified-gallery img {
     cursor: pointer; }
   .photos-template .photo-container {
     transition: all 400ms ease-in-out; }
     .photos-template .photo-container:hover {
-      transform: scale(0.98); }
+      transform: scale(0.99); }

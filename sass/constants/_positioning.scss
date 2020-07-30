@@ -3,9 +3,26 @@
 }
 
 .hidden {
-    transition: 2s;
+    transition: all 1s ease-in-out !important;
     opacity: 0;
     &.reveal {
         opacity: 1;
     }
+}
+
+$max-width: 1200px;
+
+@mixin page-layout {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+// Text highlight colors
+::selection {
+background: $blue-underline; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+background: $blue-underline; /* Gecko Browsers */
 }

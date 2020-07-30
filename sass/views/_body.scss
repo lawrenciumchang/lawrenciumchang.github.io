@@ -1,10 +1,13 @@
 body {
     font-family: 'museo-sans', sans-serif;
     font-weight: 500;
-    color: $dark-gray;
-    margin: 0px;
+    color: $gray-medium;
+    margin: 0;
     background-color: $almost-white;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Hide scrollbar
