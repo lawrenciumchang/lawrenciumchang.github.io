@@ -69,7 +69,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
-    "photos": []
+    "photos": [
+      {
+        "src": "images/adidas/1.png",
+        "w": "2880",
+        "h": "7748",
+        "title": "Adidas Product Page"
+      }
+    ]
   },
   {
     "id": "pinnacle-propane",
