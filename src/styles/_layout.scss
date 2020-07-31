@@ -16,3 +16,9 @@ body {
 ::-moz-selection {
   background: $blue-underline; /* Gecko Browsers */
 }
+
+// Hide scrollbar
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}
