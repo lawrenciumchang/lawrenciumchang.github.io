@@ -8,8 +8,18 @@
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "photos": [
-      "images/gundam-kingdom/1.png",
-      "images/gundam-kingdom/2.png"
+      {
+        "src": "images/gundam-kingdom/1.png",
+        "w": "1600",
+        "h": "1200",
+        "title": "1"
+      },
+      {
+        "src": "images/gundam-kingdom/2.png",
+        "w": "1600",
+        "h": "1200",
+        "title": "2"
+      }
     ]
   },
   {
@@ -30,7 +40,26 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
-    "photos": []
+    "photos": [
+      {
+        "src": "images/icon-go/1.png",
+        "w": "2150",
+        "h": "1201",
+        "title": "Splash, Landing, Search, and Menu"
+      },
+      {
+        "src": "images/icon-go/2.png",
+        "w": "1715",
+        "h": "1201",
+        "title": "Booking Flow Pt. 1"
+      },
+      {
+        "src": "images/icon-go/3.png",
+        "w": "1715",
+        "h": "1201",
+        "title": "Booking Flow Pt. 2"
+      }
+    ]
   },
   {
     "id": "adidas",

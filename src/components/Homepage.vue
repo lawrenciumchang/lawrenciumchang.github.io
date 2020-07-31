@@ -1,7 +1,6 @@
 <template>
   <div class="homepage">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
-
     <div class="about-me section">
       <h1>Hi, I'm Lawrence. <span>A UX Designer and photographer based in Houston, TX.</span></h1>
       <h2>I work at Credera where I help our clients craft digital solutions that better impact their business and their users.</h2>
