@@ -7,6 +7,11 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {},
+    "next": {
+      "url": "seatz",
+      "label": "sEATz Mobile App"
+    },
     "photos": [
       {
         "src": "images/gundam-kingdom/1.png",
@@ -30,6 +35,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "gundam-kingdom",
+      "label": "Gundam Kingdom E-Commerce Platform"
+    },
+    "next": {
+      "url": "icon-go",
+      "label": "Icon Go Mobile App Concept"
+    },
     "photos": []
   },
   {
@@ -40,6 +53,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "seatz",
+      "label": "sEATz Mobile App"
+    },
+    "next": {
+      "url": "adidas",
+      "label": "Adidas Product Page"
+    },
     "photos": [
       {
         "src": "images/icon-go/1.png",
@@ -69,6 +90,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "icon-go",
+      "label": "Icon Go Mobile App Concept"
+    },
+    "next": {
+      "url": "pinnacle-propane",
+      "label": "Pinnacle Propane Inquiry Tracker"
+    },
     "photos": [
       {
         "src": "images/adidas/1.png",
@@ -86,6 +115,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "adidas",
+      "label": "Adidas Product Page"
+    },
+    "next": {
+      "url": "anylist",
+      "label": "AnyList Usability Assessment"
+    },
     "photos": []
   },
   {
@@ -96,6 +133,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "pinnacle-propane",
+      "label": "Pinnacle Propane Inquiry Tracker"
+    },
+    "next": {
+      "url": "music-player",
+      "label": "Unnamed Music Player"
+    },
     "photos": []
   },
   {
@@ -106,6 +151,14 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "anylist",
+      "label": "AnyList Usability Assessment"
+    },
+    "next": {
+      "url": "other-works",
+      "label": "Other Works"
+    },
     "photos": []
   },
   {
@@ -116,6 +169,11 @@
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "music-player",
+      "label": "Unnamed Music Player"
+    },
+    "next": {},
     "photos": []
   }
 ]
