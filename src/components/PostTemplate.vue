@@ -2,6 +2,12 @@
   <div class="post-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="title-container section">
+      <router-link to="/" @click.native="scrollToTop" class="back">
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.2925 0.704609C5.9025 0.314609 5.2725 0.314609 4.8825 0.704609L0.2925 5.29461C-0.0975 5.68461 -0.0975 6.31461 0.2925 6.70461L4.8825 11.2946C5.2725 11.6846 5.9025 11.6846 6.2925 11.2946C6.6825 10.9046 6.6825 10.2746 6.2925 9.88461L2.4125 5.99461L6.2925 2.11461C6.6825 1.72461 6.6725 1.08461 6.2925 0.704609V0.704609Z" fill="#69AAF3"/>
+        </svg>
+        Back
+      </router-link>
       <h1>{{ post.title }}</h1>
       <p class="description">{{ post.description }}</p>
     </div>
@@ -84,6 +90,9 @@ export default {
     },
     hidePhotoSwipe: function() {
       this.photoswipeOptions.isOpen = false;
+    },
+    scrollToTop: function() {
+      window.scrollTo(0,0);
     }
   }
 }
@@ -91,6 +100,25 @@ export default {
 
 <style scoped lang="scss">
 .post-template {
+  .back {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-decoration: none;
+
+    svg path {
+      fill: $blue-primary;
+      transition: $hover-transition;
+    }
+
+    &:hover {
+      svg path {
+        fill: $blue-hover;
+        transition: $hover-transition;
+      }
+    }
+  }
+
   .section {
     padding: 80px 0;
   }
