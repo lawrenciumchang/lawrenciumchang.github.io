@@ -16,15 +16,15 @@
       </div>
     </div>
     <div v-if="post.photos[0]" class="single-photo-container">
-      <img :src="post.photos[0].src" @click="showPhotoSwipe(0)" />
+      <img v-lazy="post.photos[0].src" @click="showPhotoSwipe(0)" />
     </div>
     <div v-if="post.process" class="process-container section">
       <h3>The Process</h3>
       <p>{{ post.process }}</p>
     </div>
     <div v-if="post.photos[1]" class="multiple-photos-container">
-      <img :src="post.photos[1].src" @click="showPhotoSwipe(1)" />
-      <img :src="post.photos[2].src" @click="showPhotoSwipe(2)" v-if="post.photos[2]" />
+      <img v-lazy="post.photos[1].src" @click="showPhotoSwipe(1)" />
+      <img v-lazy="post.photos[2].src" @click="showPhotoSwipe(2)" v-if="post.photos[2]" />
     </div>
     <div v-if="post.lessons" class="lessons-container section">
       <h3>Lessons Learned</h3>
@@ -35,7 +35,7 @@
 
 <script>
 import posts from '@/data/posts.json';
-import { PhotoSwipe } from 'v-photoswipe';
+import PhotoSwipe from 'v-photoswipe';
 
 export default {
   name: 'PostTemplate',
@@ -135,5 +135,12 @@ export default {
 }
 ::v-deep .pswp__caption__center {
   text-align: center;
+}
+img[lazy=loading] {
+  opacity: 0;
+  transition: $hover-transition;
+}
+img[lazy=loaded] {
+  opacity: 1;
 }
 </style>
