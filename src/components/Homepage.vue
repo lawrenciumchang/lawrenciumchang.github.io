@@ -8,7 +8,7 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h2><router-link :to="project.id"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
+        <h2><router-link :to="project.id" @click.native="scrollToTop"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </div>
@@ -107,6 +107,9 @@ export default {
     },
     hidePhotoSwipe: function() {
       this.photoswipeOptions.isOpen = false;
+    },
+    scrollToTop: function() {
+      window.scrollTo(0,0);
     }
   }
 }

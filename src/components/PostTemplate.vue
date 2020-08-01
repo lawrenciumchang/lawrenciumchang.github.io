@@ -76,7 +76,6 @@ export default {
           post = element;
         }
       });
-      console.log(post);
       return post.photos;
     },
     showPhotoSwipe: function(index) {
