@@ -101,8 +101,8 @@
     "photos": [
       {
         "src": "images/adidas/1.png",
-        "w": "2880",
-        "h": "7748",
+        "w": "1842",
+        "h": "4404",
         "title": "Adidas Product Page"
       }
     ]
@@ -123,7 +123,26 @@
       "url": "anylist",
       "label": "AnyList Usability Assessment"
     },
-    "photos": []
+    "photos": [
+      {
+        "src": "images/pinnacle-propane/1.png",
+        "w": "1760",
+        "h": "1359",
+        "title": "My Inquiries"
+      },
+      {
+        "src": "images/pinnacle-propane/2.png",
+        "w": "1530",
+        "h": "2289",
+        "title": "Style Guide"
+      },
+      {
+        "src": "images/pinnacle-propane/3.png",
+        "w": "1760",
+        "h": "2177",
+        "title": "Inquiry Details"
+      }
+    ]
   },
   {
     "id": "anylist",
@@ -159,21 +178,53 @@
       "url": "other-works",
       "label": "Other Works"
     },
-    "photos": []
+    "photos": [
+      {
+        "src": "images/music-player/1.png",
+        "w": "3400",
+        "h": "2400",
+        "title": "Unnamed Music Player"
+      }
+    ]
   },
   {
     "id": "other-works",
     "title": "Other Works",
     "description": "Short description here.",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
+    "role": "",
+    "process": "",
+    "lessons": "",
     "previous": {
       "url": "music-player",
       "label": "Unnamed Music Player"
     },
     "next": {},
-    "photos": []
+    "photos": [
+      {
+        "src": "images/other/icons.png",
+        "w": "2048",
+        "h": "1096",
+        "title": "Calculator Icons"
+      },
+      {
+        "src": "images/other/calculator.png",
+        "w": "1600",
+        "h": "1200",
+        "title": "Calculator App"
+      },
+      {
+        "src": "images/other/boarding_pass.png",
+        "w": "1309",
+        "h": "1902",
+        "title": "Boarding Pass"
+      },
+      {
+        "src": "images/other/tasks.png",
+        "w": "3200",
+        "h": "2400",
+        "title": "Tasks App"
+      }
+    ]
   }
 ]
