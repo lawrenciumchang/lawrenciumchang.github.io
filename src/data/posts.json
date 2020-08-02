@@ -12,20 +12,7 @@
       "url": "seatz",
       "label": "sEATz Mobile App"
     },
-    "photos": [
-      {
-        "src": "images/gundam-kingdom/1.png",
-        "w": "1600",
-        "h": "1200",
-        "title": "1"
-      },
-      {
-        "src": "images/gundam-kingdom/2.png",
-        "w": "1600",
-        "h": "1200",
-        "title": "2"
-      }
-    ]
+    "photos": []
   },
   {
     "id": "seatz",
@@ -205,13 +192,13 @@
         "src": "images/other/icons.png",
         "w": "2048",
         "h": "1096",
-        "title": "Calculator Icons"
+        "title": "App Icons"
       },
       {
         "src": "images/other/calculator.png",
         "w": "1600",
         "h": "1200",
-        "title": "Calculator App"
+        "title": "Calculator"
       },
       {
         "src": "images/other/boarding_pass.png",
@@ -220,10 +207,22 @@
         "title": "Boarding Pass"
       },
       {
+        "src": "images/other/mint_1.png",
+        "w": "1760",
+        "h": "1986",
+        "title": "Mint Budget App Redesign"
+      },
+      {
+        "src": "images/other/mint_2.png",
+        "w": "1760",
+        "h": "1986",
+        "title": "Mint Budget App Redesign - Edit Transaction"
+      },
+      {
         "src": "images/other/tasks.png",
         "w": "3200",
         "h": "2400",
-        "title": "Tasks App"
+        "title": "Tasks"
       }
     ]
   }
