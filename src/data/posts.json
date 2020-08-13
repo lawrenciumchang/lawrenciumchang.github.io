@@ -12,7 +12,38 @@
       "url": "seatz",
       "label": "sEATz Mobile App"
     },
-    "photos": []
+    "photos": [
+      {
+        "src": "images/gundam-kingdom/1.png",
+        "w": "1759",
+        "h": "4055",
+        "title": "Landing Page"
+      },
+      {
+        "src": "images/gundam-kingdom/2.png",
+        "w": "1860",
+        "h": "2002",
+        "title": "Design System"
+      },
+      {
+        "src": "images/gundam-kingdom/3.png",
+        "w": "1759",
+        "h": "2754",
+        "title": "Products Page"
+      },
+      {
+        "src": "images/gundam-kingdom/4.png",
+        "w": "1759",
+        "h": "2404",
+        "title": "Product Detail Page"
+      },
+      {
+        "src": "images/gundam-kingdom/5.png",
+        "w": "1759",
+        "h": "2103",
+        "title": "Cart Page"
+      }
+    ]
   },
   {
     "id": "seatz",
@@ -89,7 +120,7 @@
       {
         "src": "images/adidas/1.png",
         "w": "1842",
-        "h": "4404",
+        "h": "4405",
         "title": "Adidas Product Page"
       }
     ]
