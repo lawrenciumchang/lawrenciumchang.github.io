@@ -61,7 +61,32 @@
       "url": "icon-go",
       "label": "Icon Go Mobile App Concept"
     },
-    "photos": []
+    "photos": [
+      {
+        "src": "images/seatz/1.png",
+        "w": "1705",
+        "h": "1028",
+        "title": "Splash & Landing Screen"
+      },
+      {
+        "src": "images/seatz/2.png",
+        "w": "1705",
+        "h": "1112",
+        "title": "sEATz Delivery"
+      },
+      {
+        "src": "images/seatz/3.png",
+        "w": "2017",
+        "h": "1112",
+        "title": "Order Flow"
+      },
+      {
+        "src": "images/seatz/4.png",
+        "w": "1377",
+        "h": "2415",
+        "title": "Style Guide"
+      }
+    ]
   },
   {
     "id": "icon-go",
