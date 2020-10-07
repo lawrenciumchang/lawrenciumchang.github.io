@@ -71,12 +71,6 @@ export default {
     },
     hideCopiedText: function() {
       this.$refs.copiedText.classList.remove('reveal');
-    },
-    gaTrackClick: function(category, label) {
-      var host = window.location.hostname;
-      if (host != 'localhost') {
-        ga('send', 'event', category, 'click' , label);
-      }
     }
   }
 }
