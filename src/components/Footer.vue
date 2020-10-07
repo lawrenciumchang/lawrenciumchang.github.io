@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-      <span class="hello">Say hello!</span>
+      <span class="hello">Hello there!</span>
       <span class="message">Let's grab a virtual coffee and chat about anything from photography to design to mechanical keyboards.</span>
       <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" v-on:click="revealCopiedText()">Get in touch</div>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
