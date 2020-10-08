@@ -4,11 +4,11 @@
     <div class="about-me section">
       <h1>Hi, I'm Lawrence. <span>A UX Designer and photographer based in Houston, TX.</span></h1>
       <h2>I work at Credera where I help our clients craft digital solutions that better impact their business and their users.</h2>
-      <h2>Take a look at my <a @click="showPhotoSwipe()">resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
+      <h2>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h2><router-link :to="project.id" @click.native="scrollToTop"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
+        <h2><router-link :to="project.id" @click.native="scrollToTop; gaTrackClick('Home Page', 'View Project - ' + project.name)"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </div>

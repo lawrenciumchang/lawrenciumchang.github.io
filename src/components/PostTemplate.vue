@@ -2,7 +2,7 @@
   <div class="post-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="title-container section">
-      <router-link to="/" @click.native="scrollToTop" class="navigation-link">
+      <router-link to="/" @click.native="scrollToTop; gaTrackClick('Project', 'Back Button')" class="navigation-link">
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.2925 0.704609C5.9025 0.314609 5.2725 0.314609 4.8825 0.704609L0.2925 5.29461C-0.0975 5.68461 -0.0975 6.31461 0.2925 6.70461L4.8825 11.2946C5.2725 11.6846 5.9025 11.6846 6.2925 11.2946C6.6825 10.9046 6.6825 10.2746 6.2925 9.88461L2.4125 5.99461L6.2925 2.11461C6.6825 1.72461 6.6725 1.08461 6.2925 0.704609V0.704609Z" fill="#69AAF3"/>
         </svg>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div v-if="post.photos[0]" class="single-photo-container">
-      <img v-lazy="post.photos[0].src" @click="showPhotoSwipe(0)" />
+      <img v-lazy="post.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + post.photos[0].title)" />
     </div>
     <div v-if="post.process" class="process-container section">
       <h3>The Process</h3>
@@ -30,7 +30,7 @@
     </div>
     <div v-if="post.photos[1]" class="multiple-photos-container section-buffer">
       <div class="photo-wrapper" v-for="(photo, index) in post.photos" :key="photo.title">
-        <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index)" />
+        <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + photo.title)" />
       </div>
     </div>
     <div v-if="post.lessons" class="lessons-container section">
@@ -40,7 +40,7 @@
     <div class="navigation-container section">
       <div class="previous">
         <div v-if="post.previous.url">
-          <router-link :to="post.previous.url" @click.native="scrollToTop" class="navigation-link">
+          <router-link :to="post.previous.url" @click.native="scrollToTop; gaTrackClick('Post', 'Previous Post - Navigating to ' + post.previous.label)" class="navigation-link">
             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.2925 0.704609C5.9025 0.314609 5.2725 0.314609 4.8825 0.704609L0.2925 5.29461C-0.0975 5.68461 -0.0975 6.31461 0.2925 6.70461L4.8825 11.2946C5.2725 11.6846 5.9025 11.6846 6.2925 11.2946C6.6825 10.9046 6.6825 10.2746 6.2925 9.88461L2.4125 5.99461L6.2925 2.11461C6.6825 1.72461 6.6725 1.08461 6.2925 0.704609V0.704609Z" fill="#69AAF3"/>
             </svg>
@@ -51,7 +51,7 @@
       </div>
       <div class="next">
         <div v-if="post.next.url">
-          <router-link :to="post.next.url" @click.native="scrollToTop" class="navigation-link">
+          <router-link :to="post.next.url" @click.native="scrollToTop; gaTrackClick('Post', 'Next Post - Navigating to ' + post.next.label)" class="navigation-link">
             Next
             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.292461 0.2925C0.682461 -0.0975 1.31246 -0.0975 1.70246 0.2925L6.29246 4.8825C6.68246 5.2725 6.68246 5.9025 6.29246 6.2925L1.70246 10.8825C1.31246 11.2725 0.682461 11.2725 0.292461 10.8825C-0.0975391 10.4925 -0.0975391 9.8625 0.292461 9.4725L4.17246 5.5825L0.292461 1.7025C-0.0975391 1.3125 -0.0875391 0.6725 0.292461 0.2925V0.2925Z" fill="#69AAF3"/>

@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <svg class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" v-on:click="toggleMenuOverlay($event.currentTarget)">
+    <svg class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" @click="toggleMenuOverlay($event.currentTarget)">
       <path
           class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
       <path
@@ -11,11 +11,11 @@
 
     <div ref="menuOverlay" class="menu-overlay inactive">
       <div ref="menuContents" class="menu-contents inactive">
-        <h2 class="menu-item"><a href="/">Design</a></h2>
-        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank">Photography</a></h2>
-        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank">Flickr</a></h2>
-        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank">LinkedIn</a></h2>
-        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" v-on:click="revealCopiedText()"><a>Mail</a></h2>
+        <h2 class="menu-item"><a href="/" @click="gaTrackClick('Header', 'Design Link')">Design</a></h2>
+        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank" @click="gaTrackClick('Header', 'Photography Link')">Photography</a></h2>
+        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Header', 'Flickr Link')">Flickr</a></h2>
+        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Header', 'LinkedIn Link')">LinkedIn</a></h2>
+        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Header', 'Mail Link')"><a>Mail</a></h2>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       </div>
     </div>
@@ -46,7 +46,7 @@ export default {
           element.classList.add('fade-down');
         });
 
-        // gaTrackClick('mobile menu', 'open');
+        this.gaTrackClick('Header', 'Open Menu');
       } 
 
       // Close Menu
@@ -60,7 +60,7 @@ export default {
         //   element.classList.remove('fade-down');
         // });
 
-        // gaTrackClick('mobile menu', 'close');
+        this.gaTrackClick('Header', 'Close Menu');
       }
     },
     revealCopiedText: function() {
