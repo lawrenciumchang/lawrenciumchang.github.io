@@ -118,6 +118,12 @@ export default {
     },
     scrollToTop: function() {
       window.scrollTo(0,0);
+    },
+    gaTrackClick: function(category, label) {
+      var host = window.location.hostname;
+      if (host != 'localhost') {
+        this.$ga.event(category, 'click', label);
+      }
     }
   }
 }
