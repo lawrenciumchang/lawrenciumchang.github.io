@@ -151,7 +151,7 @@ export default {
     }
 
     h2, span {
-      color: $gray-medium;
+      color: $almost-black;
       font-weight: 500;
     }
 
@@ -164,7 +164,7 @@ export default {
     .project {
       h2 {
         a {
-          color: $header-gray;
+          color: $almost-black;
           font-size: 24px;
           font-weight: 700;
           margin-bottom: 16px;

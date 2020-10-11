@@ -3,28 +3,28 @@ h1, h2, h3, p, a {
 }
 
 h1 {
-  color: $header-gray;
+  color: $almost-black;
   font-size: 28px;
   font-weight: 700;
 }
 
 h2 {
-  color: $header-gray;
+  color: $almost-black;
   font-size: 24px;
   font-weight: 700;
 }
 
 h3 {
-  color: $header-gray;
+  color: $almost-black;
   font-size: 20px;
   font-weight: 700;
 }
 
 p, li {
-  color: $gray-medium;
+  color: $gray-dark;
   font-size: 20px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 40px;
 }
 
 ul {

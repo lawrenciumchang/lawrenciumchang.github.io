@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style scoped>
-    @import url('https://use.typekit.net/bpp7urt.css');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 </style>
 
 <style lang="scss">
   #app {
-    font-family: 'museo-sans', sans-serif;
+    font-family: 'Ubuntu Mono', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
