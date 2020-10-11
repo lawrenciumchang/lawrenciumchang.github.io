@@ -1,8 +1,8 @@
 [
   {
-    "id": "credera-rebrand",
-    "title": "Credera Rebrand",
-    "description": "Rebrand and replatform of my company’s website.",
+    "id": "credera",
+    "title": "Credera",
+    "description": "Rebrand + replatform",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -10,25 +10,25 @@
     "previous": {},
     "next": {
       "url": "gundam-kingdom",
-      "label": "Gundam Kingdom E-Commerce Platform"
+      "label": "Gundam Kingdom"
     },
     "photos": []
   },
   {
     "id": "gundam-kingdom",
-    "title": "Gundam Kingdom E-Commerce Platform",
-    "description": "Responsive web design for a niche hobby web store.",
+    "title": "Gundam Kingdom",
+    "description": "E-Commerce platform design",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
-      "url": "credera-rebrand",
-      "label": "Credera Rebrand"
+      "url": "credera",
+      "label": "Credera"
     },
     "next": {
       "url": "seatz",
-      "label": "sEATz Mobile App"
+      "label": "sEATz"
     },
     "photos": [
       {
@@ -65,19 +65,19 @@
   },
   {
     "id": "seatz",
-    "title": "sEATz Mobile App",
-    "description": "Creating an experience for food delivery at the big game right to your seat.",
+    "title": "sEATz",
+    "description": "Mobile service design",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "gundam-kingdom",
-      "label": "Gundam Kingdom E-Commerce Platform"
+      "label": "Gundam Kingdom"
     },
     "next": {
       "url": "icon-go",
-      "label": "Icon Go Mobile App Concept"
+      "label": "Icon GO"
     },
     "photos": [
       {
@@ -108,19 +108,19 @@
   },
   {
     "id": "icon-go",
-    "title": "Icon Go Mobile App Concept",
-    "description": "Reimagining of Icon Parking’s mobile experience.",
+    "title": "Icon GO",
+    "description": "Mobile experience design",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "seatz",
-      "label": "sEATz Mobile App"
+      "label": "sEATz"
     },
     "next": {
       "url": "adidas",
-      "label": "Adidas Product Page"
+      "label": "Adidas"
     },
     "photos": [
       {
@@ -145,44 +145,44 @@
   },
   {
     "id": "adidas",
-    "title": "Adidas Product Page",
-    "description": "An exercise in refining Adidas’s product page.",
+    "title": "Adidas",
+    "description": "Product refinement design",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "icon-go",
-      "label": "Icon Go Mobile App Concept"
+      "label": "Icon GO"
     },
     "next": {
       "url": "pinnacle-propane",
-      "label": "Pinnacle Propane Inquiry Tracker"
+      "label": "Pinnacle Propane"
     },
     "photos": [
       {
         "src": "images/adidas/1.png",
         "w": "1842",
         "h": "4405",
-        "title": "Adidas Product Page"
+        "title": "Adidas"
       }
     ]
   },
   {
     "id": "pinnacle-propane",
-    "title": "Pinnacle Propane Inquiry Tracker",
-    "description": "Designing an internal tracking tool from the ground up.",
+    "title": "Pinnacle Propane",
+    "description": "Functional interface design",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "adidas",
-      "label": "Adidas Product Page"
+      "label": "Adidas"
     },
     "next": {
       "url": "anylist",
-      "label": "AnyList Usability Assessment"
+      "label": "AnyList"
     },
     "photos": [
       {
@@ -207,33 +207,33 @@
   },
   {
     "id": "anylist",
-    "title": "AnyList Usability Assessment",
-    "description": "Taking one of my favorite apps and improving its function and ease of use.",
+    "title": "AnyList",
+    "description": "Usability assessment",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "pinnacle-propane",
-      "label": "Pinnacle Propane Inquiry Tracker"
+      "label": "Pinnacle Propane"
     },
     "next": {
       "url": "music-player",
-      "label": "Unnamed Music Player"
+      "label": "Music Player"
     },
     "photos": []
   },
   {
     "id": "music-player",
-    "title": "Unnamed Music Player",
-    "description": "Design exploration of my ideal music player application.",
+    "title": "Music Player",
+    "description": "Design exploration",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {
       "url": "anylist",
-      "label": "AnyList Usability Assessment"
+      "label": "AnyList"
     },
     "next": {
       "url": "other-works",
@@ -244,21 +244,21 @@
         "src": "images/music-player/1.png",
         "w": "3400",
         "h": "2400",
-        "title": "Unnamed Music Player"
+        "title": "Music Player"
       }
     ]
   },
   {
-    "id": "other-works",
-    "title": "Other Works",
-    "description": "A collection of miscellaneous works.",
+    "id": "other-things",
+    "title": "Other Things",
+    "description": "Collection of miscellaneous works",
     "overview": "Overview paragraph will go here.",
     "role": "",
     "process": "",
     "lessons": "",
     "previous": {
       "url": "music-player",
-      "label": "Unnamed Music Player"
+      "label": "Music Player"
     },
     "next": {},
     "photos": [

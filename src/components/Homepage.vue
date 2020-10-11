@@ -2,9 +2,9 @@
   <div class="homepage">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="about-me section">
-      <h1>Hi, I'm Lawrence. <span>A UX Designer and photographer based in Houston, TX.</span></h1>
-      <h2>I work at Credera where I help our clients craft digital solutions that better impact their business and their users.</h2>
-      <h2>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or scroll down to see my work in finer detail.</h2>
+      <h1>Hi, I'm Lawrence. <span>A UX Designer + Photographer.</span></h1>
+      <h2>I work at Credera where I craft digital solutions for our clients and bring ideas to life through thoughtful and functional design.</h2>
+      <h2>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or ↓scroll down↓ to see my work in finer detail.</h2>
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
@@ -53,7 +53,7 @@ export default {
       },
       projects: [
         {
-          id: 'credera-rebrand',
+          id: 'credera',
           name: 'Credera Rebrand',
           titleMarkup: 'Credera <span class="underline">Rebrand</span>',
           description: 'Rebrand and replatform of my company’s website.'
@@ -99,10 +99,10 @@ export default {
           description: 'Design exploration of my ideal music player application.'
         },
         {
-          id: 'other-works',
-          name: 'Other Works',
-          titleMarkup: 'Other <span class="underline">Works</span>',
-          description: 'A collection of miscellaneous works.'
+          id: 'other-things',
+          name: 'Other Things',
+          titleMarkup: 'Other <span class="underline">Things</span>',
+          description: 'Collection of miscellaneous works'
         }
       ]
     }

@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <div class="container">
-      <span class="hello">Hello there!</span>
-      <span class="message">Let's grab a virtual coffee and chat about anything from photography to design to mechanical keyboards.</span>
+      <span class="hello">You made it to the bottom!</span>
+      <span class="message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</span>
       <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch CTA')">Get in touch</div>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <span class="copyright">All images and content Copyright © 2015-{{ currentYear }} Lawrence Chang</span>
