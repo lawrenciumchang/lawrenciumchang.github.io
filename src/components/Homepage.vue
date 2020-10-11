@@ -8,7 +8,7 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h2><router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
+        <h2><router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)"><span>{{ project.name }}</span></router-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </div>
@@ -54,54 +54,47 @@ export default {
       projects: [
         {
           id: 'credera',
-          name: 'Credera Rebrand',
-          titleMarkup: 'Credera <span class="underline">Rebrand</span>',
-          description: 'Rebrand and replatform of my company’s website.'
+          name: 'Credera',
+          description: 'Rebrand + replatform'
         },
         {
           id: 'gundam-kingdom',
-          name: 'Gundam Kingdom E-Commerce Platform',
-          titleMarkup: 'Gundam Kingdom <span class="underline">E-Commerce Platform</span>',
-          description: 'Responsive web design for a niche hobby web store.'
+          name: 'Gundam Kingdom',
+          description: 'E-Commerce platform design'
         },
         {
           id: 'seatz',
-          name: 'sEATz Mobile App',
-          titleMarkup: 'sEATz <span class="underline">Mobile App</span>',
-          description: 'Creating an experience for food delivery at the big game right to your seat.'
+          name: 'sEATz',
+          description: 'Mobile service design'
         },
         {
           id: 'icon-go',
-          name: 'Icon GO Mobile App Concept',
-          titleMarkup: 'Icon GO Mobile App <span class="underline>Concept</span>',
-          description: 'Reimagining of Icon Parking’s mobile experience.'
+          name: 'Icon GO',
+          description: 'Mobile experience design'
         },
         {
           id: 'adidas',
-          name: 'Adidas Product Page',
-          titleMarkup: 'Adidas <span class="underline">Product</span> Page',
-          description: 'An exercise in refining Adidas’s product page.'
+          name: 'Adidas',
+          description: 'Product refinement design'
         },
         {
           id: 'pinnacle-propane',
-          name: 'Pinnacle Propane Inquiry Tracker',
-          description: 'Designing an internal tracking tool from the ground up.'
+          name: 'Pinnacle Propane',
+          description: 'Functional interface design'
         },
         {
           id: 'anylist',
-          name: 'AnyList Usability Assessment',
-          titleMarkup: 'AnyList <span class="underline">Usability Assessment</span>',
-          description: 'Taking one of my favorite apps and improving its function and ease of use.'
+          name: 'AnyList',
+          description: 'Usability assessment'
         },
         {
           id: 'music-player',
-          name: 'Unnamed Music Player',
-          description: 'Design exploration of my ideal music player application.'
+          name: 'Music Player',
+          description: 'Design exploration'
         },
         {
           id: 'other-things',
           name: 'Other Things',
-          titleMarkup: 'Other <span class="underline">Things</span>',
           description: 'Collection of miscellaneous works'
         }
       ]
@@ -174,22 +167,6 @@ export default {
           &:hover {
             color: $blue-hover;
             cursor: pointer;
-
-            ::v-deep .underline {
-              background-size: 100% 100%;
-            }
-          }
-
-          ::v-deep .underline {
-            background-image: linear-gradient(120deg, $blue-underline 0%, $blue-underline 100%);
-            background-position: 0 92%;
-            background-repeat: no-repeat;
-            background-size: 100% 8px;
-            transition: background-size $hover-transition;
-            
-            &:hover {
-              background-size: 100% 100%;
-            }
           }
         }
       }
