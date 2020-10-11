@@ -1,13 +1,31 @@
 [
   {
-    "id": "gundam-kingdom",
-    "title": "Gundam Kingdom E-Commerce Platform",
-    "description": "Short description here.",
+    "id": "credera-rebrand",
+    "title": "Credera Rebrand",
+    "description": "Rebrand and replatform of my company’s website.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
     "lessons": "Lessons Learned paragraph will go here.",
     "previous": {},
+    "next": {
+      "url": "gundam-kingdom",
+      "label": "Gundam Kingdom E-Commerce Platform"
+    },
+    "photos": []
+  },
+  {
+    "id": "gundam-kingdom",
+    "title": "Gundam Kingdom E-Commerce Platform",
+    "description": "Responsive web design for a niche hobby web store.",
+    "overview": "Overview paragraph will go here.",
+    "role": "My Role paragraph will go here.",
+    "process": "The Process paragraph will go here.",
+    "lessons": "Lessons Learned paragraph will go here.",
+    "previous": {
+      "url": "credera-rebrand",
+      "label": "Credera Rebrand"
+    },
     "next": {
       "url": "seatz",
       "label": "sEATz Mobile App"
@@ -48,7 +66,7 @@
   {
     "id": "seatz",
     "title": "sEATz Mobile App",
-    "description": "Short description here.",
+    "description": "Creating an experience for food delivery at the big game right to your seat.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -91,7 +109,7 @@
   {
     "id": "icon-go",
     "title": "Icon Go Mobile App Concept",
-    "description": "Short description here.",
+    "description": "Reimagining of Icon Parking’s mobile experience.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -128,7 +146,7 @@
   {
     "id": "adidas",
     "title": "Adidas Product Page",
-    "description": "Short description here.",
+    "description": "An exercise in refining Adidas’s product page.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -153,7 +171,7 @@
   {
     "id": "pinnacle-propane",
     "title": "Pinnacle Propane Inquiry Tracker",
-    "description": "Short description here.",
+    "description": "Designing an internal tracking tool from the ground up.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -190,7 +208,7 @@
   {
     "id": "anylist",
     "title": "AnyList Usability Assessment",
-    "description": "Short description here.",
+    "description": "Taking one of my favorite apps and improving its function and ease of use.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -208,7 +226,7 @@
   {
     "id": "music-player",
     "title": "Unnamed Music Player",
-    "description": "Short description here.",
+    "description": "Design exploration of my ideal music player application.",
     "overview": "Overview paragraph will go here.",
     "role": "My Role paragraph will go here.",
     "process": "The Process paragraph will go here.",
@@ -233,7 +251,7 @@
   {
     "id": "other-works",
     "title": "Other Works",
-    "description": "Short description here.",
+    "description": "A collection of miscellaneous works.",
     "overview": "Overview paragraph will go here.",
     "role": "",
     "process": "",

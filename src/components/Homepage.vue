@@ -53,50 +53,56 @@ export default {
       },
       projects: [
         {
+          id: 'credera-rebrand',
+          name: 'Credera Rebrand',
+          titleMarkup: 'Credera <span class="underline">Rebrand</span>',
+          description: 'Rebrand and replatform of my company’s website.'
+        },
+        {
           id: 'gundam-kingdom',
           name: 'Gundam Kingdom E-Commerce Platform',
           titleMarkup: 'Gundam Kingdom <span class="underline">E-Commerce Platform</span>',
-          description: 'Short description here.'
+          description: 'Responsive web design for a niche hobby web store.'
         },
         {
           id: 'seatz',
           name: 'sEATz Mobile App',
           titleMarkup: 'sEATz <span class="underline">Mobile App</span>',
-          description: 'Short description here.'
+          description: 'Creating an experience for food delivery at the big game right to your seat.'
         },
         {
           id: 'icon-go',
           name: 'Icon GO Mobile App Concept',
           titleMarkup: 'Icon GO Mobile App <span class="underline>Concept</span>',
-          description: 'Short description here.'
+          description: 'Reimagining of Icon Parking’s mobile experience.'
         },
         {
           id: 'adidas',
           name: 'Adidas Product Page',
           titleMarkup: 'Adidas <span class="underline">Product</span> Page',
-          description: 'Short description here.'
+          description: 'An exercise in refining Adidas’s product page.'
         },
         {
           id: 'pinnacle-propane',
           name: 'Pinnacle Propane Inquiry Tracker',
-          description: 'Short description here.'
+          description: 'Designing an internal tracking tool from the ground up.'
         },
         {
           id: 'anylist',
           name: 'AnyList Usability Assessment',
           titleMarkup: 'AnyList <span class="underline">Usability Assessment</span>',
-          description: 'Short description here.'
+          description: 'Taking one of my favorite apps and improving its function and ease of use.'
         },
         {
           id: 'music-player',
           name: 'Unnamed Music Player',
-          description: 'Short description here.'
+          description: 'Design exploration of my ideal music player application.'
         },
         {
           id: 'other-works',
           name: 'Other Works',
           titleMarkup: 'Other <span class="underline">Works</span>',
-          description: 'Short description here.'
+          description: 'A collection of miscellaneous works.'
         }
       ]
     }
