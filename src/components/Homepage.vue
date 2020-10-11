@@ -8,7 +8,7 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h2><router-link :to="project.id" @click.native="scrollToTop; gaTrackClick('Home Page', 'View Project - ' + project.name)"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
+        <h2><router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)"><span v-html="project.titleMarkup ? project.titleMarkup : project.name"></span></router-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </div>
