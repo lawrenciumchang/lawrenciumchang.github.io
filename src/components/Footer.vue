@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-      <h2 class="hello">You made it to the bottom!</h2>
+      <h2 class="hello">Hello there!</h2>
       <h2 class="message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</h2>
       <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch CTA')">Get in touch</div>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
