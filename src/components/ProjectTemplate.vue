@@ -2,7 +2,7 @@
   <div class="project-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="title-container section">
-      <router-link to="/" @click.native="scrollToTop(); gaTrackClick('Project', 'Home Button')" class="navigation-link">
+      <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
       </router-link>
       <h1 class="title">{{ project.title }}</h1>
@@ -34,7 +34,7 @@
     <div class="navigation-container section">
       <div class="previous">
         <div v-if="project.previous">
-          <router-link :to="project.previous.url" @click.native="scrollToTop(); gaTrackClick('project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
+          <router-link :to="project.previous.url" @click.native="gaTrackClick('project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
             ←Previous Project
           </router-link>
           <h2>{{ project.previous.title }}</h2>
@@ -43,7 +43,7 @@
       </div>
       <div class="next">
         <div v-if="project.next">
-          <router-link :to="project.next.url" @click.native="scrollToTop(); gaTrackClick('project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
+          <router-link :to="project.next.url" @click.native="gaTrackClick('project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
             Next Project→
           </router-link>
           <h2>{{ project.next.title }}</h2>
@@ -125,9 +125,6 @@ export default {
     },
     hidePhotoSwipe: function() {
       this.photoswipeOptions.isOpen = false;
-    },
-    scrollToTop: function() {
-      window.scrollTo(0,0);
     },
     gaTrackClick: function(category, label) {
       var host = window.location.hostname;

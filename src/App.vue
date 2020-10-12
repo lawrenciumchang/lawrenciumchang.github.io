@@ -2,7 +2,13 @@
   <div id="app">
     <CustomCursor />
     <Menu />
-    <router-view :key="$route.fullPath" />
+    <transition
+      name="fade"
+      mode="out-in"
+      @enter="enter"
+    >
+      <router-view :key="$route.fullPath" />
+    </transition>
     <Footer />
   </div>
 </template>
@@ -13,6 +19,12 @@ import Footer from '@/components/Footer.vue';
 import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
+  name: 'App',
+  methods: {
+    enter() {
+      window.scrollTo(0,0);
+    }
+  },
   components: {
     Menu,
     Footer,
@@ -31,5 +43,17 @@ export default {
     font-family: 'Ubuntu Mono', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
   }
 </style>

@@ -243,7 +243,7 @@ export default {
         color: $blue-primary;
         font-size: 14px;
         opacity: 0;
-        transition: all 1s ease-in-out;
+        transition: $in-out-transition;
 
         &.reveal {
           opacity: 1;

@@ -13,7 +13,7 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.title)">
+        <router-link :to="project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <img v-lazy="project.coverPhotoSrc" />
           <h2 class="project-title">{{ project.title }}</h2>
           <label class="project-description">{{ project.description }}</label>
@@ -76,9 +76,6 @@ export default {
     },
     hidePhotoSwipe: function() {
       this.photoswipeOptions.isOpen = false;
-    },
-    scrollToTop: function() {
-      window.scrollTo(0,0);
     },
     gaTrackClick: function(category, label) {
       var host = window.location.hostname;
