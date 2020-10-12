@@ -217,12 +217,7 @@ export default {
 
   img {
     cursor: pointer;
-    transition: $hover-transition;
     width: 100%;
-
-    &:hover {
-      transform: scale(0.99);
-    }
   }
 }
 ::v-deep .pswp__caption__center {
