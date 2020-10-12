@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <CustomCursor />
     <Header />
     <router-view :key="$route.fullPath" />
     <Footer />
@@ -9,11 +10,13 @@
 <script>
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
+import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    CustomCursor
   }
 }
 </script>
@@ -24,6 +27,7 @@ export default {
 
 <style lang="scss">
   #app {
+    cursor: none;
     font-family: 'Ubuntu Mono', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
