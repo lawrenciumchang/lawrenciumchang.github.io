@@ -4,14 +4,12 @@
     "title": "Credera",
     "description": "Rebrand + replatform",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {},
-    "next": {
-      "url": "gundam-kingdom",
-      "label": "Gundam Kingdom"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": []
   },
   {
@@ -19,17 +17,12 @@
     "title": "Gundam Kingdom",
     "description": "E-Commerce platform design",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "credera",
-      "label": "Credera"
-    },
-    "next": {
-      "url": "seatz",
-      "label": "sEATz"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/gundam-kingdom/1.png",
@@ -68,17 +61,12 @@
     "title": "sEATz",
     "description": "Mobile service design",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "gundam-kingdom",
-      "label": "Gundam Kingdom"
-    },
-    "next": {
-      "url": "icon-go",
-      "label": "Icon GO"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/seatz/1.png",
@@ -111,17 +99,12 @@
     "title": "Icon GO",
     "description": "Mobile experience design",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "seatz",
-      "label": "sEATz"
-    },
-    "next": {
-      "url": "adidas",
-      "label": "Adidas"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/icon-go/1.png",
@@ -148,17 +131,12 @@
     "title": "Adidas",
     "description": "Product refinement design",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "icon-go",
-      "label": "Icon GO"
-    },
-    "next": {
-      "url": "pinnacle-propane",
-      "label": "Pinnacle Propane"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/adidas/1.png",
@@ -173,17 +151,12 @@
     "title": "Pinnacle Propane",
     "description": "Functional interface design",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "adidas",
-      "label": "Adidas"
-    },
-    "next": {
-      "url": "anylist",
-      "label": "AnyList"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/pinnacle-propane/1.png",
@@ -210,17 +183,12 @@
     "title": "AnyList",
     "description": "Usability assessment",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "pinnacle-propane",
-      "label": "Pinnacle Propane"
-    },
-    "next": {
-      "url": "music-player",
-      "label": "Music Player"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": []
   },
   {
@@ -228,17 +196,12 @@
     "title": "Music Player",
     "description": "Design exploration",
     "overview": "Overview paragraph will go here.",
-    "role": "My Role paragraph will go here.",
-    "process": "The Process paragraph will go here.",
-    "lessons": "Lessons Learned paragraph will go here.",
-    "previous": {
-      "url": "anylist",
-      "label": "AnyList"
-    },
-    "next": {
-      "url": "other-works",
-      "label": "Other Works"
-    },
+    "role": [
+      "bullet one",
+      "bullet two",
+      "bullet three"
+    ],
+    "more": "More text will go here.",
     "photos": [
       {
         "src": "images/music-player/1.png",
@@ -253,14 +216,6 @@
     "title": "Other Things",
     "description": "Collection of miscellaneous works",
     "overview": "Overview paragraph will go here.",
-    "role": "",
-    "process": "",
-    "lessons": "",
-    "previous": {
-      "url": "music-player",
-      "label": "Music Player"
-    },
-    "next": {},
     "photos": [
       {
         "src": "images/other/icons.png",

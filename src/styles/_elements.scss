@@ -1,4 +1,4 @@
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, h5, p, a {
   margin: 0;
 }
 
@@ -32,11 +32,26 @@ h4 {
   font-weight: 500;
 }
 
-p, li {
-  color: $gray-dark;
+h5 {
+  color: $almost-black;
+  font-family: Hibana;
   font-size: 20px;
   font-weight: 500;
   line-height: 40px;
+}
+
+p, label, li {
+  color: $gray-dark;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p, li {
+  line-height: 40px;
+}
+
+label {
+  line-height: 32px;
 }
 
 ul {
@@ -51,6 +66,16 @@ a {
   &:hover {
     color: $blue-hover;
     cursor: pointer;
+  }
+}
+
+ul {
+  list-style: circle;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
   }
 }
 

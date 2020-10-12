@@ -13,9 +13,9 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)">
-          <h2>{{ project.name }}</h2>
-          <p>{{ project.description }}</p>
+        <router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.title)">
+          <h2 class="project-title">{{ project.title }}</h2>
+          <label class="project-description">{{ project.description }}</label>
         </router-link>
       </div>
     </div>
@@ -68,47 +68,47 @@ export default {
       projects: [
         {
           id: 'credera',
-          name: 'Credera',
+          title: 'Credera',
           description: 'Rebrand + replatform'
         },
         {
           id: 'gundam-kingdom',
-          name: 'Gundam Kingdom',
+          title: 'Gundam Kingdom',
           description: 'E-Commerce platform design'
         },
         {
           id: 'seatz',
-          name: 'sEATz',
+          title: 'sEATz',
           description: 'Mobile service design'
         },
         {
           id: 'icon-go',
-          name: 'Icon GO',
+          title: 'Icon GO',
           description: 'Mobile experience design'
         },
         {
           id: 'adidas',
-          name: 'Adidas',
+          title: 'Adidas',
           description: 'Product refinement design'
         },
         {
           id: 'pinnacle-propane',
-          name: 'Pinnacle Propane',
+          title: 'Pinnacle Propane',
           description: 'Functional interface design'
         },
         {
           id: 'anylist',
-          name: 'AnyList',
+          title: 'AnyList',
           description: 'Usability assessment'
         },
         {
           id: 'music-player',
-          name: 'Music Player',
+          title: 'Music Player',
           description: 'Design exploration'
         },
         {
           id: 'other-things',
-          name: 'Other Things',
+          title: 'Other Things',
           description: 'Collection of miscellaneous works'
         }
       ]
@@ -187,11 +187,11 @@ export default {
         text-decoration: none;
       }
 
-      h2 {
+      .project-title {
         color: $almost-black;
         font-size: 36px;
         font-weight: 500;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
         text-decoration: none;
         transition: $hover-transition;
       }
@@ -235,16 +235,6 @@ export default {
 
       h4 {
         margin-bottom: 32px;
-      }
-
-      ul {
-        list-style: circle;
-
-        li {
-          &:not(:last-child) {
-            margin-bottom: 24px;
-          }
-        }
       }
     }
   }

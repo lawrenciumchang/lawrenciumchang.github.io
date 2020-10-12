@@ -2,62 +2,52 @@
   <div class="post-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="title-container section">
-      <router-link to="/" @click.native="scrollToTop(); gaTrackClick('Project', 'Back Button')" class="navigation-link">
-        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.2925 0.704609C5.9025 0.314609 5.2725 0.314609 4.8825 0.704609L0.2925 5.29461C-0.0975 5.68461 -0.0975 6.31461 0.2925 6.70461L4.8825 11.2946C5.2725 11.6846 5.9025 11.6846 6.2925 11.2946C6.6825 10.9046 6.6825 10.2746 6.2925 9.88461L2.4125 5.99461L6.2925 2.11461C6.6825 1.72461 6.6725 1.08461 6.2925 0.704609V0.704609Z" fill="#69AAF3"/>
-        </svg>
-        Back
+      <router-link to="/" @click.native="scrollToTop(); gaTrackClick('Project', 'Home Button')" class="navigation-link">
+        ↑Home
       </router-link>
-      <h1>{{ post.title }}</h1>
-      <p class="description">{{ post.description }}</p>
+      <h1 class="title">{{ post.title }}</h1>
+      <label class="description">{{ post.description }}</label>
     </div>
     <div class="intro-container section">
       <div v-if="post.overview">
-        <h3>Overview</h3>
-        <p>{{ post.overview }}</p>
+        <h5>{{ post.overview }}</h5>
       </div>
       <div v-if="post.role">
-        <h3>My Role</h3>
-        <p>{{ post.role }}</p>
+        <h5>My Role</h5>
+        <ul>
+          <li v-for="role in post.role" :key="role">{{ role }}</li>
+        </ul>
       </div>
     </div>
-    <div v-if="post.photos[0]" class="single-photo-container">
+    <div v-if="post.photos && post.photos[0]" class="key-photo-container">
       <img v-lazy="post.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + post.photos[0].title)" />
     </div>
-    <div v-if="post.process" class="process-container section">
-      <h3>The Process</h3>
-      <p>{{ post.process }}</p>
+    <div v-if="post.more" class="more-container section">
+      <p>{{ post.more }}</p>
     </div>
-    <div v-if="post.photos[1]" class="multiple-photos-container section-buffer">
+    <div v-if="!post.more" class="spacer section"></div>
+    <div v-if="post.photos && post.photos[1]" class="photos-container">
       <div class="photo-wrapper" v-for="(photo, index) in post.photos" :key="photo.title">
         <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + photo.title)" />
       </div>
     </div>
-    <div v-if="post.lessons" class="lessons-container section">
-      <h3>Lessons Learned</h3>
-      <p>{{ post.lessons }}</p>
-    </div>
     <div class="navigation-container section">
       <div class="previous">
-        <div v-if="post.previous.url">
-          <router-link :to="post.previous.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Previous Post - Navigating to ' + post.previous.label)" class="navigation-link">
-            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.2925 0.704609C5.9025 0.314609 5.2725 0.314609 4.8825 0.704609L0.2925 5.29461C-0.0975 5.68461 -0.0975 6.31461 0.2925 6.70461L4.8825 11.2946C5.2725 11.6846 5.9025 11.6846 6.2925 11.2946C6.6825 10.9046 6.6825 10.2746 6.2925 9.88461L2.4125 5.99461L6.2925 2.11461C6.6825 1.72461 6.6725 1.08461 6.2925 0.704609V0.704609Z" fill="#69AAF3"/>
-            </svg>
-            Previous
+        <div v-if="post.previous">
+          <router-link :to="post.previous.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Previous Post - Navigating to ' + post.previous.title)" class="navigation-link">
+            ←Previous Project
           </router-link>
-          <p>{{ post.previous.label }}</p>
+          <h2>{{ post.previous.title }}</h2>
+          <label>{{ post.previous.description }}</label>
         </div>
       </div>
       <div class="next">
-        <div v-if="post.next.url">
-          <router-link :to="post.next.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Next Post - Navigating to ' + post.next.label)" class="navigation-link">
-            Next
-            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.292461 0.2925C0.682461 -0.0975 1.31246 -0.0975 1.70246 0.2925L6.29246 4.8825C6.68246 5.2725 6.68246 5.9025 6.29246 6.2925L1.70246 10.8825C1.31246 11.2725 0.682461 11.2725 0.292461 10.8825C-0.0975391 10.4925 -0.0975391 9.8625 0.292461 9.4725L4.17246 5.5825L0.292461 1.7025C-0.0975391 1.3125 -0.0875391 0.6725 0.292461 0.2925V0.2925Z" fill="#69AAF3"/>
-            </svg>
+        <div v-if="post.next">
+          <router-link :to="post.next.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Next Post - Navigating to ' + post.next.title)" class="navigation-link">
+            Next Project→
           </router-link>
-          <p>{{ post.next.label }}</p>
+          <h2>{{ post.next.title }}</h2>
+          <label>{{ post.next.description }}</label>
         </div>
       </div>
     </div>
@@ -93,11 +83,31 @@ export default {
   methods: {
     getPost: function(postId) {
       let post = [];
-      posts.forEach(element => {
+      let postIndex;
+
+      posts.forEach((element, index) => {
         if (postId == element.id) {
           post = element;
+          postIndex = index;
         }
       });
+
+      if (posts[postIndex-1]) {
+        let previous = {};
+        previous.url = posts[postIndex-1].id;
+        previous.title = posts[postIndex-1].title;
+        previous.description = posts[postIndex-1].description;
+        post.previous = previous;
+      }
+
+      if (posts[postIndex+1]) {
+        let next = {};
+        next.url = posts[postIndex+1].id;
+        next.title = posts[postIndex+1].title;
+        next.description = posts[postIndex+1].description;
+        post.next = next;
+      }
+
       return post;
     },
     getPhotos: function(postId) {
@@ -133,27 +143,18 @@ export default {
 .post-template {
   .navigation-link {
     display: block;
+    font-size: 20px;
+    font-weight: 500;
     text-decoration: none;
-
-    svg path {
-      fill: $blue-primary;
-      transition: $hover-transition;
-    }
-
-    &:hover {
-      svg path {
-        fill: $blue-hover;
-        transition: $hover-transition;
-      }
-    }
   }
 
   .section {
     padding: 80px 0;
   }
 
-  .section-buffer {
-    padding-bottom: 20px;
+  .spacer {
+    margin-bottom: 40px;
+    padding: 0;
   }
 
   .title-container {
@@ -161,26 +162,42 @@ export default {
     margin-top: 100px;
 
     .navigation-link {
-      font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      line-height: 56px;
+      margin-bottom: 12px;
     }
   }
 
   .intro-container{
     display: grid;
-    grid-column-gap: 72px;
+    grid-column-gap: 40px;
     grid-row-gap: 40px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+
+    h5 {
+      width: 90%;
+    }
 
     @media (max-width: $mobile-breakpoint) {
       grid-template-columns: 1fr;
+
+      h5 {
+        width: 100%;
+      }
     }
   }
 
-  .multiple-photos-container {
+  .photos-container {
+    margin-bottom: 100px;
+
     .photo-wrapper {
-      &:not(:first-child) {
-        margin-top: 40px;
+      &:not(:first-child), &:not(:last-child) {
+        img {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -190,10 +207,20 @@ export default {
     display: grid;
     grid-column-gap: 72px;
     grid-template-columns: 1fr 1fr;
+    padding: 80px 0 100px;
 
     .navigation-link {
-      font-size: 20px;
       margin-bottom: 0;
+    }
+
+    .previous, .next {
+      a {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-bottom: 12px;
+      }
     }
 
     .previous {
@@ -207,7 +234,7 @@ export default {
     @media (max-width: $mobile-breakpoint) {
       grid-row-gap: 40px;
       grid-template-columns: 1fr;
-      padding: 40px 0;
+      padding: 40px 0 48px;
 
       .next {
         text-align: left;
