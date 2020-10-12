@@ -59,7 +59,7 @@ export default {
         optionsGallery: {},
         items: [
           {
-            src: require('@/assets/test_resume_1x.png'),
+            src: require('@/assets/images/test_resume_1x.png'),
             w: 1080,
             h: 1398
           }
@@ -213,7 +213,7 @@ export default {
   .more-about {
     display: grid;
     grid-column-gap: 160px;
-    grid-row-gap: 40px;
+    grid-row-gap: 80px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 100px;
 
