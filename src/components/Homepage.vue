@@ -201,4 +201,11 @@ export default {
     }
   }
 }
+img[lazy=loading] {
+  opacity: 0;
+  transition: $hover-transition;
+}
+img[lazy=loaded] {
+  opacity: 1;
+}
 </style>
