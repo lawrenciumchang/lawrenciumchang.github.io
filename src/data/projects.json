@@ -10,6 +10,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": []
   },
   {
@@ -23,6 +24,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/gundam-kingdom/1.png",
@@ -67,6 +69,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/seatz/1.png",
@@ -105,6 +108,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/icon-go/1.png",
@@ -137,6 +141,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/adidas/1.png",
@@ -157,6 +162,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/pinnacle-propane/1.png",
@@ -189,6 +195,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": []
   },
   {
@@ -202,6 +209,7 @@
       "bullet three"
     ],
     "more": "More text will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/music-player/1.png",
@@ -216,6 +224,7 @@
     "title": "Other Things",
     "description": "Collection of miscellaneous works",
     "overview": "Overview paragraph will go here.",
+    "coverPhotoSrc": "images/credera/credera_cover.png",
     "photos": [
       {
         "src": "images/other/icons.png",

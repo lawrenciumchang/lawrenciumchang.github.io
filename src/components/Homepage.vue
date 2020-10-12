@@ -14,6 +14,7 @@
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
         <router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.title)">
+          <img v-lazy="project.coverPhotoSrc" />
           <h2 class="project-title">{{ project.title }}</h2>
           <label class="project-description">{{ project.description }}</label>
         </router-link>
@@ -41,6 +42,7 @@
 </template>
 
 <script>
+import projects from '@/data/projects.json';
 import { PhotoSwipe } from 'v-photoswipe';
 
 export default {
@@ -50,6 +52,7 @@ export default {
   },
   data() {
     return {
+      projects: projects,
       photoswipeOptions: {
         isOpen: false,
         isOpenGallery: false,
@@ -64,54 +67,7 @@ export default {
             h: 1398
           }
         ]
-      },
-      projects: [
-        {
-          id: 'credera',
-          title: 'Credera',
-          description: 'Rebrand + replatform'
-        },
-        {
-          id: 'gundam-kingdom',
-          title: 'Gundam Kingdom',
-          description: 'E-Commerce platform design'
-        },
-        {
-          id: 'seatz',
-          title: 'sEATz',
-          description: 'Mobile service design'
-        },
-        {
-          id: 'icon-go',
-          title: 'Icon GO',
-          description: 'Mobile experience design'
-        },
-        {
-          id: 'adidas',
-          title: 'Adidas',
-          description: 'Product refinement design'
-        },
-        {
-          id: 'pinnacle-propane',
-          title: 'Pinnacle Propane',
-          description: 'Functional interface design'
-        },
-        {
-          id: 'anylist',
-          title: 'AnyList',
-          description: 'Usability assessment'
-        },
-        {
-          id: 'music-player',
-          title: 'Music Player',
-          description: 'Design exploration'
-        },
-        {
-          id: 'other-things',
-          title: 'Other Things',
-          description: 'Collection of miscellaneous works'
-        }
-      ]
+      }
     }
   },
   methods: {
@@ -138,6 +94,10 @@ export default {
 .homepage {
   .section {
     padding: 100px 0px;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 60px 0;
+    }
   }
 
   .intro {
@@ -179,12 +139,18 @@ export default {
     }
 
     @media (max-width: $mobile-breakpoint) {
+      grid-row-gap: 40px;
       grid-template-columns: 1fr;
     }
 
     .project {
       a {
         text-decoration: none;
+      }
+
+      img {
+        margin-bottom: 24px;
+        width: 100%;
       }
 
       .project-title {
@@ -194,10 +160,6 @@ export default {
         margin-bottom: 12px;
         text-decoration: none;
         transition: $hover-transition;
-      }
-
-      &:not(:last-child) {
-         margin-bottom: 60px;
       }
 
       &:hover {
