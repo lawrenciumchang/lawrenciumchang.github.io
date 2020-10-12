@@ -68,7 +68,7 @@ export default {
     }
 
     .btn-primary {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .copied-text{
