@@ -1,10 +1,15 @@
 <template>
   <div class="homepage">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
-    <div class="about-me section">
-      <h1>Hi, I'm Lawrence. <span>A UX Designer + Photographer.</span></h1>
-      <h2>I work at Credera where I craft digital solutions for our clients and bring ideas to life through thoughtful and functional design.</h2>
-      <h2>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or ↓scroll down↓ to see my work in finer detail.</h2>
+    <div class="intro section">
+      <div class="blurb">
+        <h1>Hi, I'm <span class="name">Lawrence</span>.</h1>
+        <h1>A UX Designer + Photographer.</h1>
+      </div>
+      <div class="paragraph">
+        <p>I work at Credera where I craft digital solutions for our clients and bring ideas to life through thoughtful and functional design.</p>
+        <p>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or ↓scroll down↓ to see my work in finer detail.</p>
+      </div>
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
@@ -12,16 +17,23 @@
         <p>{{ project.description }}</p>
       </div>
     </div>
-    <div class="bullets section">
-      <h2>Things I can help you with:</h2>
-      <ul>
-        <li>User interface and experience design</li>
-        <li>User interviews and research</li>
-        <li>Usability audit and user testing</li>
-        <li>Design systems</li>
-        <li>Data-driven design</li>
-        <li>Design sprints</li>
-      </ul>
+    <div class="more-about section">
+      <div class="paragraph">
+        <h3>You'll find me always building or learning something new.</h3>
+        <p>My journey began as an electrical engineer and full-stack developer. I’ve always had an appreciation for the way things were made and how humans interacted with those creations, which led me to the world of digital experience design.</p>
+        <p>Over the years I’ve had the opportunity to work with numerous clients and talented individuals to build new products and create great experiences along the way. Whether inheriting an existing system or designing a product from scratch, you will find me striving to creating something awesome.</p>
+      </div>
+      <div class="bullets">
+        <h4>Things I can help you with:</h4>
+        <ul>
+          <li>User Interface + Experience Design</li>
+          <li>Wireframing + Prototyping</li>
+          <li>Analytics-Driven Design</li>
+          <li>User Research + Testing</li>
+          <li>Design Systems</li>
+          <li>Design Sprints + Project Management</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -123,76 +135,114 @@ export default {
 <style scoped lang="scss">
 .homepage {
   .section {
-    padding: 80px 0px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $gray-border;
-    }
+    padding: 100px 0px;
   }
 
-  .about-me {
-    margin-top: 100px;
+  .intro {
+    display: grid;
+    grid-column-gap: 72px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 160px;
 
-    h1, h2, span {
-      line-height: 36px;
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
     }
 
-    h1, h2 {
-      &:not(:last-child) {
-         margin-bottom: 40px;
+    .name {
+      color: $blue-hover;
+    }
+
+    .paragraph {
+      margin-top: 100px;
+
+      @media (max-width: $mobile-breakpoint) {
+        margin-top: 0;
       }
-    }
 
-    h2, span {
-      color: $almost-black;
-      font-weight: 500;
-    }
-
-    span {
-      font-size: 24px;
+      p:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
 
   .projects-list {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: $desktop-breakpoint) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+
     .project {
       h2 {
         a {
           color: $almost-black;
-          font-size: 24px;
-          font-weight: 700;
+          font-size: 36px;
+          font-weight: 500;
           margin-bottom: 16px;
           text-decoration: none;
           transition: $hover-transition;
-
-          &:hover {
-            color: $blue-hover;
-            cursor: pointer;
-          }
         }
       }
 
       &:not(:last-child) {
          margin-bottom: 60px;
       }
+
+      &:hover {
+        cursor: pointer;
+
+        h2 {
+          a {
+            color: $blue-hover;
+          }
+        }
+      }
     }
   }
   
-  .bullets {
-    margin-bottom: 80px;
+  .more-about {
+    display: grid;
+    grid-column-gap: 160px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
 
-    h2 {
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+
+    h3 {
+      margin-bottom: 32px;
+    }
+
+    p:not(:last-child) {
       margin-bottom: 40px;
     }
 
-    ul {
+    .bullets {
+      align-content: center;
       display: grid;
-      grid-column-gap: 72px;
-      grid-row-gap: 40px;
-      grid-template-columns: 1fr 1fr;
-      list-style: circle;
 
-      @media (max-width: $mobile-breakpoint) {
-        grid-template-columns: 1fr;
+      h4 {
+        margin-bottom: 32px;
+      }
+
+      ul {
+        list-style: circle;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+        }
       }
     }
   }

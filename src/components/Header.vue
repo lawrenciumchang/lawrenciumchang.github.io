@@ -41,7 +41,6 @@ export default {
         this.$refs.menuContents.classList.remove('inactive');
         this.$refs.menuContents.classList.add('active');
 
-
         document.getElementsByClassName('menu-item').forEach(element => {
           element.classList.add('fade-down');
         });

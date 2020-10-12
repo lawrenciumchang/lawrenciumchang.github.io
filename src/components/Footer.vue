@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <div class="container">
-      <span class="hello">You made it to the bottom!</span>
-      <span class="message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</span>
+      <h2 class="hello">You made it to the bottom!</h2>
+      <h2 class="message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</h2>
       <div class="btn-primary" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch CTA')">Get in touch</div>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <span class="copyright">All images and content Copyright © 2015-{{ currentYear }} Lawrence Chang</span>
@@ -54,17 +54,17 @@ export default {
     .hello, .message {
       display: block;
       font-size: 36px;
-      font-weight: 700;
     }
 
     .hello {
       color: $almost-white;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
     .message {
       color: $gray-light;
-      margin-bottom: 36px;
+      line-height: 48px;
+      margin-bottom: 40px;
     }
 
     .btn-primary {
@@ -88,7 +88,7 @@ export default {
       font-size: 16px;
       font-weight: 500;
       line-height: 24px;
-      margin-top: 160px;
+      margin-top: 140px;
     }
   }
 }
