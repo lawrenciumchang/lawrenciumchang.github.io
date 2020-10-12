@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <CustomCursor />
-    <Header />
+    <Menu />
     <router-view :key="$route.fullPath" />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
+import Menu from '@/components/Menu.vue';
 import Footer from '@/components/Footer.vue';
 import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
   components: {
-    Header,
+    Menu,
     Footer,
     CustomCursor
   }

@@ -1,53 +1,53 @@
 <template>
-  <div class="post-template">
+  <div class="project-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="title-container section">
       <router-link to="/" @click.native="scrollToTop(); gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
       </router-link>
-      <h1 class="title">{{ post.title }}</h1>
-      <label class="description">{{ post.description }}</label>
+      <h1 class="title">{{ project.title }}</h1>
+      <label class="description">{{ project.description }}</label>
     </div>
     <div class="intro-container section">
-      <div v-if="post.overview">
-        <h5>{{ post.overview }}</h5>
+      <div v-if="project.overview">
+        <h5>{{ project.overview }}</h5>
       </div>
-      <div v-if="post.role">
+      <div v-if="project.role">
         <h5>My Role</h5>
         <ul>
-          <li v-for="role in post.role" :key="role">{{ role }}</li>
+          <li v-for="role in project.role" :key="role">{{ role }}</li>
         </ul>
       </div>
     </div>
-    <div v-if="post.photos && post.photos[0]" class="key-photo-container">
-      <img v-lazy="post.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + post.photos[0].title)" />
+    <div v-if="project.photos && project.photos[0]" class="key-photo-container">
+      <img v-lazy="project.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + project.photos[0].title)" />
     </div>
-    <div v-if="post.more" class="more-container section">
-      <p>{{ post.more }}</p>
+    <div v-if="project.more" class="more-container section">
+      <p>{{ project.more }}</p>
     </div>
-    <div v-if="!post.more" class="spacer section"></div>
-    <div v-if="post.photos && post.photos[1]" class="photos-container">
-      <div class="photo-wrapper" v-for="(photo, index) in post.photos" :key="photo.title">
-        <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('Post', 'Photo - ' + post.title + ' - ' + photo.title)" />
+    <div v-if="!project.more" class="spacer section"></div>
+    <div v-if="project.photos && project.photos[1]" class="photos-container">
+      <div class="photo-wrapper" v-for="(photo, index) in project.photos" :key="photo.title">
+        <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + photo.title)" />
       </div>
     </div>
     <div class="navigation-container section">
       <div class="previous">
-        <div v-if="post.previous">
-          <router-link :to="post.previous.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Previous Post - Navigating to ' + post.previous.title)" class="navigation-link">
+        <div v-if="project.previous">
+          <router-link :to="project.previous.url" @click.native="scrollToTop(); gaTrackClick('project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
             ←Previous Project
           </router-link>
-          <h2>{{ post.previous.title }}</h2>
-          <label>{{ post.previous.description }}</label>
+          <h2>{{ project.previous.title }}</h2>
+          <label>{{ project.previous.description }}</label>
         </div>
       </div>
       <div class="next">
-        <div v-if="post.next">
-          <router-link :to="post.next.url" @click.native="scrollToTop(); gaTrackClick('Post', 'Next Post - Navigating to ' + post.next.title)" class="navigation-link">
+        <div v-if="project.next">
+          <router-link :to="project.next.url" @click.native="scrollToTop(); gaTrackClick('project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
             Next Project→
           </router-link>
-          <h2>{{ post.next.title }}</h2>
-          <label>{{ post.next.description }}</label>
+          <h2>{{ project.next.title }}</h2>
+          <label>{{ project.next.description }}</label>
         </div>
       </div>
     </div>
@@ -55,20 +55,20 @@
 </template>
 
 <script>
-import posts from '@/data/posts.json';
+import projects from '@/data/projects.json';
 import { PhotoSwipe } from 'v-photoswipe';
 
 export default {
-  name: 'PostTemplate',
+  name: 'ProjectTemplate',
   components: {
     'v-photoswipe': PhotoSwipe
   },
   props: {
-    postId: String
+    projectId: String
   },
   data() {
     return {
-      post: this.getPost(this.postId),
+      project: this.getProject(this.projectId),
       photoswipeOptions: {
         isOpen: false,
         isOpenGallery: false,
@@ -76,48 +76,48 @@ export default {
           index: 0
         },
         optionsGallery: {},
-        items: this.getPhotos(this.postId)
+        items: this.getPhotos(this.projectId)
       }
     }
   },
   methods: {
-    getPost: function(postId) {
-      let post = [];
-      let postIndex;
+    getProject: function(projectId) {
+      let project = [];
+      let projectIndex;
 
-      posts.forEach((element, index) => {
-        if (postId == element.id) {
-          post = element;
-          postIndex = index;
+      projects.forEach((element, index) => {
+        if (projectId == element.id) {
+          project = element;
+          projectIndex = index;
         }
       });
 
-      if (posts[postIndex-1]) {
+      if (projects[projectIndex-1]) {
         let previous = {};
-        previous.url = posts[postIndex-1].id;
-        previous.title = posts[postIndex-1].title;
-        previous.description = posts[postIndex-1].description;
-        post.previous = previous;
+        previous.url = projects[projectIndex-1].id;
+        previous.title = projects[projectIndex-1].title;
+        previous.description = projects[projectIndex-1].description;
+        project.previous = previous;
       }
 
-      if (posts[postIndex+1]) {
+      if (projects[projectIndex+1]) {
         let next = {};
-        next.url = posts[postIndex+1].id;
-        next.title = posts[postIndex+1].title;
-        next.description = posts[postIndex+1].description;
-        post.next = next;
+        next.url = projects[projectIndex+1].id;
+        next.title = projects[projectIndex+1].title;
+        next.description = projects[projectIndex+1].description;
+        project.next = next;
       }
 
-      return post;
+      return project;
     },
-    getPhotos: function(postId) {
-      let post = [];
-      posts.forEach(element => {
-        if (postId == element.id) {
-          post = element;
+    getPhotos: function(projectId) {
+      let project = [];
+      projects.forEach(element => {
+        if (projectId == element.id) {
+          project = element;
         }
       });
-      return post.photos;
+      return project.photos;
     },
     showPhotoSwipe: function(index) {
       this.photoswipeOptions.isOpen = true;
@@ -140,7 +140,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.post-template {
+.project-template {
   .navigation-link {
     display: block;
     font-size: 20px;

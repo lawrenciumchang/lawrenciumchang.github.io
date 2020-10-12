@@ -1,27 +1,27 @@
 <template>
-  <div class="post">
-    <PostTemplate :postId="postId" />
+  <div class="project">
+    <ProjectTemplate :projectId="projectId" />
   </div>
 </template>
 
 <script>
-import PostTemplate from '@/components/PostTemplate.vue';
+import ProjectTemplate from '@/components/ProjectTemplate.vue';
 
 export default {
   name: 'Post',
   components: {
-    PostTemplate
+    ProjectTemplate
   },
   data() {
     return {
-      postId: this.$route.params.post_id
+      projectId: this.$route.params.project_id
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.post {
+.project {
   @include page-layout;
 }
 </style>

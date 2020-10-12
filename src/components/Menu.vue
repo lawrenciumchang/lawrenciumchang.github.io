@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="menu">
     <svg class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" @click="toggleMenuOverlay($event.currentTarget)">
       <path
           class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
@@ -11,11 +11,11 @@
 
     <div ref="menuOverlay" class="menu-overlay inactive">
       <div ref="menuContents" class="menu-contents inactive">
-        <h2 class="menu-item"><a href="/" @click="gaTrackClick('Header', 'Design Link')">Design</a></h2>
-        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank" @click="gaTrackClick('Header', 'Photography Link')">Photography</a></h2>
-        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Header', 'Flickr Link')">Flickr</a></h2>
-        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Header', 'LinkedIn Link')">LinkedIn</a></h2>
-        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Header', 'Mail Link')"><a>Mail</a></h2>
+        <h2 class="menu-item"><a href="/" @click="gaTrackClick('Menu', 'Design Link')">Design</a></h2>
+        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank" @click="gaTrackClick('Menu', 'Photography Link')">Photography</a></h2>
+        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Menu', 'Flickr Link')">Flickr</a></h2>
+        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Menu', 'LinkedIn Link')">LinkedIn</a></h2>
+        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Menu', 'Mail Link')"><a>Mail</a></h2>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       </div>
     </div>
@@ -26,7 +26,7 @@
 import ClipboardJS from 'clipboard';
 
 export default {
-  name: 'Header',
+  name: 'Menu',
   mounted: function() {
     new ClipboardJS('.mail');
   },
@@ -45,7 +45,7 @@ export default {
           element.classList.add('fade-down');
         });
 
-        this.gaTrackClick('Header', 'Open Menu');
+        this.gaTrackClick('Menu', 'Open Menu');
       } 
 
       // Close Menu
@@ -59,7 +59,7 @@ export default {
         //   element.classList.remove('fade-down');
         // });
 
-        this.gaTrackClick('Header', 'Close Menu');
+        this.gaTrackClick('Menu', 'Close Menu');
       }
     },
     revealCopiedText: function() {
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header {
+.menu {
   .ham {
     background-color: $almost-black;
     cursor: pointer;

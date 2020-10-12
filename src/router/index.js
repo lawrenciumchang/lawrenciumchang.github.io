@@ -11,7 +11,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/:post_id',
+    path: '/:project_id',
     component: () => import('../views/Post.vue')
 
   }
