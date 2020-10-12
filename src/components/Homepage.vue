@@ -13,8 +13,10 @@
     </div>
     <div class="projects-list section">
       <div class="project" v-for="project in projects" v-bind:key="project.id">
-        <h2><router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)"><span>{{ project.name }}</span></router-link></h2>
-        <p>{{ project.description }}</p>
+        <router-link :to="project.id" @click.native="scrollToTop(); gaTrackClick('Home Page', 'View Project - ' + project.name)">
+          <h2>{{ project.name }}</h2>
+          <p>{{ project.description }}</p>
+        </router-link>
       </div>
     </div>
     <div class="more-about section">
@@ -181,15 +183,17 @@ export default {
     }
 
     .project {
+      a {
+        text-decoration: none;
+      }
+
       h2 {
-        a {
-          color: $almost-black;
-          font-size: 36px;
-          font-weight: 500;
-          margin-bottom: 16px;
-          text-decoration: none;
-          transition: $hover-transition;
-        }
+        color: $almost-black;
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        text-decoration: none;
+        transition: $hover-transition;
       }
 
       &:not(:last-child) {
@@ -200,9 +204,7 @@ export default {
         cursor: pointer;
 
         h2 {
-          a {
-            color: $blue-hover;
-          }
+          color: $blue-hover;
         }
       }
     }
