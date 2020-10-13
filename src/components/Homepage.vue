@@ -128,7 +128,7 @@ export default {
   .projects-list {
     display: grid;
     grid-column-gap: 20px;
-    grid-row-gap: 60px;
+    grid-row-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
 
     @media (max-width: $desktop-breakpoint) {
@@ -146,7 +146,7 @@ export default {
       }
 
       img {
-        margin-bottom: 24px;
+        margin-bottom: 40px;
         width: 100%;
       }
 
