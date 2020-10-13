@@ -10,10 +10,10 @@
     </div>
     <div v-scroll-reveal class="intro-container section">
       <div v-if="project.overview">
-        <h5>{{ project.overview }}</h5>
+        <h5 class="overview">{{ project.overview }}</h5>
       </div>
       <div v-if="project.role">
-        <h5>My Role</h5>
+        <h5 class="role-header">My Role</h5>
         <ul>
           <li v-for="role in project.role" :key="role">{{ role }}</li>
         </ul>
@@ -174,14 +174,18 @@ export default {
     grid-row-gap: 40px;
     grid-template-columns: 1.5fr 1fr;
 
-    h5 {
+    .overview {
       width: 90%;
+    }
+
+    .role-header {
+      margin-bottom: 24px;
     }
 
     @media (max-width: $mobile-breakpoint) {
       grid-template-columns: 1fr;
 
-      h5 {
+      .over {
         width: 100%;
       }
     }
