@@ -14,7 +14,9 @@
     <div class="projects-list section">
       <div v-scroll-reveal class="project" v-for="project in projects" v-bind:key="project.id">
         <router-link :to="project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
-          <img v-lazy="project.coverPhotoSrc" />
+          <div class="image-container">
+            <img v-lazy="project.coverPhotoSrc" />
+          </div>
           <h2 class="project-title">{{ project.title }}</h2>
           <label class="project-description">{{ project.description }}</label>
         </router-link>
@@ -145,9 +147,15 @@ export default {
         text-decoration: none;
       }
 
-      img {
+      .image-container {
+        display: grid;
         margin-bottom: 40px;
-        width: 100%;
+        overflow: hidden;
+
+        img {
+          transition: $hover-transition;
+          width: 100%;
+        }
       }
 
       .project-title {
@@ -161,6 +169,10 @@ export default {
 
       &:hover {
         cursor: pointer;
+
+        img {
+          transform: scale(1.01);
+        }
 
         h2 {
           color: $blue-hover;
