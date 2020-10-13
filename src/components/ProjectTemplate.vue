@@ -1,14 +1,14 @@
 <template>
   <div class="project-template">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
-    <div class="title-container section">
+    <div v-scroll-reveal class="title-container section">
       <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
       </router-link>
       <h1 class="title">{{ project.title }}</h1>
       <label class="description">{{ project.description }}</label>
     </div>
-    <div class="intro-container section">
+    <div v-scroll-reveal class="intro-container section">
       <div v-if="project.overview">
         <h5>{{ project.overview }}</h5>
       </div>
@@ -19,20 +19,20 @@
         </ul>
       </div>
     </div>
-    <div v-if="project.photos && project.photos[0]" class="key-photo-container">
+    <div v-scroll-reveal v-if="project.photos && project.photos[0]" class="key-photo-container">
       <img v-lazy="project.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + project.photos[0].title)" />
     </div>
-    <div v-if="project.more" class="more-container section">
+    <div v-scroll-reveal v-if="project.more" class="more-container section">
       <p>{{ project.more }}</p>
     </div>
     <div v-if="!project.more" class="spacer section"></div>
     <div v-if="project.photos && project.photos[1]" class="photos-container">
-      <div class="photo-wrapper" v-for="(photo, index) in project.photos" :key="photo.title">
+      <div v-scroll-reveal class="photo-wrapper" v-for="(photo, index) in project.photos" :key="photo.title">
         <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + photo.title)" />
       </div>
     </div>
     <div class="navigation-container section">
-      <div class="previous">
+      <div v-scroll-reveal class="previous">
         <div v-if="project.previous">
           <router-link :to="project.previous.url" @click.native="gaTrackClick('project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
             ←Previous Project
@@ -41,7 +41,7 @@
           <label>{{ project.previous.description }}</label>
         </div>
       </div>
-      <div class="next">
+      <div v-scroll-reveal class="next">
         <div v-if="project.next">
           <router-link :to="project.next.url" @click.native="gaTrackClick('project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
             Next Project→

@@ -2,17 +2,17 @@
   <div class="homepage">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
-      <div class="blurb">
+      <div v-scroll-reveal class="blurb">
         <h1>Hi, I'm <span class="name">Lawrence</span>.</h1>
         <h1>A UX Designer + Photographer.</h1>
       </div>
-      <div class="paragraph">
+      <div v-scroll-reveal class="paragraph">
         <p>I work at Credera where I craft digital solutions for our clients and bring ideas to life through thoughtful and functional design.</p>
         <p>Take a look at my <a @click="showPhotoSwipe(); gaTrackClick('Home Page', 'View Resume')">resume</a> to see what I’ve been up over the years, or ↓scroll down↓ to see my work in finer detail.</p>
       </div>
     </div>
     <div class="projects-list section">
-      <div class="project" v-for="project in projects" v-bind:key="project.id">
+      <div v-scroll-reveal class="project" v-for="project in projects" v-bind:key="project.id">
         <router-link :to="project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <img v-lazy="project.coverPhotoSrc" />
           <h2 class="project-title">{{ project.title }}</h2>
@@ -21,12 +21,12 @@
       </div>
     </div>
     <div class="more-about section">
-      <div class="paragraph">
+      <div v-scroll-reveal class="paragraph">
         <h3>You'll find me always building or learning something new.</h3>
         <p>My journey began as an electrical engineer and full-stack developer. I’ve always had an appreciation for the way things were made and how humans interacted with those creations, which led me to the world of digital experience design.</p>
         <p>Over the years I’ve had the opportunity to work with numerous clients and talented individuals to build new products and create great experiences along the way. Whether inheriting an existing system or designing a product from scratch, you will find me striving to creating something awesome.</p>
       </div>
-      <div class="bullets">
+      <div v-scroll-reveal class="bullets">
         <h4>Things I can help you with:</h4>
         <ul>
           <li>User Interface + Experience Design</li>
