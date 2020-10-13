@@ -1,4 +1,7 @@
 @font-face {
   font-family: Hibana;
-  src: require('@/assets/fonts/Hibana-Submedium.otf') format('opentype');
+  src: require('@/assets/fonts/Hibana-Submedium.otf') format('opentype'),
+       require('@/assets/fonts/Hibana-Submedium.woff') format('woff'),
+       require('@/assets/fonts/Hibana-Submedium.ttf') format('truetype'),
+       require('@/assets/fonts/Hibana-Submedium.svg#Hibana-Submedium') format('svg');
 }
