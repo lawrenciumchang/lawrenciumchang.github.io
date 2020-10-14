@@ -20,7 +20,7 @@
       </div>
     </div>
     <div v-scroll-reveal v-if="project.photos && project.photos[0]" class="key-photo-container">
-      <img v-lazy="project.photos[0].src" @click="showPhotoSwipe(0); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + project.photos[0].title)" />
+      <img v-lazy="project.photos[0].src" v-bind:class="{ 'display-border': project.photos[0].displayBorder }" @click="showPhotoSwipe(0); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + project.photos[0].title)" />
     </div>
     <div v-scroll-reveal v-if="project.more" class="more-container section">
       <p>{{ project.more }}</p>
@@ -28,7 +28,7 @@
     <div v-if="!project.more" class="spacer section"></div>
     <div v-if="project.photos && project.photos[1]" class="photos-container">
       <div v-scroll-reveal class="photo-wrapper" v-for="(photo, index) in project.photos" :key="photo.title">
-        <img v-if="index != 0" v-lazy="photo.src" @click="showPhotoSwipe(index); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + photo.title)" />
+        <img v-if="index != 0" v-lazy="photo.src" v-bind:class="{ 'display-border': project.photos[0].displayBorder }" @click="showPhotoSwipe(index); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + photo.title)" />
       </div>
     </div>
     <div class="navigation-container section">
@@ -246,6 +246,10 @@ export default {
   img {
     cursor: pointer;
     width: 100%;
+
+    &.display-border {
+      border: 1px solid $gray-border;
+    }
   }
 }
 ::v-deep .pswp__caption__center {

@@ -11,30 +11,35 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/credera/credera_cover.png",
+    "photoLayout": 2,
     "photos": [
       {
         "src": "images/credera/home.png",
         "w": "2880",
         "h": "13654",
-        "title": "Home Page"
+        "title": "Home Page",
+        "displayBorder": true
       },
       {
         "src": "images/credera/style_guide.png",
         "w": "2400",
         "h": "4054",
-        "title": "Style Guide"
+        "title": "Style Guide",
+        "displayBorder": true
       },
       {
         "src": "images/credera/services.png",
         "w": "2880",
         "h": "10460",
-        "title": "Services"
+        "title": "Services",
+        "displayBorder": true
       },
       {
         "src": "images/credera/our_firm.png",
         "w": "2880",
         "h": "11102",
-        "title": "Our Firm"
+        "title": "Our Firm",
+        "displayBorder": true
       }
     ]
   },
@@ -50,42 +55,49 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/gundam-kingdom/gundam_cover.png",
+    "photoLayout": 2,
     "photos": [
       {
         "src": "images/gundam-kingdom/landing.png",
         "w": "2400",
         "h": "3184",
-        "title": "Landing Page"
+        "title": "Landing Page",
+        "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/typography.png",
         "w": "2400",
         "h": "3184",
-        "title": "Design System - Typography"
+        "title": "Design System - Typography",
+        "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/color.png",
         "w": "2400",
         "h": "3184",
-        "title": "Design System - Color"
+        "title": "Design System - Color",
+        "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/products.png",
         "w": "2400",
         "h": "4060",
-        "title": "Products Page"
+        "title": "Products Page",
+        "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/product_detail.png",
         "w": "2400",
         "h": "3477",
-        "title": "Product Detail Page"
+        "title": "Product Detail Page",
+        "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/cart.png",
         "w": "2400",
         "h": "2979",
-        "title": "Cart Page"
+        "title": "Cart Page",
+        "displayBorder": true
       }
     ]
   },
@@ -101,6 +113,7 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/seatz/seatz_cover.png",
+    "photoLayout": 3,
     "photos": [
       {
         "src": "images/seatz/splash.png",
@@ -188,6 +201,7 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/icon-go/icon_cover.png",
+    "photoLayout": 3,
     "photos": [
       {
         "src": "images/icon-go/splash.png",
@@ -257,12 +271,14 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/adidas/adidas_cover.png",
+    "photoLayout": 1,
     "photos": [
       {
         "src": "images/adidas/product_page.png",
         "w": "2400",
         "h": "6457",
-        "title": "Adidas Product Page"
+        "title": "Adidas Product Page",
+        "displayBorder": true
       }
     ]
   },
@@ -278,24 +294,28 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/pinnacle-propane/pinnacle_cover.png",
+    "photoLayout": 2,
     "photos": [
       {
         "src": "images/pinnacle-propane/dashboard.png",
         "w": "2400",
         "h": "1732",
-        "title": "Dashboard - My Inquiries"
+        "title": "Dashboard - My Inquiries",
+        "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/style_guide.png",
         "w": "2400",
         "h": "4105",
-        "title": "Style Guide"
+        "title": "Style Guide",
+        "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/inquiry_details.png",
         "w": "2400",
         "h": "3095",
-        "title": "Inquiry Details"
+        "title": "Inquiry Details",
+        "displayBorder": true
       }
     ]
   },
@@ -311,6 +331,7 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/anylist/anylist_cover.png",
+    "photoLayout": 3,
     "photos": []
   },
   {
@@ -325,6 +346,7 @@
     ],
     "more": "More text will go here.",
     "coverPhotoSrc": "images/music-player/music_cover.png",
+    "photoLayout": 3,
     "photos": [
       {
         "src": "images/music-player/weekly_mixtape.png",
@@ -352,6 +374,7 @@
     "description": "Collection of miscellaneous works",
     "overview": "Overview paragraph will go here.",
     "coverPhotoSrc": "images/other/other_cover.png",
+    "photoLayout": 2,
     "photos": [
       {
         "src": "images/other/calculator_icons.png",
@@ -375,13 +398,15 @@
         "src": "images/other/mint_landing.png",
         "w": "2880",
         "h": "3268",
-        "title": "Mint Budget App Redesign - Landing Page"
+        "title": "Mint Budget App Redesign - Landing Page",
+        "displayBorder": true
       },
       {
         "src": "images/other/mint_edit.png",
         "w": "2880",
         "h": "3268",
-        "title": "Mint Budget App Redesign - Edit Transaction"
+        "title": "Mint Budget App Redesign - Edit Transaction",
+        "displayBorder": true
       },
       {
         "src": "images/other/tasks.png",
