@@ -36,15 +36,17 @@ export default {
 
             // Name hovering
             var l = document.querySelector('#lawrence');
-            l.addEventListener('mouseover', function() {
-                self.showImage = true;
-                self.toggleImage();
-            });
-            l.addEventListener('mouseout', function() {
-                self.showImage = false;
-                self.toggleImage();
-                self.rotateImageFlag = !self.rotateImageFlag;
-            });
+            if (l) {
+                l.addEventListener('mouseover', function() {
+                    self.showImage = true;
+                    self.toggleImage();
+                });
+                l.addEventListener('mouseout', function() {
+                    self.showImage = false;
+                    self.toggleImage();
+                    self.rotateImageFlag = !self.rotateImageFlag;
+                });
+            }
             
             // Anchor hovering
             document.querySelectorAll('a').forEach(function(el) {
