@@ -15,29 +15,21 @@
     "photos": [
       {
         "src": "images/credera/home.png",
-        "w": "2880",
-        "h": "13654",
         "title": "Home Page",
         "displayBorder": true
       },
       {
         "src": "images/credera/style_guide.png",
-        "w": "2400",
-        "h": "4054",
         "title": "Style Guide",
         "displayBorder": true
       },
       {
         "src": "images/credera/services.png",
-        "w": "2880",
-        "h": "10460",
         "title": "Services",
         "displayBorder": true
       },
       {
         "src": "images/credera/our_firm.png",
-        "w": "2880",
-        "h": "11102",
         "title": "Our Firm",
         "displayBorder": true
       }
@@ -59,43 +51,31 @@
     "photos": [
       {
         "src": "images/gundam-kingdom/landing.png",
-        "w": "2400",
-        "h": "3184",
         "title": "Landing Page",
         "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/typography.png",
-        "w": "2400",
-        "h": "3184",
         "title": "Design System - Typography",
         "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/color.png",
-        "w": "2400",
-        "h": "3184",
         "title": "Design System - Color",
         "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/products.png",
-        "w": "2400",
-        "h": "4060",
         "title": "Products Page",
         "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/product_detail.png",
-        "w": "2400",
-        "h": "3477",
         "title": "Product Detail Page",
         "displayBorder": true
       },
       {
         "src": "images/gundam-kingdom/cart.png",
-        "w": "2400",
-        "h": "2979",
         "title": "Cart Page",
         "displayBorder": true
       }
@@ -117,74 +97,50 @@
     "photos": [
       {
         "src": "images/seatz/splash.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Splash Screen"
       },
       {
         "src": "images/seatz/landing.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Landing Screen"
       },
       {
         "src": "images/seatz/select_venue.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Select Venue"
       },
       {
         "src": "images/seatz/select_seat.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Select Seat"
       },
       {
         "src": "images/seatz/select_method.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Delivery or Pick Up"
       },
       {
         "src": "images/seatz/vendor_select.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Vendor Select"
       },
       {
         "src": "images/seatz/menu.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Menu"
       },
       {
         "src": "images/seatz/menu_item.png",
-        "w": "1500",
-        "h": "4236",
         "title": "Menu Item"
       },
       {
         "src": "images/seatz/cart.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Cart"
       },
       {
         "src": "images/seatz/checkout.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Checkout"
       },
       {
         "src": "images/seatz/order_confirmation.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Order Confirmation"
       },
       {
         "src": "images/seatz/order_details.png",
-        "w": "1500",
-        "h": "4736",
         "title": "Order Details"
       }
     ]
@@ -205,56 +161,38 @@
     "photos": [
       {
         "src": "images/icon-go/splash.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Splash Screen"
       },
       {
         "src": "images/icon-go/first_load.png",
-        "w": "1504",
-        "h": "3252",
         "title": "First Load"
       },
       {
         "src": "images/icon-go/search.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Search"
       },
       {
         "src": "images/icon-go/menu.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Menu"
       },
       {
         "src": "images/icon-go/garage_details.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Garage Details"
       },
       {
         "src": "images/icon-go/step_1.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Step 1"
       },
       {
         "src": "images/icon-go/step_2.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Step 2"
       },
       {
         "src": "images/icon-go/step_3.png",
-        "w": "1500",
-        "h": "3248",
         "title": "Step 3"
       },
       {
         "src": "images/icon-go/spot_booked.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Spot Booked"
       }
     ]
@@ -275,8 +213,6 @@
     "photos": [
       {
         "src": "images/adidas/product_page.png",
-        "w": "2400",
-        "h": "6457",
         "title": "Adidas Product Page",
         "displayBorder": true
       }
@@ -298,22 +234,16 @@
     "photos": [
       {
         "src": "images/pinnacle-propane/dashboard.png",
-        "w": "2880",
-        "h": "2078",
         "title": "Dashboard - My Inquiries",
         "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/style_guide.png",
-        "w": "2416",
-        "h": "3938",
         "title": "Style Guide",
         "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/inquiry_details.png",
-        "w": "2880",
-        "h": "3714",
         "title": "Inquiry Details",
         "displayBorder": true
       }
@@ -350,20 +280,14 @@
     "photos": [
       {
         "src": "images/music-player/weekly_mixtape.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Weekly Mixtape"
       },
       {
         "src": "images/music-player/artist_page.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Artist Page"
       },
       {
         "src": "images/music-player/player.png",
-        "w": "1504",
-        "h": "3252",
         "title": "Music Player"
       }
     ]
@@ -378,47 +302,25 @@
     "photos": [
       {
         "src": "images/other/calculator_icons.png",
-        "w": "1368",
-        "h": "1096",
         "title": "App Icons"
       },
       {
         "src": "images/other/calculator.png",
-        "w": "1200",
-        "h": "2598",
         "title": "Calculator"
       },
       {
         "src": "images/other/boarding_pass.png",
-        "w": "1200",
-        "h": "2082",
         "title": "Boarding Pass"
       },
       {
         "src": "images/other/mint_landing.png",
-        "w": "2880",
-        "h": "3268",
         "title": "Mint Budget App Redesign - Landing Page",
         "displayBorder": true
       },
       {
         "src": "images/other/mint_edit.png",
-        "w": "2880",
-        "h": "3268",
         "title": "Mint Budget App Redesign - Edit Transaction",
         "displayBorder": true
-      },
-      {
-        "src": "images/other/tasks_1.png",
-        "w": "1502",
-        "h": "3248",
-        "title": "Tasks - Overview"
-      },
-      {
-        "src": "images/other/tasks_2.png",
-        "w": "1500",
-        "h": "3248",
-        "title": "Tasks - Add New"
       }
     ]
   }

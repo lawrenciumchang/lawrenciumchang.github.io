@@ -230,7 +230,6 @@ export default {
     .photo-wrapper {
       display: flex;
       img {
-        cursor: pointer;
         width: 100%;
 
         &.display-border {
