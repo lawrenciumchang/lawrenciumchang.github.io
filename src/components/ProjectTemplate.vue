@@ -1,6 +1,5 @@
 <template>
   <div class="project-template">
-    <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div v-scroll-reveal class="title-container section">
       <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
@@ -19,17 +18,40 @@
         </ul>
       </div>
     </div>
-    <div v-scroll-reveal v-if="project.photos && project.photos[0]" class="key-photo-container">
-      <img v-lazy="project.photos[0].src" v-bind:class="{ 'display-border': project.photos[0].displayBorder }" @click="showPhotoSwipe(0); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + project.photos[0].title)" />
-    </div>
-    <div v-scroll-reveal v-if="project.more" class="more-container section">
-      <p>{{ project.more }}</p>
-    </div>
-    <div v-if="!project.more" class="spacer section"></div>
-    <div v-if="project.photos && project.photos[1]" class="photos-container">
-      <div v-scroll-reveal class="photo-wrapper" v-for="(photo, index) in project.photos" :key="photo.title">
-        <img v-if="index != 0" v-lazy="photo.src" v-bind:class="{ 'display-border': project.photos[0].displayBorder }" @click="showPhotoSwipe(index); gaTrackClick('project', 'Photo - ' + project.title + ' - ' + photo.title)" />
+
+    <!-- Photo Layout: 1 -->
+    <div v-if="project.photoLayout == 1" class="photos-container layout-1">
+      <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photos" :key="photo.title">
+        <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
       </div>
+    </div>
+
+    <!-- Photo Layout: 2 or 3 -->
+    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-desktop" v-bind:class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
+      <div class="column">
+        <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol1" :key="photo.title">
+          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+        </div>
+      </div>
+      <div class="column">
+        <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol2" :key="photo.title">
+          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+        </div>
+      </div>
+      <div v-if="project.photoLayout == 3" class="column">
+        <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol3" :key="photo.title">
+          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+        </div>
+      </div>
+    </div>
+    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-mobile" v-bind:class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
+      <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photos" :key="photo.title">
+        <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+      </div>
+    </div>
+    
+    <div v-scroll-reveal class="more-container section">
+      <p>{{ project.more }}</p>
     </div>
     <div class="navigation-container section">
       <div v-scroll-reveal class="previous">
@@ -56,28 +78,15 @@
 
 <script>
 import projects from '@/data/projects.json';
-import { PhotoSwipe } from 'v-photoswipe';
 
 export default {
   name: 'ProjectTemplate',
-  components: {
-    'v-photoswipe': PhotoSwipe
-  },
   props: {
     projectId: String
   },
   data() {
     return {
       project: this.getProject(this.projectId),
-      photoswipeOptions: {
-        isOpen: false,
-        isOpenGallery: false,
-        options: {
-          index: 0
-        },
-        optionsGallery: {},
-        items: this.getPhotos(this.projectId)
-      }
     }
   },
   methods: {
@@ -85,6 +94,7 @@ export default {
       let project = [];
       let projectIndex;
 
+      // Get project
       projects.forEach((element, index) => {
         if (projectId == element.id) {
           project = element;
@@ -92,6 +102,7 @@ export default {
         }
       });
 
+      // Get and set previous project data on object
       if (projects[projectIndex-1]) {
         let previous = {};
         previous.url = projects[projectIndex-1].id;
@@ -100,6 +111,7 @@ export default {
         project.previous = previous;
       }
 
+      // Get and set next project data on object
       if (projects[projectIndex+1]) {
         let next = {};
         next.url = projects[projectIndex+1].id;
@@ -108,23 +120,42 @@ export default {
         project.next = next;
       }
 
+      // Set up photo structure depending on photoLayout property
+      if (project.photoLayout == 2) {
+        let photosCol1 = [];
+        let photosCol2 = [];
+
+        project.photos.forEach((photo, index) => {
+          if (index % 2 == 0) {
+            photosCol1.push(photo);
+          } else if (index % 2 == 1) {
+            photosCol2.push(photo);
+          }
+        });
+
+        project.photosCol1 = photosCol1;
+        project.photosCol2 = photosCol2;
+      } else if (project.photoLayout == 3) {
+        let photosCol1 = [];
+        let photosCol2 = [];
+        let photosCol3 = [];
+
+        project.photos.forEach((photo, index) => {
+          if (index % 3 == 0) {
+            photosCol1.push(photo);
+          } else if (index % 3 == 1) {
+            photosCol2.push(photo);
+          } else if (index % 3 == 2) {
+            photosCol3.push(photo);
+          }
+        });
+
+        project.photosCol1 = photosCol1;
+        project.photosCol2 = photosCol2;
+        project.photosCol3 = photosCol3;
+      }
+
       return project;
-    },
-    getPhotos: function(projectId) {
-      let project = [];
-      projects.forEach(element => {
-        if (projectId == element.id) {
-          project = element;
-        }
-      });
-      return project.photos;
-    },
-    showPhotoSwipe: function(index) {
-      this.photoswipeOptions.isOpen = true;
-      this.$set(this.photoswipeOptions.options, 'index', index);
-    },
-    hidePhotoSwipe: function() {
-      this.photoswipeOptions.isOpen = false;
     },
     gaTrackClick: function(category, label) {
       var host = window.location.hostname;
@@ -192,13 +223,51 @@ export default {
   }
 
   .photos-container {
-    margin-bottom: 100px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 
     .photo-wrapper {
-      &:not(:first-child), &:not(:last-child) {
-        img {
-          margin-bottom: 40px;
+      display: flex;
+      img {
+        cursor: pointer;
+        width: 100%;
+
+        &.display-border {
+          border: 1px solid $gray-border;
         }
+      }
+    }
+
+    .column {
+      align-content: baseline;
+      display: grid;
+      grid-row-gap: 20px;
+    }
+
+    &.layout-1 {
+      grid-template-columns: 1fr;
+    }
+
+    &.layout-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &.layout-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.photos-container-desktop {
+      @media (max-width: $mobile-breakpoint) {
+        display: none;
+      }
+    }
+
+    &.photos-container-mobile {
+      grid-template-columns: 1fr;
+
+      @media (min-width: $mobile-breakpoint+1) {
+        display: none;
       }
     }
   }
@@ -242,18 +311,6 @@ export default {
       }
     }
   }
-
-  img {
-    cursor: pointer;
-    width: 100%;
-
-    &.display-border {
-      border: 1px solid $gray-border;
-    }
-  }
-}
-::v-deep .pswp__caption__center {
-  text-align: center;
 }
 img[lazy=loading] {
   opacity: 0;
