@@ -17,6 +17,8 @@ export default {
         endY: (window.innerHeight / 2),
         cursorVisible: true,
         cursorEnlarged: false,
+        showImage: false,
+        rotateImageFlag: true,
         $dot: document.querySelector('.cursor-dot'),
         $outline: document.querySelector('.cursor-dot-outline'),
         
@@ -31,9 +33,45 @@ export default {
 
         setupEventListeners: function() {
             var self = this;
+
+            // Name hovering
+            var l = document.querySelector('#lawrence');
+            l.addEventListener('mouseover', function() {
+                self.showImage = true;
+                self.toggleImage();
+            });
+            l.addEventListener('mouseout', function() {
+                self.showImage = false;
+                self.toggleImage();
+                self.rotateImageFlag = !self.rotateImageFlag;
+            });
             
             // Anchor hovering
             document.querySelectorAll('a').forEach(function(el) {
+                el.addEventListener('mouseover', function() {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                el.addEventListener('mouseout', function() {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+            });
+
+            // Button hovering
+            document.querySelectorAll('.btn-primary').forEach(function(el) {
+                el.addEventListener('mouseover', function() {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                el.addEventListener('mouseout', function() {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+            });
+
+            // Menu hovering
+            document.querySelectorAll('.ham').forEach(function(el) {
                 el.addEventListener('mouseover', function() {
                     self.cursorEnlarged = true;
                     self.toggleCursorSize();
@@ -53,7 +91,6 @@ export default {
                 self.cursorEnlarged = false;
                 self.toggleCursorSize();
             });
-      
       
             document.addEventListener('mousemove', function(e) {
                 // Show the cursor
@@ -116,6 +153,24 @@ export default {
                 self.$dot.style.opacity = 0;
                 self.$outline.style.opacity = 0;
             }
+        },
+
+        toggleImage: function() {
+            var self = this;
+
+            if (self.showImage) {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+                self.$outline.style.transform = 'translate(-50%, -300%) scale(4)';
+                if (self.rotateImageFlag) {
+                    self.$outline.style.backgroundImage = 'url("/images/avatar1.jpeg")';
+                } else {
+                    self.$outline.style.backgroundImage = 'url("/images/avatar2.png")';
+                }
+            } else {
+                self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.backgroundImage = 'none';
+            }
         }
       }
 
@@ -149,6 +204,7 @@ export default {
 .cursor-dot-outline {
   $size: 40px;
   background-color: rgba($blue-underline, 0.4);
+  background-size: cover;
   height: $size;
   width: $size;
 }

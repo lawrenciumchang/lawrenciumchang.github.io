@@ -3,7 +3,7 @@
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
       <div v-scroll-reveal class="blurb">
-        <h1>Hi, I'm <span class="name">Lawrence</span>.</h1>
+        <h1>Hi, I'm <span id="lawrence" class="name">Lawrence</span>.</h1>
         <h1>A UX Designer + Photographer.</h1>
       </div>
       <div v-scroll-reveal class="paragraph">
