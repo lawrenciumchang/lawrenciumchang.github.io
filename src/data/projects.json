@@ -298,22 +298,22 @@
     "photos": [
       {
         "src": "images/pinnacle-propane/dashboard.png",
-        "w": "2400",
-        "h": "1732",
+        "w": "2880",
+        "h": "2078",
         "title": "Dashboard - My Inquiries",
         "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/style_guide.png",
-        "w": "2400",
-        "h": "4105",
+        "w": "2416",
+        "h": "3938",
         "title": "Style Guide",
         "displayBorder": true
       },
       {
         "src": "images/pinnacle-propane/inquiry_details.png",
-        "w": "2400",
-        "h": "3095",
+        "w": "2880",
+        "h": "3714",
         "title": "Inquiry Details",
         "displayBorder": true
       }
@@ -409,10 +409,16 @@
         "displayBorder": true
       },
       {
-        "src": "images/other/tasks.png",
-        "w": "3200",
-        "h": "2400",
-        "title": "Tasks"
+        "src": "images/other/tasks_1.png",
+        "w": "1502",
+        "h": "3248",
+        "title": "Tasks - Overview"
+      },
+      {
+        "src": "images/other/tasks_2.png",
+        "w": "1500",
+        "h": "3248",
+        "title": "Tasks - Add New"
       }
     ]
   }
