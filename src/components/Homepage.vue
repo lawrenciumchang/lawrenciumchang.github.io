@@ -1,5 +1,6 @@
 <template>
   <div class="homepage">
+    <vue-headful title="Lawrence Chang | Design" />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
       <div v-scroll-reveal class="blurb">

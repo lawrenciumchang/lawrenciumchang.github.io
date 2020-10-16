@@ -4,6 +4,7 @@ import router from './router';
 import VueLazyLoad from 'vue-lazyload';
 import VueScrollReveal from 'vue-scroll-reveal';
 import VueAnalytics from 'vue-analytics';
+import vueHeadful from 'vue-headful';
 
 Vue.config.productionTip = false;
 
@@ -19,6 +20,8 @@ Vue.use(VueAnalytics, {
   id: 'UA-99294260-4',
   router
 });
+
+Vue.component('vue-headful', vueHeadful);
 
 new Vue({
   router,
