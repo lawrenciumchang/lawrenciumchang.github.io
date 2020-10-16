@@ -103,6 +103,11 @@ export default {
         }
       });
 
+      // If project not found, redirect to homepage
+      if (project.length == 0) {
+        this.$router.push('/');
+      }
+
       // Get and set previous project data on object
       if (projects[projectIndex-1]) {
         let previous = {};
