@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <CustomCursor />
     <Menu />
     <transition
       name="fade"
@@ -16,7 +15,6 @@
 <script>
 import Menu from '@/components/Menu.vue';
 import Footer from '@/components/Footer.vue';
-import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
   name: 'App',
@@ -27,8 +25,7 @@ export default {
   },
   components: {
     Menu,
-    Footer,
-    CustomCursor
+    Footer
   }
 }
 </script>
