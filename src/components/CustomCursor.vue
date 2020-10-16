@@ -138,10 +138,10 @@ export default {
             
             if (self.cursorEnlarged) {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-                self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(0.43)';
             } else {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(0.29)';
             }
         },
         
@@ -162,15 +162,15 @@ export default {
 
             if (self.showImage) {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-                self.$outline.style.transform = 'translate(-50%, -300%) scale(4)';
+                self.$outline.style.transform = 'translate(-50%, -120%) scale(1)';
                 if (self.rotateImageFlag) {
-                    self.$outline.style.backgroundImage = 'url("/images/avatar1.jpeg")';
+                    self.$outline.style.backgroundImage = 'url("/images/avatars/avatar1.png")';
                 } else {
-                    self.$outline.style.backgroundImage = 'url("/images/avatar2.png")';
+                    self.$outline.style.backgroundImage = 'url("/images/avatars/avatar2.png")';
                 }
             } else {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-                self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+                self.$outline.style.transform = 'translate(-50%, -50%) scale(0.29)';
                 self.$outline.style.backgroundImage = 'none';
             }
         }
@@ -204,10 +204,11 @@ export default {
 }
 
 .cursor-dot-outline {
-  $size: 40px;
-  background-color: rgba($blue-underline, 0.4);
+  $size: 140px;
+  background-color: rgba($blue-underline, 0.29);
   background-size: cover;
   height: $size;
+  transform: scale(0.4);
   width: $size;
 }
 </style>
