@@ -10,7 +10,7 @@ export default {
     name: 'CustomCursor',
     mounted: function() {
       var cursor = {
-        delay: 8,
+        delay: 4,
         _x: 0,
         _y: 0,
         endX: (window.innerWidth / 2),
@@ -190,7 +190,6 @@ export default {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
   transition: opacity 0.3s ease-in-out,
               transform 0.3s ease-in-out;
   z-index: 9001;
@@ -200,6 +199,7 @@ export default {
   $size: 8px;
   background-color: $blue-hover;
   height: $size;
+  transform: translate(-50%, -50%) scale(1);
   width: $size;
 }
 
@@ -208,7 +208,7 @@ export default {
   background-color: rgba($blue-underline, 0.29);
   background-size: cover;
   height: $size;
-  transform: scale(0.4);
+  transform: translate(-50%, -50%) scale(0.29);
   width: $size;
 }
 </style>
