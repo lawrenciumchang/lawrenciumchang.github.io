@@ -8,11 +8,11 @@
       <h1 class="title">{{ project.title }}</h1>
       <label class="description">{{ project.description }}</label>
     </div>
-    <div v-scroll-reveal class="intro-container section">
-      <div v-if="project.overview">
+    <div v-scroll-reveal class="intro-container section" :class="{ 'padding-short': !project.overview && !project.role }">
+      <div class="project-overview" v-if="project.overview">
         <h5 class="overview">{{ project.overview }}</h5>
       </div>
-      <div v-if="project.role">
+      <div class="project-roel" v-if="project.role">
         <h5 class="role-header">My Role</h5>
         <ul>
           <li v-for="role in project.role" :key="role">{{ role }}</li>
@@ -23,36 +23,36 @@
     <!-- Photo Layout: 1 -->
     <div v-if="project.photoLayout == 1" class="photos-container layout-1">
       <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photos" :key="photo.title">
-        <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+        <img v-lazy="photo.src" :class="{ 'display-border': photo.displayBorder }" />
       </div>
     </div>
 
     <!-- Photo Layout: 2 or 3 -->
-    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-desktop" v-bind:class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
+    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-desktop" :class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
       <div class="column">
         <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol1" :key="photo.title">
-          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+          <img v-lazy="photo.src" :class="{ 'display-border': photo.displayBorder }" />
         </div>
       </div>
       <div class="column">
         <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol2" :key="photo.title">
-          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+          <img v-lazy="photo.src" :class="{ 'display-border': photo.displayBorder }" />
         </div>
       </div>
       <div v-if="project.photoLayout == 3" class="column">
         <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photosCol3" :key="photo.title">
-          <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+          <img v-lazy="photo.src" :class="{ 'display-border': photo.displayBorder }" />
         </div>
       </div>
     </div>
-    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-mobile" v-bind:class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
+    <div v-if="project.photoLayout == 2 || project.photoLayout == 3" class="photos-container photos-container-mobile" :class="{ 'layout-2': project.photoLayout == 2, 'layout-3': project.photoLayout == 3 }">
       <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photos" :key="photo.title">
-        <img v-lazy="photo.src" v-bind:class="{ 'display-border': photo.displayBorder }" />
+        <img v-lazy="photo.src" :class="{ 'display-border': photo.displayBorder }" />
       </div>
     </div>
     
-    <div v-scroll-reveal class="more-container section">
-      <p>{{ project.more }}</p>
+    <div v-scroll-reveal class="more-container section" :class="{ 'padding-short': !project.more}">
+      <p v-html="project.more"></p>
     </div>
     <div class="navigation-container section">
       <div v-scroll-reveal class="previous">
@@ -184,11 +184,10 @@ export default {
 
   .section {
     padding: 80px 0;
-  }
 
-  .spacer {
-    margin-bottom: 40px;
-    padding: 0;
+    &.padding-short {
+      padding: 40px 0;
+    }
   }
 
   .title-container {
@@ -211,12 +210,27 @@ export default {
     grid-row-gap: 40px;
     grid-template-columns: 1.5fr 1fr;
 
+    .project-overview, .project-role {
+      align-content: center;
+      display: grid;
+    }
+
     .overview {
       width: 90%;
+
+      @media (max-width: $mobile-breakpoint) {
+        width: 100%;
+      }
     }
 
     .role-header {
       margin-bottom: 24px;
+    }
+
+    li {
+    &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
 
     @media (max-width: $mobile-breakpoint) {

@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="projects-list section">
-      <div v-scroll-reveal class="project" v-for="project in projects" v-bind:key="project.id">
+      <div v-scroll-reveal class="project" v-for="project in projects" :key="project.id">
         <router-link :to="project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <div class="image-container">
             <img v-lazy="project.coverPhotoSrc" />
@@ -26,7 +26,7 @@
     <div class="more-about section">
       <div v-scroll-reveal class="paragraph">
         <h3>You'll find me always building or learning something new.</h3>
-        <p>My journey began as an electrical engineer and full-stack developer. I’ve always had an appreciation for the way things were made and how humans interacted with those creations, which led me to the world of digital experience design.</p>
+        <p>My journey began as an electrical engineer and full-stack developer. I’ve always had an appreciation for how things were made and the way it affected the humans that interacted with those creations. This led me to the world of digital experience design.</p>
         <p>Over the years I’ve had the opportunity to work with numerous clients and talented individuals to build new products and create great experiences along the way. Whether inheriting an existing system or designing a product from scratch, you will find me striving to creating something awesome.</p>
       </div>
       <div v-scroll-reveal class="bullets">
