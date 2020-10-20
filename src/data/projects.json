@@ -47,7 +47,7 @@
       "Design system creation",
       "Design leadership + mentorship"
     ],
-    "more": "This platform was design from the ground up to make a simple storefront accessible to online buyers. I started by defining basic fonts and color schemes that would be familiar to those in the hobby. I then defined the user journey from searching for products all the way to checkout. There are many Gundam kits, so products are made to be easily discoverable, along with an easy-to-navigate product hierarchy.",
+    "more": "This platform was design from the ground up to make a simple storefront accessible to online buyers. I started by defining fonts and color schemes that would be familiar to those in the hobby. I then defined the user journey from searching for products all the way to checkout. There are many Gundam kits, so products are made to be easily discoverable, along with an easy-to-navigate product hierarchy.",
     "coverPhotoSrc": "images/gundam-kingdom/gundam_cover.png",
     "photoLayout": 2,
     "photos": [
@@ -150,12 +150,12 @@
     "id": "icon-go",
     "title": "Icon GO",
     "description": "Mobile experience design",
-    "overview": "Overview paragraph will go here.",
+    "overview": "Icon Parking manages many of the parking garages across New York City. I designed and implemented solutions to optimize conversion rates across their desktop experience. As I grew familiar with their user’s behaviors and interactions with the service, I took the chance to reimagine what a redesigned mobile experience could look like.",
     "role": [
       "Application redesign",
       "Conversion optimization assessment"
     ],
-    "more": "More text will go here.",
+    "more": "The existing mobile application was unorganized, riddled with bugs, and unclear in helping the user achieve the end goal of booking a parking spot within the city. I redesigned the experience by establishing a refreshed color palette, making the search functionality direct and easy for the user, and restructuring the booking flow to be a clear three-step process.",
     "coverPhotoSrc": "images/icon-go/icon_cover.png",
     "photoLayout": 3,
     "photos": [
@@ -201,11 +201,11 @@
     "id": "adidas",
     "title": "Adidas",
     "description": "Product refinement design",
-    "overview": "Overview paragraph will go here.",
+    "overview": "I recently took an interest in collecting Adidas shoes - particularly those by James Harden, my favorite basketball player. While watching the Rockets game and browsing the upcoming drop of the latest Marvel collaboration shoes, I thought I would take a stab at improving the structure and usability of the Adidas product page.",
     "role": [
       "Website design"
     ],
-    "more": "More text will go here.",
+    "more": "I can’t say there is anything wrong with Adidas’s website. I admire a lot of it - the neutral colors, the typeface, and consistent use of imagery. I also recognize that there is no such thing as redesigning something unless we can articulate why we need to, understand the implications, and test the outcomes. However, as I was browsing different products, I found small bits and pieces that I felt could be improved. Though I wasn’t in any position where I could implement A/B tests for Adidas, I decided to entertain the idea from a design stance. Some changes I made included layout spacing, decluttering of excess information, and surfacing more relevant product information.",
     "coverPhotoSrc": "images/adidas/adidas_cover.png",
     "photoLayout": 1,
     "photos": [
@@ -220,12 +220,12 @@
     "id": "pinnacle-propane",
     "title": "Pinnacle Propane",
     "description": "Functional interface design",
-    "overview": "Overview paragraph will go here.",
+    "overview": "Pinnacle Propane needed an internal tool to help manage their inquiries across different channels. I helped to design a simple yet functional digital platform that would enable them to increase their productivity and output by eliminating paper trails and creating a one-stop-shop for their business needs.",
     "role": [
       "Design system + style guide creation",
       "Website design"
     ],
-    "more": "More text will go here.",
+    "more": "Even though this was an internal tool that would never be marketed or see the light of day, I wanted to create something that was not only functional, but appealing and encouraging for employees to use on the daily. Through this process, I defined typefaces and color palettes to create a style guide, interviewed stakeholders and users, and constructed sitemaps and wireframes that ultimately informed the final product.",
     "coverPhotoSrc": "images/pinnacle-propane/pinnacle_cover.png",
     "photoLayout": 2,
     "photos": [
@@ -247,28 +247,14 @@
     ]
   },
   {
-    "id": "anylist",
-    "title": "AnyList",
-    "description": "Usability assessment",
-    "overview": "Overview paragraph will go here.",
-    "role": [
-      "Usability assessment",
-      "Application redesign"
-    ],
-    "more": "More text will go here.",
-    "coverPhotoSrc": "images/anylist/anylist_cover.png",
-    "photoLayout": 3,
-    "photos": []
-  },
-  {
     "id": "music-player",
     "title": "Music Player",
     "description": "Design exploration",
-    "overview": "Overview paragraph will go here.",
+    "overview": "Music players are one of my most used apps, and so it comes at no surprise that I am always thinking of new or revised features that would enhance the listening experience. This is my take on my ideal music player application.",
     "role": [
       "Application design"
     ],
-    "more": "More text will go here.",
+    "more": "I’m always using the Discover Weekly feature on Spotify, so I thought this would be a great place to start exploring my design. The page is understood to be just a list of songs in a curated playlist, so I wanted to explore ways to showcase a particular artist within the week and to also surface album art for each listing.<br><br>The next feature is the artist page - bringing popular songs to the top and also allowing the user to listen to the latest release with a single tap.<br><br>Lastly, the focus of the music player is to make everything easily accessible through single-handed use. High-touch functions, such as adding a song to a library and shuffle and repeat functions, are all placed on the right. Extra features such as Lyrics and the Queue are visible but teased to indicate that there is more to see with a single swipe up.",
     "coverPhotoSrc": "images/music-player/music_cover.png",
     "photoLayout": 3,
     "photos": [
