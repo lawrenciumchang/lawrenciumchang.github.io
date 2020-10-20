@@ -47,7 +47,7 @@
       "Design system creation",
       "Design leadership + mentorship"
     ],
-    "more": "This platform was design from the ground up to make a simple storefront accessible to online buyers. I started by defining fonts and color schemes that would be familiar to those in the hobby. I then defined the user journey from searching for products all the way to checkout. There are many Gundam kits, so products are made to be easily discoverable, along with an easy-to-navigate product hierarchy.",
+    "more": "This platform was designed from the ground up to make a simple storefront accessible to online buyers. I started by defining fonts and color schemes that would be familiar to those in the hobby. I then defined the user journey from searching for products all the way to checkout. There are many Gundam kits, so products are made to be easily discoverable, along with an easy-to-navigate product hierarchy.",
     "coverPhotoSrc": "images/gundam-kingdom/gundam_cover.png",
     "photoLayout": 2,
     "photos": [
@@ -223,7 +223,8 @@
     "overview": "Pinnacle Propane needed an internal tool to help manage their inquiries across different channels. I helped to design a simple yet functional digital platform that would enable them to increase their productivity and output by eliminating paper trails and creating a one-stop-shop for their business needs.",
     "role": [
       "Design system + style guide creation",
-      "Website design"
+      "Website design",
+      "User interviews + research"
     ],
     "more": "Even though this was an internal tool that would never be marketed or see the light of day, I wanted to create something that was not only functional, but appealing and encouraging for employees to use on the daily. Through this process, I defined typefaces and color palettes to create a style guide, interviewed stakeholders and users, and constructed sitemaps and wireframes that ultimately informed the final product.",
     "coverPhotoSrc": "images/pinnacle-propane/pinnacle_cover.png",
@@ -250,7 +251,7 @@
     "id": "music-player",
     "title": "Music Player",
     "description": "Design exploration",
-    "overview": "Music players are one of my most used apps, and so it comes at no surprise that I am always thinking of new or revised features that would enhance the listening experience. This is my take on my ideal music player application.",
+    "overview": "Music players are one of my most used apps and so it comes at no surprise that I am always thinking of new or revised features that would enhance the listening experience. This is my take on my ideal music player application.",
     "role": [
       "Application design"
     ],

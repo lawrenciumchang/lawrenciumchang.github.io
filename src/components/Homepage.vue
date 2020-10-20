@@ -27,7 +27,7 @@
       <div v-scroll-reveal class="paragraph">
         <h3>You'll find me always building or learning something new.</h3>
         <p>My journey began as an electrical engineer and full-stack developer. I’ve always had an appreciation for how things were made and the way it affected the humans that interacted with those creations. This led me to the world of digital experience design.</p>
-        <p>Over the years I’ve had the opportunity to work with numerous clients and talented individuals to build new products and create great experiences along the way. Whether inheriting an existing system or designing a product from scratch, you will find me striving to creating something awesome.</p>
+        <p>Over the years I’ve had the opportunity to work with numerous clients and talented individuals to build new products and create great experiences along the way. Whether inheriting an existing system or designing a product from scratch, you will find me striving to create something awesome.</p>
       </div>
       <div v-scroll-reveal class="bullets">
         <h4>Things I can help you with:</h4>
