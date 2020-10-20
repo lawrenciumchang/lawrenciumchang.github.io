@@ -46,6 +46,10 @@ export default {
                     self.toggleImage();
                     self.rotateImageFlag = !self.rotateImageFlag;
                 });
+                l.addEventListener('mousedown', function() {
+                    self.showImage = false;
+                    self.toggleImage();
+                });
             }
             
             // Anchor hovering
