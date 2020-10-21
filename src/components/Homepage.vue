@@ -65,9 +65,9 @@ export default {
         optionsGallery: {},
         items: [
           {
-            src: require('@/assets/images/test_resume_1x.png'),
-            w: 1080,
-            h: 1398
+            src: require('@/assets/images/resume.png'),
+            w: 2160,
+            h: 2796
           }
         ]
       }
