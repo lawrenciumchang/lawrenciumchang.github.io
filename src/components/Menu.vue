@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <svg class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" @click="toggleMenuOverlay($event.currentTarget)">
+    <svg ref="svg" class="ham ham-rotate ham-strokes" viewBox="0 0 100 100" width="80" @click="toggleMenuOverlay($event.currentTarget)">
       <path
           class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
       <path
@@ -11,11 +11,21 @@
 
     <div ref="menuOverlay" class="menu-overlay inactive">
       <div ref="menuContents" class="menu-contents inactive">
-        <h2 class="menu-item"><a href="/" @click="gaTrackClick('Menu', 'Design Link')">Design</a></h2>
-        <h2 class="menu-item"><a href="https://www.lawrenciumchang.com" target="_blank" @click="gaTrackClick('Menu', 'Photography Link')">Photography</a></h2>
-        <h2 class="menu-item"><a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Menu', 'Flickr Link')">Flickr</a></h2>
-        <h2 class="menu-item"><a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Menu', 'LinkedIn Link')">LinkedIn</a></h2>
-        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Menu', 'Mail Link')"><a>Mail</a></h2>
+        <h2 class="menu-item">
+          <router-link to="/" @click.native="closeMenu(); gaTrackClick('Menu', 'Design Link')">Design</router-link>
+        </h2>
+        <h2 class="menu-item">
+          <router-link to="/photography" @click.native="closeMenu(); gaTrackClick('Menu', 'Photography Link')">Photography</router-link>
+        </h2>
+        <h2 class="menu-item">
+          <a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Menu', 'Flickr Link')">Flickr</a>
+        </h2>
+        <h2 class="menu-item">
+          <a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Menu', 'LinkedIn Link')">LinkedIn</a>
+          </h2>
+        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Menu', 'Mail Link')">
+          <a>Mail</a>
+        </h2>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       </div>
     </div>
@@ -52,15 +62,14 @@ export default {
       else {
         this.$refs.menuOverlay.classList.add('inactive');
         this.$refs.menuOverlay.classList.remove('active');
-        this.$refs.menuContents.classList.add('inactive');
-        this.$refs.menuContents.classList.remove('active');
-
-        // document.getElementsByClassName('menu-item').forEach(element => {
-        //   element.classList.remove('fade-down');
-        // });
 
         this.gaTrackClick('Menu', 'Close Menu');
       }
+    },
+    closeMenu: function() {
+      this.$refs.svg.classList.toggle('active');
+      this.$refs.menuOverlay.classList.add('inactive');
+      this.$refs.menuOverlay.classList.remove('active');
     },
     revealCopiedText: function() {
       this.$refs.copiedText.classList.add('reveal');

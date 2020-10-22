@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Project from '../views/Project.vue';
+import Photography from '../views/Photography.vue';
 
 Vue.use(VueRouter);
 
@@ -11,9 +13,18 @@ const routes = [
     component: Home
   },
   {
-    path: '/:project_id',
-    name: 'Post',
-    component: () => import('../views/Post.vue')
+    path: '/projects/:project_id',
+    name: 'Project',
+    component: Project
+  },
+  {
+    path: '/photography',
+    name: 'Photography',
+    component: Photography
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 

@@ -10,7 +10,7 @@ import ProjectTemplate from '@/components/ProjectTemplate.vue';
 import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
-  name: 'Post',
+  name: 'Project',
   components: {
     ProjectTemplate,
     CustomCursor

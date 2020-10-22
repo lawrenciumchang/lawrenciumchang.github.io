@@ -1,26 +1,25 @@
 <template>
-  <div class="home">
+  <div class="photography">
     <CustomCursor />
-    <HomePage />
+    <PhotographyPage />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HomePage from '@/components/HomePage.vue';
+import PhotographyPage from '@/components/PhotographyPage.vue';
 import CustomCursor from '@/components/CustomCursor.vue';
 
 export default {
-  name: 'Home',
+  name: 'Photography',
   components: {
-    HomePage,
+    PhotographyPage,
     CustomCursor
   }
 }
 </script>
 
 <style scoped lang="scss">
-.home {
+.photography {
   @include page-layout;
 }
 </style>

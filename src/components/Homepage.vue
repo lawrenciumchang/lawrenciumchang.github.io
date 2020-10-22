@@ -14,7 +14,7 @@
     </div>
     <div class="projects-list section">
       <div v-scroll-reveal class="project" v-for="project in projects" :key="project.id">
-        <router-link :to="project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
+        <router-link :to="'projects/' + project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <div class="image-container">
             <img v-lazy="project.coverPhotoSrc" />
           </div>
@@ -49,7 +49,7 @@ import projects from '@/data/projects.json';
 import { PhotoSwipe } from 'v-photoswipe';
 
 export default {
-  name: 'Homepage',
+  name: 'HomePage',
   components: {
     'v-photoswipe': PhotoSwipe
   },

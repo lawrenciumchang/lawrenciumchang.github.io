@@ -1,6 +1,6 @@
 <template>
   <div class="project-template">
-    <vue-headful :title="'Lawrence Chang | ' + project.title" />
+    <vue-headful :title="'Design | ' + project.title" />
     <div v-scroll-reveal class="title-container section">
       <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
@@ -103,7 +103,7 @@ export default {
         }
       });
 
-      // If project not found, redirect to homepage
+      // If project not found, redirect to Home
       if (project.length == 0) {
         this.$router.push('/');
       }
