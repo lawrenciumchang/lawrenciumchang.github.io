@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">
+  <div class="home-page">
     <vue-headful title="Lawrence Chang | Design" />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.homepage {
+.home-page {
   .section {
     padding: 100px 0px;
 
