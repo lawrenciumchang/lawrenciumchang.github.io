@@ -22,7 +22,7 @@ Vue.use(VueAnalytics, {
   id: 'UA-99294260-4',
   router,
   debug: {
-    enabled: !isProd,
+    // enabled: !isProd,
     sendHitTask: isProd
   }
 });

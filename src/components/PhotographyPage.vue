@@ -7,17 +7,18 @@
         <h1>Photography</h1>
       </div>
       <div v-scroll-reveal class="paragraph">
-        <p>Everything shot on a Sony a6000 with various lenses or an iPhone 7 Plus</p>
+        <p>Photos shot on a Sony a6000 with various lenses or an iPhone 7 Plus</p>
       </div>
     </div>
     <div class="photos section">
-      
+      {{photos}}
     </div>
   </div>
 </template>
 
 <script>
 import { PhotoSwipe } from 'v-photoswipe';
+import PhotosService from '../services/PhotosService.js';
 
 export default {
   name: 'PhotographyPage',
@@ -26,7 +27,7 @@ export default {
   },
   data() {
     return {
-      photos: this.getPhotos(),
+      photos: [],
       photoswipeOptions: {
         isOpen: false,
         isOpenGallery: false,
@@ -37,22 +38,14 @@ export default {
       }
     }
   },
+  created() {
+    var self = this;
+    const photosService = new PhotosService();
+    photosService.getPhotos().then(function(response) {
+      self.photos =  response;
+    });
+  },
   methods: {
-    getPhotos: function() {
-      // TEMP
-      return [
-        {
-          src: require('@/assets/images/resume.png'),
-          w: 2160,
-          h: 2796
-        },
-        {
-          src: require('@/assets/images/resume.png'),
-          w: 2160,
-          h: 2796
-        }
-      ]
-    },
     showPhotoSwipe: function() {
       this.photoswipeOptions.isOpen = true;
     },
