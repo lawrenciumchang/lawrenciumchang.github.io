@@ -11,7 +11,9 @@
       </div>
     </div>
     <div class="photos section">
-      {{photos}}
+      <VueJustifiedLayout :items="photos" v-slot="{item, index}" :options="{containerPadding: 0}">
+        <img v-scroll-reveal :src="item.url" @click="showPhotoSwipe(index); gaTrackClick('Photography', 'View Photo - ' + item.title)" />
+      </VueJustifiedLayout>
     </div>
   </div>
 </template>
@@ -33,8 +35,7 @@ export default {
         isOpenGallery: false,
         options: {
           index: 0
-        },
-        optionsGallery: {},
+        }
       }
     }
   },
@@ -46,7 +47,8 @@ export default {
     });
   },
   methods: {
-    showPhotoSwipe: function() {
+    showPhotoSwipe: function(index) {
+      this.$set(this.photoswipeOptions.options, 'index', index);
       this.photoswipeOptions.isOpen = true;
     },
     hidePhotoSwipe: function() {
@@ -62,7 +64,11 @@ export default {
 <style scoped lang="scss">
 .photography-page {
   .section {
-    padding: 60px 0;
+    padding: 100px 0px;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 60px 0;
+    }
   }
 
   .intro {
@@ -88,5 +94,25 @@ export default {
       }
     }
   }
+
+  
+}
+::v-deep .justified-container {
+  .justified-item {
+    overflow: hidden;
+    img {
+      transition: $hover-transition;
+      width: 100%;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.01) !important;
+      }
+    }
+  }
+}
+::v-deep .pswp__caption__center {
+  color: $almost-white;
+  font-size: 16px;
+  text-align: center;
 }
 </style>

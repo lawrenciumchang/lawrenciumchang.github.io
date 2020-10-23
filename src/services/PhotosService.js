@@ -41,7 +41,7 @@ export default class PhotosService {
     photosResponse.forEach(function(p) {
       self.getPhotoDimensions(p.id).then(function(response) {
         var largeImageDimensionData = response[FLICKR_LARGE_1600];
-        var src = largeImageDimensionData.source;
+        var lsrc = largeImageDimensionData.source;
         var msrc = response[FLICKR_MEDIUM].source;
         var width = parseInt(largeImageDimensionData.width);
         var height = parseInt(largeImageDimensionData.height);
@@ -50,8 +50,10 @@ export default class PhotosService {
         var date = p.datetaken;
 
         var photo = {
-          src: src,
-          msrc: msrc,
+          src: lsrc,
+          url: msrc,
+          width: width, 
+          height: height,
           w: width, 
           h: height,
           title: title, 

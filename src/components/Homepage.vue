@@ -62,7 +62,6 @@ export default {
         options: {
           index: 0
         },
-        optionsGallery: {},
         items: [
           {
             src: require('@/assets/images/resume.png'),

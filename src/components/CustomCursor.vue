@@ -87,6 +87,18 @@ export default {
                     self.toggleCursorSize();
                 });
             });
+
+            // Photo hovering
+            document.querySelectorAll('.justified-item').forEach(function(el) {
+                el.addEventListener('mouseover', function() {
+                    self.cursorEnlarged = true;
+                    self.toggleCursorSize();
+                });
+                el.addEventListener('mouseout', function() {
+                    self.cursorEnlarged = false;
+                    self.toggleCursorSize();
+                });
+            });
             
             // Click events
             document.addEventListener('mousedown', function() {
