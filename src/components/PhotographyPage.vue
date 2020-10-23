@@ -60,10 +60,7 @@ export default {
       this.photoswipeOptions.isOpen = false;
     },
     gaTrackClick: function(category, label) {
-      var host = window.location.hostname;
-      if (host != 'localhost') {
-        this.$ga.event(category, 'click', label);
-      }
+      this.$ga.event(category, 'click', label);
     }
   }
 }
