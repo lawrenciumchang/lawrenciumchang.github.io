@@ -51,6 +51,7 @@ export default {
     .hello, .message {
       display: block;
       font-size: 36px;
+      letter-spacing: 1px;
     }
 
     .hello {

@@ -213,6 +213,7 @@ export default {
     }
 
     .overview {
+      letter-spacing: 1px;
       width: 90%;
 
       @media (max-width: $mobile-breakpoint) {
