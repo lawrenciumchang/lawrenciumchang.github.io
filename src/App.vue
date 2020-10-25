@@ -36,7 +36,6 @@ export default {
 
 <style lang="scss">
   #app {
-    cursor: none;
     font-family: 'Ubuntu Mono', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

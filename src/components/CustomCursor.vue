@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import isMobile from 'ismobilejs';
+
 export default {
     name: 'CustomCursor',
     mounted: function() {
@@ -23,12 +25,18 @@ export default {
         $outline: document.querySelector('.cursor-dot-outline'),
         
         init: function() {
-            // Set up element sizes
-            this.dotSize = this.$dot.offsetWidth;
-            this.outlineSize = this.$outline.offsetWidth;
-            
-            this.setupEventListeners();
-            this.animateDotOutline();
+            const userAgent = navigator.userAgent;
+            if (!isMobile(userAgent).any) {
+                // Remove default cursor
+                document.getElementById('app').style.cursor = 'none';
+
+                // Set up element sizes
+                this.dotSize = this.$dot.offsetWidth;
+                this.outlineSize = this.$outline.offsetWidth;
+                
+                this.setupEventListeners();
+                this.animateDotOutline();
+            }
         },
 
         setupEventListeners: function() {
