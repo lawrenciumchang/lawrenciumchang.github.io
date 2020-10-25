@@ -188,9 +188,9 @@ export default {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
                 self.$outline.style.transform = 'translate(-50%, -120%) scale(1)';
                 if (self.rotateImageFlag) {
-                    self.$outline.style.backgroundImage = 'url("/images/avatars/avatar1.png")';
+                    self.$outline.style.backgroundImage = 'url("/assets/images/avatars/avatar1.png")';
                 } else {
-                    self.$outline.style.backgroundImage = 'url("/images/avatars/avatar2.png")';
+                    self.$outline.style.backgroundImage = 'url("/assets/images/avatars/avatar2.png")';
                 }
             } else {
                 self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';

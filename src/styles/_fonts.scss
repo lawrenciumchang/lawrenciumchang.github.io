@@ -2,7 +2,7 @@
   font-display: swap;
   font-family: Hibana;
   font-style: normal;
-  src: require('@/assets/fonts/Hibana-Submedium.otf') format('opentype'),
-       require('@/assets/fonts/Hibana-Submedium.woff') format('woff'),
-       require('@/assets/fonts/Hibana-Submedium.woff2') format('woff2');
+  src: url('/assets/fonts/Hibana-Submedium.otf') format('opentype'),
+       url('/assets/fonts/Hibana-Submedium.woff') format('woff'),
+       url('/assets/fonts/Hibana-Submedium.woff2') format('woff2');
 }
