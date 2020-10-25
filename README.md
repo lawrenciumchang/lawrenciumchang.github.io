@@ -1,4 +1,4 @@
-# design
+# lawrencechang.design
 
 ## Project setup
 ```
