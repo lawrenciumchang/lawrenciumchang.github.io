@@ -245,7 +245,7 @@ export default {
     grid-row-gap: 20px;
 
     .photo-wrapper {
-      display: flex;
+      display: grid;
       img {
         width: 100%;
 
