@@ -32,12 +32,12 @@ export default {
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 </style>
 
 <style lang="scss">
   #app {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Inconsolata', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -5,7 +5,7 @@
     <div class="intro section">
       <div v-scroll-reveal class="blurb">
         <h1>Hi, I'm <span id="lawrence" class="name">Lawrence</span>.</h1>
-        <h1>A UX Designer + Photographer.</h1>
+        <h1>A UX Designer + Front End Developer.</h1>
       </div>
       <div v-scroll-reveal class="paragraph">
         <p>I work at Credera where I craft digital solutions for our clients and bring ideas to life through thoughtful and functional design.</p>
@@ -109,6 +109,10 @@ export default {
 
     .name {
       color: $blue-hover;
+    }
+
+    .blurb {
+      width: 90%;
     }
 
     .paragraph {
