@@ -20,6 +20,13 @@
       </div>
     </div>
 
+    <!-- Featured GIF -->
+    <div v-if="project.featuredGif" class="featured-gif-container">
+      <div v-scroll-reveal class="photo-wrapper">
+        <img v-lazy="project.featuredGif.src" />
+      </div>
+    </div>
+
     <!-- Photo Layout: 1 -->
     <div v-if="project.photoLayout == 1" class="photos-container layout-1">
       <div v-scroll-reveal class="photo-wrapper" v-for="photo in project.photos" :key="photo.title">
@@ -236,6 +243,21 @@ export default {
 
       .over {
         width: 100%;
+      }
+    }
+  }
+
+  .featured-gif-container {
+    .photo-wrapper {
+      background-color: #000000;
+      border-radius: 40px;
+      display: grid;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 40px;
+
+      img {
+        height: 600px;
       }
     }
   }

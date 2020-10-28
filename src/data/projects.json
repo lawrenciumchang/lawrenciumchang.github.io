@@ -16,22 +16,18 @@
     "photos": [
       {
         "src": "/assets/images/credera/home.png",
-        "title": "Home Page",
         "displayBorder": true
       },
       {
         "src": "/assets/images/credera/style_guide.png",
-        "title": "Style Guide",
         "displayBorder": true
       },
       {
         "src": "/assets/images/credera/services.png",
-        "title": "Services",
         "displayBorder": true
       },
       {
         "src": "/assets/images/credera/our_firm.png",
-        "title": "Our Firm",
         "displayBorder": true
       }
     ]
@@ -53,32 +49,26 @@
     "photos": [
       {
         "src": "/assets/images/gundam-kingdom/landing.png",
-        "title": "Landing Page",
         "displayBorder": true
       },
       {
         "src": "/assets/images/gundam-kingdom/typography.png",
-        "title": "Design System - Typography",
         "displayBorder": true
       },
       {
         "src": "/assets/images/gundam-kingdom/color.png",
-        "title": "Design System - Color",
         "displayBorder": true
       },
       {
         "src": "/assets/images/gundam-kingdom/products.png",
-        "title": "Products Page",
         "displayBorder": true
       },
       {
         "src": "/assets/images/gundam-kingdom/product_detail.png",
-        "title": "Product Detail Page",
         "displayBorder": true
       },
       {
         "src": "/assets/images/gundam-kingdom/cart.png",
-        "title": "Cart Page",
         "displayBorder": true
       }
     ]
@@ -97,52 +87,40 @@
     "photoLayout": 3,
     "photos": [
       {
-        "src": "/assets/images/seatz/splash.png",
-        "title": "Splash Screen"
+        "src": "/assets/images/seatz/splash.png"
       },
       {
-        "src": "/assets/images/seatz/landing.png",
-        "title": "Landing Screen"
+        "src": "/assets/images/seatz/landing.png"
       },
       {
-        "src": "/assets/images/seatz/select_venue.png",
-        "title": "Select Venue"
+        "src": "/assets/images/seatz/select_venue.png"
       },
       {
-        "src": "/assets/images/seatz/select_seat.png",
-        "title": "Select Seat"
+        "src": "/assets/images/seatz/select_seat.png"
       },
       {
-        "src": "/assets/images/seatz/select_method.png",
-        "title": "Delivery or Pick Up"
+        "src": "/assets/images/seatz/select_method.png"
       },
       {
-        "src": "/assets/images/seatz/vendor_select.png",
-        "title": "Vendor Select"
+        "src": "/assets/images/seatz/vendor_select.png"
       },
       {
-        "src": "/assets/images/seatz/menu.png",
-        "title": "Menu"
+        "src": "/assets/images/seatz/menu.png"
       },
       {
-        "src": "/assets/images/seatz/menu_item.png",
-        "title": "Menu Item"
+        "src": "/assets/images/seatz/menu_item.png"
       },
       {
-        "src": "/assets/images/seatz/cart.png",
-        "title": "Cart"
+        "src": "/assets/images/seatz/cart.png"
       },
       {
-        "src": "/assets/images/seatz/checkout.png",
-        "title": "Checkout"
+        "src": "/assets/images/seatz/checkout.png"
       },
       {
-        "src": "/assets/images/seatz/order_confirmation.png",
-        "title": "Order Confirmation"
+        "src": "/assets/images/seatz/order_confirmation.png"
       },
       {
-        "src": "/assets/images/seatz/order_details.png",
-        "title": "Order Details"
+        "src": "/assets/images/seatz/order_details.png"
       }
     ]
   },
@@ -160,40 +138,31 @@
     "photoLayout": 3,
     "photos": [
       {
-        "src": "/assets/images/icon-go/splash.png",
-        "title": "Splash Screen"
+        "src": "/assets/images/icon-go/splash.png"
       },
       {
-        "src": "/assets/images/icon-go/first_load.png",
-        "title": "First Load"
+        "src": "/assets/images/icon-go/first_load.png"
       },
       {
-        "src": "/assets/images/icon-go/search.png",
-        "title": "Search"
+        "src": "/assets/images/icon-go/search.png"
       },
       {
-        "src": "/assets/images/icon-go/menu.png",
-        "title": "Menu"
+        "src": "/assets/images/icon-go/menu.png"
       },
       {
-        "src": "/assets/images/icon-go/garage_details.png",
-        "title": "Garage Details"
+        "src": "/assets/images/icon-go/garage_details.png"
       },
       {
-        "src": "/assets/images/icon-go/step_1.png",
-        "title": "Step 1"
+        "src": "/assets/images/icon-go/step_1.png"
       },
       {
-        "src": "/assets/images/icon-go/step_2.png",
-        "title": "Step 2"
+        "src": "/assets/images/icon-go/step_2.png"
       },
       {
-        "src": "/assets/images/icon-go/step_3.png",
-        "title": "Step 3"
+        "src": "/assets/images/icon-go/step_3.png"
       },
       {
-        "src": "/assets/images/icon-go/spot_booked.png",
-        "title": "Spot Booked"
+        "src": "/assets/images/icon-go/spot_booked.png"
       }
     ]
   },
@@ -211,8 +180,58 @@
     "photos": [
       {
         "src": "/assets/images/adidas/product_page.png",
-        "title": "Adidas Product Page",
         "displayBorder": true
+      }
+    ]
+  },
+  {
+    "id": "anylist",
+    "title": "AnyList",
+    "description": "Usability assessment",
+    "overview": "AnyList is one of my most used apps. It’s a functional grocery list complete with sharing options that update in real time, drag-and-drop items that give me the power of organization, and built in recipe integrations. But it’s not the most modern take on apps and I felt there were some slight tweaks I could make to improve the user experience. I took it upon myself to tackle some of these challenges and also used the opportunity to put Figma’s prototyping features to the test.",
+    "role": [
+      "Usability assessment",
+      "Application redesign",
+      "Interactive prototyping"
+    ],
+    "more": "The first change I wanted to make was to relocate high-use actions from the top of the screen to a more comfortable and visible section at the bottom. These include actions that enable users to quickly add items to a given list, select from preset favorites, and to quickly clear crossed off items.<br><br>Next, I explored more efficient methods to mark items as done by including familiar swipe gestures and created ways to edit item properties through a single tap without bringing users to a separate screen and losing page context.<br><br>All of these ideas presented the perfect chance to be turned into an interactive Figma prototype. The auto animate functionalities helped bring another layer of communication into the mix to help convey design intentions and better define user interactions.",
+    "coverPhotoSrc": "/assets/images/anylist/anylist_cover.png",
+    "photoLayout": 3,
+    "featuredGif": {
+      "src": "/assets/images/anylist/prototype.gif"
+    },
+    "photos": [
+      {
+        "src": "/assets/images/anylist/list_view.png"
+      },
+      {
+        "src": "/assets/images/anylist/add_favorites.png"
+      },
+      {
+        "src": "/assets/images/anylist/edit_quantity.png"
+      }
+    ]
+  },
+  {
+    "id": "music-player",
+    "title": "Music Player",
+    "description": "Design exploration",
+    "overview": "Music players are one of my most used apps and so it comes at no surprise that I am always thinking of new or revised features that would enhance the listening experience. This is my take on my ideal music player application.",
+    "role": [
+      "Application design"
+    ],
+    "more": "I’m always using the Discover Weekly feature on Spotify, so I thought this would be a great place to start exploring my design. The page is understood to be just a list of songs in a curated playlist, so I wanted to explore ways to showcase a particular artist within the week and to also surface album art for each listing.<br><br>The next feature is the artist page - bringing popular songs to the top and also allowing the user to listen to the latest release with a single tap.<br><br>Lastly, the focus of the music player is to make everything easily accessible through single-handed use. High-touch functions, such as adding a song to a library and shuffle and repeat functions, are all placed on the right. Extra features such as Lyrics and the Queue are visible but teased to indicate that there is more to see with a single swipe up.",
+    "coverPhotoSrc": "/assets/images/music-player/music_cover.png",
+    "photoLayout": 3,
+    "photos": [
+      {
+        "src": "/assets/images/music-player/weekly_mixtape.png"
+      },
+      {
+        "src": "/assets/images/music-player/artist_page.png"
+      },
+      {
+        "src": "/assets/images/music-player/player.png"
       }
     ]
   },
@@ -232,44 +251,15 @@
     "photos": [
       {
         "src": "/assets/images/pinnacle-propane/dashboard.png",
-        "title": "Dashboard - My Inquiries",
         "displayBorder": true
       },
       {
         "src": "/assets/images/pinnacle-propane/style_guide.png",
-        "title": "Style Guide",
         "displayBorder": true
       },
       {
         "src": "/assets/images/pinnacle-propane/inquiry_details.png",
-        "title": "Inquiry Details",
         "displayBorder": true
-      }
-    ]
-  },
-  {
-    "id": "music-player",
-    "title": "Music Player",
-    "description": "Design exploration",
-    "overview": "Music players are one of my most used apps and so it comes at no surprise that I am always thinking of new or revised features that would enhance the listening experience. This is my take on my ideal music player application.",
-    "role": [
-      "Application design"
-    ],
-    "more": "I’m always using the Discover Weekly feature on Spotify, so I thought this would be a great place to start exploring my design. The page is understood to be just a list of songs in a curated playlist, so I wanted to explore ways to showcase a particular artist within the week and to also surface album art for each listing.<br><br>The next feature is the artist page - bringing popular songs to the top and also allowing the user to listen to the latest release with a single tap.<br><br>Lastly, the focus of the music player is to make everything easily accessible through single-handed use. High-touch functions, such as adding a song to a library and shuffle and repeat functions, are all placed on the right. Extra features such as Lyrics and the Queue are visible but teased to indicate that there is more to see with a single swipe up.",
-    "coverPhotoSrc": "/assets/images/music-player/music_cover.png",
-    "photoLayout": 3,
-    "photos": [
-      {
-        "src": "/assets/images/music-player/weekly_mixtape.png",
-        "title": "Weekly Mixtape"
-      },
-      {
-        "src": "/assets/images/music-player/artist_page.png",
-        "title": "Artist Page"
-      },
-      {
-        "src": "/assets/images/music-player/player.png",
-        "title": "Music Player"
       }
     ]
   },
