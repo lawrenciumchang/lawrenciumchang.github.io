@@ -84,6 +84,41 @@
     ]
   },
   {
+    "id": "wff",
+    "title": "Women's Foodservice Forum",
+    "description": "Web platform design",
+    "overview": "WFF is an organization that aims to help women in the food service industry advance in their career. Prior to this application, WFF did not have an easy method to allow members to connect, learn, and grow. I came aboard to envision what this solution could look like and helped design and develop the entire web portal experience.",
+    "role": [
+      "Design sprint facilitator",
+      "Application design + development"
+    ],
+    "more": "One of my biggest takeaways from this project was the value of user testing and feedback. The platform was rich with many features that all started from assumptions provided by WFF, as well as assumptions I had created myself. But all of these ideas were meaningless unless we put them in front of real members to gather their thoughts and reactions. Throughout the course of designing the application, I conducted weekly testing sessions to better understand my users and to ensure that my time spent creating this solution would solve members' problems.",
+    "coverPhotoSrc": "/assets/images/wff/wff_cover.png",
+    "photoLayout": 2,
+    "photos": [
+      {
+        "src": "/assets/images/wff/overview.png",
+        "displayBorder": true
+      },
+      {
+        "src": "/assets/images/wff/events.png",
+        "displayBorder": true
+      },
+      {
+        "src": "/assets/images/wff/news.png",
+        "displayBorder": true
+      },
+      {
+        "src": "/assets/images/wff/company_engagement.png",
+        "displayBorder": true
+      },
+      {
+        "src": "/assets/images/wff/key_contacts.png",
+        "displayBorder": true
+      }
+    ]
+  },
+  {
     "id": "icon-go",
     "title": "Icon GO",
     "description": "Mobile experience design",
@@ -259,37 +294,6 @@
       },
       {
         "src": "/assets/images/pinnacle-propane/inquiry_details.png",
-        "displayBorder": true
-      }
-    ]
-  },
-  {
-    "id": "other-things",
-    "title": "Other Things",
-    "description": "Collection of miscellaneous works",
-    "coverPhotoSrc": "/assets/images/other/other_cover.png",
-    "photoLayout": 2,
-    "photos": [
-      {
-        "src": "/assets/images/other/calculator_icons.png",
-        "title": "App Icons"
-      },
-      {
-        "src": "/assets/images/other/calculator.png",
-        "title": "Calculator"
-      },
-      {
-        "src": "/assets/images/other/boarding_pass.png",
-        "title": "Boarding Pass"
-      },
-      {
-        "src": "/assets/images/other/mint_landing.png",
-        "title": "Mint Budget App Redesign - Landing Page",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/other/mint_edit.png",
-        "title": "Mint Budget App Redesign - Edit Transaction",
         "displayBorder": true
       }
     ]
