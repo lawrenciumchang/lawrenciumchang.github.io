@@ -23,7 +23,7 @@
         <h2 class="menu-item">
           <a href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Menu', 'LinkedIn Link')">LinkedIn</a>
           </h2>
-        <h2 class="menu-item mail" data-clipboard-text="lawrencium.chang@gmail.com" @click="revealCopiedText(); gaTrackClick('Menu', 'Mail Link')">
+        <h2 class="menu-item mail" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Menu', 'Mail Link')">
           <a>Mail</a>
         </h2>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
