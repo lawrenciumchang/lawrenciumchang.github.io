@@ -5,11 +5,11 @@
         <img class="profile-photo" v-lazy="profilePhotoSrc">
         <router-link to="/" @click="gaTrackClick('Header, Home')">lawrence chang</router-link>
       </div>
-      <!-- <div class="toggle-container">
+      <div class="toggle-container">
         <div class="theme-toggle">
-          <span class="slider round dark" @click="toggleThemeElement($event.currentTarget)"></span>
+          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget)"></span>
         </div>
-      </div> -->
+      </div>
     </div>
     <div class="right">
       <router-link to="" @click="gaTrackClick('Header, UX Design')">ux design</router-link>
@@ -19,7 +19,7 @@
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <div class="toggle-container">
         <div class="theme-toggle">
-          <span class="slider round dark" @click="toggleThemeElement($event.currentTarget)"></span>
+          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget)"></span>
         </div>
       </div>
     </div>
@@ -39,8 +39,14 @@ export default {
       profilePhotoSrc: '../assets/images/avatars/avatar1.png'
     }
   },
+  props: {
+    darkTheme: Boolean
+  },
   methods: {
-    toggleThemeElement: function(element) {
+    toggleTheme: function () {
+      this.$emit('toggleTheme');
+    },
+    changeToggleStyle: function(element) {
       element.classList.toggle('dark');
     },
     revealCopiedText: function() {
@@ -160,7 +166,7 @@ export default {
     width: 30px;
     left: 5px;
     bottom: 5px;
-    background-color: #ffc207;
+    background-color: $yellow-primary;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -170,10 +176,10 @@ export default {
   }
 
   .slider.dark:before {
-    -webkit-transform: translateX(52px);
-    -ms-transform: translateX(52px);
+    -webkit-transform: rotate(40deg) translate(28px, -23px);
+    -ms-transform: rotate(40deg) translate(28px, -23px);
     transform: rotate(40deg) translate(28px, -23px);
-    box-shadow: inset -10px 0 0 3px #ffc207;
+    box-shadow: inset -10px 0 0 3px $yellow-primary;
     background-color: #27173a;
   }
 

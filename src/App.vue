@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
-    <Header />
+  <div id="app" :class='darkTheme ? "darkTheme" : "lightTheme"'>
+    <Header :darkTheme="darkTheme" @toggleTheme="toggleTheme()" />
     <transition
       name="fade"
       mode="out-in"
-      @enter="enter"
+      @enter="enter()"
     >
       <router-view :key="$route.fullPath" />
     </transition>
@@ -18,9 +18,17 @@ import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      darkTheme: true
+    }
+  },
   methods: {
-    enter() {
+    enter: function() {
       window.scrollTo(0,0);
+    },
+    toggleTheme: function() {
+      this.darkTheme = !this.darkTheme;
     }
   },
   components: {

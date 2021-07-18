@@ -44,7 +44,7 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  background-color: $almost-black;
+  background-color: $gray-01;
 
   .container {
     @include page-layout;
@@ -57,12 +57,12 @@ export default {
     }
 
     .hello {
-      color: $almost-white;
+      color: $white;
       margin-bottom: 8px;
     }
 
     .message {
-      color: $gray-light;
+      color: $gray-06;
       line-height: 48px;
       margin-bottom: 40px;
     }
@@ -86,7 +86,7 @@ export default {
       margin-top: 140px;
 
       .copyright, .built {
-        color: $almost-white;
+        color: $white;
         display: block;
         font-size: 16px;
         font-weight: 500;

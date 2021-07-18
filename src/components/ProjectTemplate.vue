@@ -195,7 +195,7 @@ export default {
   }
 
   .title-container {
-    border-bottom: 1px solid $gray-border;
+    border-bottom: 1px solid $gray-06;
     margin-top: 100px;
 
     .navigation-link {
@@ -273,7 +273,7 @@ export default {
         width: 100%;
 
         &.display-border {
-          border: 1px solid $gray-border;
+          border: 1px solid $gray-06;
         }
       }
     }
@@ -312,7 +312,7 @@ export default {
   }
 
   .navigation-container {
-    border-top: 1px solid $gray-border;
+    border-top: 1px solid $gray-06;
     display: grid;
     grid-column-gap: 72px;
     grid-template-columns: 1fr 1fr;

@@ -111,7 +111,7 @@ export default {
   }
 }
 ::v-deep .pswp__caption__center {
-  color: $almost-white;
+  color: $white;
   font-size: 16px;
   text-align: center;
 }

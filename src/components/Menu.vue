@@ -90,7 +90,7 @@ export default {
 <style scoped lang="scss">
 .menu {
   .ham {
-    background-color: $almost-black;
+    background-color: $gray-01;
     cursor: pointer;
     position: fixed;
     right: 40px;
@@ -119,7 +119,7 @@ export default {
     transform: rotate(45deg);
 
     .line {
-      stroke: $almost-white;
+      stroke: $white;
     }
 
     &:hover {
@@ -131,13 +131,13 @@ export default {
     transform: rotate(180deg);
     
     .line {
-      stroke: $almost-white;
+      stroke: $white;
     }
   }
 
   .line {
     fill: none;
-    stroke: $almost-white;
+    stroke: $white;
     stroke-linecap: round;
     stroke-width: 3.5;
     transition: stroke-dasharray $hover-transition, stroke-dashoffset $hover-transition;
@@ -177,7 +177,7 @@ export default {
 
   .menu-overlay {
     align-items: center;
-    background-color: $almost-black;
+    background-color: $gray-01;
     display: flex;
     height: 100vh;
     position: fixed;
@@ -229,7 +229,7 @@ export default {
         }
 
         a {
-          color: $almost-white;
+          color: $white;
           font-size: 20px;
           font-weight: 500;
           text-decoration: none;

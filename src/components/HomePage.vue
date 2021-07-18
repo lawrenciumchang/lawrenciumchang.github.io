@@ -160,7 +160,7 @@ export default {
       }
 
       .project-title {
-        color: $almost-black;
+        color: $gray-01;
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 12px;
