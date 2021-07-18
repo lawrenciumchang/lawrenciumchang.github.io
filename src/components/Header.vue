@@ -2,8 +2,7 @@
   <div class="header">
     <div class="left">
       <div class="name-container">
-        <img class="profile-photo" v-lazy="profilePhotoSrc">
-        <router-link class="name" to="/" @click="gaTrackClick('Header, Home')">lawrence chang</router-link>
+        <router-link class="name" to="/" @click="gaTrackClick('Header, Home')"><img class="profile-photo" v-lazy="profilePhotoSrc">lawrence chang</router-link>
       </div>
       <div class="toggle-container">
         <div class="theme-toggle">
@@ -81,11 +80,14 @@ export default {
 
   .left {
     .name-container {
-      align-items: center;
-      display: flex;
-      grid-column-gap: 12px;
+      img {
+        margin-right: 12px;
+        
+      }
 
       .name {
+        align-items: center;
+        display: flex;
         text-decoration: none;
       }
     }
