@@ -15,8 +15,10 @@
       <router-link to="" @click="gaTrackClick('Header, UX Design')">ux design</router-link>
       <router-link to="/photography" @click="gaTrackClick('Header, Photography')">photography</router-link>
       <router-link to="" @click="gaTrackClick('Header, About')">about</router-link>
-      <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</a>
-      <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
+      <div class="get-in-touch-container">
+        <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</a>
+        <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
+      </div>
       <div class="toggle-container">
         <div class="theme-toggle">
           <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget)"></span>
@@ -53,7 +55,7 @@ export default {
       this.$refs.copiedText.classList.add('reveal');
       setTimeout(function() { 
         this.hideCopiedText();
-      }.bind(this), 2000);
+      }.bind(this), 1600);
     },
     hideCopiedText: function() {
       this.$refs.copiedText.classList.remove('reveal');
@@ -130,19 +132,35 @@ export default {
     }
   }
 
+  .get-in-touch-container {
+    position: relative;
+  }
+
   .get-in-touch {
     color: $blue-primary;
+    cursor: pointer;
   }
 
   .copied-text {
-    font-size: 14px;
+    font-size: 12px;
+    right: 0;
     opacity: 0;
     position: absolute;
-    top: 80px;
+    text-align: right;
+    top: 36px;
     transition: $ease-in-out;
+    width: max-content;
 
     &.reveal {
       opacity: 1;
+    }
+
+    @include theme() {
+      color: theme-get('header-copied-text-color');
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 48px;
     }
   }
 

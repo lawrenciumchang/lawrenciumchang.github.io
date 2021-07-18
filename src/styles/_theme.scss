@@ -7,7 +7,8 @@ $themes: (
     'p-small-color': $gray-06,
     'label-color': $gray-04,
     'link-color': $white,
-    'border-color': $white
+    'border-color': $white,
+    'header-copied-text-color': $white
   ),
   lightTheme: (
     'h1-color': $gray-06,
@@ -17,7 +18,8 @@ $themes: (
     'p-small-color': $gray-04,
     'label-color': $gray-06,
     'link-color': $gray-01,
-    'border-color': $gray-01
+    'border-color': $gray-01,
+    'header-copied-text-color': $gray-01
   )
 );
 
