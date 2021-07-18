@@ -95,7 +95,7 @@ export default {
     position: fixed;
     right: 40px;
     top: 40px;
-    transition: $fast-ease-in;
+    transition: $ease-in;
     user-select: none;
     width: 60px;
     z-index: 1000;
@@ -140,7 +140,7 @@ export default {
     stroke: $white;
     stroke-linecap: round;
     stroke-width: 3.5;
-    transition: stroke-dasharray $fast-ease-in, stroke-dashoffset $fast-ease-in;
+    transition: stroke-dasharray $ease-in, stroke-dashoffset $ease-in;
   }
 
   .ham-strokes {
@@ -151,13 +151,13 @@ export default {
     .middle {
       stroke-dasharray: 40 142;
       transform-origin: 50%;
-      transition: transform $fast-ease-in;
+      transition: transform $ease-in;
     }
 
     .bottom {
       stroke-dasharray: 40 85;
       transform-origin: 50%;
-      transition: transform $fast-ease-in, stroke-dashoffset $fast-ease-in;
+      transition: transform $ease-in, stroke-dashoffset $ease-in;
     }
 
     &.active {
@@ -182,7 +182,7 @@ export default {
     height: 100vh;
     position: fixed;
     top: 0;
-    transition: $fast-ease-in;
+    transition: $ease-in;
     width: 100vw;
 
     &.active {
@@ -197,14 +197,14 @@ export default {
 
     .menu-contents {
       @include page-layout;
-      transition: $fast-ease-in;
+      transition: $ease-in;
       width: 100%;
 
       .menu-item {
         margin-bottom: 40px;
 
         &.fade-down {
-          animation: fadeIn $fast-ease-in both;
+          animation: fadeIn $ease-in both;
           opacity: 0;
 
           &:first-child {
@@ -233,7 +233,7 @@ export default {
           font-size: 20px;
           font-weight: 500;
           text-decoration: none;
-          transition: $fast-ease-in;
+          transition: $ease-in;
 
           &:hover {
             color: $blue-hover;
@@ -249,7 +249,7 @@ export default {
         color: $blue-primary;
         font-size: 14px;
         opacity: 0;
-        transition: $long-ease-in-out;
+        transition: $ease-in-out;
 
         &.reveal {
           opacity: 1;

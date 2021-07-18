@@ -101,7 +101,7 @@ export default {
   .justified-item {
     overflow: hidden;
     img {
-      transition: $fast-ease-in;
+      transition: $ease-in;
       width: 100%;
       &:hover {
         cursor: pointer;

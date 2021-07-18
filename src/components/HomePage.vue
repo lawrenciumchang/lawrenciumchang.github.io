@@ -3,6 +3,14 @@
     <vue-headful title="Lawrence Chang" />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
+      <div class="test-section">
+        <h1>h1 header 1</h1>
+        <h2>h2 header 2</h2>
+        <h3>h3 header 3</h3>
+        <p class="regular">paragraph regular</p>
+        <p class="small">paragraph small</p>
+        <label>label</label>
+      </div>
       <div v-scroll-reveal class="blurb">
         <h1>Hi, I'm <span id="lawrence" class="name">Lawrence</span>.</h1>
         <h1>A UX Designer + Front End Developer.</h1>
@@ -154,7 +162,7 @@ export default {
         overflow: hidden;
 
         img {
-          transition: $fast-ease-in;
+          transition: $ease-in;
           width: 100%;
         }
       }
@@ -165,7 +173,7 @@ export default {
         font-weight: 500;
         margin-bottom: 12px;
         text-decoration: none;
-        transition: $fast-ease-in;
+        transition: $ease-in;
       }
 
       &:hover {
@@ -213,7 +221,7 @@ export default {
 }
 img[lazy=loading] {
   opacity: 0;
-  transition: $fast-ease-in;
+  transition: $ease-in;
 }
 img[lazy=loaded] {
   opacity: 1;

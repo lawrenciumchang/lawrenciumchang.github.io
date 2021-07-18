@@ -3,7 +3,7 @@
     <div class="left">
       <div class="name-container">
         <img class="profile-photo" v-lazy="profilePhotoSrc">
-        <router-link to="/" @click="gaTrackClick('Header, Home')">lawrence chang</router-link>
+        <router-link class="name" to="/" @click="gaTrackClick('Header, Home')">lawrence chang</router-link>
       </div>
       <div class="toggle-container">
         <div class="theme-toggle">
@@ -15,7 +15,7 @@
       <router-link to="" @click="gaTrackClick('Header, UX Design')">ux design</router-link>
       <router-link to="/photography" @click="gaTrackClick('Header, Photography')">photography</router-link>
       <router-link to="" @click="gaTrackClick('Header, About')">about</router-link>
-      <span class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</span>
+      <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</a>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <div class="toggle-container">
         <div class="theme-toggle">
@@ -82,6 +82,10 @@ export default {
       align-items: center;
       display: flex;
       grid-column-gap: 12px;
+
+      .name {
+        text-decoration: none;
+      }
     }
     
     .toggle-container {
@@ -115,10 +119,19 @@ export default {
   }
 
   .profile-photo {
-    border: 2px solid $gray-01;
+    border: 2px solid;
     border-radius: 200px;
     height: 44px;
+    transition: $ease-in;
     width: 44px;
+
+    @include theme() {
+      border-color: theme-get('border-color');
+    }
+  }
+
+  .get-in-touch {
+    color: $blue-primary;
   }
 
   .copied-text {
@@ -126,7 +139,7 @@ export default {
     opacity: 0;
     position: absolute;
     top: 80px;
-    transition: $long-ease-in-out;
+    transition: $ease-in-out;
 
     &.reveal {
       opacity: 1;

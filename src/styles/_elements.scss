@@ -1,47 +1,62 @@
-h1, h2, h3, p, a {
+h1, h2, h3, p, a, label {
   margin: 0;
+  transition: $ease-in;
 }
 
 h1 {
-  // color: $gray-01;
   font-size: 48px;
   font-weight: 900;
+  @include theme() {
+    color: theme-get('h1-color');
+  }
 }
 
 h2 {
-  // color: $gray-01;
   font-size: 36px;
   font-weight: 900;
+  @include theme() {
+    color: theme-get('h2-color');
+  }
 }
 
 h3 {
-  // color: $gray-01;
   font-size: 32px;
   font-weight: 700;
+  @include theme() {
+    color: theme-get('h3-color');
+  }  
 }
 
 p {
-  // color: $gray-01;
   font-weight: 700;
   &.regular {
     font-size: 24px;
     line-height: 40px;
+    @include theme() {
+      color: theme-get('p-regular-color');
+    }  
   }
   &.small {
     font-size: 20px;
+    @include theme() {
+      color: theme-get('p-small-color');
+    }  
   }
 }
 
 label {
   font-size: 20px;
   font-weight: 700;
+  @include theme() {
+    color: theme-get('label-color');
+  }  
 }
 
 // a {
 //   color: $blue-primary;
 //   font-size: 20px;
 //   font-weight: 700;
-//   transition: $fast-ease-in;
+//   transition: $ease-in;
 
 //   &:hover {
 //     color: $blue-hover;
@@ -49,8 +64,11 @@ label {
 //   }
 // }
 
-router-link {
+a {
   font-weight: 700;
   font-size: 16px;
   text-decoration: underline;
+  @include theme() {
+    color: theme-get('link-color');
+  }  
 }

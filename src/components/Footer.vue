@@ -75,7 +75,7 @@ export default {
       color: $blue-primary;
       font-size: 14px;
       opacity: 0;
-      transition: $long-ease-in-out;
+      transition: $ease-in-out;
 
       &.reveal {
         opacity: 1;
