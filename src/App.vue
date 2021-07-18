@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Menu />
+    <Header />
     <transition
       name="fade"
       mode="out-in"
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
+import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
@@ -24,20 +24,19 @@ export default {
     }
   },
   components: {
-    Menu,
+    Header,
     Footer
   }
 }
 </script>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
 </style>
 
 <style lang="scss">
   #app {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

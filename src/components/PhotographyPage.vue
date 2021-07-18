@@ -1,6 +1,6 @@
 <template>
   <div class="photography-page">
-    <vue-headful title="Lawrence Chang | Photography" />
+    <vue-headful title="Photography | Lawrence Chang" />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photos" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
       <div v-scroll-reveal class="headline">

@@ -3,11 +3,10 @@
     <div class="container">
       <h2 v-scroll-reveal class="hello">Hello there!</h2>
       <h2 v-scroll-reveal class="message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</h2>
-      <div v-scroll-reveal class="btn-primary" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch CTA')">Get in touch</div>
+      <a v-scroll-reveal data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch CTA')">Get in touch</a>
       <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       <div class="sub-section">
-        <span class="copyright">All images and content Copyright © 2015-{{ currentYear }} Lawrence Chang.</span>
-        <span class="built">This site was built using Vue.js. View the source code on <a href="https://github.com/lawrenciumchang/lawrenciumchang.github.io/tree/version/4.0" target="_blank" @click="gaTrackClick('Footer', 'Github Link')"><span class="github-logo"></span>Github</a>.</span>    
+        <span class="copyright">Copyright © {{ currentYear }} Lawrence Chang</span>
       </div>
     </div>
   </div>

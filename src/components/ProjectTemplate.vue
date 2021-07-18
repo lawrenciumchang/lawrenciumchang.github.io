@@ -1,6 +1,6 @@
 <template>
   <div class="project-template">
-    <vue-headful :title="'Design | ' + project.title" />
+    <vue-headful :title="project.title + ' | Lawrence Chang'" />
     <div v-scroll-reveal class="title-container section">
       <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home

@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <vue-headful title="Lawrence Chang | Design" />
+    <vue-headful title="Lawrence Chang" />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="intro section">
       <div v-scroll-reveal class="blurb">
@@ -14,7 +14,7 @@
     </div>
     <div class="projects-list section">
       <div v-scroll-reveal class="project" v-for="project in projects" :key="project.id">
-        <router-link :to="'projects/' + project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
+        <router-link :to="'work/' + project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <div class="image-container">
             <img v-lazy="project.coverPhotoSrc" />
           </div>

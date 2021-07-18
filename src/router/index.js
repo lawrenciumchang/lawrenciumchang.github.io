@@ -13,7 +13,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/projects/:project_id',
+    path: '/work/:project_id',
     name: 'Project',
     component: Project
   },
@@ -29,7 +29,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
