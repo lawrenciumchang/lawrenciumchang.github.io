@@ -1,5 +1,4 @@
 // Colors
-
 $gray-01: #0E1012;
 $gray-02: #1A1D20;
 $gray-03: #404243;
@@ -18,8 +17,8 @@ $yellow-primary: #FFC207;
 $max-width: 1200px;
 
 // Animation
-$hover-transition: 0.3s ease-in;
-$in-out-transition: all 1s ease-in-out;
+$fast-ease-in: 0.3s ease-in;
+$long-ease-in-out: all 1s ease-in-out;
 
 // Breakpoints
 $mobile-breakpoint: 768px; // max-width

@@ -353,7 +353,7 @@ export default {
 }
 img[lazy=loading] {
   opacity: 0;
-  transition: $hover-transition;
+  transition: $fast-ease-in;
 }
 img[lazy=loaded] {
   opacity: 1;

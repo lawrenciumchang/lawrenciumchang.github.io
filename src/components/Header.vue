@@ -126,7 +126,7 @@ export default {
     opacity: 0;
     position: absolute;
     top: 80px;
-    transition: $in-out-transition;
+    transition: $long-ease-in-out;
 
     &.reveal {
       opacity: 1;

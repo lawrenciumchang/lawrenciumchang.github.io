@@ -154,7 +154,7 @@ export default {
         overflow: hidden;
 
         img {
-          transition: $hover-transition;
+          transition: $fast-ease-in;
           width: 100%;
         }
       }
@@ -165,7 +165,7 @@ export default {
         font-weight: 500;
         margin-bottom: 12px;
         text-decoration: none;
-        transition: $hover-transition;
+        transition: $fast-ease-in;
       }
 
       &:hover {
@@ -213,7 +213,7 @@ export default {
 }
 img[lazy=loading] {
   opacity: 0;
-  transition: $hover-transition;
+  transition: $fast-ease-in;
 }
 img[lazy=loaded] {
   opacity: 1;

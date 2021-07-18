@@ -47,6 +47,15 @@ export default {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: $fast-ease-in;
+
+    &.darkTheme {
+      background-color: $gray-01;
+    }
+
+    &.lightTheme {
+      background-color: $white;
+    }
   }
 
   .fade-enter-active,
