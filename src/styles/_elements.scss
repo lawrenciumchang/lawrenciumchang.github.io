@@ -37,14 +37,20 @@ label {
   font-weight: 700;
 }
 
-a {
-  color: $blue-primary;
-  font-size: 20px;
-  font-weight: 700;
-  transition: $hover-transition;
+// a {
+//   color: $blue-primary;
+//   font-size: 20px;
+//   font-weight: 700;
+//   transition: $hover-transition;
 
-  &:hover {
-    color: $blue-hover;
-    cursor: pointer;
-  }
+//   &:hover {
+//     color: $blue-hover;
+//     cursor: pointer;
+//   }
+// }
+
+router-link {
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: underline;
 }
