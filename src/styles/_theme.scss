@@ -9,7 +9,8 @@ $themes: (
     'link-color': $white,
     'border-color': $white,
     'header-copied-text-color': $white,
-    'theme-toggle-bg-color': $gray-02
+    'theme-toggle-bg-color': $gray-02,
+    'footer-bg-color': $gray-02
   ),
   lightTheme: (
     'h1-color': $gray-06,
@@ -21,7 +22,8 @@ $themes: (
     'link-color': $gray-01,
     'border-color': $gray-01,
     'header-copied-text-color': $gray-01,
-    'theme-toggle-bg-color': $gray-01
+    'theme-toggle-bg-color': $gray-01,
+    'footer-bg-color': $gray-01
   )
 );
 
