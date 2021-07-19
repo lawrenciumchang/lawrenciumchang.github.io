@@ -167,53 +167,59 @@ export default {
   }
 
   .theme-toggle {
-    position: relative;
     display: inline-block;
-    width: 76px;
     height: 40px;
+    position: relative;
+    width: 76px;
     -webkit-tap-highlight-color: transparent;
   }
 
   .theme-toggle input {
+    height: 0;
     opacity: 0;
     width: 0;
-    height: 0;
   }
 
   .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #27173a;
     -webkit-transition: 0.4s;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     transition: 0.4s;
+    @include theme() {
+      background-color: theme-get('theme-toggle-bg-color');
+    }
   }
 
   .slider:before {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    left: 5px;
-    bottom: 5px;
     background-color: $yellow-primary;
-    -webkit-transition: 0.4s;
+    bottom: 5px;
+    content: '';
+    height: 30px;
+    left: 5px;
+    position: absolute;
+    width: 30px;
     transition: 0.4s;
+    -webkit-transition: 0.4s;
   }
 
   .slider.dark {
-    background-color: #27173a;
+    @include theme() {
+      background-color: theme-get('theme-toggle-bg-color');
+    }
   }
 
   .slider.dark:before {
+    box-shadow: inset -10px 0 0 3px $yellow-primary;
+    transform: rotate(40deg) translate(28px, -23px);
     -webkit-transform: rotate(40deg) translate(28px, -23px);
     -ms-transform: rotate(40deg) translate(28px, -23px);
-    transform: rotate(40deg) translate(28px, -23px);
-    box-shadow: inset -10px 0 0 3px $yellow-primary;
-    background-color: #27173a;
+    @include theme() {
+      background-color: theme-get('theme-toggle-bg-color');
+    }
   }
 
   .slider.round {
