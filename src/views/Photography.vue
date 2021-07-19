@@ -1,5 +1,6 @@
 <template>
   <div class="photography">
+    <vue-headful title="Photography | Lawrence Chang" />
     <CustomCursor />
     <PhotographyPage />
   </div>
