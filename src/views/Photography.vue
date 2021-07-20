@@ -21,9 +21,6 @@ export default {
 .photography {
   @include page-layout;
   min-height: 100vh;
-  h1 {
-    padding-bottom: 24px;
-    padding-top: 100px;
-  }
+  padding-top: 100px;
 }
 </style>

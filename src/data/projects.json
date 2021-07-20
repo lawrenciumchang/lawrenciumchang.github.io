@@ -1,8 +1,14 @@
 [
   {
+    "id": "clackd",
+    "title": "Clackd",
+    "description": "The hub for mechanical keyboards.",
+    "coverPhotoSrc": "/assets/images/clackd/clackd_cover.png"
+  },
+  {
     "id": "credera",
     "title": "Credera",
-    "description": "Rebrand + replatform",
+    "description": "Unlock extraordinary.",
     "overview": "Although we're proud of the quality of work we provide at Credera, it became evident that our brand and image did not match that output. Our team worked to redefine how to present and message ourselves to new and existing clients. The Credera rebrand launched in the Summer of 2020.",
     "role": [
       "Website design",
@@ -33,60 +39,9 @@
     ]
   },
   {
-    "id": "seatz",
-    "title": "sEATz",
-    "description": "Mobile service design",
-    "overview": "sEATz is a unique service that delivers food at major sporting events right to your seat. The app provides an easy ordering experience so that users don’t miss a second of the game. After sEATz tested and validated its service model, I jumped on board to help turn the mobile app into a clean and seamless experience.",
-    "role": [
-      "Application design",
-      "Sitemap and experience assessment"
-    ],
-    "more": "Designing the app started with the overall journey - from the time a user entered the stadium all the way to when they received their food and drink order. I was able to rethink the entire ordering process, consider and design for edge cases, and create a new visual identify for the application and brand.",
-    "coverPhotoSrc": "/assets/images/seatz/seatz_cover.png",
-    "photoLayout": 3,
-    "photos": [
-      {
-        "src": "/assets/images/seatz/splash.png"
-      },
-      {
-        "src": "/assets/images/seatz/landing.png"
-      },
-      {
-        "src": "/assets/images/seatz/select_venue.png"
-      },
-      {
-        "src": "/assets/images/seatz/select_seat.png"
-      },
-      {
-        "src": "/assets/images/seatz/select_method.png"
-      },
-      {
-        "src": "/assets/images/seatz/vendor_select.png"
-      },
-      {
-        "src": "/assets/images/seatz/menu.png"
-      },
-      {
-        "src": "/assets/images/seatz/menu_item.png"
-      },
-      {
-        "src": "/assets/images/seatz/cart.png"
-      },
-      {
-        "src": "/assets/images/seatz/checkout.png"
-      },
-      {
-        "src": "/assets/images/seatz/order_confirmation.png"
-      },
-      {
-        "src": "/assets/images/seatz/order_details.png"
-      }
-    ]
-  },
-  {
     "id": "wff",
-    "title": "Women's Foodservice Forum",
-    "description": "Web platform design",
+    "title": "WFF",
+    "description": "Connect. Grow. Inspire.",
     "overview": "WFF is an organization that aims to help women in the food service industry advance in their career. Prior to this application, WFF did not have an easy method to allow members to connect, learn, and grow. I came aboard to envision what this solution could look like and helped design and develop the entire web portal experience.",
     "role": [
       "Design sprint facilitator",
@@ -117,185 +72,5 @@
         "displayBorder": true
       }
     ]
-  },
-  {
-    "id": "icon-go",
-    "title": "Icon GO",
-    "description": "Mobile experience design",
-    "overview": "Icon Parking manages many of the parking garages across New York City. I designed and implemented solutions to optimize conversion rates across their desktop experience. As I grew familiar with their users' behaviors and interactions with the service, I took the chance to reimagine what a new mobile experience could look like.",
-    "role": [
-      "Application redesign",
-      "Conversion optimization assessment"
-    ],
-    "more": "The existing application is unorganized, riddled with bugs, and unclear in helping the user achieve the end goal of booking a parking spot within the city. I redesigned the experience by establishing a refreshed color palette, making the search functionality direct and clear to the user, and restructuring the booking flow to be a simple three-step process.",
-    "coverPhotoSrc": "/assets/images/icon-go/icon_cover.png",
-    "photoLayout": 3,
-    "photos": [
-      {
-        "src": "/assets/images/icon-go/splash.png"
-      },
-      {
-        "src": "/assets/images/icon-go/first_load.png"
-      },
-      {
-        "src": "/assets/images/icon-go/search.png"
-      },
-      {
-        "src": "/assets/images/icon-go/menu.png"
-      },
-      {
-        "src": "/assets/images/icon-go/garage_details.png"
-      },
-      {
-        "src": "/assets/images/icon-go/step_1.png"
-      },
-      {
-        "src": "/assets/images/icon-go/step_2.png"
-      },
-      {
-        "src": "/assets/images/icon-go/step_3.png"
-      },
-      {
-        "src": "/assets/images/icon-go/spot_booked.png"
-      }
-    ]
-  },
-  {
-    "id": "gundam-kingdom",
-    "title": "Gundam Kingdom",
-    "description": "E-Commerce platform design",
-    "overview": "Gundam Kingdom is a small shop in Katy, TX that sells kits and tools for the niche hobby of Gunpla building. As an avid Gunpla builder, I was excited when I was approached to help design and build an e-commerce platform related to one of my favorite hobbies.",
-    "role": [
-      "Branding + design direction",
-      "Website design",
-      "Design system creation",
-      "Design leadership + mentorship"
-    ],
-    "more": "This platform was designed to make a storefront simple and accessible to online buyers. I started by defining fonts and color schemes familiar to those in the hobby. I then defined the user journey from searching for products all the way to checking out. There are many Gundam kits so products are discoverable through a clear product hierarchy.",
-    "coverPhotoSrc": "/assets/images/gundam-kingdom/gundam_cover.png",
-    "photoLayout": 2,
-    "photos": [
-      {
-        "src": "/assets/images/gundam-kingdom/landing.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/gundam-kingdom/typography.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/gundam-kingdom/color.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/gundam-kingdom/products.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/gundam-kingdom/product_detail.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/gundam-kingdom/cart.png",
-        "displayBorder": true
-      }
-    ]
-  },
-  {
-    "id": "anylist",
-    "title": "AnyList",
-    "description": "Usability assessment",
-    "overview": "AnyList is one of my most used apps. It’s a functional grocery list complete with sharing options that update in real time, drag-and-drop items that give me the power of organization, and built in recipe integrations. But it’s not the most modern take on apps and I felt there were some slight tweaks I could make to improve the user experience. I took it upon myself to tackle some of these challenges and also used the opportunity to put Figma’s prototyping features to the test.",
-    "role": [
-      "Usability assessment",
-      "Application redesign",
-      "Interactive prototyping"
-    ],
-    "more": "The first change I wanted to make was to relocate high-use actions from the top of the screen to a more comfortable and visible section at the bottom. These include actions that enable users to  add items to a given list, select from preset favorites, and to clear crossed off items.<br><br>Next, I explored more efficient methods to interact with single items that would normally take users to a new page. These problems were solved by including swipe gestures to mark items as complete and single tap functions to edit item properties.<br><br>All these ideas presented the perfect chance to build an interactive Figma prototype. The auto animate functionalities added another layer of communication into the mix to convey design intentions and better define user interactions.",
-    "coverPhotoSrc": "/assets/images/anylist/anylist_cover.png",
-    "photoLayout": 3,
-    "featuredGif": {
-      "src": "/assets/images/anylist/prototype.gif"
-    },
-    "photos": [
-      {
-        "src": "/assets/images/anylist/list_view.png"
-      },
-      {
-        "src": "/assets/images/anylist/add_favorites.png"
-      },
-      {
-        "src": "/assets/images/anylist/edit_quantity.png"
-      }
-    ]
-  },
-  {
-    "id": "adidas",
-    "title": "Adidas",
-    "description": "Product refinement design",
-    "overview": "I recently took an interest in collecting Adidas shoes - particularly those by James Harden, my favorite basketball player. While watching the Rockets game and browsing the upcoming drop of the latest Marvel collaboration shoes, I thought I would take a stab at improving the structure and usability of the Adidas product page.",
-    "role": [
-      "Website design"
-    ],
-    "more": "I can’t say there is anything wrong with Adidas’s website. I admire a lot of it - the neutral colors, the typeface, and consistent use of imagery. I also recognize that there is no such thing as redesigning something unless we can articulate why we need to, understand the implications, and test the outcomes. However, as I was browsing different products, I found small bits and pieces that I felt could be improved. Although I wasn’t in any position where I could implement A/B tests for Adidas, I decided to entertain the idea from a design stance. Some changes I made included layout spacing, decluttering of excess information, and surfacing more relevant product information.",
-    "coverPhotoSrc": "/assets/images/adidas/adidas_cover.png",
-    "photoLayout": 1,
-    "photos": [
-      {
-        "src": "/assets/images/adidas/product_page.png",
-        "displayBorder": true
-      }
-    ]
-  },
-  {
-    "id": "music-player",
-    "title": "Music Player",
-    "description": "Design exploration",
-    "overview": "Music players are one of my most used apps and so it comes at no surprise that I am always thinking of features that would enhance the listening experience. This is my take on my ideal music player application.",
-    "role": [
-      "Application design"
-    ],
-    "more": "I’m always using the Discover Weekly feature on Spotify, so I thought this would be a great place to start exploring my design. The page is understood to be a list of songs in a curated playlist, so I wanted to explore new ideas such as showcasing a particular artist within the week and surfacing album art for each listing.<br><br>The next feature is the artist page - bringing popular songs to the top and also allowing the user to listen to the latest release with a single tap.<br><br>Lastly, the focus of the music player is to make everything accessible through single-handed use. High-touch functions, such as adding a song to a library and shuffle and repeat functions, are all placed on the right. Extra features such as Lyrics and the Queue are visible but teased to show that there is more to see with a single swipe up.",
-    "coverPhotoSrc": "/assets/images/music-player/music_cover.png",
-    "photoLayout": 3,
-    "photos": [
-      {
-        "src": "/assets/images/music-player/weekly_mixtape.png"
-      },
-      {
-        "src": "/assets/images/music-player/artist_page.png"
-      },
-      {
-        "src": "/assets/images/music-player/player.png"
-      }
-    ]
-  },
-  {
-    "id": "pinnacle-propane",
-    "title": "Pinnacle Propane",
-    "description": "Functional interface design",
-    "overview": "Pinnacle Propane needed an internal tool to help manage their inquiries across different channels. I helped to design a simple yet functional digital platform that would enable them to increase their productivity and output by eliminating paper trails and creating a one-stop-shop for their business needs.",
-    "role": [
-      "Design system + style guide creation",
-      "Website design",
-      "User interviews + research"
-    ],
-    "more": "Even though this was an internal tool that would never see the light of day, I wanted to create something that was not only functional, but appealing and encouraging for employees to use on the daily. Through this process, I defined typefaces and color palettes to create a style guide, interviewed stakeholders and users, and constructed sitemaps and wireframes that ultimately informed the final product.",
-    "coverPhotoSrc": "/assets/images/pinnacle-propane/pinnacle_cover.png",
-    "photoLayout": 2,
-    "photos": [
-      {
-        "src": "/assets/images/pinnacle-propane/dashboard.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/pinnacle-propane/style_guide.png",
-        "displayBorder": true
-      },
-      {
-        "src": "/assets/images/pinnacle-propane/inquiry_details.png",
-        "displayBorder": true
-      }
-    ]
   }
-]
+] 
