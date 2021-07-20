@@ -1,5 +1,6 @@
 <template>
   <div id="app" :class='darkTheme ? "darkTheme" : "lightTheme"'>
+    <CustomCursor />
     <Header :darkTheme="darkTheme" @toggleTheme="toggleTheme()" />
     <transition
       name="fade"
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import CustomCursor from '@/components/CustomCursor.vue';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -32,6 +34,7 @@ export default {
     }
   },
   components: {
+    CustomCursor,
     Header,
     Footer
   }

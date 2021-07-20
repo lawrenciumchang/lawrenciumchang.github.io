@@ -1,21 +1,27 @@
 <template>
   <div class="home">
     <vue-headful title="Lawrence Chang" />
-    <CustomCursor />
     <Introduction />
+    <FeaturedProjects />
+    <FeaturedPhotography />
+    <FeaturedAbout />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CustomCursor from '@/components/CustomCursor.vue';
 import Introduction from '@/components/Introduction.vue';
+import FeaturedProjects from '@/components/FeaturedProjects.vue';
+import FeaturedPhotography from '@/components/FeaturedPhotography.vue';
+import FeaturedAbout from '@/components/FeaturedAbout.vue';
 
 export default {
   name: 'Home',
   components: {
-    CustomCursor,
-    Introduction
+    Introduction,
+    FeaturedProjects,
+    FeaturedPhotography,
+    FeaturedAbout
   }
 }
 </script>
