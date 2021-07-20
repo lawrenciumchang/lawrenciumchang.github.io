@@ -54,8 +54,6 @@ export default {
 
 <style scoped lang="scss">
 .photo-grid {
-  min-height: 100vh;
-
   .section {
     padding-bottom: 100px;
   }

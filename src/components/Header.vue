@@ -13,7 +13,7 @@
     <div class="right">
       <router-link to="" @click="gaTrackClick('Header, UX Design')">ux design</router-link>
       <router-link to="/photography" @click="gaTrackClick('Header, Photography')">photography</router-link>
-      <router-link to="" @click="gaTrackClick('Header, About')">about</router-link>
+      <router-link to="/about" @click="gaTrackClick('Header, About')">about</router-link>
       <div class="get-in-touch-container">
         <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</a>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>

@@ -23,5 +23,6 @@ export default {
 <style scoped lang="scss">
 .project {
   @include page-layout;
+  min-height: 100vh;
 }
 </style>

@@ -12,7 +12,7 @@
         </div>
         <div class="right">
           <div class="group">
-            <router-link to="" @click="gaTrackClick('Footer, About')">about</router-link>
+            <router-link to="/about" @click="gaTrackClick('Footer, About')">about</router-link>
             <router-link to="" @click="gaTrackClick('Footer, Resume')">resume</router-link>
           </div>
           <div class="group">
@@ -21,7 +21,7 @@
             <router-link to="" @click="gaTrackClick('Footer, WFF')">wff</router-link>
           </div>
           <div class="group">
-            <router-link to="" @click="gaTrackClick('Footer, Photography')">photography</router-link>
+            <router-link to="/photography" @click="gaTrackClick('Footer, Photography')">photography</router-link>
           </div>
           <div class="group">
             <router-link to="" @click="gaTrackClick('Footer, LinkedIn')">linkedin</router-link>

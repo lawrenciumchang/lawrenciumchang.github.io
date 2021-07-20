@@ -20,6 +20,7 @@ export default {
 <style scoped lang="scss">
 .photography {
   @include page-layout;
+  min-height: 100vh;
   h1 {
     padding-bottom: 24px;
     padding-top: 100px;

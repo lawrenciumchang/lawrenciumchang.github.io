@@ -28,6 +28,6 @@ export default {
 
 <style scoped lang="scss">
 .home {
-  @include page-layout;
+  min-height: 100vh;
 }
 </style>

@@ -6,12 +6,12 @@
 
 <script>
 export default {
-  name: 'Featured Photography'
+  name: 'FeaturedPhotography'
 }
 </script>
 
 <style scoped lang="scss">
-.feature-photography {
+.featured-photography {
   padding-bottom: 100px;
 }
 </style>

@@ -13,7 +13,8 @@ export default {
 
 <style scoped lang="scss">
 .introduction {
-  padding: 100px 0;
+  @include page-layout;
+  padding: 100px 24px;
 
   .first-sentence {
     margin-bottom: 12px;
