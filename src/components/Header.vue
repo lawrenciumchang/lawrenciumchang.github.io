@@ -131,7 +131,7 @@ export default {
     width: 44px;
 
     @include theme() {
-      border-color: theme-get('border-color');
+      border-color: theme-get('default-theme-inverse');
     }
   }
 

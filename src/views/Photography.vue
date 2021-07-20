@@ -1,17 +1,18 @@
 <template>
   <div class="photography">
     <vue-headful title="Photography | Lawrence Chang" />
-    <PhotographyPage />
+    <h1 v-scroll-reveal>photography</h1>
+    <PhotoGrid />
   </div>
 </template>
 
 <script>
-import PhotographyPage from '@/components/PhotographyPage.vue';
+import PhotoGrid from '@/components/PhotoGrid.vue';
 
 export default {
   name: 'Photography',
   components: {
-    PhotographyPage
+    PhotoGrid
   }
 }
 </script>
@@ -19,5 +20,9 @@ export default {
 <style scoped lang="scss">
 .photography {
   @include page-layout;
+  h1 {
+    padding-bottom: 24px;
+    padding-top: 100px;
+  }
 }
 </style>

@@ -1,5 +1,6 @@
 $themes: (
   darkTheme: (
+    'default-theme-inverse': $white,
     'h1-color': $gray-04,
     'h2-color': $white,
     'h3-color': $white,
@@ -7,12 +8,12 @@ $themes: (
     'p-small-color': $gray-06,
     'label-color': $gray-04,
     'link-color': $white,
-    'border-color': $white,
     'header-copied-text-color': $white,
     'theme-toggle-bg-color': $gray-02,
     'footer-bg-color': $gray-02
   ),
   lightTheme: (
+    'default-theme-inverse': $gray-01,
     'h1-color': $gray-06,
     'h2-color': $gray-01,
     'h3-color': $gray-01,
@@ -20,7 +21,6 @@ $themes: (
     'p-small-color': $gray-04,
     'label-color': $gray-06,
     'link-color': $gray-01,
-    'border-color': $gray-01,
     'header-copied-text-color': $gray-01,
     'theme-toggle-bg-color': $gray-01,
     'footer-bg-color': $gray-01

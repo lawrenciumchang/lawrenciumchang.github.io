@@ -1,15 +1,7 @@
 <template>
-  <div class="photography-page">
+  <div class="photo-grid">
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photos" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
-    <div class="intro section">
-      <div v-scroll-reveal class="headline">
-        <h1>Photography</h1>
-      </div>
-      <div v-scroll-reveal class="paragraph">
-        <p>Photos shot on a Sony a6000 with various lenses or an iPhone 7 Plus</p>
-      </div>
-    </div>
-    <div class="photos section">
+    <div v-scroll-reveal class="photos section">
       <VueJustifiedLayout :items="photos" v-slot="{item, index}" :options="{containerPadding: 0}">
         <img v-scroll-reveal :src="item.url" @click="showPhotoSwipe(index); gaTrackClick('Photography', 'View Photo - ' + item.title)" />
       </VueJustifiedLayout>
@@ -22,7 +14,7 @@ import { PhotoSwipe } from 'v-photoswipe';
 import PhotosService from '../services/PhotosService.js';
 
 export default {
-  name: 'PhotographyPage',
+  name: 'PhotoGrid',
   components: {
     'v-photoswipe': PhotoSwipe
   },
@@ -61,40 +53,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.photography-page {
+.photo-grid {
+  min-height: 100vh;
+
   .section {
-    padding: 100px 0px;
-
-    @media (max-width: $mobile-breakpoint) {
-      padding: 60px 0;
-    }
+    padding-bottom: 100px;
   }
-
-  .intro {
-    display: grid;
-    grid-column-gap: 72px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 160px;
-
-    @media (max-width: $mobile-breakpoint) {
-      grid-template-columns: 1fr;
-    }
-
-    .paragraph {
-      margin-top: 100px;
-
-      @media (max-width: $mobile-breakpoint) {
-        margin-top: 0;
-      }
-
-      p:not(:last-child) {
-        margin-bottom: 40px;
-      }
-    }
-  }
-
-  
 }
 ::v-deep .justified-container {
   .justified-item {
