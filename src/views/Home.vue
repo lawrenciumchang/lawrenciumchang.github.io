@@ -2,20 +2,20 @@
   <div class="home">
     <vue-headful title="Lawrence Chang" />
     <CustomCursor />
-    <HomePage />
+    <Introduction />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomePage from '@/components/HomePage.vue';
 import CustomCursor from '@/components/CustomCursor.vue';
+import Introduction from '@/components/Introduction.vue';
 
 export default {
   name: 'Home',
   components: {
-    HomePage,
-    CustomCursor
+    CustomCursor,
+    Introduction
   }
 }
 </script>

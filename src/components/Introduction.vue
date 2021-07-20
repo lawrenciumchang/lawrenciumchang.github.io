@@ -1,17 +1,17 @@
 <template>
-  <div class="featured-about">
+  <div class="introduction">
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Featured About'
+  name: 'Introduction'
 }
 </script>
 
 <style scoped lang="scss">
-.feature-about {
-  padding-bottom: 100px;
+.introduction {
+  padding: 100px 0;
 }
 </style>

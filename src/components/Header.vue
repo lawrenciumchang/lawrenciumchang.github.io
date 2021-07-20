@@ -71,6 +71,7 @@ export default {
   @include page-layout;
   display: grid;
   grid-template-columns: auto 1fr;
+  padding-bottom: 40px;
   padding-top: 40px;
 
   @media (max-width: $mobile-breakpoint) {
