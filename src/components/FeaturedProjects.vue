@@ -60,7 +60,7 @@ export default {
 
       .image-container {
         display: grid;
-        margin-bottom: 40px;
+        margin-bottom: 28px;
         overflow: hidden;
 
         img {
