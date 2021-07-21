@@ -102,6 +102,7 @@ export default {
       grid-template-columns: 1fr 1fr;
 
       .toggle-container {
+        align-items: center;
         display: flex;
         justify-content: flex-end;
       }
@@ -113,6 +114,10 @@ export default {
     display: flex;
     justify-content: flex-end;
     grid-column-gap: 32px;
+
+    .toggle-container {
+      display: flex;
+    }
 
     @media (max-width: $mobile-breakpoint) {
       justify-content: flex-start;
