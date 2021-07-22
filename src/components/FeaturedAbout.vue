@@ -3,7 +3,7 @@
     <h1 v-scroll-reveal>about</h1>
     <p v-scroll-reveal class="regular first-sentence">I am a UX Designer based in Houston, TX.</p>
     <p v-scroll-reveal class="regular second-sentence">I lead design at companies of various stages, turning startup ideas into tangible products and helping clients transform their digital needs into world-class experiences.</p>
-    <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Home', 'Read More')">read more</router-link>
+    <router-link v-scroll-reveal class="large" to="/about" @click="gaTrackClick('Home', 'Read More')">read more</router-link>
   </div>
 </template>
 
