@@ -1,5 +1,6 @@
 <template>
   <div class="footer">
+    <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="container">
       <div class="top">
         <div class="left">
@@ -12,20 +13,20 @@
         </div>
         <div class="right">
           <div class="group">
-            <router-link to="/about" @click="gaTrackClick('Footer, About')">about</router-link>
-            <router-link to="" @click="gaTrackClick('Footer, Resume')">resume</router-link>
+            <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Footer, About')">about</router-link>
+            <a v-scroll-reveal @click="showPhotoSwipe(); gaTrackClick('Footer', 'Resume')">resume</a>
           </div>
           <div class="group">
-            <router-link to="" @click="gaTrackClick('Footer, Clackd')">clackd</router-link>
-            <router-link to="" @click="gaTrackClick('Footer, Credera')">credera</router-link>
-            <router-link to="" @click="gaTrackClick('Footer, WFF')">wff</router-link>
+            <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer, Clackd')">clackd</router-link>
+            <router-link v-scroll-reveal to="/work/credera" @click="gaTrackClick('Footer, Credera')">credera</router-link>
+            <router-link v-scroll-reveal to="/work/wff" @click="gaTrackClick('Footer, WFF')">wff</router-link>
           </div>
           <div class="group">
-            <router-link to="/photography" @click="gaTrackClick('Footer, Photography')">photography</router-link>
+            <router-link v-scroll-reveal to="/photography" @click="gaTrackClick('Footer, Photography')">photography</router-link>
           </div>
           <div class="group">
-            <router-link to="" @click="gaTrackClick('Footer, LinkedIn')">linkedin</router-link>
-            <router-link to="" @click="gaTrackClick('Footer, flickr')">flickr</router-link>
+            <a v-scroll-reveal href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Footer', 'LinkedIn')">linkedin</a>
+            <a v-scroll-reveal href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Footer', 'Flickr')">flickr</a>
           </div>
         </div>
       </div>
@@ -37,19 +38,43 @@
 </template>
 
 <script>
+import { PhotoSwipe } from 'v-photoswipe';
 import ClipboardJS from 'clipboard';
 
 export default {
   name: 'Footer',
+  components: {
+    'v-photoswipe': PhotoSwipe
+  },
   mounted: function() {
     new ClipboardJS('.btn-primary');
   },
   data() {
     return {
-      currentYear: new Date().getFullYear()
+      currentYear: new Date().getFullYear(),
+      photoswipeOptions: {
+        isOpen: false,
+        isOpenGallery: false,
+        options: {
+          index: 0
+        },
+        items: [
+          {
+            src: require('@/assets/images/resume.png'),
+            w: 2160,
+            h: 2796
+          }
+        ]
+      }
     }
   },
   methods: {
+    showPhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = true;
+    },
+    hidePhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = false;
+    },
     revealCopiedText: function() {
       this.$refs.copiedText.classList.add('reveal');
       setTimeout(function() { 
