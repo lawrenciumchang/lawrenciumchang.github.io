@@ -21,7 +21,7 @@
     </div>
     <div class="projects-list section">
       <div v-scroll-reveal class="project" v-for="project in projects" :key="project.id">
-        <router-link :to="'work/' + project.id" @click.native="gaTrackClick('Home Page', 'View Project - ' + project.title)">
+        <router-link :to="'work/' + project.id" @click="gaTrackClick('Home Page', 'View Project - ' + project.title)">
           <div class="image-container">
             <img v-lazy="project.coverPhotoSrc" />
           </div>

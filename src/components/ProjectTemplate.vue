@@ -2,7 +2,7 @@
   <div class="project-template">
     <vue-headful :title="project.title + ' | Lawrence Chang'" />
     <div v-scroll-reveal class="title-container section">
-      <router-link to="/" @click.native="gaTrackClick('Project', 'Home Button')" class="navigation-link">
+      <router-link to="/" @click="gaTrackClick('Project', 'Home Button')" class="navigation-link">
         ↑Home
       </router-link>
       <h1 class="title">{{ project.title }}</h1>
@@ -64,7 +64,7 @@
     <div class="navigation-container section">
       <div v-scroll-reveal class="previous">
         <div v-if="project.previous">
-          <router-link :to="project.previous.url" @click.native="gaTrackClick('Project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
+          <router-link :to="project.previous.url" @click="gaTrackClick('Project', 'Previous project - Navigating to ' + project.previous.title)" class="navigation-link">
             ←Previous Project
           </router-link>
           <h2>{{ project.previous.title }}</h2>
@@ -73,7 +73,7 @@
       </div>
       <div v-scroll-reveal class="next">
         <div v-if="project.next">
-          <router-link :to="project.next.url" @click.native="gaTrackClick('Project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
+          <router-link :to="project.next.url" @click="gaTrackClick('Project', 'Next project - Navigating to ' + project.next.title)" class="navigation-link">
             Next Project→
           </router-link>
           <h2>{{ project.next.title }}</h2>

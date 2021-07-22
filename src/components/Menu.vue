@@ -12,10 +12,10 @@
     <div ref="menuOverlay" class="menu-overlay inactive">
       <div ref="menuContents" class="menu-contents inactive">
         <h2 class="menu-item">
-          <router-link to="/" @click.native="closeMenu(); gaTrackClick('Menu', 'Design Link')">Design</router-link>
+          <router-link to="/" @click="closeMenu(); gaTrackClick('Menu', 'Design Link')">Design</router-link>
         </h2>
         <h2 class="menu-item">
-          <router-link to="/photography" @click.native="closeMenu(); gaTrackClick('Menu', 'Photography Link')">Photography</router-link>
+          <router-link to="/photography" @click="closeMenu(); gaTrackClick('Menu', 'Photography Link')">Photography</router-link>
         </h2>
         <h2 class="menu-item">
           <a href="https://www.flickr.com/photos/lawrenciumchang" target="_blank" @click="gaTrackClick('Menu', 'Flickr Link')">Flickr</a>
