@@ -130,6 +130,10 @@ export default {
             @media (max-width: $mobile-breakpoint) {
               text-align: left;
             }
+
+            &:hover {
+              color: $blue-secondary;
+            }
           }
         }
       }
@@ -150,6 +154,10 @@ export default {
       color: $blue-primary;
       cursor: pointer;
       margin-bottom: 12px;
+
+      &:hover {
+        color: $blue-secondary;
+      }
     }
 
     .copied-text{

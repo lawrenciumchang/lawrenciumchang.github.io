@@ -115,7 +115,7 @@ export default {
     }
 
     .name {
-      color: $blue-hover;
+      color: $blue-secondary;
     }
 
     .blurb {
@@ -183,7 +183,7 @@ export default {
         }
 
         h2 {
-          color: $blue-hover;
+          color: $blue-secondary;
         }
       }
     }

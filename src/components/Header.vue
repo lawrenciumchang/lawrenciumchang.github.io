@@ -198,6 +198,9 @@ export default {
     @include theme() {
       background-color: theme-get('theme-toggle-bg-color');
     }
+    &:hover {
+      background-color: $blue-secondary;
+    }
   }
 
   .slider:before {
@@ -216,6 +219,12 @@ export default {
     @include theme() {
       background-color: theme-get('theme-toggle-bg-color');
     }
+    &:hover {
+      background-color: $blue-secondary;
+      &:before {
+        background-color: $blue-secondary !important;
+      }
+    }
   }
 
   .slider.dark:before {
@@ -225,6 +234,9 @@ export default {
     -ms-transform: rotate(40deg) translate(28px, -23px);
     @include theme() {
       background-color: theme-get('theme-toggle-bg-color');
+    }
+    &:hover {
+      background-color: $blue-secondary;
     }
   }
 

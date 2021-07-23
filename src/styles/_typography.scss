@@ -68,5 +68,8 @@ a {
   }
   @include theme() {
     color: theme-get('link-color');
-  }  
+  }
+  &:hover {
+    color: $blue-secondary;
+  }
 }

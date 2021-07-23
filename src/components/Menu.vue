@@ -105,7 +105,7 @@ export default {
     -webkit-user-select: none;
 
     &:hover {
-      background-color: $blue-hover;
+      background-color: $blue-secondary;
     }
 
     @media (max-width: $desktop-breakpoint) {
@@ -236,7 +236,7 @@ export default {
           transition: $ease-in;
 
           &:hover {
-            color: $blue-hover;
+            color: $blue-secondary;
           }
         }
       }

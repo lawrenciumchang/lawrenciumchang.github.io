@@ -162,7 +162,7 @@ export default {
 
 .cursor-dot {
   $size: 8px;
-  background-color: $blue-hover;
+  background-color: $blue-secondary;
   height: $size;
   transform: translate(-50%, -50%) scale(1);
   width: $size;
@@ -170,7 +170,7 @@ export default {
 
 .cursor-dot-outline {
   $size: 140px;
-  background-color: rgba($blue-underline, 0.29);
+  background-color: rgba($blue-outline, 0.29);
   background-size: cover;
   height: $size;
   transform: translate(-50%, -50%) scale(0.29);

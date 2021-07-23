@@ -10,11 +10,11 @@ body {
 
 // Text highlight colors
 ::selection {
-  background: $blue-underline; /* WebKit/Blink Browsers */
+  background: $blue-outline; /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  background: $blue-underline; /* Gecko Browsers */
+  background: $blue-outline; /* Gecko Browsers */
 }
 
 // Hide scrollbar

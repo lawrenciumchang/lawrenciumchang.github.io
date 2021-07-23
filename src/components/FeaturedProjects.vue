@@ -80,6 +80,10 @@ export default {
         img {
           transform: scale(1.01);
         }
+
+        .project-title {
+          color: $blue-secondary;
+        }
       }
     }
   }
