@@ -77,6 +77,7 @@ export default {
   @media (max-width: $mobile-breakpoint) {
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
+    padding-bottom: 0;
   }
 
   .left {
@@ -99,7 +100,7 @@ export default {
 
     @media (max-width: $mobile-breakpoint) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr auto;
 
       .toggle-container {
         align-items: center;
@@ -120,7 +121,9 @@ export default {
     }
 
     @media (max-width: $mobile-breakpoint) {
-      justify-content: flex-start;
+      display: grid;
+      grid-row-gap: 8px;
+      text-align: right;
 
       .toggle-container {
         display: none;
@@ -168,7 +171,7 @@ export default {
     }
 
     @media (max-width: $mobile-breakpoint) {
-      top: 48px;
+      top: 28px;
     }
   }
 
