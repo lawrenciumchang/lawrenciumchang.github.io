@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <p v-scroll-reveal class="regular first-sentence">Hey there, I'm <span class="name">Lawrence</span>. Senior UX Designer at Credera by <span class="icon icon-day"></span>. Product Design Director at Clackd by <span class="icon icon-night"></span>.</p>
-    <p v-scroll-reveal class="regular">When I’m not designing, you will find me playing board games, reading manga, cooking up a Japanese meal, or brewing a specialty cup of coffee. ↓Scroll down↓ to see some of my work and to learn more about me!</p>
+    <p v-scroll-reveal class="regular">When I’m not designing, you will find me playing board games, reading manga, cooking up a Japanese meal, or brewing a specialty cup of coffee. <span class="arrow">↓</span>Scroll down<span class="arrow">↓</span> to see some of my work and to learn more about me!</p>
   </div>
 </template>
 
@@ -43,5 +43,16 @@ export default {
   .icon-night {
     background: url('/assets/icons/icon-night.svg') no-repeat;
   }
+
+  .arrow {
+    -webkit-animation: bounce 3s infinite ease-in-out;
+    display: inline-block;
+  }
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 40%, 60%, 80%, 100%  { -webkit-transform: translateY(0); }
+  10%  { -webkit-transform: translateY(-4px); }
+	30% { -webkit-transform: translateY(-2px); }
 }
 </style>
