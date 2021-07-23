@@ -9,12 +9,15 @@ body {
 }
 
 // Text highlight colors
-::selection {
-  background: $blue-outline; /* WebKit/Blink Browsers */
+::selection { /* WebKit/Blink Browsers */
+  @include theme() {
+    background: theme-get('highlight-color');
+  }
 }
-
-::-moz-selection {
-  background: $blue-outline; /* Gecko Browsers */
+::-moz-selection { /* Gecko Browsers */
+  @include theme() {
+    background: theme-get('highlight-color');
+  }
 }
 
 // Hide scrollbar
