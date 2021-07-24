@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <p v-scroll-reveal class="regular first-sentence">Hey there, I'm <span class="name">Lawrence</span>. Senior UX Designer at Credera by <span class="icon icon-day"></span>. Product Design Director at Clackd by <span class="icon icon-night"></span>.</p>
-    <p v-scroll-reveal class="regular">When I’m not designing, you will find me playing board games, reading manga, cooking up a Japanese meal, or brewing a specialty cup of coffee. <span class="arrow">↓</span>Scroll down<span class="arrow">↓</span> to see some of my work and to learn more about me!</p>
+    <p v-scroll-reveal class="regular">I lead design at companies of various stages, turning startup ideas into tangible products and helping clients transform their digital needs into world-class experiences. <span class="arrow">↓</span>Scroll down<span class="arrow">↓</span> to see some of my work and to learn more about me!</p>
   </div>
 </template>
 

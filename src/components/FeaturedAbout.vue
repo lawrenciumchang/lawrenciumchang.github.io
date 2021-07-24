@@ -2,8 +2,8 @@
   <div class="featured-about">
     <h1 v-scroll-reveal>about</h1>
     <p v-scroll-reveal class="regular first-sentence">I am a UX Designer based in Houston, TX.</p>
-    <p v-scroll-reveal class="regular second-sentence">I lead design at companies of various stages, turning startup ideas into tangible products and helping clients transform their digital needs into world-class experiences.</p>
-    <router-link v-scroll-reveal class="large" to="/about" @click="gaTrackClick('Home', 'Read More')">read more</router-link>
+    <p v-scroll-reveal class="regular second-sentence">When I’m not designing, you will find me playing board games, reading manga, cooking up a Japanese meal, or brewing a specialty cup of coffee.</p>
+    <router-link v-scroll-reveal class="large" to="/about" @click="gaTrackClick('Home', 'See More')">see more</router-link>
   </div>
 </template>
 
