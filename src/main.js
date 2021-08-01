@@ -6,6 +6,7 @@ import vueHeadful from 'vue-headful';
 import VueJustifiedLayout from 'vue-justified-layout';
 import VueLazyLoad from 'vue-lazyload';
 import VueScrollReveal from 'vue-scroll-reveal';
+import VueTypedJs from 'vue-typed-js';
 
 Vue.config.productionTip = false;
 
@@ -32,6 +33,8 @@ Vue.use(VueScrollReveal, {
   scale: 1,
   distance: '10px'
 });
+
+Vue.use(VueTypedJs);
 
 new Vue({
   router,

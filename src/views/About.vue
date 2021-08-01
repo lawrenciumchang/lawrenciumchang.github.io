@@ -13,7 +13,12 @@
       </div>
     </div>
     <div class="currently">
-      <h2 v-scroll-reveal class="contained">currently ...</h2>
+      <div v-scroll-reveal class="type-container contained">
+        <h2 class="currently-text">currently</h2>
+        <vue-typed-js :strings="['reading', 'watching', 'playing', 'listening']" :smartBackspace="true" :backSpeed="50" :backDelay="1600" :loop="true" :startDelay="1600">
+          <h2 class="typing"></h2>
+        </vue-typed-js>
+      </div>
       <div v-scroll-reveal class="overflow-container">
         <div class="scroll-container">
           <div class="photo" v-for="index in 7" :key="index">
@@ -102,8 +107,18 @@ export default {
     }
   }
 
-  h2 {
-    margin-bottom: 24px !important;
+  .type-container {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .currently-text {
+    display: inline-flex;
+    margin-right: 8px;
+  }
+
+  .typed-element {
+    display: inline-flex;
   }
 
   p {
