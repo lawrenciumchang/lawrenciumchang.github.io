@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <vue-headful title="About | Lawrence Chang" />
+    <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="bio contained">
       <div v-scroll-reveal class="image-container">
         <img class="profile-image" v-lazy="'/assets/images/about/profile.png'" />
@@ -8,7 +9,7 @@
       <div class="about-container">
         <h1 v-scroll-reveal>about</h1>
         <p v-scroll-reveal class="regular first-sentence">I am a senior ux designer based in Houston, Texas, currently working at Credera. I’ve touched everything from circuit design to back-end API architecture to front-end development, but now focus on building desirable experiences through design.</p>
-        <p v-scroll-reveal class="regular">Check out my resume to see what I’ve been up to over the years or scroll down to learn some of the things I enjoy doing in my free time!</p>
+        <p v-scroll-reveal class="regular">Check out my <a v-scroll-reveal class="resume-link" @click="showPhotoSwipe(); gaTrackClick('About', 'Resume')">resume</a> to see what I’ve been up to over the years or scroll down to learn some of the things I enjoy doing in my free time!</p>
       </div>
     </div>
     <div class="currently">
@@ -25,8 +26,42 @@
 </template>
 
 <script>
+import { PhotoSwipe } from 'v-photoswipe';
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    'v-photoswipe': PhotoSwipe
+  },
+  data() {
+    return {
+      photoswipeOptions: {
+        isOpen: false,
+        isOpenGallery: false,
+        options: {
+          index: 0
+        },
+        items: [
+          {
+            src: require('@/assets/images/resume.png'),
+            w: 2160,
+            h: 2796
+          }
+        ]
+      }
+    }
+  },
+  methods: {
+    showPhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = true;
+    },
+    hidePhotoSwipe: function() {
+      this.photoswipeOptions.isOpen = false;
+    },
+    gaTrackClick: function(category, label) {
+      this.$ga.event(category, 'click', label);
+    }
+  }
 }
 </script>
 
@@ -53,7 +88,7 @@ export default {
 
   .image-container {
     width: 380px;
-    
+
     @media (max-width: $mobile-breakpoint) {
       width: calc(100vw - 48px);
     }
@@ -73,6 +108,17 @@ export default {
 
   p {
     margin-bottom: 20px;
+  }
+
+  .resume-link {
+    font-size: 24px;
+    line-height: 40px;
+    @include theme() {
+      color: theme-get('p-regular-color');
+    }
+    &:hover {
+      color: $blue-secondary;
+    }
   }
 
   .overflow-container {

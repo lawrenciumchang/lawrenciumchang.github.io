@@ -1,6 +1,5 @@
 <template>
   <div class="footer">
-    <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="container">
       <div class="top">
         <div class="left">
@@ -14,7 +13,6 @@
         <div class="right">
           <div class="group">
             <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Footer, About')">about</router-link>
-            <a v-scroll-reveal @click="showPhotoSwipe(); gaTrackClick('Footer', 'Resume')">resume</a>
           </div>
           <div class="group">
             <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer, Clackd')">clackd</router-link>
@@ -38,43 +36,19 @@
 </template>
 
 <script>
-import { PhotoSwipe } from 'v-photoswipe';
 import ClipboardJS from 'clipboard';
 
 export default {
   name: 'Footer',
-  components: {
-    'v-photoswipe': PhotoSwipe
-  },
   mounted: function() {
     new ClipboardJS('.btn-primary');
   },
   data() {
     return {
-      currentYear: new Date().getFullYear(),
-      photoswipeOptions: {
-        isOpen: false,
-        isOpenGallery: false,
-        options: {
-          index: 0
-        },
-        items: [
-          {
-            src: require('@/assets/images/resume.png'),
-            w: 2160,
-            h: 2796
-          }
-        ]
-      }
+      currentYear: new Date().getFullYear()
     }
   },
   methods: {
-    showPhotoSwipe: function() {
-      this.photoswipeOptions.isOpen = true;
-    },
-    hidePhotoSwipe: function() {
-      this.photoswipeOptions.isOpen = false;
-    },
     revealCopiedText: function() {
       this.$refs.copiedText.classList.add('reveal');
       setTimeout(function() { 
