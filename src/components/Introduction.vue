@@ -18,9 +18,6 @@ export default {
 
   .first-sentence {
     margin-bottom: 12px;
-    @include theme() {
-      color: theme-get('default-theme-inverse');
-    }
   }
 
   .name {

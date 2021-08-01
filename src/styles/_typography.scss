@@ -39,7 +39,12 @@ p {
     line-height: 40px;
     @include theme() {
       color: theme-get('p-regular-color');
-    }  
+    }
+    &.first-sentence {
+      @include theme() {
+        color: theme-get('default-theme-inverse');
+      }
+    }
   }
   &.small {
     font-size: 20px;

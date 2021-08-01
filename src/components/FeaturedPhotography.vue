@@ -56,7 +56,6 @@ export default {
 
     img {
       height: 400px;
-      
     }
   }
 
