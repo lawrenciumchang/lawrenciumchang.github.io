@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <vue-headful title="About | Lawrence Chang" />
+    <DraggableContainer />
     <v-photoswipe :isOpen="photoswipeOptions.isOpen" :items="photoswipeOptions.items" :options="photoswipeOptions.options" @close="hidePhotoSwipe"></v-photoswipe>
     <div class="bio contained">
       <div v-scroll-reveal class="image-container">
@@ -32,12 +33,14 @@
 </template>
 
 <script>
+import DraggableContainer from '@/components/DraggableContainer.vue';
 import { PhotoSwipe } from 'v-photoswipe';
 import currentlyList from '@/data/currentlyList.json';
 
 export default {
   name: 'About',
   components: {
+    DraggableContainer,
     'v-photoswipe': PhotoSwipe
   },
   data() {
@@ -143,30 +146,7 @@ export default {
     margin-bottom: 100px;
   }
 
-  .overflow-container {
-    color: $white;
-    display: flex;
-    overflow-x: hidden;
-  }
-
-  .scroll-container {
-    display: flex;
-    overflow-x: scroll;
-    padding: 0 calc(50% - 600px);
-
-    @media (max-width: $desktop-breakpoint) {
-      padding: 0 24px;
-    }
-  }
-
   .item-container {
-    // display: grid;
-    // grid-row-gap: 16px;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
     img {
       height: 320px;
       margin-bottom: 16px;

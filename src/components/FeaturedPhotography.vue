@@ -1,9 +1,10 @@
 <template>
   <div class="featured-photography">
+    <DraggableContainer />
     <h1 v-scroll-reveal class="contained">photography</h1>
     <div v-scroll-reveal class="overflow-container">
       <div class="scroll-container">
-        <div class="photo" v-for="index in 6" :key="index">
+        <div class="item-container" v-for="index in 6" :key="index">
           <img v-lazy="'/assets/images/photography/' + index + '.jpg'" />
         </div>
       </div>
@@ -14,8 +15,13 @@
 </template>
 
 <script>
+import DraggableContainer from '@/components/DraggableContainer.vue';
+
 export default {
-  name: 'FeaturedPhotography'
+  name: 'FeaturedPhotography',
+  components: {
+    DraggableContainer
+  }
 }
 </script>
 
@@ -32,31 +38,7 @@ export default {
   }
 
   .overflow-container {
-    color: $white;
-    display: flex;
-    overflow-x: hidden;
-  }
-
-  .scroll-container {
-    display: flex;
-    overflow-x: scroll;
-    padding: 0 calc(50% - 600px);
-
-    @media (max-width: $desktop-breakpoint) {
-      padding: 0 24px;
-    }
-  }
-
-  .photo {
-    display: inline-flex;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    img {
-      height: 400px;
-    }
+    margin-bottom: 8px;
   }
 
   .view-more {
