@@ -15,14 +15,15 @@
     <div class="currently">
       <div v-scroll-reveal class="type-container contained">
         <h2 class="currently-text">currently</h2>
-        <vue-typed-js :strings="['reading', 'watching', 'playing', 'listening']" :smartBackspace="true" :backSpeed="50" :backDelay="1600" :loop="true" :startDelay="1600">
+        <vue-typed-js :strings="['reading', 'watching', 'playing', 'listening']" :smartBackspace="true" :backSpeed="50" :backDelay="1600" :loop="true" :startDelay="1600" :showCursor="false">
           <h2 class="typing"></h2>
         </vue-typed-js>
       </div>
       <div v-scroll-reveal class="overflow-container">
         <div class="scroll-container">
-          <div class="photo" v-for="index in 7" :key="index">
-            <img v-lazy="'/assets/images/about/' + index + '.png'" />
+          <div class="item-container" v-for="item in currentlyList" :key="item.caption">
+            <img v-lazy="item.img" />
+            <p class="small">{{ item.caption }}</p>
           </div>
         </div>
       </div>
@@ -32,6 +33,7 @@
 
 <script>
 import { PhotoSwipe } from 'v-photoswipe';
+import currentlyList from '@/data/currentlyList.json';
 
 export default {
   name: 'About',
@@ -40,6 +42,7 @@ export default {
   },
   data() {
     return {
+      currentlyList: currentlyList,
       photoswipeOptions: {
         isOpen: false,
         isOpenGallery: false,
@@ -136,6 +139,10 @@ export default {
     }
   }
 
+  .currently {
+    margin-bottom: 100px;
+  }
+
   .overflow-container {
     color: $white;
     display: flex;
@@ -152,8 +159,9 @@ export default {
     }
   }
 
-  .photo {
-    display: inline-flex;
+  .item-container {
+    // display: grid;
+    // grid-row-gap: 16px;
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -161,6 +169,11 @@ export default {
 
     img {
       height: 320px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      width: 75%;
     }
   }
 }
