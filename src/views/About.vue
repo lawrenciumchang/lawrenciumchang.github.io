@@ -78,7 +78,7 @@ export default {
 
 <style scoped lang="scss">
 .about {
-  min-height: 110vh;
+  min-height: 100vh;
   padding-top: 100px;
 
   .contained {
@@ -143,7 +143,7 @@ export default {
   }
 
   .currently {
-    margin-bottom: 100px;
+    margin-bottom: 320px;
   }
 
   .item-container {
