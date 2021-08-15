@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import projects from '@/data/projects.json';
+import projects from '@/data/projectList.json';
 
 export default {
   name: 'FeaturedProjects',

@@ -1,0 +1,32 @@
+{
+  "id": "credera",
+  "title": "credera",
+  "displayTitle": "Credera",
+  "description": "",
+  "timeframe": "",
+  "role": "",
+  "category": "",
+  "pageContent": [
+    {
+      "type": "title",
+      "content": ""
+    },
+    {
+      "type": "paragraph",
+      "content": ""
+    },
+    {
+      "type": "image",
+      "content": "",
+      "caption": ""
+    },
+    {
+      "type": "bullets",
+      "content": [
+        ""
+      ]
+    }
+  ],
+  "previousId": "clackd",
+  "nextId": "wff"
+}

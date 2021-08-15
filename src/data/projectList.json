@@ -1,0 +1,20 @@
+[
+  {
+    "id": "clackd",
+    "title": "Clackd",
+    "description": "The hub for mechanical keyboards.",
+    "coverPhotoSrc": "/assets/images/clackd/clackd_cover.png"
+  },
+  {
+    "id": "credera",
+    "title": "Credera",
+    "description": "Unlock extraordinary.",
+    "coverPhotoSrc": "/assets/images/credera/credera_cover.png"
+  },
+  {
+    "id": "wff",
+    "title": "WFF",
+    "description": "Connect. Grow. Inspire.",
+    "coverPhotoSrc": "/assets/images/wff/wff_cover.png"
+  }
+] 
