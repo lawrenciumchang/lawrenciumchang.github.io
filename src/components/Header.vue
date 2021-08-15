@@ -251,4 +251,11 @@ export default {
     border-radius: 50%;
   }
 }
+img[lazy=loading] {
+  opacity: 0;
+  transition: $ease-in;
+}
+img[lazy=loaded] {
+  opacity: 1;
+}
 </style>
