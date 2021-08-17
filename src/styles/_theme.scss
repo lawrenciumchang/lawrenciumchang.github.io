@@ -11,7 +11,10 @@ $themes: (
     'header-copied-text-color': $white,
     'theme-toggle-bg-color': $gray-02,
     'footer-bg-color': $gray-02,
-    'highlight-color': $gray-03
+    'highlight-color': $gray-03,
+    'project-stat-label-color': $gray-04,
+    'project-stat-description-color': $white,
+    'image-border-color': $gray-01
   ),
   lightTheme: (
     'default-theme-inverse': $gray-01,
@@ -25,7 +28,10 @@ $themes: (
     'header-copied-text-color': $gray-01,
     'theme-toggle-bg-color': $gray-01,
     'footer-bg-color': $gray-01,
-    'highlight-color': $blue-outline
+    'highlight-color': $blue-outline,
+    'project-stat-label-color': $gray-06,
+    'project-stat-description-color': $gray-01,
+    'image-border-color': $gray-06
   )
 );
 

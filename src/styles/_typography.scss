@@ -28,7 +28,7 @@ h3 {
   transition: $ease-in;
   @include theme() {
     color: theme-get('h3-color');
-  }  
+  }
 }
 
 p {

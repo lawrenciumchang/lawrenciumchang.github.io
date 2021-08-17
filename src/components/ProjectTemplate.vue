@@ -1,11 +1,53 @@
 <template>
   <div class="project-template">
     <vue-headful :title="project.displayTitle + ' | Lawrence Chang'" />
-    <div v-scroll-reveal class="title-container section">
+    <!-- Title -->
+    <div v-scroll-reveal class="title-container">
       <h1>{{ project.title }}</h1>
       <p class="regular first-sentence">{{ project.description }}</p>
     </div>
-   
+    <!-- Stats -->
+    <div v-scroll-reveal class="stats-container">
+      <div>
+        <p class="small">Timeframe</p>
+        <p class="regular">{{ project.timeframe }}</p>
+      </div>
+      <div>
+        <p class="small">Role</p>
+        <p class="regular">{{ project.role }}</p>
+      </div>
+      <div>
+        <p class="small">Category</p>
+        <p class="regular">{{ project.category }}</p>
+      </div>
+    </div>
+    <!-- Dynamic Content -->
+    <div class="block-container">
+      <div v-scroll-reveal v-for="block in project.pageContent" :key="block.index">
+        <!-- Title -->
+        <div v-if="block.type === 'title'" class="title-block">
+          <h2>{{ block.content }}</h2>
+        </div>
+        <!-- Paragraph -->
+        <div v-if="block.type === 'paragraph'" class="paragraph-block">
+          <p class="regular">{{ block.content }}</p>
+        </div>
+        <!-- Bullets -->
+        <div v-if="block.type === 'bullets'" class="bullet-block">
+          <ul>
+            <li v-for="item in block.content" :key="item.index">
+              <span class="first-sentence">{{ item.firstSentence }}</span>
+              <span> {{ item.remainingContent }}</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Image -->
+        <div v-if="block.type === 'image'" class="image-block">
+          <img v-lazy="block.content" :alt="block.caption" />
+          <span v-if="block.caption" class="caption">{{ block.caption }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,12 +88,112 @@ export default {
 
 <style scoped lang="scss">
 .project-template {
-  .section {
-    margin-bottom: 100px;
-  }
-  
   .title-container {
-    margin-top: 140px;
+    margin-bottom: 100px;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .stats-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: $mobile-breakpoint) {
+      grid-row-gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    p {
+      transition: $ease-in;
+      &.small {
+        @include theme() {
+          color: theme-get('project-stat-label-color');
+        }
+      }
+      &.regular {
+        @include theme() {
+          color: theme-get('project-stat-description-color');
+        }
+      }
+    }
+  }
+
+  .block-container {
+    margin-bottom: 140px;
+  }
+
+  .title-block, .image-block {
+    margin-top: 100px;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-top: 60px;
+    }
+  }
+
+  .paragraph-block, .bullet-block {
+    margin-top: 24px;
+  }
+
+  .bullet-block {
+    padding-left: 20px;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      &::before {
+        content: '\2022';
+        display: inline-block;
+        font-size: 28px;
+        margin-left: -1em;
+        width: 1em;
+        @include theme() {
+          color: theme-get('p-regular-color');
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 40px;
+      transition: $ease-in;
+      @include theme() {
+        color: theme-get('p-regular-color');
+      }
+
+      &.first-sentence {
+        @include theme() {
+          color: theme-get('default-theme-inverse');
+        }
+      }
+    }
+  }
+
+  .image-block {
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .caption {
+      display: block;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+      text-align: center;
+      @include theme() {
+        color: theme-get('default-theme-inverse');
+      }
+    }
   }
 }
 img[lazy=loading] {

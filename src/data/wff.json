@@ -13,7 +13,11 @@
     },
     {
       "type": "paragraph",
-      "content": "WFF has many members in their organization, with the bulk of activities consisting of in-person events. Over the months leading up to this project, members voiced challenges of finding and registering for events, building ongoing relationships through the organization, and locating a central repository of resources to help develop their career. I stepped in to lead the effort in designing a solution that addressed these concerns.\nThe organization started with a large list of requirements -- all needs and wants from members of the organization and partners who helped sponsor events. My first challenge was to cut through all the noise and to really understand what was feasible and appropriate to build in our timeframe of eight months. Along the way, I conducted interviews with stakeholders, partners, and members to identify key themes. All of this discovery and planning culminated in a sitemap that underwent several revisions. It was this document that helped align the team on what we were building, who we were building it for, and how we would define success."
+      "content": "WFF has many members in their organization, with the bulk of activities consisting of in-person events. Over the months leading up to this project, members voiced challenges of finding and registering for events, building ongoing relationships through the organization, and locating a central repository of resources to help develop their career. I stepped in to lead the effort in designing a solution that addressed these concerns."
+    },
+    {
+      "type": "paragraph",
+      "content": "The organization started with a large list of requirements -- all needs and wants from members of the organization and partners who helped sponsor events. My first challenge was to cut through all the noise and to really understand what was feasible and appropriate to build in our timeframe of eight months. Along the way, I conducted interviews with stakeholders, partners, and members to identify key themes. All of this discovery and planning culminated in a sitemap that underwent several revisions. It was this document that helped align the team on what we were building, who we were building it for, and how we would define success."
     },
     {
       "type": "image",
@@ -29,10 +33,67 @@
       "content": "After initial discovery and planning, I led a design sprint to kickstart the functional and visual design process. Our defining question in this session was to understand how we could build a product that would entice users to revisit the site on an ongoing basis. The focus of this activity was rooted in the landing page of this application. Through this activity, we uncovered many sources of inspiration, understood how information was perceived by different audiences, and defined a structure to where content would live on the site. Although this design sprint only addressed a sliver of the work we were doing, it served as a starting point and foundation for the rest of the project."
     },
     {
+      "type": "image",
+      "content": "/assets/images/wff/dashboard.png",
+      "caption": "Dashboard before and after - incorporating design sprint ideas, user testing feedback, and a new visual language"
+    },
+    {
+      "type": "title",
+      "content": "user testing"
+    },
+    {
+      "type": "paragraph",
+      "content": "Throughout the visual design process, I worked with my team to conduct weekly user testing sessions. What good is a design if users don’t find it useful? I worked to define a testing schedule, wrote scripts, and conducted virtual rounds of testing with multiple audiences. The time spent on this part of the project was invaluable and arguably the most important piece of the process. We learned of challenges users faced when engaging with the prototype, validated our assumptions on design architecture and visual elements, and were able further understand the mindset of a future user of the platform."
+    },
+    {
+      "type": "image",
+      "content": "/assets/images/wff/sidebar.png",
+      "caption": "Sidebar navigation before and after - the smallest changes make the biggest impact"
+    },
+    {
+      "type": "title",
+      "content": "the result"
+    },
+    {
+      "type": "paragraph",
+      "content": "After months of defining the application scope, creating visual designs and prototypes, testing, and development, we launched the web platform that would become the central hub of a WFF member. The portal allowed users to connect with one another, easily locate and register for events, discover articles and resources, take self-assessment exams, and manage members from a partner level. The release also happened to coincide with the global pandemic in 2020. As WFF had to cancel their annual conference and local events, the portal served as a powerful method to provide online content and to connect users remotely."
+    },
+    {
+      "type": "image",
+      "content": "/assets/images/wff/screens.png"
+    },
+    {
+      "type": "title",
+      "content": "learnings"
+    },
+    {
+      "type": "paragraph",
+      "content": "This project was a lot of fun in being able to create something that would connect individuals and empower future women leaders. Through accomplishing so much, there were many positive learnings and new insights I have taken with me on following projects."
+    },
+    {
       "type": "bullets",
       "content": [
-        ""
+        {
+          "firstSentence": "Initial project planning and discovery is essential.",
+          "remainingContent": "If I had designed to the initial spreadsheet of requirements, the project would have had conflicting direction and lack of structure. Being able to parse through information, interview appropriate individuals, and plan designs around a sitemap were key to success."
+        },
+        {
+          "firstSentence": "User testing and feedback are essential to any design project.",
+          "remainingContent": "We can design through an understanding of best UX practices as well as accepted research. But each application, audience, and purpose is unique. Having a voice to validate or challenge your assumptions ultimately helps create the best possible product."
+        },
+        {
+          "firstSentence": "Understanding when and why to conduct a design sprint helps to align on where to best allocate resources.",
+          "remainingContent": "For this project, the design sprint was useful in getting different voices involved and generating ideas and structure. However, I’ve learned that design sprints are more conducive when the problem is specific yet complex. In this instance, we already knew we were aligned on building a web platform for users. I would have repurposed this time to conduct additional interviews, testing, and visual exploration. "
+        },
+        {
+          "firstSentence": "Visual design is highly subjective, but coming to the table with multiple options is always recommended.",
+          "remainingContent": "I started the project with a singular design, preferring to focus my attention on solving the the content and functionality challenges ahead. In revisiting a visual exploration, I learned that the best option is to come up with many options. This allows us to consider different styles, select what works from each option, and ultimately drives a better design conversation."
+        }
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Thank you for reading! Check out some of my other projects below."
     }
   ],
   "previousId": "credera",

@@ -24,5 +24,6 @@ export default {
 .project {
   @include page-layout;
   min-height: 100vh;
+  padding-top: 100px;
 }
 </style>
