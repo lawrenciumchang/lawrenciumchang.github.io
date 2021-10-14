@@ -227,7 +227,12 @@ export default {
       background-size: contain;
       height: 280px;
       margin: 0 auto;
+      transition: $ease-in;
       width: 800px;
+
+      &:hover {
+        transform: scale(1.01);
+      }
 
       @media (max-width: 800px) {
         width: 90vw;
