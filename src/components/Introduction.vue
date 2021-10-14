@@ -1,6 +1,6 @@
 <template>
   <div class="introduction">
-    <p v-scroll-reveal class="regular first-sentence">Hey there, I'm <span class="name">Lawrence</span>. Senior UX Designer at Credera by <span class="icon icon-day"></span>. Product Design Director at Clackd by <span class="icon icon-night"></span>.</p>
+    <p v-scroll-reveal class="regular first-sentence">Hey there, I'm Lawrence. Senior UX Designer at Credera by <span class="icon icon-day"></span>. Product Design Director at Clackd by <span class="icon icon-night"></span>.</p>
     <p v-scroll-reveal class="regular">I lead design at companies of various stages, turning startup ideas into tangible products and helping clients transform their digital needs into world-class experiences. <span class="arrow">↓</span>Scroll down<span class="arrow">↓</span> to see some of my work and to learn more about me!</p>
   </div>
 </template>
@@ -18,10 +18,6 @@ export default {
 
   .first-sentence {
     margin-bottom: 12px;
-  }
-
-  .name {
-    color: $blue-primary;
   }
 
   .icon {

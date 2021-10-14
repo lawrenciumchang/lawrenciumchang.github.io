@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <router-link v-scroll-reveal class="contained view-more large" to="/photography" @click="gaTrackClick('Home', 'View Photography')">see everything</router-link>
+    <router-link v-scroll-reveal class="contained view-more large" to="/photography" @click="gaTrackClick('Home', 'View Photography')">see more</router-link>
     
   </div>
 </template>
