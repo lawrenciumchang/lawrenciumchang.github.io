@@ -47,6 +47,7 @@ export default {
   display: flex;
   overflow-x: scroll;
   padding: 0 calc(50% - 600px);
+  scrollbar-width: none;
 
   @media (max-width: $desktop-breakpoint) {
     padding: 0 24px;
