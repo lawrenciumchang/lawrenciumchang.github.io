@@ -2,29 +2,86 @@
   "id": "credera",
   "title": "credera",
   "displayTitle": "Credera",
-  "description": "",
-  "timeframe": "",
-  "role": "",
-  "category": "",
+  "description": "Credera is a technology consulting firm offering services of strategy and transformation across many industries. I helped turn their recent rebrand into a success through a complete redesign of their online experience.",
+  "timeframe": "2020",
+  "role": "UI/UX Design, Branding",
+  "category": "Business, Marketing",
   "pageContent": [
     {
       "type": "title",
-      "content": ""
+      "content": "the problem"
     },
     {
       "type": "paragraph",
-      "content": ""
+      "content": "With a visually outdated website, disorganized content architecture, and uncertainty around their target audience, Credera sought to rebuild not only their online presense but their entire identity. Through this process, I came onboard to assist with the visual and experience design of the website. Rethinking page architecture and layout, I combined a baseline of styles established for the new visual look to redefine how the online experience would behave."
     },
     {
       "type": "image",
-      "content": "",
+      "content": "/assets/images/credera/style_guide.png",
+      "caption": "A sample of style guide components"
+    },
+    {
+      "type": "title",
+      "content": "careers"
+    },
+    {
+      "type": "paragraph",
+      "content": "Though I constructed many pages of the site, I wanted to zero in on the careers pages. A major focus of rebuilding the website was to identify who was coming to the site and why. I discovered that half of visitors were clients looking to understand who Credera is and to find a potential partnership, while the other half was a blend of students and experienced professionals looking for a shift in their career."
+    },
+    {
+      "type": "paragraph",
+      "content": "While rethinking how our users would interact with the site, I took advantage of the rebranding to not only apply a new coat of paint, but to provide a better job searching experience for the candidate. Conducting this process, I found myself interviewing users, working hand in hand with talent acquisition to gather requirements, and conducting competitive research to understand pain points across the job search market. Even though job application seems trivial and a baseline implementation across many websites, I sought to provide the best experience, as I believe each step of a user’s experience is of equal importance."
+    },
+    {
+      "type": "image",
+      "content": "/assets/images/credera/careers.png",
+      "caption": "Careers application page before and after"
+    },
+    {
+      "type": "title",
+      "content": "the result"
+    },
+    {
+      "type": "paragraph",
+      "content": "After months of planning, research, designing, and working with the development team, the new visual identity was shown of to the world in August of 2020. The launch was a success -- providing a new identity and voice for Credera to tell their story. "
+    },
+    {
+      "type": "paragraph",
+      "content": "Digging into the data after the release, views across the careers pages had doubled in comparison to the previous year. There was also an 80% increase in clickthrough rate for job applications. The application process has been smoother for the hiring team, and Credera has grown significantly in numbers since the rebrand."
+    },
+    {
+      "type": "image",
+      "content": "/assets/images/credera/website_preview.png",
       "caption": ""
+    },
+    {
+      "type": "title",
+      "content": "learnings"
+    },
+    {
+      "type": "paragraph",
+      "content": "Working on this rebrand was no small feat, and one of the most rewarding projects I had been a part of. Here are some of my takeaways."
     },
     {
       "type": "bullets",
       "content": [
-        ""
+        {
+          "firstSentence": "Rebranding isn’t just a task of redesigning a website.",
+          "remainingContent": "It involves high collaboration and coordiation between many different teams. Understanding how to voice a company’s message, who the audience drivers are, and main goals of a website, marketing material, presentations, and more all play a role into every decision along the way."
+        },
+        {
+          "firstSentence": "An accelerated timeline isn’t ideal, but a reality due to various factors and business needs.",
+          "remainingContent": "The rebrand covered the span of a couple months. At times I was required to make fast decisions without the ability to explore further options. Given the right circumstances, I would plan adequate time around all aspects of the project to ensure ample time for exploration, testing, and design implementation."
+        },
+        {
+          "firstSentence": "Competitive research is essential.",
+          "remainingContent": "Understanding the design landscape not only provides ideas, but helps to inform what users come to expect, what pain points may exist, and areas of improvement that can be created as part of a new solution."
+        }
       ]
+    },
+    {
+      "type": "paragraph",
+      "content": "Thank you for reading! Check out some of my other projects below."
     }
   ],
   "previousId": "clackd",
