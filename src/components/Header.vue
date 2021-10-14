@@ -2,25 +2,25 @@
   <div class="header">
     <div class="left">
       <div class="name-container">
-        <router-link class="name" to="/" @click="gaTrackClick('Header, Home')"><img class="profile-photo" v-lazy="profilePhotoSrc">lawrence chang</router-link>
+        <router-link class="name" to="/" @click="gaTrackClick('Header', 'Home')"><img class="profile-photo" v-lazy="profilePhotoSrc">lawrence chang</router-link>
       </div>
       <div class="toggle-container">
         <div class="theme-toggle">
-          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget)"></span>
+          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget); gaTrackClick('Header', 'Toggle Theme')"></span>
         </div>
       </div>
     </div>
     <div class="right">
-      <router-link to="/work/credera" @click="gaTrackClick('Header, UX Design')">ux design</router-link>
-      <router-link to="/photography" @click="gaTrackClick('Header, Photography')">photography</router-link>
-      <router-link to="/about" @click="gaTrackClick('Header, About')">about</router-link>
+      <router-link to="/work/credera" @click="gaTrackClick('Header', 'UX Design')">ux design</router-link>
+      <router-link to="/photography" @click="gaTrackClick('Header', 'Photography')">photography</router-link>
+      <router-link to="/about" @click="gaTrackClick('Header', 'About')">about</router-link>
       <div class="get-in-touch-container">
-        <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header, Get In Touch')">get in touch</a>
+        <a class="get-in-touch" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Header', 'Get In Touch')">get in touch</a>
         <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
       </div>
       <div class="toggle-container">
         <div class="theme-toggle">
-          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget)"></span>
+          <span class="slider round" :class='darkTheme ? "dark" : ""' @click="toggleTheme(); changeToggleStyle($event.currentTarget); gaTrackClick('Header', 'Toggle Theme')"></span>
         </div>
       </div>
     </div>

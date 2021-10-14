@@ -6,21 +6,21 @@
           <p v-scroll-reveal class="regular hello">Thanks for stopping by!</p>
           <p v-scroll-reveal class="regular message">Want to create something together or just chat? Let’s grab a virtual coffee and talk about anything from photography to design to mechanical keyboards.</p>
           <div v-scroll-reveal class="get-in-touch-container">
-            <a class="get-in-touch large" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Footer, Get In Touch')">get in touch</a>
+            <a class="get-in-touch large" data-clipboard-text="contact@lawrencechang.design" @click="revealCopiedText(); gaTrackClick('Footer', 'Get In Touch')">get in touch</a>
             <span ref="copiedText" class="copied-text">My email has been copied to your clipboard!</span>
           </div>
         </div>
         <div class="right">
           <div class="group">
-            <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Footer, About')">about</router-link>
+            <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Footer', 'About')">about</router-link>
           </div>
           <div class="group">
-            <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer, Clackd')">clackd</router-link>
-            <router-link v-scroll-reveal to="/work/credera" @click="gaTrackClick('Footer, Credera')">credera</router-link>
-            <router-link v-scroll-reveal to="/work/wff" @click="gaTrackClick('Footer, WFF')">wff</router-link>
+            <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer', 'Clackd')">clackd</router-link>
+            <router-link v-scroll-reveal to="/work/credera" @click="gaTrackClick('Footer', 'Credera')">credera</router-link>
+            <router-link v-scroll-reveal to="/work/wff" @click="gaTrackClick('Footer', 'WFF')">wff</router-link>
           </div>
           <div class="group">
-            <router-link v-scroll-reveal to="/photography" @click="gaTrackClick('Footer, Photography')">photography</router-link>
+            <router-link v-scroll-reveal to="/photography" @click="gaTrackClick('Footer', 'Photography')">photography</router-link>
           </div>
           <div class="group">
             <a v-scroll-reveal href="https://www.linkedin.com/in/lawrence-chang-3799914b" target="_blank" @click="gaTrackClick('Footer', 'LinkedIn')">linkedin</a>

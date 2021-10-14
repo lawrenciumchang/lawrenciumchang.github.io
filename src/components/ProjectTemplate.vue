@@ -60,7 +60,7 @@
         </router-link>
       </div>
       <div class="next">
-        <router-link :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.nextId)">
+        <router-link :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Next - ' + project.nextId)">
           <h1><span class="next-label">next </span><span class="next-title">{{ project.nextId }}</span></h1>
         </router-link>
       </div>
