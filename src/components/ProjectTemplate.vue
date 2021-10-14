@@ -48,6 +48,19 @@
         </div>
       </div>
     </div>
+    <!-- Previous / Next -->
+    <div class="previous-next-container">
+      <div class="previous">
+        <router-link :to="'/work/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
+          <h1><span class="previous-label">previous </span><span class="previous-title">{{ project.previousId }}</span></h1>
+        </router-link>
+      </div>
+      <div class="next">
+        <router-link :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.nextId)">
+          <h1><span class="next-label">next </span><span class="next-title">{{ project.nextId }}</span></h1>
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -192,6 +205,42 @@ export default {
       text-align: center;
       @include theme() {
         color: theme-get('default-theme-inverse');
+      }
+    }
+  }
+
+  .previous-next-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 140px;
+
+    .next {
+      text-align: right;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .previous-label, .next-label {
+      @include theme() {
+        color: theme-get('prev-next-label-color');
+      }
+    }
+
+    .previous-title, .next-title {
+      @include theme() {
+        color: theme-get('prev-next-title-color');
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+      .next {
+        text-align: left;
+      }
+      .previous-label, .next-label {
+        display: block;
       }
     }
   }

@@ -14,7 +14,9 @@ $themes: (
     'highlight-color': $gray-03,
     'project-stat-label-color': $gray-04,
     'project-stat-description-color': $white,
-    'image-border-color': $gray-01
+    'image-border-color': $gray-01,
+    'prev-next-label-color': $gray-04,
+    'prev-next-title-color': $white
   ),
   lightTheme: (
     'default-theme-inverse': $gray-01,
@@ -31,7 +33,9 @@ $themes: (
     'highlight-color': $blue-outline,
     'project-stat-label-color': $gray-06,
     'project-stat-description-color': $gray-01,
-    'image-border-color': $gray-06
+    'image-border-color': $gray-06,
+    'prev-next-label-color': $gray-06,
+    'prev-next-title-color': $gray-01
   )
 );
 
