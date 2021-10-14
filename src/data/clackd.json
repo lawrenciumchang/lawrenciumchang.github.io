@@ -2,29 +2,13 @@
   "id": "clackd",
   "title": "clackd",
   "displayTitle": "Clackd",
-  "description": "",
-  "timeframe": "",
-  "role": "",
-  "category": "",
+  "description": "Clackd is an online platform that aims to bring the mechanical keyboard community into one central hub. I helped lead a team of designers and developers to bring this vision to life.",
+  "timeframe": "2020 - Present",
+  "role": "Product Design Director, Strategy",
+  "category": "Social",
   "pageContent": [
     {
-      "type": "title",
-      "content": ""
-    },
-    {
-      "type": "paragraph",
-      "content": ""
-    },
-    {
-      "type": "image",
-      "content": "",
-      "caption": ""
-    },
-    {
-      "type": "bullets",
-      "content": [
-        ""
-      ]
+      "type": "clackd-placeholder"
     }
   ],
   "previousId": "wff",

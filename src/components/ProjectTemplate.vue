@@ -46,6 +46,10 @@
           <img v-lazy="block.content" :alt="block.caption" />
           <span v-if="block.caption" class="caption">{{ block.caption }}</span>
         </div>
+        <!-- Clackd Placeholder -->
+        <div v-if="block.type === 'clackd-placeholder'" class="clackd-placeholder-block">
+          <div class="placeholder-image" />
+        </div>
       </div>
     </div>
     <!-- Previous / Next -->
@@ -205,6 +209,28 @@ export default {
       text-align: center;
       @include theme() {
         color: theme-get('default-theme-inverse');
+      }
+    }
+  }
+
+  .clackd-placeholder-block {
+    margin: 200px 0;
+    @media (max-width: 800px) {
+      margin: 100px 0;
+    }
+    .placeholder-image {
+      @include theme() {
+        background-image: theme-get('clackd-soon-tm-photo');
+      }
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 280px;
+      margin: 0 auto;
+      width: 800px;
+
+      @media (max-width: 800px) {
+        width: 90vw;
       }
     }
   }
