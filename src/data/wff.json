@@ -17,7 +17,7 @@
     },
     {
       "type": "paragraph",
-      "content": "The organization started with a large list of requirements -- all needs and wants from members of the organization and partners who helped sponsor events. My first challenge was to cut through all the noise and to really understand what was feasible and appropriate to build in our timeframe of eight months. Along the way, I conducted interviews with stakeholders, partners, and members to identify key themes. All of this discovery and planning culminated in a sitemap that underwent several revisions. It was this document that helped align the team on what we were building, who we were building it for, and how we would define success."
+      "content": "The organization started with a large list of requirements — all needs and wants from members of the organization and partners who helped sponsor events. My first challenge was to cut through all the noise and to really understand what was feasible and appropriate to build in our timeframe of eight months. Along the way, I conducted interviews with stakeholders, partners, and members to identify key themes. All of this discovery and planning culminated in a sitemap that underwent several revisions. It was this document that helped align the team on what we were building, who we were building it for, and how we would define success."
     },
     {
       "type": "image",
@@ -56,7 +56,7 @@
     },
     {
       "type": "paragraph",
-      "content": "After months of defining the application scope, creating visual designs and prototypes, testing, and development, we launched the web platform that would become the central hub of a WFF member. The portal allowed users to connect with one another, easily locate and register for events, discover articles and resources, take self-assessment exams, and manage members from a partner level. The release also happened to coincide with the global pandemic in 2020. As WFF had to cancel their annual conference and local events, the portal served as a powerful method to provide online content and to connect users remotely."
+      "content": "After months of defining the application scope, creating visual designs and prototypes, testing, and development, we launched the web platform that would become the central hub of a WFF member. The portal allowed users to connect with one another, easily locate and register for events, discover articles and resources, take self-assessment exams, and manage members from a partner level. The release also happened to coincide with the pandemic in 2020. As WFF had to cancel their annual conference and local events, the portal served as a powerful method to provide online content and to connect users remotely."
     },
     {
       "type": "image",
@@ -68,7 +68,7 @@
     },
     {
       "type": "paragraph",
-      "content": "This project was a lot of fun in being able to create something that would connect individuals and empower future women leaders. Through accomplishing so much, there were many positive learnings and new insights I have taken with me on following projects."
+      "content": "This project was very rewarding in being able to create something that would connect individuals and empower future women leaders. There were many positive learnings and insights I have taken with me on future projects."
     },
     {
       "type": "bullets",
@@ -78,7 +78,7 @@
           "remainingContent": "If I had designed to the initial spreadsheet of requirements, the project would have had conflicting direction and lack of structure. Being able to parse through information, interview appropriate individuals, and plan designs around a sitemap were key to success."
         },
         {
-          "firstSentence": "User testing and feedback are essential to any design project.",
+          "firstSentence": "User testing and feedback are necessary to any design project.",
           "remainingContent": "We can design through an understanding of best UX practices as well as accepted research. But each application, audience, and purpose is unique. Having a voice to validate or challenge your assumptions ultimately helps create the best possible product."
         },
         {
@@ -86,14 +86,14 @@
           "remainingContent": "For this project, the design sprint was useful in getting different voices involved and generating ideas and structure. However, I’ve learned that design sprints are more conducive when the problem is specific yet complex. In this instance, we already knew we were aligned on building a web platform for users. I would have repurposed this time to conduct additional interviews, testing, and visual exploration. "
         },
         {
-          "firstSentence": "Visual design is highly subjective, but coming to the table with multiple options is always recommended.",
-          "remainingContent": "I started the project with a singular design, preferring to focus my attention on solving the the content and functionality challenges ahead. In revisiting a visual exploration, I learned that the best option is to come up with many options. This allows us to consider different styles, select what works from each option, and ultimately drives a better design conversation."
+          "firstSentence": "Visual design is highly subjective, but being able to come to the table with multiple options is always recommended.",
+          "remainingContent": "I started the project with a single visual design language and preferred to place my attention on solving the the content and functional challenges instead. When revisiting the UI, I learned that the best method is to come up a couple variations. This allows us to consider different styles, select what works from each option, and ultimately drives a better design conversation."
         }
       ]
     },
     {
       "type": "paragraph",
-      "content": "Thank you for reading! Check out some of my other projects below."
+      "content": "Thank you for reading! Check out some of my other projects using the links below."
     }
   ],
   "previousId": "credera",
