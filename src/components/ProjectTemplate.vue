@@ -46,6 +46,10 @@
           <img v-lazy="block.content" :alt="block.caption" />
           <span v-if="block.caption" class="caption">{{ block.caption }}</span>
         </div>
+        <!-- Centered Paragraph -->
+        <div v-if="block.type === 'paragraph-centered'" class="paragraph-block centered">
+          <p class="regular">{{ block.content }}</p>
+        </div>
         <!-- Clackd Placeholder -->
         <div v-if="block.type === 'clackd-placeholder'" class="clackd-placeholder-block">
           <div class="placeholder-image" />
@@ -152,6 +156,18 @@ export default {
 
   .paragraph-block, .bullet-block {
     margin-top: 24px;
+  }
+
+  .paragraph-block {
+    &.centered {
+      p {
+        text-align: center;
+
+        @media (max-width: $mobile-breakpoint) {
+          text-align: left;
+        }
+      }
+    }
   }
 
   .bullet-block {

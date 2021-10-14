@@ -9,6 +9,10 @@
   "pageContent": [
     {
       "type": "clackd-placeholder"
+    },
+    {
+      "type": "paragraph-centered",
+      "content": "In the meantime, check out some of my other projects using the links below."
     }
   ],
   "previousId": "wff",
