@@ -244,6 +244,15 @@ export default {
       text-align: right;
     }
 
+    .previous, .next {
+      &:hover {
+        .previous-title, .next-title {
+          transition: $ease-in;
+          color: $blue-secondary;
+        }
+      }
+    }
+
     a {
       text-decoration: none;
     }
