@@ -78,7 +78,6 @@ export default {
 
 <style scoped lang="scss">
 .about {
-  min-height: 100vh;
   padding-top: 100px;
 
   .contained {
@@ -132,18 +131,19 @@ export default {
   }
 
   .resume-link {
+    color: $blue-primary;
     font-size: 24px;
     line-height: 40px;
-    @include theme() {
-      color: theme-get('p-regular-color');
-    }
     &:hover {
       color: $blue-secondary;
     }
   }
 
   .currently {
-    margin-bottom: 320px;
+    margin-bottom: 240px;
+    @media (max-width: $mobile-breakpoint) {
+      margin-bottom: 120px;
+    }
   }
 
   .item-container {

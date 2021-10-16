@@ -17,7 +17,8 @@ $themes: (
     'image-border-color': $gray-01,
     'prev-next-label-color': $gray-04,
     'prev-next-title-color': $white,
-    'clackd-soon-tm-photo': url('/assets/images/clackd/clackd_soon_tm_dark.svg')
+    'badge-background-color': $white,
+    'badge-font-color': $gray-01
   ),
   lightTheme: (
     'default-theme-inverse': $gray-01,
@@ -37,7 +38,8 @@ $themes: (
     'image-border-color': $gray-06,
     'prev-next-label-color': $gray-06,
     'prev-next-title-color': $gray-01,
-    'clackd-soon-tm-photo': url('/assets/images/clackd/clackd_soon_tm_light.svg')
+    'badge-background-color': $gray-02,
+    'badge-font-color': $white
   )
 );
 

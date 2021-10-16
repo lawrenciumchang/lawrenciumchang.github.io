@@ -3,7 +3,8 @@
     "id": "clackd",
     "title": "Clackd",
     "description": "The hub for mechanical keyboards.",
-    "coverPhotoSrc": "/assets/images/clackd/clackd_cover.png"
+    "coverPhotoSrc": "/assets/images/clackd/clackd_cover.png",
+    "comingSoon": true
   },
   {
     "id": "credera",

@@ -22,8 +22,8 @@
       </div>
     </div>
     <!-- Dynamic Content -->
-    <div class="block-container">
-      <div v-scroll-reveal v-for="block in project.pageContent" :key="block.index">
+    <div v-scroll-reveal class="block-container">
+      <div v-for="block in project.pageContent" :key="block.index">
         <!-- Title -->
         <div v-if="block.type === 'title'" class="title-block">
           <h2>{{ block.content }}</h2>
@@ -46,25 +46,17 @@
           <img v-lazy="block.content" :alt="block.caption" />
           <span v-if="block.caption" class="caption">{{ block.caption }}</span>
         </div>
-        <!-- Centered Paragraph -->
-        <div v-if="block.type === 'paragraph-centered'" class="paragraph-block centered">
-          <p class="regular">{{ block.content }}</p>
-        </div>
-        <!-- Clackd Placeholder -->
-        <div v-if="block.type === 'clackd-placeholder'" class="clackd-placeholder-block">
-          <div class="placeholder-image" />
-        </div>
       </div>
     </div>
     <!-- Previous / Next -->
-    <div class="previous-next-container">
+    <div v-scroll-reveal class="previous-next-container">
       <div class="previous">
-        <router-link :to="'/work/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
+        <router-link v-if="project.previousId" :to="'/work/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
           <h1><span class="previous-label">previous </span><span class="previous-title">{{ project.previousId }}</span></h1>
         </router-link>
       </div>
       <div class="next">
-        <router-link :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Next - ' + project.nextId)">
+        <router-link v-if="project.nextId" :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Next - ' + project.nextId)">
           <h1><span class="next-label">next </span><span class="next-title">{{ project.nextId }}</span></h1>
         </router-link>
       </div>
@@ -73,7 +65,7 @@
 </template>
 
 <script>
-import clackd from '@/data/clackd.json';
+// import clackd from '@/data/clackd.json';
 import credera from '@/data/credera.json';
 import wff from '@/data/wff.json';
 
@@ -90,8 +82,8 @@ export default {
   methods: {
     getProject: function(projectId) {
       switch(projectId) {
-        case 'clackd': 
-          return clackd;
+        // case 'clackd': 
+          // return clackd;
         case 'credera': 
           return credera;
         case 'wff':
@@ -158,18 +150,6 @@ export default {
     margin-top: 24px;
   }
 
-  .paragraph-block {
-    &.centered {
-      p {
-        text-align: center;
-
-        @media (max-width: $mobile-breakpoint) {
-          text-align: left;
-        }
-      }
-    }
-  }
-
   .bullet-block {
     padding-left: 20px;
 
@@ -225,33 +205,6 @@ export default {
       text-align: center;
       @include theme() {
         color: theme-get('default-theme-inverse');
-      }
-    }
-  }
-
-  .clackd-placeholder-block {
-    margin: 200px 0;
-    @media (max-width: 800px) {
-      margin: 100px 0;
-    }
-    .placeholder-image {
-      @include theme() {
-        background-image: theme-get('clackd-soon-tm-photo');
-      }
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 280px;
-      margin: 0 auto;
-      transition: $ease-in;
-      width: 800px;
-
-      &:hover {
-        transform: scale(1.01);
-      }
-
-      @media (max-width: 800px) {
-        width: 90vw;
       }
     }
   }

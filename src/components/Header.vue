@@ -147,11 +147,6 @@ export default {
     position: relative;
   }
 
-  .get-in-touch {
-    color: $blue-primary;
-    cursor: pointer;
-  }
-
   .copied-text {
     font-size: 12px;
     right: 0;

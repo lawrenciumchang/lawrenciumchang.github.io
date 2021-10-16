@@ -15,7 +15,7 @@
             <router-link v-scroll-reveal to="/about" @click="gaTrackClick('Footer', 'About')">about</router-link>
           </div>
           <div class="group">
-            <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer', 'Clackd')">clackd</router-link>
+            <!-- <router-link v-scroll-reveal to="/work/clackd" @click="gaTrackClick('Footer', 'Clackd')">clackd</router-link> -->
             <router-link v-scroll-reveal to="/work/credera" @click="gaTrackClick('Footer', 'Credera')">credera</router-link>
             <router-link v-scroll-reveal to="/work/wff" @click="gaTrackClick('Footer', 'WFF')">wff</router-link>
           </div>
