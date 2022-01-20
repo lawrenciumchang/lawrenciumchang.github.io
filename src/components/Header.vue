@@ -37,7 +37,7 @@ export default {
   },
   data() {
     return {
-      profilePhotoSrc: '../assets/images/avatars/avatar1.png'
+      profilePhotoSrc: '../assets/images/avatars/memoji_avatar.png'
     }
   },
   props: {
