@@ -49,7 +49,7 @@
       </div>
     </div>
     <!-- Previous / Next -->
-    <div v-scroll-reveal class="previous-next-container">
+    <div class="previous-next-container">
       <div class="previous">
         <router-link v-if="project.previousId" :to="'/project/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
           <h1><span class="previous-label">previous </span><span class="previous-title">{{ project.previousId }}</span></h1>
