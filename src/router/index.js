@@ -14,7 +14,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/work/:project_id',
+    path: '/project/:project_id',
     name: 'Project',
     component: Project
   },

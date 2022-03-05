@@ -51,12 +51,12 @@
     <!-- Previous / Next -->
     <div v-scroll-reveal class="previous-next-container">
       <div class="previous">
-        <router-link v-if="project.previousId" :to="'/work/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
+        <router-link v-if="project.previousId" :to="'/project/' + project.previousId" @click="gaTrackClick('Project - ' + project.id, 'Previous - ' + project.previousId)">
           <h1><span class="previous-label">previous </span><span class="previous-title">{{ project.previousId }}</span></h1>
         </router-link>
       </div>
       <div class="next">
-        <router-link v-if="project.nextId" :to="'/work/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Next - ' + project.nextId)">
+        <router-link v-if="project.nextId" :to="'/project/' + project.nextId" @click="gaTrackClick('Project - ' + project.id, 'Next - ' + project.nextId)">
           <h1><span class="next-label">next </span><span class="next-title">{{ project.nextId }}</span></h1>
         </router-link>
       </div>

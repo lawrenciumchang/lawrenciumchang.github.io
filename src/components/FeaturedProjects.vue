@@ -1,9 +1,9 @@
 <template>
   <div class="featured-projects">
-    <h1 v-scroll-reveal>ux design</h1>
+    <h1 v-scroll-reveal>projects</h1>
     <div class="projects-section">
       <div v-scroll-reveal class="project" :class='project.comingSoon ? "coming-soon" : ""' v-for="project in projects" :key="project.id">
-        <router-link v-if="!project.comingSoon" :to="'work/' + project.id" @click="gaTrackClick('Home', 'View Project - ' + project.title)">
+        <router-link v-if="!project.comingSoon" :to="'project/' + project.id" @click="gaTrackClick('Home', 'View Project - ' + project.title)">
           <div class="image-container">
             <img v-lazy="project.coverPhotoSrc" />
           </div>
