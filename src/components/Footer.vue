@@ -89,9 +89,16 @@ export default {
       }
 
       .right {
+        padding-top: 12px;
+        @media (max-width: $mobile-breakpoint) {
+          padding-top: 0;
+        }
         .group {
           &:not(:last-child) {
             margin-bottom: 40px;
+            @media (max-width: $mobile-breakpoint) {
+              margin-bottom: 32px;
+            }
           }
           a {
             display: block;

@@ -122,8 +122,8 @@ export default {
 
     @media (max-width: $mobile-breakpoint) {
       display: grid;
-      grid-row-gap: 8px;
-      text-align: right;
+      grid-row-gap: 12px;
+      justify-content: flex-start;
 
       .toggle-container {
         display: none;
