@@ -65,7 +65,7 @@
 </template>
 
 <script>
-// import clackd from '@/data/clackd.json';
+import clackd from '@/data/clackd.json';
 import credera from '@/data/credera.json';
 import wff from '@/data/wff.json';
 
@@ -82,8 +82,8 @@ export default {
   methods: {
     getProject: function(projectId) {
       switch(projectId) {
-        // case 'clackd': 
-          // return clackd;
+        case 'clackd': 
+          return clackd;
         case 'credera': 
           return credera;
         case 'wff':

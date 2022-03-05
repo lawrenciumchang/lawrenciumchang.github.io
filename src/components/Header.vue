@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="right">
-      <router-link to="/project/credera" @click="gaTrackClick('Header', 'Projects')">projects</router-link>
+      <router-link to="/project/clackd" @click="gaTrackClick('Header', 'Projects')">projects</router-link>
       <router-link to="/photography" @click="gaTrackClick('Header', 'Photography')">photography</router-link>
       <router-link to="/about" @click="gaTrackClick('Header', 'About')">about</router-link>
       <div class="get-in-touch-container">
