@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <router-link v-scroll-reveal class="contained view-more large" to="/photography" @click="gaTrackClick('Home', 'View Photography')">see more</router-link>
+    <router-link v-scroll-reveal class="contained view-more large" to="/photography" @click="gaTrackClick('Home', 'View Photography')">view all</router-link>
     
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
   }
 
   .overflow-container {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   .view-more {

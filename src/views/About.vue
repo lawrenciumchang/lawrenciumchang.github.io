@@ -9,7 +9,7 @@
       </div>
       <div class="about-container">
         <h1 v-scroll-reveal>about</h1>
-        <p v-scroll-reveal class="regular first-sentence">I am a UX designer based in Houston, Texas, currently working at Credera. I’ve touched everything from circuit design to back-end API architecture to front-end development, but now focus on building desirable experiences through design.</p>
+        <p v-scroll-reveal class="regular first-sentence">I am a user experience designer based in Houston, Texas, currently working at Credera. I’ve touched everything from circuit design to back-end API architecture to front-end development but now focus on building desirable experirences through design. </p>
         <p v-scroll-reveal class="regular">Check out my <a v-scroll-reveal class="resume-link" @click="showPhotoSwipe(); gaTrackClick('About', 'Resume')">resume</a> to see what I’ve been up to over the years or scroll down to learn some of the things I enjoy doing in my free time!</p>
       </div>
     </div>

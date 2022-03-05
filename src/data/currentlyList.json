@@ -1,15 +1,15 @@
 [
   {
     "img": "/assets/images/about/1.png",
-    "caption": "13 Sentinels: Aegis Rim"
+    "caption": "Elden Ring"
   },
   {
     "img": "/assets/images/about/2.png",
-    "caption": "Kimetsu no Yaiba"
+    "caption": "How I Met Your Mother"
   },
   {
     "img": "/assets/images/about/3.png",
-    "caption": "Ghost of Tsushima"
+    "caption": "Kimetsu no Yaiba"
   },
   {
     "img": "/assets/images/about/4.png",
@@ -21,10 +21,6 @@
   },
   {
     "img": "/assets/images/about/6.png",
-    "caption": "Neo: The World Ends With You"
-  },
-  {
-    "img": "/assets/images/about/7.png",
-    "caption": "Jujutsu Kaisen"
+    "caption": "Pokémon Legends: Arceus"
   }
 ]

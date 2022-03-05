@@ -55,8 +55,6 @@ export default {
 }
 
 .item-container {
-  display: grid;
-  
   &:not(:last-child) {
     margin-right: 20px;
   }

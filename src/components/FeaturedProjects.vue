@@ -71,7 +71,7 @@ export default {
 
       .image-container {
         display: grid;
-        margin-bottom: 28px;
+        margin-bottom: 24px;
         overflow: hidden;
 
         img {
