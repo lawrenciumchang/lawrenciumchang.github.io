@@ -44,7 +44,7 @@
     },
     {
       "type": "paragraph",
-      "content": "The next order of business was digging into the user experience. As I reviewed each page, I identified areas of improvement in terms of UX best practices and design consistency. One example of introducing changes was on a page that allowed a user to submit a build to their profile. The existing method was an embeded form that would let users add custom slots featuring any part of their build. Althrough customization and uniqueness are usually desired traits, I believed we should keep the user focused and instructed on what they could add to their entry. The result was a guided form with clearly defined sections, allowing freeform text when appropriate and autocomplete search fields where necessary."
+      "content": "The next order of business was digging into the user experience. As I reviewed each page, I identified areas of improvement in terms of UX best practices and design consistency. One example of introducing changes was on a page that allowed a user to submit a build to their profile. The existing method was an embedded form that would let users add custom slots featuring any part of their build. Although customization and uniqueness are usually desired traits, I believed we should keep the user focused and instructed on what they could add to their entry. The result was a guided form with clearly defined sections, allowing free-form text when appropriate and autocomplete search fields where necessary."
     },
     {
       "type": "image",
@@ -97,7 +97,7 @@
         },
         {
           "firstSentence": "Don’t de-prioritize designs of varying screen sizes.",
-          "remainingContent": "I had placed an emphasis on desktop designs while re-imagining the experience and defining the visual tone. This caused our team to lose sight of how the experience would function on mobile devices. Moving forward, designs for all screen sizes take an equal priority and dedication so that the experience is cocsistent across the board."
+          "remainingContent": "I had placed an emphasis on desktop designs while re-imagining the experience and defining the visual tone. This caused our team to lose sight of how the experience would function on mobile devices. Moving forward, designs for all screen sizes take an equal priority and dedication so that the experience is consistent across the board."
         }
       ]
     },
